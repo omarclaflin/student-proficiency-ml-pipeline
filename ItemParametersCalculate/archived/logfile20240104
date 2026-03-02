@@ -1,0 +1,122 @@
+04/01/2024 01:20:50: fetched 4608 skills.
+04/01/2024 01:21:15: skill #: 1 skill_id: bc7b5e8e21eae311b64a005056801da1
+04/01/2024 01:21:15: attempting to load skill from local data: bc7b5e8e21eae311b64a005056801da1
+04/01/2024 01:22:46: loading time: 91.1640694141388 for : 1421213(1421213, 3)
+04/01/2024 01:22:46: converting into table...
+04/01/2024 01:22:47: table size: (123157, 139)
+04/01/2024 01:22:47: solving for item parameters...
+04/01/2024 01:29:55: parameter calculation time: 427.67411971092224 seconds.
+04/01/2024 23:41:09: skill #: 1 skill_id: bc7b5e8e21eae311b64a005056801da1
+04/01/2024 23:41:09: attempting to load skill from local data: bc7b5e8e21eae311b64a005056801da1
+04/01/2024 23:42:44: loading time: 95.77568435668945 for : 1421213(1421213, 3)
+04/01/2024 23:42:44: converting into table...
+04/01/2024 23:42:45: table size: (123157, 139)
+04/01/2024 23:42:45: solving for item parameters...
+04/01/2024 23:49:52: parameter calculation time: 426.7063772678375 seconds.
+04/01/2024 23:53:37: nans in est params: 0 out of 139
+04/01/2024 23:53:37: nans in auc_roc: 0 out of 139
+04/01/2024 23:53:37: nans in optimal_threshold: 0 out of 139
+04/01/2024 23:53:37: exporting to csv...
+04/01/2024 23:53:37: exported.
+04/01/2024 23:55:00: skill #: 1 skill_id: bc7b5e8e21eae311b64a005056801da1
+04/01/2024 23:55:00: attempting to load skill from local data: bc7b5e8e21eae311b64a005056801da1
+04/01/2024 23:56:37: loading time: 96.3692717552185 for : 1421213(1421213, 3)
+04/01/2024 23:56:37: converting into table...
+04/01/2024 23:56:37: table size: (123157, 139)
+04/01/2024 23:56:37: solving for item parameters...
+05/01/2024 00:03:46: parameter calculation time: 428.1781005859375 seconds.
+05/01/2024 00:03:46: nans in est params: 0 out of 139
+05/01/2024 00:03:46: nans in auc_roc: 0 out of 139
+05/01/2024 00:03:46: nans in optimal_threshold: 0 out of 139
+05/01/2024 00:03:46: exporting to csv...
+05/01/2024 00:03:46: exported.
+05/01/2024 00:03:46: skill #: 2 skill_id: iewietia
+05/01/2024 00:03:46: attempting to load skill from local data: iewietia
+05/01/2024 00:05:19: loading time: 93.8135359287262 for : 157566(157566, 3)
+05/01/2024 00:05:19: converting into table...
+05/01/2024 00:05:20: table size: (41139, 77)
+05/01/2024 00:05:20: solving for item parameters...
+05/01/2024 00:07:16: parameter calculation time: 116.09391665458679 seconds.
+05/01/2024 00:07:16: nans in est params: 8 out of 77
+05/01/2024 00:07:16: nans in auc_roc: 8 out of 77
+05/01/2024 00:07:16: nans in optimal_threshold: 8 out of 77
+05/01/2024 00:07:16: exporting to csv...
+05/01/2024 00:07:16: exported.
+05/01/2024 00:07:16: skill #: 3 skill_id: iefaezei
+05/01/2024 00:07:16: attempting to load skill from local data: iefaezei
+05/01/2024 00:08:49: loading time: 92.91537094116211 for : 107838(107838, 3)
+05/01/2024 00:08:49: converting into table...
+05/01/2024 00:08:49: table size: (35223, 49)
+05/01/2024 00:08:49: solving for item parameters...
+05/01/2024 00:10:06: parameter calculation time: 77.0611457824707 seconds.
+05/01/2024 00:10:06: nans in est params: 0 out of 49
+05/01/2024 00:10:06: nans in auc_roc: 0 out of 49
+05/01/2024 00:10:06: nans in optimal_threshold: 0 out of 49
+05/01/2024 00:10:06: exporting to csv...
+05/01/2024 00:10:06: exported.
+05/01/2024 00:10:06: skill #: 4 skill_id: 7db6668c36134063a06b6e23e391f5a5
+05/01/2024 00:10:06: attempting to load skill from local data: 7db6668c36134063a06b6e23e391f5a5
+05/01/2024 00:11:40: loading time: 94.107342004776 for : 168759(168759, 3)
+05/01/2024 00:11:40: converting into table...
+05/01/2024 00:11:40: table size: (25119, 81)
+05/01/2024 00:11:40: solving for item parameters...
+05/01/2024 00:13:15: parameter calculation time: 94.68158459663391 seconds.
+05/01/2024 00:13:15: nans in est params: 0 out of 81
+05/01/2024 00:13:15: nans in auc_roc: 0 out of 81
+05/01/2024 00:13:15: nans in optimal_threshold: 0 out of 81
+05/01/2024 00:13:15: exporting to csv...
+05/01/2024 00:13:15: exported.
+05/01/2024 00:13:15: skill #: 5 skill_id: 7ca4bfaa479de311b77c005056801da1
+05/01/2024 00:13:15: attempting to load skill from local data: 7ca4bfaa479de311b77c005056801da1
+05/01/2024 00:14:48: loading time: 93.74150800704956 for : 158816(158816, 3)
+05/01/2024 00:14:48: converting into table...
+05/01/2024 00:14:48: table size: (19942, 43)
+05/01/2024 00:14:48: solving for item parameters...
+05/01/2024 00:15:50: parameter calculation time: 61.057844400405884 seconds.
+05/01/2024 00:15:50: nans in est params: 0 out of 43
+05/01/2024 00:15:50: nans in auc_roc: 0 out of 43
+05/01/2024 00:15:50: nans in optimal_threshold: 0 out of 43
+05/01/2024 00:15:50: exporting to csv...
+05/01/2024 00:15:50: exported.
+05/01/2024 00:15:50: skill #: 6 skill_id: 38a3bfaa479de311b77c005056801da1
+05/01/2024 00:15:50: attempting to load skill from local data: 38a3bfaa479de311b77c005056801da1
+05/01/2024 00:17:26: loading time: 96.02994990348816 for : 1522545(1522545, 3)
+05/01/2024 00:17:26: converting into table...
+05/01/2024 00:17:27: table size: (241248, 66)
+05/01/2024 00:17:27: solving for item parameters...
+05/01/2024 00:21:39: skipping 38a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+05/01/2024 00:21:39: skill #: 7 skill_id: 39a3bfaa479de311b77c005056801da1
+05/01/2024 00:21:39: attempting to load skill from local data: 39a3bfaa479de311b77c005056801da1
+05/01/2024 00:21:39: skipping 39a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+05/01/2024 00:21:39: skill #: 8 skill_id: 3aa3bfaa479de311b77c005056801da1
+05/01/2024 00:21:39: attempting to load skill from local data: 3aa3bfaa479de311b77c005056801da1
+05/01/2024 00:21:39: skipping 3aa3bfaa479de311b77c005056801da1 either loading or estimating broke.
+05/01/2024 00:21:39: skill #: 9 skill_id: 44a3bfaa479de311b77c005056801da1
+05/01/2024 00:21:39: attempting to load skill from local data: 44a3bfaa479de311b77c005056801da1
+05/01/2024 00:21:39: skipping 44a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+05/01/2024 00:21:39: skill #: 10 skill_id: oochiavi
+05/01/2024 00:21:39: attempting to load skill from local data: oochiavi
+05/01/2024 00:21:39: skipping oochiavi either loading or estimating broke.
+05/01/2024 00:21:39: skill #: 11 skill_id: 4ea3bfaa479de311b77c005056801da1
+05/01/2024 00:21:39: attempting to load skill from local data: 4ea3bfaa479de311b77c005056801da1
+05/01/2024 00:21:40: skipping 4ea3bfaa479de311b77c005056801da1 either loading or estimating broke.
+05/01/2024 00:21:40: skill #: 12 skill_id: 60a3bfaa479de311b77c005056801da1
+05/01/2024 00:21:40: attempting to load skill from local data: 60a3bfaa479de311b77c005056801da1
+05/01/2024 00:21:40: skipping 60a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+05/01/2024 00:21:40: skill #: 13 skill_id: 5ea3bfaa479de311b77c005056801da1
+05/01/2024 00:21:40: attempting to load skill from local data: 5ea3bfaa479de311b77c005056801da1
+05/01/2024 00:21:41: skipping 5ea3bfaa479de311b77c005056801da1 either loading or estimating broke.
+05/01/2024 00:21:41: skill #: 14 skill_id: 62a3bfaa479de311b77c005056801da1
+05/01/2024 00:21:41: attempting to load skill from local data: 62a3bfaa479de311b77c005056801da1
+05/01/2024 00:21:41: skipping 62a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+05/01/2024 00:21:41: skill #: 15 skill_id: 65a3bfaa479de311b77c005056801da1
+05/01/2024 00:21:41: attempting to load skill from local data: 65a3bfaa479de311b77c005056801da1
+05/01/2024 00:21:43: skipping 65a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+05/01/2024 00:21:43: skill #: 16 skill_id: 28a5bfaa479de311b77c005056801da1
+05/01/2024 00:21:43: attempting to load skill from local data: 28a5bfaa479de311b77c005056801da1
+05/01/2024 00:21:44: skipping 28a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+05/01/2024 00:21:44: skill #: 17 skill_id: dahteeco
+05/01/2024 00:21:44: attempting to load skill from local data: dahteeco
+05/01/2024 00:21:45: skipping dahteeco either loading or estimating broke.
+05/01/2024 00:21:45: skill #: 18 skill_id: 3ea5bfaa479de311b77c005056801da1
+05/01/2024 00:21:45: attempting to load skill from local data: 3ea5bfaa479de311b77c005056801da1

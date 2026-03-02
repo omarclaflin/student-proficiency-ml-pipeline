@@ -1,0 +1,9 @@
+*.csv.gz
+*/.ipynb_checkpoints/*
+*/.ipynb_checkpoints
+
+# Ignore all .parquet files
+*.parquet
+
+# Ignore Jupyter notebook checkpoint files
+*-checkpoint.ipynb

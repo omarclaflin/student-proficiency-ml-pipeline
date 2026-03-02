@@ -1,0 +1,86 @@
+2025-03-28 00:40:42,716 - Starting model training. Logs will be saved to ./ML_training_pipeline_log_01312025_noSkillExplode_v50_20250328_004042.txt
+2025-03-28 00:40:42,716 - Pipeline Configuration:
+2025-03-28 00:40:42,717 - pipeline_id: 01312025_noSkillExplode
+2025-03-28 00:40:42,717 - feature_set_id: v50
+2025-03-28 00:40:42,718 - model_type: ModelOnlyIncompleteIP_future3
+2025-03-28 00:40:42,718 - doSnowflakeETL: False
+2025-03-28 00:40:42,718 - skillExplode: False
+2025-03-28 00:40:42,719 - CorrectnessBinary: False
+2025-03-28 00:40:42,719 - ItemAgnostic: False
+2025-03-28 00:40:42,720 - ItemAgnosticFit: False
+2025-03-28 00:40:42,720 - ItemAgnosticDoubleFit: False
+2025-03-28 00:40:42,721 - F1ObjectiveMeasure: False
+2025-03-28 00:40:42,721 - SigmoidTransformOutputFit: False
+2025-03-28 00:40:42,722 - UseSigmoidTransform: False
+2025-03-28 00:40:42,722 - SigmoidTransformOutput: False
+2025-03-28 00:40:42,722 - pullNewData: False
+2025-03-28 00:40:42,723 - query_file: querytransformedtable.txt
+2025-03-28 00:40:42,723 - raw_data_folder_path: StudentProficiencyData_Math_yearOfData
+2025-03-28 00:40:42,724 - GenerateTestTrainSplit: False
+2025-03-28 00:40:42,724 - ItemParameterCalculate: False
+2025-03-28 00:40:42,725 - item_params_file: Math_ItemParameters_v5_partial031225.csv
+2025-03-28 00:40:42,725 - FeatureEngineering: False
+2025-03-28 00:40:42,725 - ProficiencyModelFit: False
+2025-03-28 00:40:42,726 - ConfidenceModelFit: False
+2025-03-28 00:40:42,726 - InferenceModeOn: True
+2025-03-28 00:40:42,727 - InferenceModeFeatureEngineering: False
+2025-03-28 00:40:42,727 - TestMode: False
+2025-03-28 00:40:42,728 - n_estimators: 1
+2025-03-28 00:40:42,728 - FUTURE_WINDOW: 3
+2025-03-28 00:40:42,728 - scalerFlag: False
+2025-03-28 00:40:42,729 - log_folder: .
+2025-03-28 00:40:42,729 - Folder Locations for input data and output artifacts:
+2025-03-28 00:40:42,729 - feature_engineering_output_folder: feature_engineered_train_parquets_v50/
+2025-03-28 00:40:42,730 - proficiency_input_folder: feature_engineered_train_parquets_v50/
+2025-03-28 00:40:42,730 - proficiency_model_output_folder: proficiency_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3
+2025-03-28 00:40:42,730 - confidence_input_folder: feature_engineered_train_parquets_v50/
+2025-03-28 00:40:42,731 - confidence_model_output_folder: confidence_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3
+2025-03-28 00:40:42,732 - proficiency_model_file : proficiency_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/xgb_model.json
+2025-03-28 00:40:42,732 - column_names.txt (from raw query): ['STUDENTID', 'SKILL', 'QUESTIONID', 'OCCURREDAT', 'CORRECTNESS', 'DURATIONSECONDS', 'ANSWERPOSITIONINSESSION', 'EVENT_RANK', 'QUESTIONID_LAG_1', 'QUESTIONID_LAG_2', 'QUESTIONID_LAG_3', 'QUESTIONID_LAG_4', 'QUESTIONID_LAG_5', 'QUESTIONID_LAG_6', 'QUESTIONID_LAG_7', 'QUESTIONID_LAG_8', 'QUESTIONID_LAG_9', 'QUESTIONID_LAG_10', 'OCCURREDAT_LAG_1', 'OCCURREDAT_LAG_2', 'OCCURREDAT_LAG_3', 'OCCURREDAT_LAG_4', 'OCCURREDAT_LAG_5', 'OCCURREDAT_LAG_6', 'OCCURREDAT_LAG_7', 'OCCURREDAT_LAG_8', 'OCCURREDAT_LAG_9', 'OCCURREDAT_LAG_10', 'CORRECTNESS_LAG_1', 'CORRECTNESS_LAG_2', 'CORRECTNESS_LAG_3', 'CORRECTNESS_LAG_4', 'CORRECTNESS_LAG_5', 'CORRECTNESS_LAG_6', 'CORRECTNESS_LAG_7', 'CORRECTNESS_LAG_8', 'CORRECTNESS_LAG_9', 'CORRECTNESS_LAG_10', 'DURATIONSECONDS_LAG_1', 'DURATIONSECONDS_LAG_2', 'DURATIONSECONDS_LAG_3', 'DURATIONSECONDS_LAG_4', 'DURATIONSECONDS_LAG_5', 'DURATIONSECONDS_LAG_6', 'DURATIONSECONDS_LAG_7', 'DURATIONSECONDS_LAG_8', 'DURATIONSECONDS_LAG_9', 'DURATIONSECONDS_LAG_10', 'FUTURE_CORRECTNESS_LAG_1', 'FUTURE_CORRECTNESS_LAG_2', 'FUTURE_CORRECTNESS_LAG_3', 'FUTURE_CORRECTNESS_LAG_4', 'FUTURE_CORRECTNESS_LAG_5']
+2025-03-28 00:40:42,735 - 844 files found.
+2025-03-28 00:40:43,159 - Imported 1028975 studentids for train split.
+2025-03-28 00:40:43,160 - Starting inference mode testing.
+2025-03-28 00:40:43,254 - Imported 228661 studentids for test split.
+2025-03-28 00:40:43,255 - Starting Inference Testing on reserved test set
+2025-03-28 00:40:43,450 - Loaded proficiency model from proficiency_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/xgb_model.json
+2025-03-28 00:40:43,634 - Loaded confidence model from confidence_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/confidence_xgb_model.json
+2025-03-28 00:40:43,635 - Confidence model Score Transformer loaded from confidence_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/percentile_rank_calculator.pkl
+2025-03-28 00:40:43,965 - Loaded IPD data Math_ItemParameters_v5_partial031225.csv
+2025-03-28 00:40:43,967 - Small Inference Run Mode: Finding 30 files with sufficient data...
+2025-03-28 00:40:44,065 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_7_19.snappy.parquet with 35664 rows
+2025-03-28 00:40:44,153 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_3_1.snappy.parquet with 36160 rows
+2025-03-28 00:40:44,223 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_6_50.snappy.parquet with 27702 rows
+2025-03-28 00:40:44,310 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_3_93.snappy.parquet with 34659 rows
+2025-03-28 00:40:44,387 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_70.snappy.parquet with 32721 rows
+2025-03-28 00:40:44,488 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_3_13.snappy.parquet with 38921 rows
+2025-03-28 00:40:44,566 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_7_56.snappy.parquet with 32971 rows
+2025-03-28 00:40:44,647 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_4_88.snappy.parquet with 35822 rows
+2025-03-28 00:40:44,720 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_57.snappy.parquet with 33574 rows
+2025-03-28 00:40:44,794 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_62.snappy.parquet with 33851 rows
+2025-03-28 00:40:44,876 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_1_91.snappy.parquet with 36399 rows
+2025-03-28 00:40:44,944 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_6_70.snappy.parquet with 30113 rows
+2025-03-28 00:40:45,008 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_6_71.snappy.parquet with 27983 rows
+2025-03-28 00:40:45,076 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_7_47.snappy.parquet with 31666 rows
+2025-03-28 00:40:45,156 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_4_41.snappy.parquet with 38252 rows
+2025-03-28 00:40:45,235 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_1_40.snappy.parquet with 37372 rows
+2025-03-28 00:40:45,320 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_17.snappy.parquet with 39365 rows
+2025-03-28 00:40:45,395 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_4_40.snappy.parquet with 35179 rows
+2025-03-28 00:40:45,482 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_26.snappy.parquet with 38296 rows
+2025-03-28 00:40:45,555 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_48.snappy.parquet with 32486 rows
+2025-03-28 00:40:45,635 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_1_54.snappy.parquet with 40020 rows
+2025-03-28 00:40:45,716 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_35.snappy.parquet with 38891 rows
+2025-03-28 00:40:45,788 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_5_66.snappy.parquet with 34288 rows
+2025-03-28 00:40:45,882 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_2_85.snappy.parquet with 39186 rows
+2025-03-28 00:40:45,954 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_7_39.snappy.parquet with 34279 rows
+2025-03-28 00:40:46,026 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_4_49.snappy.parquet with 33882 rows
+2025-03-28 00:40:46,096 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_4_75.snappy.parquet with 32289 rows
+2025-03-28 00:40:46,181 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_2_18.snappy.parquet with 39024 rows
+2025-03-28 00:40:46,262 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_5_14.snappy.parquet with 38832 rows
+2025-03-28 00:40:46,335 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_1_57.snappy.parquet with 34187 rows
+2025-03-28 00:40:46,336 - Small inference run mode will use these files: ['inferenceTest_feature_engineered_train_parquets_v50/data__0_7_19.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_3_1.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_6_50.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_3_93.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_70.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_3_13.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_7_56.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_4_88.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_57.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_62.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_1_91.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_6_70.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_6_71.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_7_47.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_4_41.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_1_40.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_17.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_4_40.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_26.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_48.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_1_54.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_35.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_5_66.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_2_85.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_7_39.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_4_49.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_4_75.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_2_18.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_5_14.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_1_57.snappy.parquet']
+2025-03-28 00:40:46,337 - Using DEFAULT threshold parameters: struggling=0.600, proficiency=0.800
+2025-03-28 00:40:46,338 - Final model metrics using reserved test set.
+2025-03-28 00:40:46,338 - Erasing next-item information for item-agnostic inference testing. This is used when we are forecasting more than one item into the future, or testing a non-individual-item probability calculation for skill.
+2025-03-28 00:40:46,339 - Found 30 files.
+2025-03-28 00:40:46,346 - Test set 1:
+2025-03-28 00:40:49,683 - Using future window of 3 for confidence model inference metrics.

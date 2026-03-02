@@ -1,0 +1,1276 @@
+2025-03-28 02:16:46,273 - Starting model training. Logs will be saved to ./ML_training_pipeline_log_01312025_noSkillExplode_v50_20250328_021646.txt
+2025-03-28 02:16:46,274 - Pipeline Configuration:
+2025-03-28 02:16:46,274 - pipeline_id: 01312025_noSkillExplode
+2025-03-28 02:16:46,274 - feature_set_id: v50
+2025-03-28 02:16:46,275 - model_type: ModelOnlyIncompleteIP_future3
+2025-03-28 02:16:46,275 - doSnowflakeETL: False
+2025-03-28 02:16:46,276 - skillExplode: False
+2025-03-28 02:16:46,276 - CorrectnessBinary: False
+2025-03-28 02:16:46,276 - ItemAgnostic: False
+2025-03-28 02:16:46,277 - ItemAgnosticFit: False
+2025-03-28 02:16:46,277 - ItemAgnosticDoubleFit: False
+2025-03-28 02:16:46,278 - F1ObjectiveMeasure: False
+2025-03-28 02:16:46,278 - SigmoidTransformOutputFit: False
+2025-03-28 02:16:46,278 - UseSigmoidTransform: False
+2025-03-28 02:16:46,279 - SigmoidTransformOutput: False
+2025-03-28 02:16:46,279 - pullNewData: False
+2025-03-28 02:16:46,280 - query_file: querytransformedtable.txt
+2025-03-28 02:16:46,280 - raw_data_folder_path: StudentProficiencyData_Math_yearOfData
+2025-03-28 02:16:46,280 - GenerateTestTrainSplit: False
+2025-03-28 02:16:46,281 - ItemParameterCalculate: False
+2025-03-28 02:16:46,281 - item_params_file: Math_ItemParameters_v5_partial031225.csv
+2025-03-28 02:16:46,282 - FeatureEngineering: False
+2025-03-28 02:16:46,282 - ProficiencyModelFit: False
+2025-03-28 02:16:46,282 - ConfidenceModelFit: False
+2025-03-28 02:16:46,283 - InferenceModeOn: True
+2025-03-28 02:16:46,283 - InferenceModeFeatureEngineering: False
+2025-03-28 02:16:46,284 - TestMode: False
+2025-03-28 02:16:46,284 - n_estimators: 1
+2025-03-28 02:16:46,284 - FUTURE_WINDOW: 3
+2025-03-28 02:16:46,285 - scalerFlag: False
+2025-03-28 02:16:46,285 - log_folder: .
+2025-03-28 02:16:46,285 - Folder Locations for input data and output artifacts:
+2025-03-28 02:16:46,286 - feature_engineering_output_folder: feature_engineered_train_parquets_v50/
+2025-03-28 02:16:46,286 - proficiency_input_folder: feature_engineered_train_parquets_v50/
+2025-03-28 02:16:46,286 - proficiency_model_output_folder: proficiency_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3
+2025-03-28 02:16:46,287 - confidence_input_folder: feature_engineered_train_parquets_v50/
+2025-03-28 02:16:46,287 - confidence_model_output_folder: confidence_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3
+2025-03-28 02:16:46,288 - proficiency_model_file : proficiency_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/xgb_model.json
+2025-03-28 02:16:46,288 - column_names.txt (from raw query): ['STUDENTID', 'SKILL', 'QUESTIONID', 'OCCURREDAT', 'CORRECTNESS', 'DURATIONSECONDS', 'ANSWERPOSITIONINSESSION', 'EVENT_RANK', 'QUESTIONID_LAG_1', 'QUESTIONID_LAG_2', 'QUESTIONID_LAG_3', 'QUESTIONID_LAG_4', 'QUESTIONID_LAG_5', 'QUESTIONID_LAG_6', 'QUESTIONID_LAG_7', 'QUESTIONID_LAG_8', 'QUESTIONID_LAG_9', 'QUESTIONID_LAG_10', 'OCCURREDAT_LAG_1', 'OCCURREDAT_LAG_2', 'OCCURREDAT_LAG_3', 'OCCURREDAT_LAG_4', 'OCCURREDAT_LAG_5', 'OCCURREDAT_LAG_6', 'OCCURREDAT_LAG_7', 'OCCURREDAT_LAG_8', 'OCCURREDAT_LAG_9', 'OCCURREDAT_LAG_10', 'CORRECTNESS_LAG_1', 'CORRECTNESS_LAG_2', 'CORRECTNESS_LAG_3', 'CORRECTNESS_LAG_4', 'CORRECTNESS_LAG_5', 'CORRECTNESS_LAG_6', 'CORRECTNESS_LAG_7', 'CORRECTNESS_LAG_8', 'CORRECTNESS_LAG_9', 'CORRECTNESS_LAG_10', 'DURATIONSECONDS_LAG_1', 'DURATIONSECONDS_LAG_2', 'DURATIONSECONDS_LAG_3', 'DURATIONSECONDS_LAG_4', 'DURATIONSECONDS_LAG_5', 'DURATIONSECONDS_LAG_6', 'DURATIONSECONDS_LAG_7', 'DURATIONSECONDS_LAG_8', 'DURATIONSECONDS_LAG_9', 'DURATIONSECONDS_LAG_10', 'FUTURE_CORRECTNESS_LAG_1', 'FUTURE_CORRECTNESS_LAG_2', 'FUTURE_CORRECTNESS_LAG_3', 'FUTURE_CORRECTNESS_LAG_4', 'FUTURE_CORRECTNESS_LAG_5']
+2025-03-28 02:16:46,291 - 844 files found.
+2025-03-28 02:16:46,719 - Imported 1028975 studentids for train split.
+2025-03-28 02:16:46,719 - Starting inference mode testing.
+2025-03-28 02:16:46,810 - Imported 228661 studentids for test split.
+2025-03-28 02:16:46,811 - Starting Inference Testing on reserved test set
+2025-03-28 02:16:46,993 - Loaded proficiency model from proficiency_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/xgb_model.json
+2025-03-28 02:16:47,175 - Loaded confidence model from confidence_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/confidence_xgb_model.json
+2025-03-28 02:16:47,177 - Confidence model Score Transformer loaded from confidence_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/percentile_rank_calculator.pkl
+2025-03-28 02:16:47,503 - Loaded IPD data Math_ItemParameters_v5_partial031225.csv
+2025-03-28 02:16:47,505 - Small Inference Run Mode: Finding 2 files with sufficient data...
+2025-03-28 02:16:47,595 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_7_19.snappy.parquet with 35664 rows
+2025-03-28 02:16:47,682 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_3_1.snappy.parquet with 36160 rows
+2025-03-28 02:16:47,683 - Small inference run mode will use these files: ['inferenceTest_feature_engineered_train_parquets_v50/data__0_7_19.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_3_1.snappy.parquet']
+2025-03-28 02:16:47,683 - Using DEFAULT threshold parameters: struggling=0.600, proficiency=0.800
+2025-03-28 02:16:47,684 - Final model metrics using reserved test set.
+2025-03-28 02:16:47,684 - Erasing next-item information for item-agnostic inference testing. This is used when we are forecasting more than one item into the future, or testing a non-individual-item probability calculation for skill.
+2025-03-28 02:16:47,685 - Found 2 files.
+2025-03-28 02:16:47,692 - Test set 1:
+2025-03-28 02:16:50,812 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 02:17:31,100 - skill_proficiency_predictions - NaN: 27197, non-NaN: 8467
+2025-03-28 02:17:31,103 - item_AWARE_prof_metrics
+2025-03-28 02:17:31,131 - Count 0 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18330, RMSE: 0.42814, Cross Entropy: 0.54762, R2: 0.17052, (Imputed) Precision (incorrect/0): 0.64733, (Imputed) Precision (correct/1): 0.73705, (Imputed) Recall (incorrect/0): 0.35862, (Imputed) Recall (correct/1): 0.90197, (Imputed) F1: 0.8112171476179656, (Imputed) Accuracy: 0.72045, (Imputed) AUC ROC: 0.74422, (Imputed) AUC PR: 0.84334
+2025-03-28 02:17:31,132 - item_conf_metrics
+2025-03-28 02:17:31,153 - Count 1 (tgt threshold=0.2120) (pred threshold=1.0000): MSE: 0.58741, RMSE: 0.76642, Cross Entropy: 11.85394, R2: -16.03192, (Imputed) Precision (incorrect/0): 0.50000, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50000, (Imputed) AUC ROC: 0.50006, (Imputed) AUC PR: 0.50003
+2025-03-28 02:17:31,153 - item_cs_metrics
+2025-03-28 02:17:31,200 - Count 2 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10031, RMSE: 0.31671, Cross Entropy: 3.07129, R2: -1.90840, (Imputed) Precision (incorrect/0): 0.88294, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99981, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88279, (Imputed) AUC ROC: 0.49990, (Imputed) AUC PR: 0.11704
+2025-03-28 02:17:31,200 - item_AGNOSTIC_prof_metrics
+2025-03-28 02:17:31,227 - Count 3 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19429, RMSE: 0.44078, Cross Entropy: 0.57452, R2: 0.12081, (Imputed) Precision (incorrect/0): 0.63308, (Imputed) Precision (correct/1): 0.71201, (Imputed) Recall (incorrect/0): 0.25313, (Imputed) Recall (correct/1): 0.92640, (Imputed) F1: 0.805174843089535, (Imputed) Accuracy: 0.70146, (Imputed) AUC ROC: 0.70314, (Imputed) AUC PR: 0.81458
+2025-03-28 02:17:31,265 - Count 4 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.57811, RMSE: 0.76034, Cross Entropy: 11.77377, R2: -16.68160, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.11625, (Imputed) Recall (incorrect/0): 0.00003, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.20829460674721798, (Imputed) Accuracy: 0.11628, (Imputed) AUC ROC: 0.50002, (Imputed) AUC PR: 0.11625
+2025-03-28 02:17:31,311 - Count 5 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10107, RMSE: 0.31792, Cross Entropy: 3.13152, R2: -2.09125, (Imputed) Precision (incorrect/0): 0.88375, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88372, (Imputed) AUC ROC: 0.49998, (Imputed) AUC PR: 0.11625
+2025-03-28 02:17:31,312 - skill_prof_metrics
+2025-03-28 02:17:31,326 - Count 6 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.24450, RMSE: 0.49447, Cross Entropy: 0.69759, R2: -0.11819, (Imputed) Precision (incorrect/0): 0.31422, (Imputed) Precision (correct/1): 0.67056, (Imputed) Recall (incorrect/0): 0.14440, (Imputed) Recall (correct/1): 0.84676, (Imputed) F1: 0.7484291366069351, (Imputed) Accuracy: 0.61698, (Imputed) AUC ROC: 0.49142, (Imputed) AUC PR: 0.66552
+2025-03-28 02:17:31,327 - skill_conf_metrics
+2025-03-28 02:17:31,340 - Count 7 (tgt threshold=0.2120) (pred threshold=1.0000): MSE: 0.60090, RMSE: 0.77518, Cross Entropy: 12.07238, R2: -15.20354, (Imputed) Precision (incorrect/0): 0.53336, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.53336, (Imputed) AUC ROC: 0.50131, (Imputed) AUC PR: 0.46729
+2025-03-28 02:17:31,341 - skill_cs_metrics
+2025-03-28 02:17:31,357 - Count 8 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09897, RMSE: 0.31460, Cross Entropy: 2.97477, R2: -1.66882, (Imputed) Precision (incorrect/0): 0.88071, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88071, (Imputed) AUC ROC: 0.49908, (Imputed) AUC PR: 0.11918
+2025-03-28 02:17:31,358 - Test set 2:
+2025-03-28 02:17:33,595 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 02:18:18,254 - skill_proficiency_predictions - NaN: 28087, non-NaN: 8073
+2025-03-28 02:18:18,257 - item_AWARE_prof_metrics
+2025-03-28 02:18:18,285 - Count 9 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18728, RMSE: 0.43276, Cross Entropy: 0.55719, R2: 0.13245, (Imputed) Precision (incorrect/0): 0.61424, (Imputed) Precision (correct/1): 0.73208, (Imputed) Recall (incorrect/0): 0.28800, (Imputed) Recall (correct/1): 0.91494, (Imputed) F1: 0.8133595995011837, (Imputed) Accuracy: 0.71441, (Imputed) AUC ROC: 0.71792, (Imputed) AUC PR: 0.83741
+2025-03-28 02:18:18,286 - item_conf_metrics
+2025-03-28 02:18:18,306 - Count 10 (tgt threshold=0.2118) (pred threshold=1.0000): MSE: 0.58840, RMSE: 0.76707, Cross Entropy: 11.86328, R2: -15.99473, (Imputed) Precision (incorrect/0): 0.50044, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50044, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.49957
+2025-03-28 02:18:18,307 - item_cs_metrics
+2025-03-28 02:18:18,353 - Count 11 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10012, RMSE: 0.31642, Cross Entropy: 3.06426, R2: -1.89185, (Imputed) Precision (incorrect/0): 0.88170, (Imputed) Precision (correct/1): 0.20000, (Imputed) Recall (incorrect/0): 0.99987, (Imputed) Recall (correct/1): 0.00023, (Imputed) F1: 0.00046696240952603317, (Imputed) Accuracy: 0.88161, (Imputed) AUC ROC: 0.50005, (Imputed) AUC PR: 0.11833
+2025-03-28 02:18:18,354 - item_AGNOSTIC_prof_metrics
+2025-03-28 02:18:18,381 - Count 12 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19857, RMSE: 0.44561, Cross Entropy: 0.58457, R2: 0.08018, (Imputed) Precision (incorrect/0): 0.57390, (Imputed) Precision (correct/1): 0.70764, (Imputed) Recall (incorrect/0): 0.17526, (Imputed) Recall (correct/1): 0.93881, (Imputed) F1: 0.8069973087274125, (Imputed) Accuracy: 0.69458, (Imputed) AUC ROC: 0.67061, (Imputed) AUC PR: 0.80736
+2025-03-28 02:18:18,418 - Count 13 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58228, RMSE: 0.76307, Cross Entropy: 11.81534, R2: -16.65180, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.11585, (Imputed) Recall (incorrect/0): 0.00003, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.2076435015366313, (Imputed) Accuracy: 0.11587, (Imputed) AUC ROC: 0.49990, (Imputed) AUC PR: 0.11582
+2025-03-28 02:18:18,464 - Count 14 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10000, RMSE: 0.31623, Cross Entropy: 3.10010, R2: -2.03145, (Imputed) Precision (incorrect/0): 0.88418, (Imputed) Precision (correct/1): 0.50000, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00024, (Imputed) F1: 0.0004772130756382725, (Imputed) Accuracy: 0.88415, (Imputed) AUC ROC: 0.50010, (Imputed) AUC PR: 0.11594
+2025-03-28 02:18:18,465 - skill_prof_metrics
+2025-03-28 02:18:18,479 - Count 15 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23888, RMSE: 0.48876, Cross Entropy: 0.68376, R2: -0.09298, (Imputed) Precision (incorrect/0): 0.34534, (Imputed) Precision (correct/1): 0.67525, (Imputed) Recall (incorrect/0): 0.14145, (Imputed) Recall (correct/1): 0.86941, (Imputed) F1: 0.7601256139785812, (Imputed) Accuracy: 0.63099, (Imputed) AUC ROC: 0.49719, (Imputed) AUC PR: 0.66971
+2025-03-28 02:18:18,479 - skill_conf_metrics
+2025-03-28 02:18:18,492 - Count 16 (tgt threshold=0.2118) (pred threshold=1.0000): MSE: 0.59904, RMSE: 0.77398, Cross Entropy: 12.06977, R2: -15.62462, (Imputed) Precision (incorrect/0): 0.52174, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.52174, (Imputed) AUC ROC: 0.50076, (Imputed) AUC PR: 0.47864
+2025-03-28 02:18:18,492 - skill_cs_metrics
+2025-03-28 02:18:18,509 - Count 17 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09830, RMSE: 0.31353, Cross Entropy: 2.98518, R2: -1.72809, (Imputed) Precision (incorrect/0): 0.88344, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88344, (Imputed) AUC ROC: 0.51641, (Imputed) AUC PR: 0.12082
+2025-03-28 02:18:18,509 - Looking for raw files in: StudentProficiencyData_Math_yearOfData/*.parquet
+2025-03-28 02:18:18,511 - Found 844 raw files.
+2025-03-28 02:18:18,512 - Found matching raw file: StudentProficiencyData_Math_yearOfData/data__0_3_1.snappy.parquet
+2025-03-28 02:18:19,833 - Loaded raw data with 360448 rows before filtering for test_ids.
+2025-03-28 02:18:20,605 - Loaded raw data with 36160 rows after filtering for test_ids.
+2025-03-28 02:18:20,606 - Feature engineered data has 36160 rows.
+2025-03-28 02:18:20,684 - Average metrics across all test sets (item aware/item agnostic/skill: proficiency & confidence models & confidence scores):
+2025-03-28 02:18:20,685 - Average ITEM AWARE PROFICIENCY MODEL metrics across all test sets:
+2025-03-28 02:18:20,686 - MSE: 0.18728
+2025-03-28 02:18:20,687 - RMSE: 0.43276
+2025-03-28 02:18:20,688 - Cross Entropy: 0.55719
+2025-03-28 02:18:20,689 - R2: 0.13245
+2025-03-28 02:18:20,690 - (Imputed) Precision (incorrect/0): 0.61424
+2025-03-28 02:18:20,691 - (Imputed) Precision (correct/1): 0.73208
+2025-03-28 02:18:20,692 - (Imputed) Recall (incorrect/0): 0.28800
+2025-03-28 02:18:20,693 - (Imputed) Recall (correct/1): 0.91494
+2025-03-28 02:18:20,694 - (Imputed) F1: 0.81336
+2025-03-28 02:18:20,695 - (Imputed) Accuracy: 0.71441
+2025-03-28 02:18:20,696 - (Imputed) AUC ROC: 0.71792
+2025-03-28 02:18:20,697 - (Imputed) AUC PR: 0.83741
+2025-03-28 02:18:20,698 - Average ITEM AWARE CONFIDENCE MODEL metrics across all test sets:
+2025-03-28 02:18:20,699 - MSE: 0.58840
+2025-03-28 02:18:20,700 - RMSE: 0.76707
+2025-03-28 02:18:20,701 - Cross Entropy: 11.86328
+2025-03-28 02:18:20,701 - R2: -15.99473
+2025-03-28 02:18:20,702 - (Imputed) Precision (incorrect/0): 0.50044
+2025-03-28 02:18:20,703 - (Imputed) Precision (correct/1): 0.00000
+2025-03-28 02:18:20,704 - (Imputed) Recall (incorrect/0): 1.00000
+2025-03-28 02:18:20,705 - (Imputed) Recall (correct/1): 0.00000
+2025-03-28 02:18:20,706 - (Imputed) F1: 0.00000
+2025-03-28 02:18:20,707 - (Imputed) Accuracy: 0.50044
+2025-03-28 02:18:20,708 - (Imputed) AUC ROC: 0.50003
+2025-03-28 02:18:20,709 - (Imputed) AUC PR: 0.49957
+2025-03-28 02:18:20,709 - Average ITEM AWARE CONFIDENCE SCORE metrics across all test sets:
+2025-03-28 02:18:20,710 - MSE: 0.10012
+2025-03-28 02:18:20,711 - RMSE: 0.31642
+2025-03-28 02:18:20,712 - Cross Entropy: 3.06426
+2025-03-28 02:18:20,713 - R2: -1.89185
+2025-03-28 02:18:20,714 - (Imputed) Precision (incorrect/0): 0.88170
+2025-03-28 02:18:20,715 - (Imputed) Precision (correct/1): 0.20000
+2025-03-28 02:18:20,715 - (Imputed) Recall (incorrect/0): 0.99987
+2025-03-28 02:18:20,717 - (Imputed) Recall (correct/1): 0.00023
+2025-03-28 02:18:20,718 - (Imputed) F1: 0.00047
+2025-03-28 02:18:20,718 - (Imputed) Accuracy: 0.88161
+2025-03-28 02:18:20,719 - (Imputed) AUC ROC: 0.50005
+2025-03-28 02:18:20,721 - (Imputed) AUC PR: 0.11833
+2025-03-28 02:18:20,722 - Average ITEM AGNOSTIC PROFICIENCY MODEL metrics across all test sets:
+2025-03-28 02:18:20,722 - MSE: 0.19857
+2025-03-28 02:18:20,723 - RMSE: 0.44561
+2025-03-28 02:18:20,724 - Cross Entropy: 0.58457
+2025-03-28 02:18:20,725 - R2: 0.08018
+2025-03-28 02:18:20,726 - (Imputed) Precision (incorrect/0): 0.57390
+2025-03-28 02:18:20,727 - (Imputed) Precision (correct/1): 0.70764
+2025-03-28 02:18:20,728 - (Imputed) Recall (incorrect/0): 0.17526
+2025-03-28 02:18:20,730 - (Imputed) Recall (correct/1): 0.93881
+2025-03-28 02:18:20,731 - (Imputed) F1: 0.80700
+2025-03-28 02:18:20,732 - (Imputed) Accuracy: 0.69458
+2025-03-28 02:18:20,733 - (Imputed) AUC ROC: 0.67061
+2025-03-28 02:18:20,734 - (Imputed) AUC PR: 0.80736
+2025-03-28 02:18:20,735 - Average ITEM AGNOSTIC CONFIDENCE MODEL metrics across all test sets:
+2025-03-28 02:18:20,736 - MSE: 0.58228
+2025-03-28 02:18:20,737 - RMSE: 0.76307
+2025-03-28 02:18:20,739 - Cross Entropy: 11.81534
+2025-03-28 02:18:20,739 - R2: -16.65180
+2025-03-28 02:18:20,741 - (Imputed) Precision (incorrect/0): 1.00000
+2025-03-28 02:18:20,742 - (Imputed) Precision (correct/1): 0.11585
+2025-03-28 02:18:20,743 - (Imputed) Recall (incorrect/0): 0.00003
+2025-03-28 02:18:20,744 - (Imputed) Recall (correct/1): 1.00000
+2025-03-28 02:18:20,745 - (Imputed) F1: 0.20764
+2025-03-28 02:18:20,746 - (Imputed) Accuracy: 0.11587
+2025-03-28 02:18:20,748 - (Imputed) AUC ROC: 0.49990
+2025-03-28 02:18:20,748 - (Imputed) AUC PR: 0.11582
+2025-03-28 02:18:20,750 - Average ITEM AGNOSTIC CONFIDENCE SCORE metrics across all test sets:
+2025-03-28 02:18:20,750 - MSE: 0.10000
+2025-03-28 02:18:20,753 - RMSE: 0.31623
+2025-03-28 02:18:20,754 - Cross Entropy: 3.10010
+2025-03-28 02:18:20,755 - R2: -2.03145
+2025-03-28 02:18:20,756 - (Imputed) Precision (incorrect/0): 0.88418
+2025-03-28 02:18:20,756 - (Imputed) Precision (correct/1): 0.50000
+2025-03-28 02:18:20,757 - (Imputed) Recall (incorrect/0): 0.99997
+2025-03-28 02:18:20,758 - (Imputed) Recall (correct/1): 0.00024
+2025-03-28 02:18:20,759 - (Imputed) F1: 0.00048
+2025-03-28 02:18:20,760 - (Imputed) Accuracy: 0.88415
+2025-03-28 02:18:20,761 - (Imputed) AUC ROC: 0.50010
+2025-03-28 02:18:20,762 - (Imputed) AUC PR: 0.11594
+2025-03-28 02:18:20,763 - Average SKILL PROFICIENCY MODEL metrics across all test sets:
+2025-03-28 02:18:20,764 - MSE: 0.23888
+2025-03-28 02:18:20,765 - RMSE: 0.48876
+2025-03-28 02:18:20,766 - Cross Entropy: 0.68376
+2025-03-28 02:18:20,767 - R2: -0.09298
+2025-03-28 02:18:20,768 - (Imputed) Precision (incorrect/0): 0.34534
+2025-03-28 02:18:20,769 - (Imputed) Precision (correct/1): 0.67525
+2025-03-28 02:18:20,770 - (Imputed) Recall (incorrect/0): 0.14145
+2025-03-28 02:18:20,771 - (Imputed) Recall (correct/1): 0.86941
+2025-03-28 02:18:20,772 - (Imputed) F1: 0.76013
+2025-03-28 02:18:20,773 - (Imputed) Accuracy: 0.63099
+2025-03-28 02:18:20,774 - (Imputed) AUC ROC: 0.49719
+2025-03-28 02:18:20,775 - (Imputed) AUC PR: 0.66971
+2025-03-28 02:18:20,775 - Average SKILL CONFIDENCE MODEL metrics across all test sets:
+2025-03-28 02:18:20,776 - MSE: 0.59904
+2025-03-28 02:18:20,777 - RMSE: 0.77398
+2025-03-28 02:18:20,778 - Cross Entropy: 12.06977
+2025-03-28 02:18:20,779 - R2: -15.62462
+2025-03-28 02:18:20,780 - (Imputed) Precision (incorrect/0): 0.52174
+2025-03-28 02:18:20,781 - (Imputed) Precision (correct/1): 0.00000
+2025-03-28 02:18:20,783 - (Imputed) Recall (incorrect/0): 1.00000
+2025-03-28 02:18:20,783 - (Imputed) Recall (correct/1): 0.00000
+2025-03-28 02:18:20,784 - (Imputed) F1: 0.00000
+2025-03-28 02:18:20,785 - (Imputed) Accuracy: 0.52174
+2025-03-28 02:18:20,786 - (Imputed) AUC ROC: 0.50076
+2025-03-28 02:18:20,787 - (Imputed) AUC PR: 0.47864
+2025-03-28 02:18:20,788 - Average SKILL CONFIDENCE SCORE metrics across all test sets:
+2025-03-28 02:18:20,789 - MSE: 0.09830
+2025-03-28 02:18:20,789 - RMSE: 0.31353
+2025-03-28 02:18:20,790 - Cross Entropy: 2.98518
+2025-03-28 02:18:20,791 - R2: -1.72809
+2025-03-28 02:18:20,792 - (Imputed) Precision (incorrect/0): 0.88344
+2025-03-28 02:18:20,793 - (Imputed) Precision (correct/1): 0.00000
+2025-03-28 02:18:20,794 - (Imputed) Recall (incorrect/0): 1.00000
+2025-03-28 02:18:20,795 - (Imputed) Recall (correct/1): 0.00000
+2025-03-28 02:18:20,795 - (Imputed) F1: 0.00000
+2025-03-28 02:18:20,796 - (Imputed) Accuracy: 0.88344
+2025-03-28 02:18:20,796 - (Imputed) AUC ROC: 0.51641
+2025-03-28 02:18:20,797 - (Imputed) AUC PR: 0.12082
+2025-03-28 02:18:30,868 - 
+Item Level - Metrics by number of previous responses:
+2025-03-28 02:18:30,869 - 
+Responses: 0
+2025-03-28 02:18:30,869 -   Sample count: 6338
+2025-03-28 02:18:30,870 -   Proficiency Model:
+2025-03-28 02:18:30,870 -     MAE: 0.43841
+2025-03-28 02:18:30,870 -     MSE: 0.21719
+2025-03-28 02:18:30,871 -     RMSE: 0.46604
+2025-03-28 02:18:30,871 -   Confidence Model:
+2025-03-28 02:18:30,872 -     MAE: 0.56159
+2025-03-28 02:18:30,872 -     MSE: 0.34037
+2025-03-28 02:18:30,872 -     RMSE: 0.58341
+2025-03-28 02:18:30,873 - 
+Responses: 1
+2025-03-28 02:18:30,873 -   Sample count: 4749
+2025-03-28 02:18:30,874 -   Proficiency Model:
+2025-03-28 02:18:30,874 -     MAE: 0.39021
+2025-03-28 02:18:30,874 -     MSE: 0.19529
+2025-03-28 02:18:30,874 -     RMSE: 0.44192
+2025-03-28 02:18:30,875 -   Confidence Model:
+2025-03-28 02:18:30,876 -     MAE: 0.60979
+2025-03-28 02:18:30,876 -     MSE: 0.41488
+2025-03-28 02:18:30,876 -     RMSE: 0.64411
+2025-03-28 02:18:30,877 - 
+Responses: 2
+2025-03-28 02:18:30,877 -   Sample count: 3786
+2025-03-28 02:18:30,878 -   Proficiency Model:
+2025-03-28 02:18:30,878 -     MAE: 0.36567
+2025-03-28 02:18:30,878 -     MSE: 0.18490
+2025-03-28 02:18:30,879 -     RMSE: 0.43001
+2025-03-28 02:18:30,879 -   Confidence Model:
+2025-03-28 02:18:30,879 -     MAE: 0.63433
+2025-03-28 02:18:30,880 -     MSE: 0.45356
+2025-03-28 02:18:30,880 -     RMSE: 0.67347
+2025-03-28 02:18:30,881 - 
+Responses: 3
+2025-03-28 02:18:30,881 -   Sample count: 3170
+2025-03-28 02:18:30,881 -   Proficiency Model:
+2025-03-28 02:18:30,882 -     MAE: 0.35618
+2025-03-28 02:18:30,882 -     MSE: 0.17808
+2025-03-28 02:18:30,883 -     RMSE: 0.42199
+2025-03-28 02:18:30,883 -   Confidence Model:
+2025-03-28 02:18:30,883 -     MAE: 0.64382
+2025-03-28 02:18:30,884 -     MSE: 0.46572
+2025-03-28 02:18:30,884 -     RMSE: 0.68243
+2025-03-28 02:18:30,884 - 
+Responses: 4
+2025-03-28 02:18:30,885 -   Sample count: 2741
+2025-03-28 02:18:30,885 -   Proficiency Model:
+2025-03-28 02:18:30,886 -     MAE: 0.34879
+2025-03-28 02:18:30,886 -     MSE: 0.17461
+2025-03-28 02:18:30,886 -     RMSE: 0.41786
+2025-03-28 02:18:30,887 -   Confidence Model:
+2025-03-28 02:18:30,887 -     MAE: 0.65121
+2025-03-28 02:18:30,887 -     MSE: 0.47704
+2025-03-28 02:18:30,888 -     RMSE: 0.69068
+2025-03-28 02:18:30,888 - 
+Responses: 5
+2025-03-28 02:18:30,889 -   Sample count: 2355
+2025-03-28 02:18:30,889 -   Proficiency Model:
+2025-03-28 02:18:30,889 -     MAE: 0.35278
+2025-03-28 02:18:30,890 -     MSE: 0.17654
+2025-03-28 02:18:30,890 -     RMSE: 0.42017
+2025-03-28 02:18:30,890 -   Confidence Model:
+2025-03-28 02:18:30,891 -     MAE: 0.64722
+2025-03-28 02:18:30,891 -     MSE: 0.47098
+2025-03-28 02:18:30,891 -     RMSE: 0.68628
+2025-03-28 02:18:30,892 - 
+Responses: 6
+2025-03-28 02:18:30,892 -   Sample count: 2082
+2025-03-28 02:18:30,893 -   Proficiency Model:
+2025-03-28 02:18:30,893 -     MAE: 0.34718
+2025-03-28 02:18:30,894 -     MSE: 0.17220
+2025-03-28 02:18:30,894 -     RMSE: 0.41497
+2025-03-28 02:18:30,894 -   Confidence Model:
+2025-03-28 02:18:30,895 -     MAE: 0.65282
+2025-03-28 02:18:30,895 -     MSE: 0.47784
+2025-03-28 02:18:30,896 -     RMSE: 0.69126
+2025-03-28 02:18:30,896 - 
+Responses: 7
+2025-03-28 02:18:30,896 -   Sample count: 1861
+2025-03-28 02:18:30,897 -   Proficiency Model:
+2025-03-28 02:18:30,897 -     MAE: 0.34567
+2025-03-28 02:18:30,897 -     MSE: 0.17394
+2025-03-28 02:18:30,898 -     RMSE: 0.41706
+2025-03-28 02:18:30,898 -   Confidence Model:
+2025-03-28 02:18:30,899 -     MAE: 0.65433
+2025-03-28 02:18:30,899 -     MSE: 0.48260
+2025-03-28 02:18:30,899 -     RMSE: 0.69470
+2025-03-28 02:18:30,900 - 
+Responses: 8
+2025-03-28 02:18:30,900 -   Sample count: 1643
+2025-03-28 02:18:30,901 -   Proficiency Model:
+2025-03-28 02:18:30,901 -     MAE: 0.34920
+2025-03-28 02:18:30,901 -     MSE: 0.17617
+2025-03-28 02:18:30,902 -     RMSE: 0.41973
+2025-03-28 02:18:30,902 -   Confidence Model:
+2025-03-28 02:18:30,903 -     MAE: 0.65050
+2025-03-28 02:18:30,903 -     MSE: 0.47737
+2025-03-28 02:18:30,903 -     RMSE: 0.69092
+2025-03-28 02:18:30,904 - 
+Responses: 9
+2025-03-28 02:18:30,904 -   Sample count: 1518
+2025-03-28 02:18:30,905 -   Proficiency Model:
+2025-03-28 02:18:30,905 -     MAE: 0.34274
+2025-03-28 02:18:30,905 -     MSE: 0.17573
+2025-03-28 02:18:30,906 -     RMSE: 0.41921
+2025-03-28 02:18:30,906 -   Confidence Model:
+2025-03-28 02:18:30,906 -     MAE: 0.65673
+2025-03-28 02:18:30,907 -     MSE: 0.48966
+2025-03-28 02:18:30,907 -     RMSE: 0.69976
+2025-03-28 02:18:30,908 - 
+Responses: 10
+2025-03-28 02:18:30,908 -   Sample count: 5917
+2025-03-28 02:18:30,908 -   Proficiency Model:
+2025-03-28 02:18:30,909 -     MAE: 0.35125
+2025-03-28 02:18:30,909 -     MSE: 0.18097
+2025-03-28 02:18:30,909 -     RMSE: 0.42541
+2025-03-28 02:18:30,910 -   Confidence Model:
+2025-03-28 02:18:30,910 -     MAE: 0.64858
+2025-03-28 02:18:30,911 -     MSE: 0.47830
+2025-03-28 02:18:30,911 -     RMSE: 0.69159
+2025-03-28 02:18:30,930 - 
+Item-Agnostic Level - Metrics by number of previous responses:
+2025-03-28 02:18:30,931 - 
+Responses: 0
+2025-03-28 02:18:30,931 -   Sample count: 6338
+2025-03-28 02:18:30,931 -   Proficiency Model:
+2025-03-28 02:18:30,932 -     MAE: 0.47345
+2025-03-28 02:18:30,932 -     MSE: 0.23371
+2025-03-28 02:18:30,933 -     RMSE: 0.48344
+2025-03-28 02:18:30,933 -   Confidence Model:
+2025-03-28 02:18:30,933 -     MAE: 0.52655
+2025-03-28 02:18:30,934 -     MSE: 0.28681
+2025-03-28 02:18:30,934 -     RMSE: 0.53554
+2025-03-28 02:18:30,935 - 
+Responses: 1
+2025-03-28 02:18:30,935 -   Sample count: 4749
+2025-03-28 02:18:30,936 -   Proficiency Model:
+2025-03-28 02:18:30,936 -     MAE: 0.41277
+2025-03-28 02:18:30,936 -     MSE: 0.20548
+2025-03-28 02:18:30,936 -     RMSE: 0.45330
+2025-03-28 02:18:30,937 -   Confidence Model:
+2025-03-28 02:18:30,937 -     MAE: 0.58723
+2025-03-28 02:18:30,937 -     MSE: 0.37995
+2025-03-28 02:18:30,938 -     RMSE: 0.61640
+2025-03-28 02:18:30,938 - 
+Responses: 2
+2025-03-28 02:18:30,939 -   Sample count: 3786
+2025-03-28 02:18:30,939 -   Proficiency Model:
+2025-03-28 02:18:30,940 -     MAE: 0.38698
+2025-03-28 02:18:30,940 -     MSE: 0.19602
+2025-03-28 02:18:30,940 -     RMSE: 0.44274
+2025-03-28 02:18:30,941 -   Confidence Model:
+2025-03-28 02:18:30,941 -     MAE: 0.61302
+2025-03-28 02:18:30,941 -     MSE: 0.42205
+2025-03-28 02:18:30,942 -     RMSE: 0.64966
+2025-03-28 02:18:30,942 - 
+Responses: 3
+2025-03-28 02:18:30,943 -   Sample count: 3170
+2025-03-28 02:18:30,943 -   Proficiency Model:
+2025-03-28 02:18:30,943 -     MAE: 0.37709
+2025-03-28 02:18:30,944 -     MSE: 0.18893
+2025-03-28 02:18:30,944 -     RMSE: 0.43466
+2025-03-28 02:18:30,944 -   Confidence Model:
+2025-03-28 02:18:30,945 -     MAE: 0.62291
+2025-03-28 02:18:30,945 -     MSE: 0.43476
+2025-03-28 02:18:30,946 -     RMSE: 0.65936
+2025-03-28 02:18:30,946 - 
+Responses: 4
+2025-03-28 02:18:30,946 -   Sample count: 2741
+2025-03-28 02:18:30,947 -   Proficiency Model:
+2025-03-28 02:18:30,947 -     MAE: 0.36890
+2025-03-28 02:18:30,948 -     MSE: 0.18449
+2025-03-28 02:18:30,948 -     RMSE: 0.42952
+2025-03-28 02:18:30,948 -   Confidence Model:
+2025-03-28 02:18:30,949 -     MAE: 0.63110
+2025-03-28 02:18:30,949 -     MSE: 0.44669
+2025-03-28 02:18:30,949 -     RMSE: 0.66835
+2025-03-28 02:18:30,950 - 
+Responses: 5
+2025-03-28 02:18:30,950 -   Sample count: 2355
+2025-03-28 02:18:30,951 -   Proficiency Model:
+2025-03-28 02:18:30,951 -     MAE: 0.37439
+2025-03-28 02:18:30,952 -     MSE: 0.18894
+2025-03-28 02:18:30,952 -     RMSE: 0.43467
+2025-03-28 02:18:30,952 -   Confidence Model:
+2025-03-28 02:18:30,953 -     MAE: 0.62561
+2025-03-28 02:18:30,953 -     MSE: 0.44017
+2025-03-28 02:18:30,953 -     RMSE: 0.66345
+2025-03-28 02:18:30,954 - 
+Responses: 6
+2025-03-28 02:18:30,954 -   Sample count: 2082
+2025-03-28 02:18:30,954 -   Proficiency Model:
+2025-03-28 02:18:30,955 -     MAE: 0.36837
+2025-03-28 02:18:30,955 -     MSE: 0.18521
+2025-03-28 02:18:30,956 -     RMSE: 0.43036
+2025-03-28 02:18:30,956 -   Confidence Model:
+2025-03-28 02:18:30,957 -     MAE: 0.63163
+2025-03-28 02:18:30,957 -     MSE: 0.44847
+2025-03-28 02:18:30,957 -     RMSE: 0.66968
+2025-03-28 02:18:30,958 - 
+Responses: 7
+2025-03-28 02:18:30,958 -   Sample count: 1861
+2025-03-28 02:18:30,958 -   Proficiency Model:
+2025-03-28 02:18:30,958 -     MAE: 0.36506
+2025-03-28 02:18:30,959 -     MSE: 0.18354
+2025-03-28 02:18:30,959 -     RMSE: 0.42842
+2025-03-28 02:18:30,960 -   Confidence Model:
+2025-03-28 02:18:30,960 -     MAE: 0.63494
+2025-03-28 02:18:30,961 -     MSE: 0.45343
+2025-03-28 02:18:30,961 -     RMSE: 0.67337
+2025-03-28 02:18:30,961 - 
+Responses: 8
+2025-03-28 02:18:30,962 -   Sample count: 1643
+2025-03-28 02:18:30,962 -   Proficiency Model:
+2025-03-28 02:18:30,962 -     MAE: 0.36447
+2025-03-28 02:18:30,963 -     MSE: 0.18394
+2025-03-28 02:18:30,963 -     RMSE: 0.42888
+2025-03-28 02:18:30,964 -   Confidence Model:
+2025-03-28 02:18:30,964 -     MAE: 0.63553
+2025-03-28 02:18:30,965 -     MSE: 0.45499
+2025-03-28 02:18:30,965 -     RMSE: 0.67453
+2025-03-28 02:18:30,965 - 
+Responses: 9
+2025-03-28 02:18:30,966 -   Sample count: 1518
+2025-03-28 02:18:30,966 -   Proficiency Model:
+2025-03-28 02:18:30,966 -     MAE: 0.35993
+2025-03-28 02:18:30,966 -     MSE: 0.18354
+2025-03-28 02:18:30,967 -     RMSE: 0.42841
+2025-03-28 02:18:30,967 -   Confidence Model:
+2025-03-28 02:18:30,967 -     MAE: 0.63950
+2025-03-28 02:18:30,968 -     MSE: 0.46311
+2025-03-28 02:18:30,969 -     RMSE: 0.68052
+2025-03-28 02:18:30,969 - 
+Responses: 10
+2025-03-28 02:18:30,969 -   Sample count: 5917
+2025-03-28 02:18:30,970 -   Proficiency Model:
+2025-03-28 02:18:30,970 -     MAE: 0.36904
+2025-03-28 02:18:30,971 -     MSE: 0.18987
+2025-03-28 02:18:30,971 -     RMSE: 0.43574
+2025-03-28 02:18:30,972 -   Confidence Model:
+2025-03-28 02:18:30,972 -     MAE: 0.63095
+2025-03-28 02:18:30,972 -     MSE: 0.45178
+2025-03-28 02:18:30,973 -     RMSE: 0.67215
+2025-03-28 02:18:30,993 - 
+Skill Level - Metrics by number of previous responses:
+2025-03-28 02:18:30,993 - 
+Responses: 0
+2025-03-28 02:18:30,994 -   Sample count: 6338
+2025-03-28 02:18:30,994 -   Proficiency Model:
+2025-03-28 02:18:30,994 -     MAE: 0.45748
+2025-03-28 02:18:30,995 -     MSE: 0.25656
+2025-03-28 02:18:30,995 -     RMSE: 0.50651
+2025-03-28 02:18:30,996 -   Confidence Model:
+2025-03-28 02:18:30,996 -     MAE: 0.54243
+2025-03-28 02:18:30,996 -     MSE: 0.34151
+2025-03-28 02:18:30,997 -     RMSE: 0.58439
+2025-03-28 02:18:30,997 - 
+Responses: 1
+2025-03-28 02:18:30,997 -   Sample count: 4749
+2025-03-28 02:18:30,998 -   Proficiency Model:
+2025-03-28 02:18:30,998 -     MAE: 0.43091
+2025-03-28 02:18:30,998 -     MSE: 0.23095
+2025-03-28 02:18:30,998 -     RMSE: 0.48058
+2025-03-28 02:18:31,000 -   Confidence Model:
+2025-03-28 02:18:31,000 -     MAE: 0.56906
+2025-03-28 02:18:31,000 -     MSE: 0.36910
+2025-03-28 02:18:31,001 -     RMSE: 0.60754
+2025-03-28 02:18:31,001 - 
+Responses: 2
+2025-03-28 02:18:31,001 -   Sample count: 3786
+2025-03-28 02:18:31,002 -   Proficiency Model:
+2025-03-28 02:18:31,002 -     MAE: 0.42796
+2025-03-28 02:18:31,002 -     MSE: 0.22645
+2025-03-28 02:18:31,003 -     RMSE: 0.47587
+2025-03-28 02:18:31,003 -   Confidence Model:
+2025-03-28 02:18:31,003 -     MAE: 0.57203
+2025-03-28 02:18:31,004 -     MSE: 0.37052
+2025-03-28 02:18:31,004 -     RMSE: 0.60870
+2025-03-28 02:18:31,005 - 
+Responses: 3
+2025-03-28 02:18:31,005 -   Sample count: 3170
+2025-03-28 02:18:31,005 -   Proficiency Model:
+2025-03-28 02:18:31,006 -     MAE: 0.42339
+2025-03-28 02:18:31,006 -     MSE: 0.22223
+2025-03-28 02:18:31,006 -     RMSE: 0.47141
+2025-03-28 02:18:31,007 -   Confidence Model:
+2025-03-28 02:18:31,007 -     MAE: 0.57654
+2025-03-28 02:18:31,008 -     MSE: 0.37540
+2025-03-28 02:18:31,008 -     RMSE: 0.61270
+2025-03-28 02:18:31,008 - 
+Responses: 4
+2025-03-28 02:18:31,009 -   Sample count: 2741
+2025-03-28 02:18:31,009 -   Proficiency Model:
+2025-03-28 02:18:31,010 -     MAE: 0.42645
+2025-03-28 02:18:31,010 -     MSE: 0.22403
+2025-03-28 02:18:31,010 -     RMSE: 0.47332
+2025-03-28 02:18:31,011 -   Confidence Model:
+2025-03-28 02:18:31,011 -     MAE: 0.57349
+2025-03-28 02:18:31,012 -     MSE: 0.37108
+2025-03-28 02:18:31,012 -     RMSE: 0.60917
+2025-03-28 02:18:31,012 - 
+Responses: 5
+2025-03-28 02:18:31,013 -   Sample count: 2355
+2025-03-28 02:18:31,013 -   Proficiency Model:
+2025-03-28 02:18:31,014 -     MAE: 0.44268
+2025-03-28 02:18:31,014 -     MSE: 0.24108
+2025-03-28 02:18:31,014 -     RMSE: 0.49100
+2025-03-28 02:18:31,015 -   Confidence Model:
+2025-03-28 02:18:31,015 -     MAE: 0.55732
+2025-03-28 02:18:31,016 -     MSE: 0.35573
+2025-03-28 02:18:31,016 -     RMSE: 0.59643
+2025-03-28 02:18:31,017 - 
+Responses: 6
+2025-03-28 02:18:31,017 -   Sample count: 2082
+2025-03-28 02:18:31,017 -   Proficiency Model:
+2025-03-28 02:18:31,017 -     MAE: 0.43988
+2025-03-28 02:18:31,018 -     MSE: 0.24000
+2025-03-28 02:18:31,018 -     RMSE: 0.48990
+2025-03-28 02:18:31,018 -   Confidence Model:
+2025-03-28 02:18:31,019 -     MAE: 0.55990
+2025-03-28 02:18:31,019 -     MSE: 0.35995
+2025-03-28 02:18:31,019 -     RMSE: 0.59996
+2025-03-28 02:18:31,020 - 
+Responses: 7
+2025-03-28 02:18:31,021 -   Sample count: 1861
+2025-03-28 02:18:31,021 -   Proficiency Model:
+2025-03-28 02:18:31,021 -     MAE: 0.44251
+2025-03-28 02:18:31,022 -     MSE: 0.24281
+2025-03-28 02:18:31,022 -     RMSE: 0.49275
+2025-03-28 02:18:31,023 -   Confidence Model:
+2025-03-28 02:18:31,023 -     MAE: 0.55749
+2025-03-28 02:18:31,023 -     MSE: 0.35779
+2025-03-28 02:18:31,024 -     RMSE: 0.59816
+2025-03-28 02:18:31,024 - 
+Responses: 8
+2025-03-28 02:18:31,024 -   Sample count: 1643
+2025-03-28 02:18:31,025 -   Proficiency Model:
+2025-03-28 02:18:31,025 -     MAE: 0.43818
+2025-03-28 02:18:31,026 -     MSE: 0.23815
+2025-03-28 02:18:31,026 -     RMSE: 0.48800
+2025-03-28 02:18:31,026 -   Confidence Model:
+2025-03-28 02:18:31,027 -     MAE: 0.56175
+2025-03-28 02:18:31,027 -     MSE: 0.36174
+2025-03-28 02:18:31,028 -     RMSE: 0.60144
+2025-03-28 02:18:31,028 - 
+Responses: 9
+2025-03-28 02:18:31,028 -   Sample count: 1518
+2025-03-28 02:18:31,029 -   Proficiency Model:
+2025-03-28 02:18:31,029 -     MAE: 0.43953
+2025-03-28 02:18:31,029 -     MSE: 0.24040
+2025-03-28 02:18:31,030 -     RMSE: 0.49031
+2025-03-28 02:18:31,030 -   Confidence Model:
+2025-03-28 02:18:31,030 -     MAE: 0.56028
+2025-03-28 02:18:31,031 -     MSE: 0.36126
+2025-03-28 02:18:31,031 -     RMSE: 0.60105
+2025-03-28 02:18:31,032 - 
+Responses: 10
+2025-03-28 02:18:31,032 -   Sample count: 5917
+2025-03-28 02:18:31,033 -   Proficiency Model:
+2025-03-28 02:18:31,033 -     MAE: 0.44949
+2025-03-28 02:18:31,033 -     MSE: 0.24795
+2025-03-28 02:18:31,034 -     RMSE: 0.49795
+2025-03-28 02:18:31,034 -   Confidence Model:
+2025-03-28 02:18:31,035 -     MAE: 0.55043
+2025-03-28 02:18:31,035 -     MSE: 0.34891
+2025-03-28 02:18:31,035 -     RMSE: 0.59068
+2025-03-28 02:18:31,880 - 
+Printing 5 random samples from the last file:
+2025-03-28 02:18:31,881 - 
+Student #1:
+2025-03-28 02:18:31,882 - Raw input (Snowflake SQL):
+2025-03-28 02:18:31,883 -   STUDENTID: 45732902
+2025-03-28 02:18:31,883 -   SKILL: 02a3bfaa479de311b77c005056801da1
+2025-03-28 02:18:31,884 -   QUESTIONID: ef0a4b852298
+2025-03-28 02:18:31,884 -   OCCURREDAT: 2024-05-29 17:37:38.062000+00:00
+2025-03-28 02:18:31,884 -   CORRECTNESS: 100
+2025-03-28 02:18:31,885 -   DURATIONSECONDS: nan
+2025-03-28 02:18:31,885 -   ANSWERPOSITIONINSESSION: 3.0
+2025-03-28 02:18:31,886 -   EVENT_RANK: 9
+2025-03-28 02:18:31,886 -   QUESTIONID_LAG_1: e66fc4efb07c
+2025-03-28 02:18:31,886 -   QUESTIONID_LAG_2: ee46e32f5ed4
+2025-03-28 02:18:31,887 -   QUESTIONID_LAG_3: 488aaa1f813f
+2025-03-28 02:18:31,887 -   QUESTIONID_LAG_4: 2eefdc0d71b9
+2025-03-28 02:18:31,888 -   QUESTIONID_LAG_5: d5853b832a28
+2025-03-28 02:18:31,888 -   QUESTIONID_LAG_6: a9a9c7fffbb8
+2025-03-28 02:18:31,888 -   QUESTIONID_LAG_7: 9352da6f3216
+2025-03-28 02:18:31,889 -   QUESTIONID_LAG_8: 9ea00e48edfc
+2025-03-28 02:18:31,889 -   QUESTIONID_LAG_9: None
+2025-03-28 02:18:31,890 -   QUESTIONID_LAG_10: None
+2025-03-28 02:18:31,890 -   OCCURREDAT_LAG_1: 2024-05-29 17:37:38.062000+00:00
+2025-03-28 02:18:31,890 -   OCCURREDAT_LAG_2: 2024-05-29 17:31:33.162000+00:00
+2025-03-28 02:18:31,891 -   OCCURREDAT_LAG_3: 2024-05-29 17:27:50.335000+00:00
+2025-03-28 02:18:31,891 -   OCCURREDAT_LAG_4: 2024-05-29 17:27:50.335000+00:00
+2025-03-28 02:18:31,892 -   OCCURREDAT_LAG_5: 2024-05-29 17:27:50.335000+00:00
+2025-03-28 02:18:31,892 -   OCCURREDAT_LAG_6: 2024-05-29 17:27:50.335000+00:00
+2025-03-28 02:18:31,893 -   OCCURREDAT_LAG_7: 2024-05-29 17:24:41.051000+00:00
+2025-03-28 02:18:31,893 -   OCCURREDAT_LAG_8: 2024-05-29 17:24:41.051000+00:00
+2025-03-28 02:18:31,893 -   OCCURREDAT_LAG_9: NaT
+2025-03-28 02:18:31,894 -   OCCURREDAT_LAG_10: NaT
+2025-03-28 02:18:31,894 -   CORRECTNESS_LAG_1: 0
+2025-03-28 02:18:31,895 -   CORRECTNESS_LAG_2: 100
+2025-03-28 02:18:31,895 -   CORRECTNESS_LAG_3: 100
+2025-03-28 02:18:31,896 -   CORRECTNESS_LAG_4: 0
+2025-03-28 02:18:31,896 -   CORRECTNESS_LAG_5: 100
+2025-03-28 02:18:31,896 -   CORRECTNESS_LAG_6: 0
+2025-03-28 02:18:31,897 -   CORRECTNESS_LAG_7: 100
+2025-03-28 02:18:31,897 -   CORRECTNESS_LAG_8: 100
+2025-03-28 02:18:31,898 -   CORRECTNESS_LAG_9: None
+2025-03-28 02:18:31,898 -   CORRECTNESS_LAG_10: None
+2025-03-28 02:18:31,898 -   DURATIONSECONDS_LAG_1: nan
+2025-03-28 02:18:31,899 -   DURATIONSECONDS_LAG_2: nan
+2025-03-28 02:18:31,899 -   DURATIONSECONDS_LAG_3: nan
+2025-03-28 02:18:31,899 -   DURATIONSECONDS_LAG_4: nan
+2025-03-28 02:18:31,900 -   DURATIONSECONDS_LAG_5: nan
+2025-03-28 02:18:31,900 -   DURATIONSECONDS_LAG_6: nan
+2025-03-28 02:18:31,901 -   DURATIONSECONDS_LAG_7: nan
+2025-03-28 02:18:31,901 -   DURATIONSECONDS_LAG_8: nan
+2025-03-28 02:18:31,901 -   DURATIONSECONDS_LAG_9: nan
+2025-03-28 02:18:31,902 -   DURATIONSECONDS_LAG_10: nan
+2025-03-28 02:18:31,902 -   FUTURE_CORRECTNESS_LAG_1: 0
+2025-03-28 02:18:31,903 -   FUTURE_CORRECTNESS_LAG_2: 100
+2025-03-28 02:18:31,903 -   FUTURE_CORRECTNESS_LAG_3: 100
+2025-03-28 02:18:31,904 -   FUTURE_CORRECTNESS_LAG_4: 100
+2025-03-28 02:18:31,904 -   FUTURE_CORRECTNESS_LAG_5: 0
+2025-03-28 02:18:31,904 - Feature-engineered inputs (internal):
+2025-03-28 02:18:31,919 - {'CORRECTNESS_LAG_1': 0.0, 'CORRECTNESS_LAG_2': 1.0, 'CORRECTNESS_LAG_3': 1.0, 'CORRECTNESS_LAG_4': 0.0, 'CORRECTNESS_LAG_5': 1.0, 'CORRECTNESS_LAG_6': 0.0, 'CORRECTNESS_LAG_7': 1.0, 'CORRECTNESS_LAG_8': 1.0, 'CORRECTNESS_LAG_9': nan, 'CORRECTNESS_LAG_10': nan, 'DURATIONSECONDS_LAG_1': nan, 'DURATIONSECONDS_LAG_2': nan, 'DURATIONSECONDS_LAG_3': nan, 'DURATIONSECONDS_LAG_4': nan, 'DURATIONSECONDS_LAG_5': nan, 'DURATIONSECONDS_LAG_6': nan, 'DURATIONSECONDS_LAG_7': nan, 'DURATIONSECONDS_LAG_8': nan, 'DURATIONSECONDS_LAG_9': nan, 'DURATIONSECONDS_LAG_10': nan, 'OCCURREDAT_DIFF_1': 0.0002777777777777778, 'OCCURREDAT_DIFF_2': 0.101, 'OCCURREDAT_DIFF_3': 0.062, 'OCCURREDAT_DIFF_4': 0.0002777777777777778, 'OCCURREDAT_DIFF_5': 0.0002777777777777778, 'OCCURREDAT_DIFF_6': 0.0002777777777777778, 'OCCURREDAT_DIFF_7': 0.053, 'OCCURREDAT_DIFF_8': 0.0002777777777777778, 'OCCURREDAT_DIFF_9': nan, 'OCCURREDAT_DIFF_10': nan, 'LOG_OCCURREDAT_DIFF_1': -8.1886891244442, 'LOG_OCCURREDAT_DIFF_2': -2.2926347621408776, 'LOG_OCCURREDAT_DIFF_3': -2.7806208939370456, 'LOG_OCCURREDAT_DIFF_4': -8.1886891244442, 'LOG_OCCURREDAT_DIFF_5': -8.1886891244442, 'LOG_OCCURREDAT_DIFF_6': -8.1886891244442, 'LOG_OCCURREDAT_DIFF_7': -2.9374633654300153, 'LOG_OCCURREDAT_DIFF_8': -8.1886891244442, 'LOG_OCCURREDAT_DIFF_9': nan, 'LOG_OCCURREDAT_DIFF_10': nan, 'LOG_DURATIONSECONDS_LAG_1': nan, 'LOG_DURATIONSECONDS_LAG_2': nan, 'LOG_DURATIONSECONDS_LAG_3': nan, 'LOG_DURATIONSECONDS_LAG_4': nan, 'LOG_DURATIONSECONDS_LAG_5': nan, 'LOG_DURATIONSECONDS_LAG_6': nan, 'LOG_DURATIONSECONDS_LAG_7': nan, 'LOG_DURATIONSECONDS_LAG_8': nan, 'LOG_DURATIONSECONDS_LAG_9': nan, 'LOG_DURATIONSECONDS_LAG_10': nan, 'discriminability': nan, 'difficulty': nan, 'guessing': nan, 'inattention': nan, 'discriminability_error': nan, 'difficulty_error': nan, 'guessing_error': nan, 'inattention_error': nan, 'auc_roc': nan, 'optimal_threshold': nan, 'tpr': nan, 'tnr': nan, 'skill_optimal_threshold': nan, 'student_mean_accuracy': nan, 'discriminability_LAG_1': nan, 'difficulty_LAG_1': nan, 'guessing_LAG_1': nan, 'inattention_LAG_1': nan, 'discriminability_error_LAG_1': nan, 'difficulty_error_LAG_1': nan, 'guessing_error_LAG_1': nan, 'inattention_error_LAG_1': nan, 'auc_roc_LAG_1': nan, 'optimal_threshold_LAG_1': nan, 'tpr_LAG_1': nan, 'tnr_LAG_1': nan, 'student_mean_accuracy_LAG_1': nan, 'discriminability_LAG_2': nan, 'difficulty_LAG_2': nan, 'guessing_LAG_2': nan, 'inattention_LAG_2': nan, 'discriminability_error_LAG_2': nan, 'difficulty_error_LAG_2': nan, 'guessing_error_LAG_2': nan, 'inattention_error_LAG_2': nan, 'auc_roc_LAG_2': nan, 'optimal_threshold_LAG_2': nan, 'tpr_LAG_2': nan, 'tnr_LAG_2': nan, 'student_mean_accuracy_LAG_2': nan, 'discriminability_LAG_3': nan, 'difficulty_LAG_3': nan, 'guessing_LAG_3': nan, 'inattention_LAG_3': nan, 'discriminability_error_LAG_3': nan, 'difficulty_error_LAG_3': nan, 'guessing_error_LAG_3': nan, 'inattention_error_LAG_3': nan, 'auc_roc_LAG_3': nan, 'optimal_threshold_LAG_3': nan, 'tpr_LAG_3': nan, 'tnr_LAG_3': nan, 'student_mean_accuracy_LAG_3': nan, 'discriminability_LAG_4': nan, 'difficulty_LAG_4': nan, 'guessing_LAG_4': nan, 'inattention_LAG_4': nan, 'discriminability_error_LAG_4': nan, 'difficulty_error_LAG_4': nan, 'guessing_error_LAG_4': nan, 'inattention_error_LAG_4': nan, 'auc_roc_LAG_4': nan, 'optimal_threshold_LAG_4': nan, 'tpr_LAG_4': nan, 'tnr_LAG_4': nan, 'student_mean_accuracy_LAG_4': nan, 'discriminability_LAG_5': nan, 'difficulty_LAG_5': nan, 'guessing_LAG_5': nan, 'inattention_LAG_5': nan, 'discriminability_error_LAG_5': nan, 'difficulty_error_LAG_5': nan, 'guessing_error_LAG_5': nan, 'inattention_error_LAG_5': nan, 'auc_roc_LAG_5': nan, 'optimal_threshold_LAG_5': nan, 'tpr_LAG_5': nan, 'tnr_LAG_5': nan, 'student_mean_accuracy_LAG_5': nan, 'discriminability_LAG_6': nan, 'difficulty_LAG_6': nan, 'guessing_LAG_6': nan, 'inattention_LAG_6': nan, 'discriminability_error_LAG_6': nan, 'difficulty_error_LAG_6': nan, 'guessing_error_LAG_6': nan, 'inattention_error_LAG_6': nan, 'auc_roc_LAG_6': nan, 'optimal_threshold_LAG_6': nan, 'tpr_LAG_6': nan, 'tnr_LAG_6': nan, 'student_mean_accuracy_LAG_6': nan, 'discriminability_LAG_7': nan, 'difficulty_LAG_7': nan, 'guessing_LAG_7': nan, 'inattention_LAG_7': nan, 'discriminability_error_LAG_7': nan, 'difficulty_error_LAG_7': nan, 'guessing_error_LAG_7': nan, 'inattention_error_LAG_7': nan, 'auc_roc_LAG_7': nan, 'optimal_threshold_LAG_7': nan, 'tpr_LAG_7': nan, 'tnr_LAG_7': nan, 'student_mean_accuracy_LAG_7': nan, 'discriminability_LAG_8': nan, 'difficulty_LAG_8': nan, 'guessing_LAG_8': nan, 'inattention_LAG_8': nan, 'discriminability_error_LAG_8': nan, 'difficulty_error_LAG_8': nan, 'guessing_error_LAG_8': nan, 'inattention_error_LAG_8': nan, 'auc_roc_LAG_8': nan, 'optimal_threshold_LAG_8': nan, 'tpr_LAG_8': nan, 'tnr_LAG_8': nan, 'student_mean_accuracy_LAG_8': nan, 'discriminability_LAG_9': nan, 'difficulty_LAG_9': nan, 'guessing_LAG_9': nan, 'inattention_LAG_9': nan, 'discriminability_error_LAG_9': nan, 'difficulty_error_LAG_9': nan, 'guessing_error_LAG_9': nan, 'inattention_error_LAG_9': nan, 'auc_roc_LAG_9': nan, 'optimal_threshold_LAG_9': nan, 'tpr_LAG_9': nan, 'tnr_LAG_9': nan, 'student_mean_accuracy_LAG_9': nan, 'discriminability_LAG_10': nan, 'difficulty_LAG_10': nan, 'guessing_LAG_10': nan, 'inattention_LAG_10': nan, 'discriminability_error_LAG_10': nan, 'difficulty_error_LAG_10': nan, 'guessing_error_LAG_10': nan, 'inattention_error_LAG_10': nan, 'auc_roc_LAG_10': nan, 'optimal_threshold_LAG_10': nan, 'tpr_LAG_10': nan, 'tnr_LAG_10': nan, 'student_mean_accuracy_LAG_10': nan, 'LOG_sample_size': nan, 'LOG_sample_size_LAG_1': nan, 'LOG_sample_size_LAG_2': nan, 'LOG_sample_size_LAG_3': nan, 'LOG_sample_size_LAG_4': nan, 'LOG_sample_size_LAG_5': nan, 'LOG_sample_size_LAG_6': nan, 'LOG_sample_size_LAG_7': nan, 'LOG_sample_size_LAG_8': nan, 'LOG_sample_size_LAG_9': nan, 'LOG_sample_size_LAG_10': nan, 'difficulty_spread': nan, 'optimal_threshold_spread': nan, 'student_mean_accuracy_spread': nan, 'tnr_spread': nan, 'tpr_spread': nan, 'mean_auc_roc': nan, 'mean_discriminability': nan, 'mean_discriminability_error': nan, 'mean_difficulty_error': nan, 'mean_guessing_error': nan, 'mean_inattention_error': nan, 'num_responses': 8.0}
+2025-03-28 02:18:31,920 - JSON formatted submission input (for live testing, with duplicated current inputs):
+2025-03-28 02:18:31,920 - {
+  "skillId": "02a3bfaa479de311b77c005056801da1",
+  "questionId": "ef0a4b852298",
+  "eventTime": "2024-05-29 17:37:38.062000+00:00",
+  "questionIdsHistory": [
+    "ef0a4b852298",
+    "e66fc4efb07c",
+    "ee46e32f5ed4",
+    "488aaa1f813f",
+    "2eefdc0d71b9",
+    "d5853b832a28",
+    "a9a9c7fffbb8",
+    "9352da6f3216",
+    "9ea00e48edfc"
+  ],
+  "correctnessHistory": [
+    100,
+    0,
+    100,
+    100,
+    0,
+    100,
+    0,
+    100,
+    100
+  ],
+  "durationSecondsHistory": [],
+  "eventTimesHistory": [
+    "2024-05-29T17:37:38.000Z",
+    "2024-05-29T17:37:38.000Z",
+    "2024-05-29T17:31:33.000Z",
+    "2024-05-29T17:27:50.000Z",
+    "2024-05-29T17:27:50.000Z",
+    "2024-05-29T17:27:50.000Z",
+    "2024-05-29T17:27:50.000Z",
+    "2024-05-29T17:24:41.000Z",
+    "2024-05-29T17:24:41.000Z"
+  ]
+}
+2025-03-28 02:18:31,921 - True value: 1.0
+2025-03-28 02:18:31,923 - Confidence true value: 0.750 (average of 4 values: CORRECTNESS: 1.000, FUTURE_CORRECTNESS_LAG_1: 0.000, FUTURE_CORRECTNESS_LAG_2: 1.000, FUTURE_CORRECTNESS_LAG_3: 1.000)
+2025-03-28 02:18:31,924 - Item Proficiency model prediction: 0.6964524388313293
+2025-03-28 02:18:31,924 - Item Confidence model prediction: 1.0
+2025-03-28 02:18:31,925 - Item Confidence Score Transformer (percentile ranker) prediction: 0.0006292830578122345
+2025-03-28 02:18:31,925 - Item AGNOSTIC Proficiency model prediction: 0.6964524388313293
+2025-03-28 02:18:31,925 - Item AGNOSTIC Confidence model prediction: 1.0
+2025-03-28 02:18:31,926 - Item AGNOSTIC Confidence Score Transformer (percentile ranker) prediction: 0.0006292830578122345
+2025-03-28 02:18:31,926 - Skill Proficiency model prediction: nan
+2025-03-28 02:18:31,927 - Skill Confidence model prediction: nan
+2025-03-28 02:18:31,927 - Skill Confidence Score Transformer (percentile ranker) prediction: nan
+2025-03-28 02:18:31,927 - 
+Student #2:
+2025-03-28 02:18:31,928 - Raw input (Snowflake SQL):
+2025-03-28 02:18:31,929 -   STUDENTID: 42789852
+2025-03-28 02:18:31,929 -   SKILL: 05a4bfaa479de311b77c005056801da1
+2025-03-28 02:18:31,929 -   QUESTIONID: 65fb256202f8
+2025-03-28 02:18:31,930 -   OCCURREDAT: 2024-05-06 16:08:21.843000+00:00
+2025-03-28 02:18:31,930 -   CORRECTNESS: 100
+2025-03-28 02:18:31,930 -   DURATIONSECONDS: nan
+2025-03-28 02:18:31,931 -   ANSWERPOSITIONINSESSION: nan
+2025-03-28 02:18:31,932 -   EVENT_RANK: 5
+2025-03-28 02:18:31,932 -   QUESTIONID_LAG_1: 9b4cb03c0ea5
+2025-03-28 02:18:31,932 -   QUESTIONID_LAG_2: f6d8261dfbb9
+2025-03-28 02:18:31,933 -   QUESTIONID_LAG_3: c689a061664d
+2025-03-28 02:18:31,933 -   QUESTIONID_LAG_4: 99008cc52adb
+2025-03-28 02:18:31,933 -   QUESTIONID_LAG_5: None
+2025-03-28 02:18:31,934 -   QUESTIONID_LAG_6: None
+2025-03-28 02:18:31,934 -   QUESTIONID_LAG_7: None
+2025-03-28 02:18:31,935 -   QUESTIONID_LAG_8: None
+2025-03-28 02:18:31,935 -   QUESTIONID_LAG_9: None
+2025-03-28 02:18:31,936 -   QUESTIONID_LAG_10: None
+2025-03-28 02:18:31,936 -   OCCURREDAT_LAG_1: 2024-05-06 16:07:45.901000+00:00
+2025-03-28 02:18:31,936 -   OCCURREDAT_LAG_2: 2024-05-06 16:07:19.123000+00:00
+2025-03-28 02:18:31,937 -   OCCURREDAT_LAG_3: 2024-05-06 16:07:04.992000+00:00
+2025-03-28 02:18:31,937 -   OCCURREDAT_LAG_4: 2024-05-06 16:06:41.348000+00:00
+2025-03-28 02:18:31,938 -   OCCURREDAT_LAG_5: NaT
+2025-03-28 02:18:31,938 -   OCCURREDAT_LAG_6: NaT
+2025-03-28 02:18:31,938 -   OCCURREDAT_LAG_7: NaT
+2025-03-28 02:18:31,939 -   OCCURREDAT_LAG_8: NaT
+2025-03-28 02:18:31,939 -   OCCURREDAT_LAG_9: NaT
+2025-03-28 02:18:31,939 -   OCCURREDAT_LAG_10: NaT
+2025-03-28 02:18:31,940 -   CORRECTNESS_LAG_1: 100
+2025-03-28 02:18:31,940 -   CORRECTNESS_LAG_2: 100
+2025-03-28 02:18:31,941 -   CORRECTNESS_LAG_3: 100
+2025-03-28 02:18:31,941 -   CORRECTNESS_LAG_4: 100
+2025-03-28 02:18:31,942 -   CORRECTNESS_LAG_5: None
+2025-03-28 02:18:31,942 -   CORRECTNESS_LAG_6: None
+2025-03-28 02:18:31,942 -   CORRECTNESS_LAG_7: None
+2025-03-28 02:18:31,942 -   CORRECTNESS_LAG_8: None
+2025-03-28 02:18:31,943 -   CORRECTNESS_LAG_9: None
+2025-03-28 02:18:31,943 -   CORRECTNESS_LAG_10: None
+2025-03-28 02:18:31,943 -   DURATIONSECONDS_LAG_1: nan
+2025-03-28 02:18:31,944 -   DURATIONSECONDS_LAG_2: nan
+2025-03-28 02:18:31,946 -   DURATIONSECONDS_LAG_3: nan
+2025-03-28 02:18:31,946 -   DURATIONSECONDS_LAG_4: nan
+2025-03-28 02:18:31,947 -   DURATIONSECONDS_LAG_5: nan
+2025-03-28 02:18:31,947 -   DURATIONSECONDS_LAG_6: nan
+2025-03-28 02:18:31,948 -   DURATIONSECONDS_LAG_7: nan
+2025-03-28 02:18:31,948 -   DURATIONSECONDS_LAG_8: nan
+2025-03-28 02:18:31,948 -   DURATIONSECONDS_LAG_9: nan
+2025-03-28 02:18:31,949 -   DURATIONSECONDS_LAG_10: nan
+2025-03-28 02:18:31,949 -   FUTURE_CORRECTNESS_LAG_1: 100
+2025-03-28 02:18:31,950 -   FUTURE_CORRECTNESS_LAG_2: 100
+2025-03-28 02:18:31,950 -   FUTURE_CORRECTNESS_LAG_3: None
+2025-03-28 02:18:31,950 -   FUTURE_CORRECTNESS_LAG_4: None
+2025-03-28 02:18:31,951 -   FUTURE_CORRECTNESS_LAG_5: None
+2025-03-28 02:18:31,951 - Feature-engineered inputs (internal):
+2025-03-28 02:18:31,966 - {'CORRECTNESS_LAG_1': 1.0, 'CORRECTNESS_LAG_2': 1.0, 'CORRECTNESS_LAG_3': 1.0, 'CORRECTNESS_LAG_4': 1.0, 'CORRECTNESS_LAG_5': nan, 'CORRECTNESS_LAG_6': nan, 'CORRECTNESS_LAG_7': nan, 'CORRECTNESS_LAG_8': nan, 'CORRECTNESS_LAG_9': nan, 'CORRECTNESS_LAG_10': nan, 'DURATIONSECONDS_LAG_1': nan, 'DURATIONSECONDS_LAG_2': nan, 'DURATIONSECONDS_LAG_3': nan, 'DURATIONSECONDS_LAG_4': nan, 'DURATIONSECONDS_LAG_5': nan, 'DURATIONSECONDS_LAG_6': nan, 'DURATIONSECONDS_LAG_7': nan, 'DURATIONSECONDS_LAG_8': nan, 'DURATIONSECONDS_LAG_9': nan, 'DURATIONSECONDS_LAG_10': nan, 'OCCURREDAT_DIFF_1': 0.01, 'OCCURREDAT_DIFF_2': 0.007, 'OCCURREDAT_DIFF_3': 0.004, 'OCCURREDAT_DIFF_4': 0.007, 'OCCURREDAT_DIFF_5': nan, 'OCCURREDAT_DIFF_6': nan, 'OCCURREDAT_DIFF_7': nan, 'OCCURREDAT_DIFF_8': nan, 'OCCURREDAT_DIFF_9': nan, 'OCCURREDAT_DIFF_10': nan, 'LOG_OCCURREDAT_DIFF_1': -4.605170185988091, 'LOG_OCCURREDAT_DIFF_2': -4.961845129926823, 'LOG_OCCURREDAT_DIFF_3': -5.521460917862246, 'LOG_OCCURREDAT_DIFF_4': -4.961845129926823, 'LOG_OCCURREDAT_DIFF_5': nan, 'LOG_OCCURREDAT_DIFF_6': nan, 'LOG_OCCURREDAT_DIFF_7': nan, 'LOG_OCCURREDAT_DIFF_8': nan, 'LOG_OCCURREDAT_DIFF_9': nan, 'LOG_OCCURREDAT_DIFF_10': nan, 'LOG_DURATIONSECONDS_LAG_1': nan, 'LOG_DURATIONSECONDS_LAG_2': nan, 'LOG_DURATIONSECONDS_LAG_3': nan, 'LOG_DURATIONSECONDS_LAG_4': nan, 'LOG_DURATIONSECONDS_LAG_5': nan, 'LOG_DURATIONSECONDS_LAG_6': nan, 'LOG_DURATIONSECONDS_LAG_7': nan, 'LOG_DURATIONSECONDS_LAG_8': nan, 'LOG_DURATIONSECONDS_LAG_9': nan, 'LOG_DURATIONSECONDS_LAG_10': nan, 'discriminability': nan, 'difficulty': nan, 'guessing': nan, 'inattention': nan, 'discriminability_error': nan, 'difficulty_error': nan, 'guessing_error': nan, 'inattention_error': nan, 'auc_roc': nan, 'optimal_threshold': nan, 'tpr': nan, 'tnr': nan, 'skill_optimal_threshold': nan, 'student_mean_accuracy': nan, 'discriminability_LAG_1': nan, 'difficulty_LAG_1': nan, 'guessing_LAG_1': nan, 'inattention_LAG_1': nan, 'discriminability_error_LAG_1': nan, 'difficulty_error_LAG_1': nan, 'guessing_error_LAG_1': nan, 'inattention_error_LAG_1': nan, 'auc_roc_LAG_1': nan, 'optimal_threshold_LAG_1': nan, 'tpr_LAG_1': nan, 'tnr_LAG_1': nan, 'student_mean_accuracy_LAG_1': nan, 'discriminability_LAG_2': nan, 'difficulty_LAG_2': nan, 'guessing_LAG_2': nan, 'inattention_LAG_2': nan, 'discriminability_error_LAG_2': nan, 'difficulty_error_LAG_2': nan, 'guessing_error_LAG_2': nan, 'inattention_error_LAG_2': nan, 'auc_roc_LAG_2': nan, 'optimal_threshold_LAG_2': nan, 'tpr_LAG_2': nan, 'tnr_LAG_2': nan, 'student_mean_accuracy_LAG_2': nan, 'discriminability_LAG_3': nan, 'difficulty_LAG_3': nan, 'guessing_LAG_3': nan, 'inattention_LAG_3': nan, 'discriminability_error_LAG_3': nan, 'difficulty_error_LAG_3': nan, 'guessing_error_LAG_3': nan, 'inattention_error_LAG_3': nan, 'auc_roc_LAG_3': nan, 'optimal_threshold_LAG_3': nan, 'tpr_LAG_3': nan, 'tnr_LAG_3': nan, 'student_mean_accuracy_LAG_3': nan, 'discriminability_LAG_4': nan, 'difficulty_LAG_4': nan, 'guessing_LAG_4': nan, 'inattention_LAG_4': nan, 'discriminability_error_LAG_4': nan, 'difficulty_error_LAG_4': nan, 'guessing_error_LAG_4': nan, 'inattention_error_LAG_4': nan, 'auc_roc_LAG_4': nan, 'optimal_threshold_LAG_4': nan, 'tpr_LAG_4': nan, 'tnr_LAG_4': nan, 'student_mean_accuracy_LAG_4': nan, 'discriminability_LAG_5': nan, 'difficulty_LAG_5': nan, 'guessing_LAG_5': nan, 'inattention_LAG_5': nan, 'discriminability_error_LAG_5': nan, 'difficulty_error_LAG_5': nan, 'guessing_error_LAG_5': nan, 'inattention_error_LAG_5': nan, 'auc_roc_LAG_5': nan, 'optimal_threshold_LAG_5': nan, 'tpr_LAG_5': nan, 'tnr_LAG_5': nan, 'student_mean_accuracy_LAG_5': nan, 'discriminability_LAG_6': nan, 'difficulty_LAG_6': nan, 'guessing_LAG_6': nan, 'inattention_LAG_6': nan, 'discriminability_error_LAG_6': nan, 'difficulty_error_LAG_6': nan, 'guessing_error_LAG_6': nan, 'inattention_error_LAG_6': nan, 'auc_roc_LAG_6': nan, 'optimal_threshold_LAG_6': nan, 'tpr_LAG_6': nan, 'tnr_LAG_6': nan, 'student_mean_accuracy_LAG_6': nan, 'discriminability_LAG_7': nan, 'difficulty_LAG_7': nan, 'guessing_LAG_7': nan, 'inattention_LAG_7': nan, 'discriminability_error_LAG_7': nan, 'difficulty_error_LAG_7': nan, 'guessing_error_LAG_7': nan, 'inattention_error_LAG_7': nan, 'auc_roc_LAG_7': nan, 'optimal_threshold_LAG_7': nan, 'tpr_LAG_7': nan, 'tnr_LAG_7': nan, 'student_mean_accuracy_LAG_7': nan, 'discriminability_LAG_8': nan, 'difficulty_LAG_8': nan, 'guessing_LAG_8': nan, 'inattention_LAG_8': nan, 'discriminability_error_LAG_8': nan, 'difficulty_error_LAG_8': nan, 'guessing_error_LAG_8': nan, 'inattention_error_LAG_8': nan, 'auc_roc_LAG_8': nan, 'optimal_threshold_LAG_8': nan, 'tpr_LAG_8': nan, 'tnr_LAG_8': nan, 'student_mean_accuracy_LAG_8': nan, 'discriminability_LAG_9': nan, 'difficulty_LAG_9': nan, 'guessing_LAG_9': nan, 'inattention_LAG_9': nan, 'discriminability_error_LAG_9': nan, 'difficulty_error_LAG_9': nan, 'guessing_error_LAG_9': nan, 'inattention_error_LAG_9': nan, 'auc_roc_LAG_9': nan, 'optimal_threshold_LAG_9': nan, 'tpr_LAG_9': nan, 'tnr_LAG_9': nan, 'student_mean_accuracy_LAG_9': nan, 'discriminability_LAG_10': nan, 'difficulty_LAG_10': nan, 'guessing_LAG_10': nan, 'inattention_LAG_10': nan, 'discriminability_error_LAG_10': nan, 'difficulty_error_LAG_10': nan, 'guessing_error_LAG_10': nan, 'inattention_error_LAG_10': nan, 'auc_roc_LAG_10': nan, 'optimal_threshold_LAG_10': nan, 'tpr_LAG_10': nan, 'tnr_LAG_10': nan, 'student_mean_accuracy_LAG_10': nan, 'LOG_sample_size': nan, 'LOG_sample_size_LAG_1': nan, 'LOG_sample_size_LAG_2': nan, 'LOG_sample_size_LAG_3': nan, 'LOG_sample_size_LAG_4': nan, 'LOG_sample_size_LAG_5': nan, 'LOG_sample_size_LAG_6': nan, 'LOG_sample_size_LAG_7': nan, 'LOG_sample_size_LAG_8': nan, 'LOG_sample_size_LAG_9': nan, 'LOG_sample_size_LAG_10': nan, 'difficulty_spread': nan, 'optimal_threshold_spread': nan, 'student_mean_accuracy_spread': nan, 'tnr_spread': nan, 'tpr_spread': nan, 'mean_auc_roc': nan, 'mean_discriminability': nan, 'mean_discriminability_error': nan, 'mean_difficulty_error': nan, 'mean_guessing_error': nan, 'mean_inattention_error': nan, 'num_responses': 4.0}
+2025-03-28 02:18:31,967 - JSON formatted submission input (for live testing, with duplicated current inputs):
+2025-03-28 02:18:31,967 - {
+  "skillId": "05a4bfaa479de311b77c005056801da1",
+  "questionId": "65fb256202f8",
+  "eventTime": "2024-05-06 16:08:21.843000+00:00",
+  "questionIdsHistory": [
+    "65fb256202f8",
+    "9b4cb03c0ea5",
+    "f6d8261dfbb9",
+    "c689a061664d",
+    "99008cc52adb"
+  ],
+  "correctnessHistory": [
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "durationSecondsHistory": [],
+  "eventTimesHistory": [
+    "2024-05-06T16:08:21.000Z",
+    "2024-05-06T16:07:45.000Z",
+    "2024-05-06T16:07:19.000Z",
+    "2024-05-06T16:07:04.000Z",
+    "2024-05-06T16:06:41.000Z"
+  ]
+}
+2025-03-28 02:18:31,967 - True value: 1.0
+2025-03-28 02:18:31,970 - Confidence true value: 1.000 (average of 4 values: CORRECTNESS: 1.000, FUTURE_CORRECTNESS_LAG_1: 1.000, FUTURE_CORRECTNESS_LAG_2: 1.000, FUTURE_CORRECTNESS_LAG_3: nan)
+2025-03-28 02:18:31,970 - Item Proficiency model prediction: 0.8364159464836121
+2025-03-28 02:18:31,971 - Item Confidence model prediction: 1.0
+2025-03-28 02:18:31,971 - Item Confidence Score Transformer (percentile ranker) prediction: 0.0006292830578122345
+2025-03-28 02:18:31,972 - Item AGNOSTIC Proficiency model prediction: 0.8364159464836121
+2025-03-28 02:18:31,972 - Item AGNOSTIC Confidence model prediction: 1.0
+2025-03-28 02:18:31,972 - Item AGNOSTIC Confidence Score Transformer (percentile ranker) prediction: 0.0006292830578122345
+2025-03-28 02:18:31,973 - Skill Proficiency model prediction: nan
+2025-03-28 02:18:31,973 - Skill Confidence model prediction: nan
+2025-03-28 02:18:31,974 - Skill Confidence Score Transformer (percentile ranker) prediction: nan
+2025-03-28 02:18:31,974 - 
+Student #3:
+2025-03-28 02:18:31,975 - Raw input (Snowflake SQL):
+2025-03-28 02:18:31,975 -   STUDENTID: 45737783
+2025-03-28 02:18:31,976 -   SKILL: 99a4bfaa479de311b77c005056801da1
+2025-03-28 02:18:31,976 -   QUESTIONID: 67b97765038e
+2025-03-28 02:18:31,977 -   OCCURREDAT: 2024-09-26 15:42:47.801000+00:00
+2025-03-28 02:18:31,977 -   CORRECTNESS: 100
+2025-03-28 02:18:31,978 -   DURATIONSECONDS: 15.0
+2025-03-28 02:18:31,978 -   ANSWERPOSITIONINSESSION: 4.0
+2025-03-28 02:18:31,978 -   EVENT_RANK: 5
+2025-03-28 02:18:31,979 -   QUESTIONID_LAG_1: 5db397c90f09
+2025-03-28 02:18:31,979 -   QUESTIONID_LAG_2: 5258578d2fd1
+2025-03-28 02:18:31,979 -   QUESTIONID_LAG_3: e6d4021b10d7
+2025-03-28 02:18:31,980 -   QUESTIONID_LAG_4: 1ffd727b8d04
+2025-03-28 02:18:31,980 -   QUESTIONID_LAG_5: None
+2025-03-28 02:18:31,981 -   QUESTIONID_LAG_6: None
+2025-03-28 02:18:31,981 -   QUESTIONID_LAG_7: None
+2025-03-28 02:18:31,982 -   QUESTIONID_LAG_8: None
+2025-03-28 02:18:31,982 -   QUESTIONID_LAG_9: None
+2025-03-28 02:18:31,982 -   QUESTIONID_LAG_10: None
+2025-03-28 02:18:31,983 -   OCCURREDAT_LAG_1: 2024-09-26 15:42:47.801000+00:00
+2025-03-28 02:18:31,983 -   OCCURREDAT_LAG_2: 2024-09-26 15:42:47.801000+00:00
+2025-03-28 02:18:31,983 -   OCCURREDAT_LAG_3: 2024-09-26 15:42:47.801000+00:00
+2025-03-28 02:18:31,984 -   OCCURREDAT_LAG_4: 2024-09-26 15:42:47.801000+00:00
+2025-03-28 02:18:31,984 -   OCCURREDAT_LAG_5: NaT
+2025-03-28 02:18:31,985 -   OCCURREDAT_LAG_6: NaT
+2025-03-28 02:18:31,985 -   OCCURREDAT_LAG_7: NaT
+2025-03-28 02:18:31,986 -   OCCURREDAT_LAG_8: NaT
+2025-03-28 02:18:31,986 -   OCCURREDAT_LAG_9: NaT
+2025-03-28 02:18:31,986 -   OCCURREDAT_LAG_10: NaT
+2025-03-28 02:18:31,987 -   CORRECTNESS_LAG_1: 100
+2025-03-28 02:18:31,987 -   CORRECTNESS_LAG_2: 100
+2025-03-28 02:18:31,988 -   CORRECTNESS_LAG_3: 0
+2025-03-28 02:18:31,988 -   CORRECTNESS_LAG_4: 100
+2025-03-28 02:18:31,988 -   CORRECTNESS_LAG_5: None
+2025-03-28 02:18:31,989 -   CORRECTNESS_LAG_6: None
+2025-03-28 02:18:31,989 -   CORRECTNESS_LAG_7: None
+2025-03-28 02:18:31,989 -   CORRECTNESS_LAG_8: None
+2025-03-28 02:18:31,990 -   CORRECTNESS_LAG_9: None
+2025-03-28 02:18:31,990 -   CORRECTNESS_LAG_10: None
+2025-03-28 02:18:31,991 -   DURATIONSECONDS_LAG_1: 8.0
+2025-03-28 02:18:31,991 -   DURATIONSECONDS_LAG_2: 7.0
+2025-03-28 02:18:31,992 -   DURATIONSECONDS_LAG_3: 18.0
+2025-03-28 02:18:31,992 -   DURATIONSECONDS_LAG_4: 12.0
+2025-03-28 02:18:31,992 -   DURATIONSECONDS_LAG_5: nan
+2025-03-28 02:18:31,993 -   DURATIONSECONDS_LAG_6: nan
+2025-03-28 02:18:31,993 -   DURATIONSECONDS_LAG_7: nan
+2025-03-28 02:18:31,994 -   DURATIONSECONDS_LAG_8: nan
+2025-03-28 02:18:31,994 -   DURATIONSECONDS_LAG_9: nan
+2025-03-28 02:18:31,994 -   DURATIONSECONDS_LAG_10: nan
+2025-03-28 02:18:31,994 -   FUTURE_CORRECTNESS_LAG_1: 0
+2025-03-28 02:18:31,995 -   FUTURE_CORRECTNESS_LAG_2: 0
+2025-03-28 02:18:31,995 -   FUTURE_CORRECTNESS_LAG_3: 100
+2025-03-28 02:18:31,996 -   FUTURE_CORRECTNESS_LAG_4: 100
+2025-03-28 02:18:31,996 -   FUTURE_CORRECTNESS_LAG_5: 100
+2025-03-28 02:18:31,997 - Feature-engineered inputs (internal):
+2025-03-28 02:18:32,011 - {'CORRECTNESS_LAG_1': 1.0, 'CORRECTNESS_LAG_2': 1.0, 'CORRECTNESS_LAG_3': 0.0, 'CORRECTNESS_LAG_4': 1.0, 'CORRECTNESS_LAG_5': nan, 'CORRECTNESS_LAG_6': nan, 'CORRECTNESS_LAG_7': nan, 'CORRECTNESS_LAG_8': nan, 'CORRECTNESS_LAG_9': nan, 'CORRECTNESS_LAG_10': nan, 'DURATIONSECONDS_LAG_1': 8.0, 'DURATIONSECONDS_LAG_2': 7.0, 'DURATIONSECONDS_LAG_3': 18.0, 'DURATIONSECONDS_LAG_4': 12.0, 'DURATIONSECONDS_LAG_5': nan, 'DURATIONSECONDS_LAG_6': nan, 'DURATIONSECONDS_LAG_7': nan, 'DURATIONSECONDS_LAG_8': nan, 'DURATIONSECONDS_LAG_9': nan, 'DURATIONSECONDS_LAG_10': nan, 'OCCURREDAT_DIFF_1': 0.0002777777777777778, 'OCCURREDAT_DIFF_2': 0.0002777777777777778, 'OCCURREDAT_DIFF_3': 0.0002777777777777778, 'OCCURREDAT_DIFF_4': 0.0002777777777777778, 'OCCURREDAT_DIFF_5': nan, 'OCCURREDAT_DIFF_6': nan, 'OCCURREDAT_DIFF_7': nan, 'OCCURREDAT_DIFF_8': nan, 'OCCURREDAT_DIFF_9': nan, 'OCCURREDAT_DIFF_10': nan, 'LOG_OCCURREDAT_DIFF_1': -8.1886891244442, 'LOG_OCCURREDAT_DIFF_2': -8.1886891244442, 'LOG_OCCURREDAT_DIFF_3': -8.1886891244442, 'LOG_OCCURREDAT_DIFF_4': -8.1886891244442, 'LOG_OCCURREDAT_DIFF_5': nan, 'LOG_OCCURREDAT_DIFF_6': nan, 'LOG_OCCURREDAT_DIFF_7': nan, 'LOG_OCCURREDAT_DIFF_8': nan, 'LOG_OCCURREDAT_DIFF_9': nan, 'LOG_OCCURREDAT_DIFF_10': nan, 'LOG_DURATIONSECONDS_LAG_1': 2.0794415416798357, 'LOG_DURATIONSECONDS_LAG_2': 1.9459101490553132, 'LOG_DURATIONSECONDS_LAG_3': 2.8903717578961645, 'LOG_DURATIONSECONDS_LAG_4': 2.4849066497880004, 'LOG_DURATIONSECONDS_LAG_5': nan, 'LOG_DURATIONSECONDS_LAG_6': nan, 'LOG_DURATIONSECONDS_LAG_7': nan, 'LOG_DURATIONSECONDS_LAG_8': nan, 'LOG_DURATIONSECONDS_LAG_9': nan, 'LOG_DURATIONSECONDS_LAG_10': nan, 'discriminability': nan, 'difficulty': nan, 'guessing': nan, 'inattention': nan, 'discriminability_error': nan, 'difficulty_error': nan, 'guessing_error': nan, 'inattention_error': nan, 'auc_roc': nan, 'optimal_threshold': nan, 'tpr': nan, 'tnr': nan, 'skill_optimal_threshold': nan, 'student_mean_accuracy': nan, 'discriminability_LAG_1': nan, 'difficulty_LAG_1': nan, 'guessing_LAG_1': nan, 'inattention_LAG_1': nan, 'discriminability_error_LAG_1': nan, 'difficulty_error_LAG_1': nan, 'guessing_error_LAG_1': nan, 'inattention_error_LAG_1': nan, 'auc_roc_LAG_1': nan, 'optimal_threshold_LAG_1': nan, 'tpr_LAG_1': nan, 'tnr_LAG_1': nan, 'student_mean_accuracy_LAG_1': nan, 'discriminability_LAG_2': nan, 'difficulty_LAG_2': nan, 'guessing_LAG_2': nan, 'inattention_LAG_2': nan, 'discriminability_error_LAG_2': nan, 'difficulty_error_LAG_2': nan, 'guessing_error_LAG_2': nan, 'inattention_error_LAG_2': nan, 'auc_roc_LAG_2': nan, 'optimal_threshold_LAG_2': nan, 'tpr_LAG_2': nan, 'tnr_LAG_2': nan, 'student_mean_accuracy_LAG_2': nan, 'discriminability_LAG_3': nan, 'difficulty_LAG_3': nan, 'guessing_LAG_3': nan, 'inattention_LAG_3': nan, 'discriminability_error_LAG_3': nan, 'difficulty_error_LAG_3': nan, 'guessing_error_LAG_3': nan, 'inattention_error_LAG_3': nan, 'auc_roc_LAG_3': nan, 'optimal_threshold_LAG_3': nan, 'tpr_LAG_3': nan, 'tnr_LAG_3': nan, 'student_mean_accuracy_LAG_3': nan, 'discriminability_LAG_4': nan, 'difficulty_LAG_4': nan, 'guessing_LAG_4': nan, 'inattention_LAG_4': nan, 'discriminability_error_LAG_4': nan, 'difficulty_error_LAG_4': nan, 'guessing_error_LAG_4': nan, 'inattention_error_LAG_4': nan, 'auc_roc_LAG_4': nan, 'optimal_threshold_LAG_4': nan, 'tpr_LAG_4': nan, 'tnr_LAG_4': nan, 'student_mean_accuracy_LAG_4': nan, 'discriminability_LAG_5': nan, 'difficulty_LAG_5': nan, 'guessing_LAG_5': nan, 'inattention_LAG_5': nan, 'discriminability_error_LAG_5': nan, 'difficulty_error_LAG_5': nan, 'guessing_error_LAG_5': nan, 'inattention_error_LAG_5': nan, 'auc_roc_LAG_5': nan, 'optimal_threshold_LAG_5': nan, 'tpr_LAG_5': nan, 'tnr_LAG_5': nan, 'student_mean_accuracy_LAG_5': nan, 'discriminability_LAG_6': nan, 'difficulty_LAG_6': nan, 'guessing_LAG_6': nan, 'inattention_LAG_6': nan, 'discriminability_error_LAG_6': nan, 'difficulty_error_LAG_6': nan, 'guessing_error_LAG_6': nan, 'inattention_error_LAG_6': nan, 'auc_roc_LAG_6': nan, 'optimal_threshold_LAG_6': nan, 'tpr_LAG_6': nan, 'tnr_LAG_6': nan, 'student_mean_accuracy_LAG_6': nan, 'discriminability_LAG_7': nan, 'difficulty_LAG_7': nan, 'guessing_LAG_7': nan, 'inattention_LAG_7': nan, 'discriminability_error_LAG_7': nan, 'difficulty_error_LAG_7': nan, 'guessing_error_LAG_7': nan, 'inattention_error_LAG_7': nan, 'auc_roc_LAG_7': nan, 'optimal_threshold_LAG_7': nan, 'tpr_LAG_7': nan, 'tnr_LAG_7': nan, 'student_mean_accuracy_LAG_7': nan, 'discriminability_LAG_8': nan, 'difficulty_LAG_8': nan, 'guessing_LAG_8': nan, 'inattention_LAG_8': nan, 'discriminability_error_LAG_8': nan, 'difficulty_error_LAG_8': nan, 'guessing_error_LAG_8': nan, 'inattention_error_LAG_8': nan, 'auc_roc_LAG_8': nan, 'optimal_threshold_LAG_8': nan, 'tpr_LAG_8': nan, 'tnr_LAG_8': nan, 'student_mean_accuracy_LAG_8': nan, 'discriminability_LAG_9': nan, 'difficulty_LAG_9': nan, 'guessing_LAG_9': nan, 'inattention_LAG_9': nan, 'discriminability_error_LAG_9': nan, 'difficulty_error_LAG_9': nan, 'guessing_error_LAG_9': nan, 'inattention_error_LAG_9': nan, 'auc_roc_LAG_9': nan, 'optimal_threshold_LAG_9': nan, 'tpr_LAG_9': nan, 'tnr_LAG_9': nan, 'student_mean_accuracy_LAG_9': nan, 'discriminability_LAG_10': nan, 'difficulty_LAG_10': nan, 'guessing_LAG_10': nan, 'inattention_LAG_10': nan, 'discriminability_error_LAG_10': nan, 'difficulty_error_LAG_10': nan, 'guessing_error_LAG_10': nan, 'inattention_error_LAG_10': nan, 'auc_roc_LAG_10': nan, 'optimal_threshold_LAG_10': nan, 'tpr_LAG_10': nan, 'tnr_LAG_10': nan, 'student_mean_accuracy_LAG_10': nan, 'LOG_sample_size': nan, 'LOG_sample_size_LAG_1': nan, 'LOG_sample_size_LAG_2': nan, 'LOG_sample_size_LAG_3': nan, 'LOG_sample_size_LAG_4': nan, 'LOG_sample_size_LAG_5': nan, 'LOG_sample_size_LAG_6': nan, 'LOG_sample_size_LAG_7': nan, 'LOG_sample_size_LAG_8': nan, 'LOG_sample_size_LAG_9': nan, 'LOG_sample_size_LAG_10': nan, 'difficulty_spread': nan, 'optimal_threshold_spread': nan, 'student_mean_accuracy_spread': nan, 'tnr_spread': nan, 'tpr_spread': nan, 'mean_auc_roc': nan, 'mean_discriminability': nan, 'mean_discriminability_error': nan, 'mean_difficulty_error': nan, 'mean_guessing_error': nan, 'mean_inattention_error': nan, 'num_responses': 4.0}
+2025-03-28 02:18:32,012 - JSON formatted submission input (for live testing, with duplicated current inputs):
+2025-03-28 02:18:32,012 - {
+  "skillId": "99a4bfaa479de311b77c005056801da1",
+  "questionId": "67b97765038e",
+  "eventTime": "2024-09-26 15:42:47.801000+00:00",
+  "questionIdsHistory": [
+    "67b97765038e",
+    "5db397c90f09",
+    "5258578d2fd1",
+    "e6d4021b10d7",
+    "1ffd727b8d04"
+  ],
+  "correctnessHistory": [
+    100,
+    100,
+    100,
+    0,
+    100
+  ],
+  "durationSecondsHistory": [
+    15.0,
+    8.0,
+    7.0,
+    18.0,
+    12.0
+  ],
+  "eventTimesHistory": [
+    "2024-09-26T15:42:47.000Z",
+    "2024-09-26T15:42:47.000Z",
+    "2024-09-26T15:42:47.000Z",
+    "2024-09-26T15:42:47.000Z",
+    "2024-09-26T15:42:47.000Z"
+  ]
+}
+2025-03-28 02:18:32,013 - True value: 1.0
+2025-03-28 02:18:32,015 - Confidence true value: 0.500 (average of 4 values: CORRECTNESS: 1.000, FUTURE_CORRECTNESS_LAG_1: 0.000, FUTURE_CORRECTNESS_LAG_2: 0.000, FUTURE_CORRECTNESS_LAG_3: 1.000)
+2025-03-28 02:18:32,016 - Item Proficiency model prediction: 0.7843806147575378
+2025-03-28 02:18:32,016 - Item Confidence model prediction: 1.0
+2025-03-28 02:18:32,017 - Item Confidence Score Transformer (percentile ranker) prediction: 0.0006292830578122345
+2025-03-28 02:18:32,017 - Item AGNOSTIC Proficiency model prediction: 0.7843806147575378
+2025-03-28 02:18:32,017 - Item AGNOSTIC Confidence model prediction: 1.0
+2025-03-28 02:18:32,018 - Item AGNOSTIC Confidence Score Transformer (percentile ranker) prediction: 0.0006292830578122345
+2025-03-28 02:18:32,018 - Skill Proficiency model prediction: nan
+2025-03-28 02:18:32,018 - Skill Confidence model prediction: nan
+2025-03-28 02:18:32,019 - Skill Confidence Score Transformer (percentile ranker) prediction: nan
+2025-03-28 02:18:32,019 - 
+Student #4:
+2025-03-28 02:18:32,020 - Raw input (Snowflake SQL):
+2025-03-28 02:18:32,020 -   STUDENTID: 45737474
+2025-03-28 02:18:32,021 -   SKILL: 76a3bfaa479de311b77c005056801da1
+2025-03-28 02:18:32,021 -   QUESTIONID: 05f352665272
+2025-03-28 02:18:32,022 -   OCCURREDAT: 2024-12-09 19:29:04.939000+00:00
+2025-03-28 02:18:32,022 -   CORRECTNESS: 100
+2025-03-28 02:18:32,023 -   DURATIONSECONDS: 10.0
+2025-03-28 02:18:32,023 -   ANSWERPOSITIONINSESSION: nan
+2025-03-28 02:18:32,024 -   EVENT_RANK: 1
+2025-03-28 02:18:32,024 -   QUESTIONID_LAG_1: None
+2025-03-28 02:18:32,024 -   QUESTIONID_LAG_2: None
+2025-03-28 02:18:32,025 -   QUESTIONID_LAG_3: None
+2025-03-28 02:18:32,025 -   QUESTIONID_LAG_4: None
+2025-03-28 02:18:32,025 -   QUESTIONID_LAG_5: None
+2025-03-28 02:18:32,026 -   QUESTIONID_LAG_6: None
+2025-03-28 02:18:32,026 -   QUESTIONID_LAG_7: None
+2025-03-28 02:18:32,027 -   QUESTIONID_LAG_8: None
+2025-03-28 02:18:32,027 -   QUESTIONID_LAG_9: None
+2025-03-28 02:18:32,028 -   QUESTIONID_LAG_10: None
+2025-03-28 02:18:32,028 -   OCCURREDAT_LAG_1: NaT
+2025-03-28 02:18:32,029 -   OCCURREDAT_LAG_2: NaT
+2025-03-28 02:18:32,029 -   OCCURREDAT_LAG_3: NaT
+2025-03-28 02:18:32,030 -   OCCURREDAT_LAG_4: NaT
+2025-03-28 02:18:32,030 -   OCCURREDAT_LAG_5: NaT
+2025-03-28 02:18:32,031 -   OCCURREDAT_LAG_6: NaT
+2025-03-28 02:18:32,031 -   OCCURREDAT_LAG_7: NaT
+2025-03-28 02:18:32,032 -   OCCURREDAT_LAG_8: NaT
+2025-03-28 02:18:32,032 -   OCCURREDAT_LAG_9: NaT
+2025-03-28 02:18:32,033 -   OCCURREDAT_LAG_10: NaT
+2025-03-28 02:18:32,033 -   CORRECTNESS_LAG_1: None
+2025-03-28 02:18:32,033 -   CORRECTNESS_LAG_2: None
+2025-03-28 02:18:32,034 -   CORRECTNESS_LAG_3: None
+2025-03-28 02:18:32,034 -   CORRECTNESS_LAG_4: None
+2025-03-28 02:18:32,034 -   CORRECTNESS_LAG_5: None
+2025-03-28 02:18:32,035 -   CORRECTNESS_LAG_6: None
+2025-03-28 02:18:32,035 -   CORRECTNESS_LAG_7: None
+2025-03-28 02:18:32,036 -   CORRECTNESS_LAG_8: None
+2025-03-28 02:18:32,036 -   CORRECTNESS_LAG_9: None
+2025-03-28 02:18:32,036 -   CORRECTNESS_LAG_10: None
+2025-03-28 02:18:32,037 -   DURATIONSECONDS_LAG_1: nan
+2025-03-28 02:18:32,037 -   DURATIONSECONDS_LAG_2: nan
+2025-03-28 02:18:32,038 -   DURATIONSECONDS_LAG_3: nan
+2025-03-28 02:18:32,038 -   DURATIONSECONDS_LAG_4: nan
+2025-03-28 02:18:32,038 -   DURATIONSECONDS_LAG_5: nan
+2025-03-28 02:18:32,039 -   DURATIONSECONDS_LAG_6: nan
+2025-03-28 02:18:32,039 -   DURATIONSECONDS_LAG_7: nan
+2025-03-28 02:18:32,040 -   DURATIONSECONDS_LAG_8: nan
+2025-03-28 02:18:32,040 -   DURATIONSECONDS_LAG_9: nan
+2025-03-28 02:18:32,040 -   DURATIONSECONDS_LAG_10: nan
+2025-03-28 02:18:32,041 -   FUTURE_CORRECTNESS_LAG_1: 100
+2025-03-28 02:18:32,041 -   FUTURE_CORRECTNESS_LAG_2: 100
+2025-03-28 02:18:32,042 -   FUTURE_CORRECTNESS_LAG_3: 0
+2025-03-28 02:18:32,042 -   FUTURE_CORRECTNESS_LAG_4: 100
+2025-03-28 02:18:32,042 -   FUTURE_CORRECTNESS_LAG_5: 0
+2025-03-28 02:18:32,043 - Feature-engineered inputs (internal):
+2025-03-28 02:18:32,057 - {'CORRECTNESS_LAG_1': nan, 'CORRECTNESS_LAG_2': nan, 'CORRECTNESS_LAG_3': nan, 'CORRECTNESS_LAG_4': nan, 'CORRECTNESS_LAG_5': nan, 'CORRECTNESS_LAG_6': nan, 'CORRECTNESS_LAG_7': nan, 'CORRECTNESS_LAG_8': nan, 'CORRECTNESS_LAG_9': nan, 'CORRECTNESS_LAG_10': nan, 'DURATIONSECONDS_LAG_1': nan, 'DURATIONSECONDS_LAG_2': nan, 'DURATIONSECONDS_LAG_3': nan, 'DURATIONSECONDS_LAG_4': nan, 'DURATIONSECONDS_LAG_5': nan, 'DURATIONSECONDS_LAG_6': nan, 'DURATIONSECONDS_LAG_7': nan, 'DURATIONSECONDS_LAG_8': nan, 'DURATIONSECONDS_LAG_9': nan, 'DURATIONSECONDS_LAG_10': nan, 'OCCURREDAT_DIFF_1': nan, 'OCCURREDAT_DIFF_2': nan, 'OCCURREDAT_DIFF_3': nan, 'OCCURREDAT_DIFF_4': nan, 'OCCURREDAT_DIFF_5': nan, 'OCCURREDAT_DIFF_6': nan, 'OCCURREDAT_DIFF_7': nan, 'OCCURREDAT_DIFF_8': nan, 'OCCURREDAT_DIFF_9': nan, 'OCCURREDAT_DIFF_10': nan, 'LOG_OCCURREDAT_DIFF_1': nan, 'LOG_OCCURREDAT_DIFF_2': nan, 'LOG_OCCURREDAT_DIFF_3': nan, 'LOG_OCCURREDAT_DIFF_4': nan, 'LOG_OCCURREDAT_DIFF_5': nan, 'LOG_OCCURREDAT_DIFF_6': nan, 'LOG_OCCURREDAT_DIFF_7': nan, 'LOG_OCCURREDAT_DIFF_8': nan, 'LOG_OCCURREDAT_DIFF_9': nan, 'LOG_OCCURREDAT_DIFF_10': nan, 'LOG_DURATIONSECONDS_LAG_1': nan, 'LOG_DURATIONSECONDS_LAG_2': nan, 'LOG_DURATIONSECONDS_LAG_3': nan, 'LOG_DURATIONSECONDS_LAG_4': nan, 'LOG_DURATIONSECONDS_LAG_5': nan, 'LOG_DURATIONSECONDS_LAG_6': nan, 'LOG_DURATIONSECONDS_LAG_7': nan, 'LOG_DURATIONSECONDS_LAG_8': nan, 'LOG_DURATIONSECONDS_LAG_9': nan, 'LOG_DURATIONSECONDS_LAG_10': nan, 'discriminability': 99.99999999939168, 'difficulty': 0.0477160016141857, 'guessing': 1.487872671758467e-17, 'inattention': 0.997475367919796, 'discriminability_error': 3.32697106812008, 'difficulty_error': 0.0005048352587591, 'guessing_error': 0.0127728925537428, 'inattention_error': 0.0025953627102533, 'auc_roc': 0.929255185661863, 'optimal_threshold': 0.930679200619981, 'tpr': 0.846640872317974, 'tnr': 0.8467048710601719, 'skill_optimal_threshold': nan, 'student_mean_accuracy': 0.9243524439145984, 'discriminability_LAG_1': nan, 'difficulty_LAG_1': nan, 'guessing_LAG_1': nan, 'inattention_LAG_1': nan, 'discriminability_error_LAG_1': nan, 'difficulty_error_LAG_1': nan, 'guessing_error_LAG_1': nan, 'inattention_error_LAG_1': nan, 'auc_roc_LAG_1': nan, 'optimal_threshold_LAG_1': nan, 'tpr_LAG_1': nan, 'tnr_LAG_1': nan, 'student_mean_accuracy_LAG_1': nan, 'discriminability_LAG_2': nan, 'difficulty_LAG_2': nan, 'guessing_LAG_2': nan, 'inattention_LAG_2': nan, 'discriminability_error_LAG_2': nan, 'difficulty_error_LAG_2': nan, 'guessing_error_LAG_2': nan, 'inattention_error_LAG_2': nan, 'auc_roc_LAG_2': nan, 'optimal_threshold_LAG_2': nan, 'tpr_LAG_2': nan, 'tnr_LAG_2': nan, 'student_mean_accuracy_LAG_2': nan, 'discriminability_LAG_3': nan, 'difficulty_LAG_3': nan, 'guessing_LAG_3': nan, 'inattention_LAG_3': nan, 'discriminability_error_LAG_3': nan, 'difficulty_error_LAG_3': nan, 'guessing_error_LAG_3': nan, 'inattention_error_LAG_3': nan, 'auc_roc_LAG_3': nan, 'optimal_threshold_LAG_3': nan, 'tpr_LAG_3': nan, 'tnr_LAG_3': nan, 'student_mean_accuracy_LAG_3': nan, 'discriminability_LAG_4': nan, 'difficulty_LAG_4': nan, 'guessing_LAG_4': nan, 'inattention_LAG_4': nan, 'discriminability_error_LAG_4': nan, 'difficulty_error_LAG_4': nan, 'guessing_error_LAG_4': nan, 'inattention_error_LAG_4': nan, 'auc_roc_LAG_4': nan, 'optimal_threshold_LAG_4': nan, 'tpr_LAG_4': nan, 'tnr_LAG_4': nan, 'student_mean_accuracy_LAG_4': nan, 'discriminability_LAG_5': nan, 'difficulty_LAG_5': nan, 'guessing_LAG_5': nan, 'inattention_LAG_5': nan, 'discriminability_error_LAG_5': nan, 'difficulty_error_LAG_5': nan, 'guessing_error_LAG_5': nan, 'inattention_error_LAG_5': nan, 'auc_roc_LAG_5': nan, 'optimal_threshold_LAG_5': nan, 'tpr_LAG_5': nan, 'tnr_LAG_5': nan, 'student_mean_accuracy_LAG_5': nan, 'discriminability_LAG_6': nan, 'difficulty_LAG_6': nan, 'guessing_LAG_6': nan, 'inattention_LAG_6': nan, 'discriminability_error_LAG_6': nan, 'difficulty_error_LAG_6': nan, 'guessing_error_LAG_6': nan, 'inattention_error_LAG_6': nan, 'auc_roc_LAG_6': nan, 'optimal_threshold_LAG_6': nan, 'tpr_LAG_6': nan, 'tnr_LAG_6': nan, 'student_mean_accuracy_LAG_6': nan, 'discriminability_LAG_7': nan, 'difficulty_LAG_7': nan, 'guessing_LAG_7': nan, 'inattention_LAG_7': nan, 'discriminability_error_LAG_7': nan, 'difficulty_error_LAG_7': nan, 'guessing_error_LAG_7': nan, 'inattention_error_LAG_7': nan, 'auc_roc_LAG_7': nan, 'optimal_threshold_LAG_7': nan, 'tpr_LAG_7': nan, 'tnr_LAG_7': nan, 'student_mean_accuracy_LAG_7': nan, 'discriminability_LAG_8': nan, 'difficulty_LAG_8': nan, 'guessing_LAG_8': nan, 'inattention_LAG_8': nan, 'discriminability_error_LAG_8': nan, 'difficulty_error_LAG_8': nan, 'guessing_error_LAG_8': nan, 'inattention_error_LAG_8': nan, 'auc_roc_LAG_8': nan, 'optimal_threshold_LAG_8': nan, 'tpr_LAG_8': nan, 'tnr_LAG_8': nan, 'student_mean_accuracy_LAG_8': nan, 'discriminability_LAG_9': nan, 'difficulty_LAG_9': nan, 'guessing_LAG_9': nan, 'inattention_LAG_9': nan, 'discriminability_error_LAG_9': nan, 'difficulty_error_LAG_9': nan, 'guessing_error_LAG_9': nan, 'inattention_error_LAG_9': nan, 'auc_roc_LAG_9': nan, 'optimal_threshold_LAG_9': nan, 'tpr_LAG_9': nan, 'tnr_LAG_9': nan, 'student_mean_accuracy_LAG_9': nan, 'discriminability_LAG_10': nan, 'difficulty_LAG_10': nan, 'guessing_LAG_10': nan, 'inattention_LAG_10': nan, 'discriminability_error_LAG_10': nan, 'difficulty_error_LAG_10': nan, 'guessing_error_LAG_10': nan, 'inattention_error_LAG_10': nan, 'auc_roc_LAG_10': nan, 'optimal_threshold_LAG_10': nan, 'tpr_LAG_10': nan, 'tnr_LAG_10': nan, 'student_mean_accuracy_LAG_10': nan, 'LOG_sample_size': 9.129889247578555, 'LOG_sample_size_LAG_1': nan, 'LOG_sample_size_LAG_2': nan, 'LOG_sample_size_LAG_3': nan, 'LOG_sample_size_LAG_4': nan, 'LOG_sample_size_LAG_5': nan, 'LOG_sample_size_LAG_6': nan, 'LOG_sample_size_LAG_7': nan, 'LOG_sample_size_LAG_8': nan, 'LOG_sample_size_LAG_9': nan, 'LOG_sample_size_LAG_10': nan, 'difficulty_spread': nan, 'optimal_threshold_spread': nan, 'student_mean_accuracy_spread': nan, 'tnr_spread': nan, 'tpr_spread': nan, 'mean_auc_roc': nan, 'mean_discriminability': nan, 'mean_discriminability_error': nan, 'mean_difficulty_error': nan, 'mean_guessing_error': nan, 'mean_inattention_error': nan, 'num_responses': 0.0}
+2025-03-28 02:18:32,058 - JSON formatted submission input (for live testing, with duplicated current inputs):
+2025-03-28 02:18:32,059 - {
+  "skillId": "76a3bfaa479de311b77c005056801da1",
+  "questionId": "05f352665272",
+  "eventTime": "2024-12-09 19:29:04.939000+00:00",
+  "questionIdsHistory": [
+    "05f352665272"
+  ],
+  "correctnessHistory": [
+    100
+  ],
+  "durationSecondsHistory": [
+    10.0
+  ],
+  "eventTimesHistory": [
+    "2024-12-09T19:29:04.000Z"
+  ]
+}
+2025-03-28 02:18:32,059 - True value: 1.0
+2025-03-28 02:18:32,061 - Confidence true value: 0.750 (average of 4 values: CORRECTNESS: 1.000, FUTURE_CORRECTNESS_LAG_1: 1.000, FUTURE_CORRECTNESS_LAG_2: 1.000, FUTURE_CORRECTNESS_LAG_3: 0.000)
+2025-03-28 02:18:32,062 - Item Proficiency model prediction: 0.9031314253807068
+2025-03-28 02:18:32,062 - Item Confidence model prediction: 1.0
+2025-03-28 02:18:32,062 - Item Confidence Score Transformer (percentile ranker) prediction: 0.0006292830578122345
+2025-03-28 02:18:32,063 - Item AGNOSTIC Proficiency model prediction: 0.6801629662513733
+2025-03-28 02:18:32,063 - Item AGNOSTIC Confidence model prediction: 1.0
+2025-03-28 02:18:32,064 - Item AGNOSTIC Confidence Score Transformer (percentile ranker) prediction: 0.0006292830578122345
+2025-03-28 02:18:32,064 - Skill Proficiency model prediction: nan
+2025-03-28 02:18:32,065 - Skill Confidence model prediction: nan
+2025-03-28 02:18:32,065 - Skill Confidence Score Transformer (percentile ranker) prediction: nan
+2025-03-28 02:18:32,065 - 
+Student #5:
+2025-03-28 02:18:32,066 - Raw input (Snowflake SQL):
+2025-03-28 02:18:32,066 -   STUDENTID: 45738913
+2025-03-28 02:18:32,067 -   SKILL: 054339899af44942a1a92372f9191cf4
+2025-03-28 02:18:32,067 -   QUESTIONID: 284d54b5ed84
+2025-03-28 02:18:32,068 -   OCCURREDAT: 2024-11-22 18:51:46.934000+00:00
+2025-03-28 02:18:32,068 -   CORRECTNESS: 0
+2025-03-28 02:18:32,069 -   DURATIONSECONDS: 21.0
+2025-03-28 02:18:32,069 -   ANSWERPOSITIONINSESSION: 1.0
+2025-03-28 02:18:32,070 -   EVENT_RANK: 1
+2025-03-28 02:18:32,070 -   QUESTIONID_LAG_1: None
+2025-03-28 02:18:32,070 -   QUESTIONID_LAG_2: None
+2025-03-28 02:18:32,071 -   QUESTIONID_LAG_3: None
+2025-03-28 02:18:32,071 -   QUESTIONID_LAG_4: None
+2025-03-28 02:18:32,072 -   QUESTIONID_LAG_5: None
+2025-03-28 02:18:32,072 -   QUESTIONID_LAG_6: None
+2025-03-28 02:18:32,072 -   QUESTIONID_LAG_7: None
+2025-03-28 02:18:32,073 -   QUESTIONID_LAG_8: None
+2025-03-28 02:18:32,073 -   QUESTIONID_LAG_9: None
+2025-03-28 02:18:32,073 -   QUESTIONID_LAG_10: None
+2025-03-28 02:18:32,074 -   OCCURREDAT_LAG_1: NaT
+2025-03-28 02:18:32,074 -   OCCURREDAT_LAG_2: NaT
+2025-03-28 02:18:32,075 -   OCCURREDAT_LAG_3: NaT
+2025-03-28 02:18:32,075 -   OCCURREDAT_LAG_4: NaT
+2025-03-28 02:18:32,075 -   OCCURREDAT_LAG_5: NaT
+2025-03-28 02:18:32,076 -   OCCURREDAT_LAG_6: NaT
+2025-03-28 02:18:32,076 -   OCCURREDAT_LAG_7: NaT
+2025-03-28 02:18:32,077 -   OCCURREDAT_LAG_8: NaT
+2025-03-28 02:18:32,077 -   OCCURREDAT_LAG_9: NaT
+2025-03-28 02:18:32,077 -   OCCURREDAT_LAG_10: NaT
+2025-03-28 02:18:32,078 -   CORRECTNESS_LAG_1: None
+2025-03-28 02:18:32,078 -   CORRECTNESS_LAG_2: None
+2025-03-28 02:18:32,079 -   CORRECTNESS_LAG_3: None
+2025-03-28 02:18:32,079 -   CORRECTNESS_LAG_4: None
+2025-03-28 02:18:32,079 -   CORRECTNESS_LAG_5: None
+2025-03-28 02:18:32,080 -   CORRECTNESS_LAG_6: None
+2025-03-28 02:18:32,080 -   CORRECTNESS_LAG_7: None
+2025-03-28 02:18:32,080 -   CORRECTNESS_LAG_8: None
+2025-03-28 02:18:32,081 -   CORRECTNESS_LAG_9: None
+2025-03-28 02:18:32,081 -   CORRECTNESS_LAG_10: None
+2025-03-28 02:18:32,082 -   DURATIONSECONDS_LAG_1: nan
+2025-03-28 02:18:32,082 -   DURATIONSECONDS_LAG_2: nan
+2025-03-28 02:18:32,082 -   DURATIONSECONDS_LAG_3: nan
+2025-03-28 02:18:32,083 -   DURATIONSECONDS_LAG_4: nan
+2025-03-28 02:18:32,083 -   DURATIONSECONDS_LAG_5: nan
+2025-03-28 02:18:32,084 -   DURATIONSECONDS_LAG_6: nan
+2025-03-28 02:18:32,084 -   DURATIONSECONDS_LAG_7: nan
+2025-03-28 02:18:32,084 -   DURATIONSECONDS_LAG_8: nan
+2025-03-28 02:18:32,085 -   DURATIONSECONDS_LAG_9: nan
+2025-03-28 02:18:32,085 -   DURATIONSECONDS_LAG_10: nan
+2025-03-28 02:18:32,085 -   FUTURE_CORRECTNESS_LAG_1: 100
+2025-03-28 02:18:32,086 -   FUTURE_CORRECTNESS_LAG_2: None
+2025-03-28 02:18:32,086 -   FUTURE_CORRECTNESS_LAG_3: None
+2025-03-28 02:18:32,087 -   FUTURE_CORRECTNESS_LAG_4: None
+2025-03-28 02:18:32,087 -   FUTURE_CORRECTNESS_LAG_5: None
+2025-03-28 02:18:32,087 - Feature-engineered inputs (internal):
+2025-03-28 02:18:32,102 - {'CORRECTNESS_LAG_1': nan, 'CORRECTNESS_LAG_2': nan, 'CORRECTNESS_LAG_3': nan, 'CORRECTNESS_LAG_4': nan, 'CORRECTNESS_LAG_5': nan, 'CORRECTNESS_LAG_6': nan, 'CORRECTNESS_LAG_7': nan, 'CORRECTNESS_LAG_8': nan, 'CORRECTNESS_LAG_9': nan, 'CORRECTNESS_LAG_10': nan, 'DURATIONSECONDS_LAG_1': nan, 'DURATIONSECONDS_LAG_2': nan, 'DURATIONSECONDS_LAG_3': nan, 'DURATIONSECONDS_LAG_4': nan, 'DURATIONSECONDS_LAG_5': nan, 'DURATIONSECONDS_LAG_6': nan, 'DURATIONSECONDS_LAG_7': nan, 'DURATIONSECONDS_LAG_8': nan, 'DURATIONSECONDS_LAG_9': nan, 'DURATIONSECONDS_LAG_10': nan, 'OCCURREDAT_DIFF_1': nan, 'OCCURREDAT_DIFF_2': nan, 'OCCURREDAT_DIFF_3': nan, 'OCCURREDAT_DIFF_4': nan, 'OCCURREDAT_DIFF_5': nan, 'OCCURREDAT_DIFF_6': nan, 'OCCURREDAT_DIFF_7': nan, 'OCCURREDAT_DIFF_8': nan, 'OCCURREDAT_DIFF_9': nan, 'OCCURREDAT_DIFF_10': nan, 'LOG_OCCURREDAT_DIFF_1': nan, 'LOG_OCCURREDAT_DIFF_2': nan, 'LOG_OCCURREDAT_DIFF_3': nan, 'LOG_OCCURREDAT_DIFF_4': nan, 'LOG_OCCURREDAT_DIFF_5': nan, 'LOG_OCCURREDAT_DIFF_6': nan, 'LOG_OCCURREDAT_DIFF_7': nan, 'LOG_OCCURREDAT_DIFF_8': nan, 'LOG_OCCURREDAT_DIFF_9': nan, 'LOG_OCCURREDAT_DIFF_10': nan, 'LOG_DURATIONSECONDS_LAG_1': nan, 'LOG_DURATIONSECONDS_LAG_2': nan, 'LOG_DURATIONSECONDS_LAG_3': nan, 'LOG_DURATIONSECONDS_LAG_4': nan, 'LOG_DURATIONSECONDS_LAG_5': nan, 'LOG_DURATIONSECONDS_LAG_6': nan, 'LOG_DURATIONSECONDS_LAG_7': nan, 'LOG_DURATIONSECONDS_LAG_8': nan, 'LOG_DURATIONSECONDS_LAG_9': nan, 'LOG_DURATIONSECONDS_LAG_10': nan, 'discriminability': 80.32307469223916, 'difficulty': 0.025439718503886, 'guessing': 7.51977087531389e-21, 'inattention': 0.9999958472563512, 'discriminability_error': 5.097371813147007, 'difficulty_error': 0.0012922296824687, 'guessing_error': 0.0404714082717399, 'inattention_error': 0.0085410141537212, 'auc_roc': 0.8794857873119994, 'optimal_threshold': 0.7954918645325281, 'tpr': 0.7731362467866324, 'tnr': 0.8045977011494253, 'skill_optimal_threshold': nan, 'student_mean_accuracy': 0.8172268907563025, 'discriminability_LAG_1': nan, 'difficulty_LAG_1': nan, 'guessing_LAG_1': nan, 'inattention_LAG_1': nan, 'discriminability_error_LAG_1': nan, 'difficulty_error_LAG_1': nan, 'guessing_error_LAG_1': nan, 'inattention_error_LAG_1': nan, 'auc_roc_LAG_1': nan, 'optimal_threshold_LAG_1': nan, 'tpr_LAG_1': nan, 'tnr_LAG_1': nan, 'student_mean_accuracy_LAG_1': nan, 'discriminability_LAG_2': nan, 'difficulty_LAG_2': nan, 'guessing_LAG_2': nan, 'inattention_LAG_2': nan, 'discriminability_error_LAG_2': nan, 'difficulty_error_LAG_2': nan, 'guessing_error_LAG_2': nan, 'inattention_error_LAG_2': nan, 'auc_roc_LAG_2': nan, 'optimal_threshold_LAG_2': nan, 'tpr_LAG_2': nan, 'tnr_LAG_2': nan, 'student_mean_accuracy_LAG_2': nan, 'discriminability_LAG_3': nan, 'difficulty_LAG_3': nan, 'guessing_LAG_3': nan, 'inattention_LAG_3': nan, 'discriminability_error_LAG_3': nan, 'difficulty_error_LAG_3': nan, 'guessing_error_LAG_3': nan, 'inattention_error_LAG_3': nan, 'auc_roc_LAG_3': nan, 'optimal_threshold_LAG_3': nan, 'tpr_LAG_3': nan, 'tnr_LAG_3': nan, 'student_mean_accuracy_LAG_3': nan, 'discriminability_LAG_4': nan, 'difficulty_LAG_4': nan, 'guessing_LAG_4': nan, 'inattention_LAG_4': nan, 'discriminability_error_LAG_4': nan, 'difficulty_error_LAG_4': nan, 'guessing_error_LAG_4': nan, 'inattention_error_LAG_4': nan, 'auc_roc_LAG_4': nan, 'optimal_threshold_LAG_4': nan, 'tpr_LAG_4': nan, 'tnr_LAG_4': nan, 'student_mean_accuracy_LAG_4': nan, 'discriminability_LAG_5': nan, 'difficulty_LAG_5': nan, 'guessing_LAG_5': nan, 'inattention_LAG_5': nan, 'discriminability_error_LAG_5': nan, 'difficulty_error_LAG_5': nan, 'guessing_error_LAG_5': nan, 'inattention_error_LAG_5': nan, 'auc_roc_LAG_5': nan, 'optimal_threshold_LAG_5': nan, 'tpr_LAG_5': nan, 'tnr_LAG_5': nan, 'student_mean_accuracy_LAG_5': nan, 'discriminability_LAG_6': nan, 'difficulty_LAG_6': nan, 'guessing_LAG_6': nan, 'inattention_LAG_6': nan, 'discriminability_error_LAG_6': nan, 'difficulty_error_LAG_6': nan, 'guessing_error_LAG_6': nan, 'inattention_error_LAG_6': nan, 'auc_roc_LAG_6': nan, 'optimal_threshold_LAG_6': nan, 'tpr_LAG_6': nan, 'tnr_LAG_6': nan, 'student_mean_accuracy_LAG_6': nan, 'discriminability_LAG_7': nan, 'difficulty_LAG_7': nan, 'guessing_LAG_7': nan, 'inattention_LAG_7': nan, 'discriminability_error_LAG_7': nan, 'difficulty_error_LAG_7': nan, 'guessing_error_LAG_7': nan, 'inattention_error_LAG_7': nan, 'auc_roc_LAG_7': nan, 'optimal_threshold_LAG_7': nan, 'tpr_LAG_7': nan, 'tnr_LAG_7': nan, 'student_mean_accuracy_LAG_7': nan, 'discriminability_LAG_8': nan, 'difficulty_LAG_8': nan, 'guessing_LAG_8': nan, 'inattention_LAG_8': nan, 'discriminability_error_LAG_8': nan, 'difficulty_error_LAG_8': nan, 'guessing_error_LAG_8': nan, 'inattention_error_LAG_8': nan, 'auc_roc_LAG_8': nan, 'optimal_threshold_LAG_8': nan, 'tpr_LAG_8': nan, 'tnr_LAG_8': nan, 'student_mean_accuracy_LAG_8': nan, 'discriminability_LAG_9': nan, 'difficulty_LAG_9': nan, 'guessing_LAG_9': nan, 'inattention_LAG_9': nan, 'discriminability_error_LAG_9': nan, 'difficulty_error_LAG_9': nan, 'guessing_error_LAG_9': nan, 'inattention_error_LAG_9': nan, 'auc_roc_LAG_9': nan, 'optimal_threshold_LAG_9': nan, 'tpr_LAG_9': nan, 'tnr_LAG_9': nan, 'student_mean_accuracy_LAG_9': nan, 'discriminability_LAG_10': nan, 'difficulty_LAG_10': nan, 'guessing_LAG_10': nan, 'inattention_LAG_10': nan, 'discriminability_error_LAG_10': nan, 'difficulty_error_LAG_10': nan, 'guessing_error_LAG_10': nan, 'inattention_error_LAG_10': nan, 'auc_roc_LAG_10': nan, 'optimal_threshold_LAG_10': nan, 'tpr_LAG_10': nan, 'tnr_LAG_10': nan, 'student_mean_accuracy_LAG_10': nan, 'LOG_sample_size': 8.244859395911256, 'LOG_sample_size_LAG_1': nan, 'LOG_sample_size_LAG_2': nan, 'LOG_sample_size_LAG_3': nan, 'LOG_sample_size_LAG_4': nan, 'LOG_sample_size_LAG_5': nan, 'LOG_sample_size_LAG_6': nan, 'LOG_sample_size_LAG_7': nan, 'LOG_sample_size_LAG_8': nan, 'LOG_sample_size_LAG_9': nan, 'LOG_sample_size_LAG_10': nan, 'difficulty_spread': nan, 'optimal_threshold_spread': nan, 'student_mean_accuracy_spread': nan, 'tnr_spread': nan, 'tpr_spread': nan, 'mean_auc_roc': nan, 'mean_discriminability': nan, 'mean_discriminability_error': nan, 'mean_difficulty_error': nan, 'mean_guessing_error': nan, 'mean_inattention_error': nan, 'num_responses': 0.0}
+2025-03-28 02:18:32,103 - JSON formatted submission input (for live testing, with duplicated current inputs):
+2025-03-28 02:18:32,103 - {
+  "skillId": "054339899af44942a1a92372f9191cf4",
+  "questionId": "284d54b5ed84",
+  "eventTime": "2024-11-22 18:51:46.934000+00:00",
+  "questionIdsHistory": [
+    "284d54b5ed84"
+  ],
+  "correctnessHistory": [
+    0
+  ],
+  "durationSecondsHistory": [
+    21.0
+  ],
+  "eventTimesHistory": [
+    "2024-11-22T18:51:46.000Z"
+  ]
+}
+2025-03-28 02:18:32,104 - True value: 0.0
+2025-03-28 02:18:32,106 - Confidence true value: 0.500 (average of 4 values: CORRECTNESS: 0.000, FUTURE_CORRECTNESS_LAG_1: 1.000, FUTURE_CORRECTNESS_LAG_2: nan, FUTURE_CORRECTNESS_LAG_3: nan)
+2025-03-28 02:18:32,107 - Item Proficiency model prediction: 0.7553590536117554
+2025-03-28 02:18:32,107 - Item Confidence model prediction: 1.0
+2025-03-28 02:18:32,108 - Item Confidence Score Transformer (percentile ranker) prediction: 0.0006292830578122345
+2025-03-28 02:18:32,108 - Item AGNOSTIC Proficiency model prediction: 0.622311532497406
+2025-03-28 02:18:32,108 - Item AGNOSTIC Confidence model prediction: 1.0
+2025-03-28 02:18:32,109 - Item AGNOSTIC Confidence Score Transformer (percentile ranker) prediction: 0.0006292830578122345
+2025-03-28 02:18:32,109 - Skill Proficiency model prediction: nan
+2025-03-28 02:18:32,110 - Skill Confidence model prediction: nan
+2025-03-28 02:18:32,110 - Skill Confidence Score Transformer (percentile ranker) prediction: nan
+2025-03-28 02:18:32,111 - 
+Skill Proficiency Category Analysis (Custom Thresholds):
+2025-03-28 02:18:32,112 - 
+Struggling Category (< 0.6):
+2025-03-28 02:18:32,112 - Count: 2420 (6.7%)
+2025-03-28 02:18:32,113 - Mean Correctness: 0.672
+2025-03-28 02:18:32,113 - 
+Practicing Category (>= 0.6 and < 0.8):
+2025-03-28 02:18:32,114 - Count: 4105 (11.4%)
+2025-03-28 02:18:32,114 - Mean Correctness: 0.678
+2025-03-28 02:18:32,114 - 
+Proficient Category (>= 0.8):
+2025-03-28 02:18:32,115 - Count: 1548 (4.3%)
+2025-03-28 02:18:32,115 - Mean Correctness: 0.660
+2025-03-28 02:18:32,116 - 
+Skill Proficiency Category Analysis (Default Thresholds):
+2025-03-28 02:18:32,117 - 
+Struggling Category (< 0.6):
+2025-03-28 02:18:32,118 - Count: 2420 (6.7%)
+2025-03-28 02:18:32,118 - Mean Correctness: 0.672
+2025-03-28 02:18:32,118 - 
+Practicing Category (>= 0.6 and < 0.8):
+2025-03-28 02:18:32,119 - Count: 4105 (11.4%)
+2025-03-28 02:18:32,119 - Mean Correctness: 0.678
+2025-03-28 02:18:32,120 - 
+Proficient Category (>= 0.8):
+2025-03-28 02:18:32,120 - Count: 1548 (4.3%)
+2025-03-28 02:18:32,121 - Mean Correctness: 0.660
+2025-03-28 02:18:32,121 - 
+Item Proficiency Category Analysis (Custom Thresholds):
+2025-03-28 02:18:32,123 - 
+Struggling Category (< 0.6):
+2025-03-28 02:18:32,124 - Count: 12716 (35.2%)
+2025-03-28 02:18:32,124 - Mean Correctness: 0.502
+2025-03-28 02:18:32,124 - 
+Practicing Category (>= 0.6 and < 0.8):
+2025-03-28 02:18:32,125 - Count: 12849 (35.5%)
+2025-03-28 02:18:32,125 - Mean Correctness: 0.702
+2025-03-28 02:18:32,125 - 
+Proficient Category (>= 0.8):
+2025-03-28 02:18:32,126 - Count: 10595 (29.3%)
+2025-03-28 02:18:32,126 - Mean Correctness: 0.869
+2025-03-28 02:18:32,127 - 
+Item Proficiency Category Analysis (Default Thresholds):
+2025-03-28 02:18:32,129 - 
+Struggling Category (< 0.6):
+2025-03-28 02:18:32,129 - Count: 12716 (35.2%)
+2025-03-28 02:18:32,130 - Mean Correctness: 0.502
+2025-03-28 02:18:32,130 - 
+Practicing Category (>= 0.6 and < 0.8):
+2025-03-28 02:18:32,131 - Count: 12849 (35.5%)
+2025-03-28 02:18:32,131 - Mean Correctness: 0.702
+2025-03-28 02:18:32,132 - 
+Proficient Category (>= 0.8):
+2025-03-28 02:18:32,132 - Count: 10595 (29.3%)
+2025-03-28 02:18:32,132 - Mean Correctness: 0.869
+2025-03-28 02:18:32,133 - 
+Item Agnostic Proficiency Category Analysis (Custom Thresholds):
+2025-03-28 02:18:32,135 - 
+Struggling Category (< 0.6):
+2025-03-28 02:18:32,135 - Count: 12128 (33.5%)
+2025-03-28 02:18:32,136 - Mean Correctness: 0.540
+2025-03-28 02:18:32,136 - 
+Practicing Category (>= 0.6 and < 0.8):
+2025-03-28 02:18:32,137 - Count: 15609 (43.2%)
+2025-03-28 02:18:32,137 - Mean Correctness: 0.697
+2025-03-28 02:18:32,138 - 
+Proficient Category (>= 0.8):
+2025-03-28 02:18:32,138 - Count: 8423 (23.3%)
+2025-03-28 02:18:32,138 - Mean Correctness: 0.854
+2025-03-28 02:18:32,139 - 
+Item Agnostic Proficiency Category Analysis (Default Thresholds):
+2025-03-28 02:18:32,141 - 
+Struggling Category (< 0.6):
+2025-03-28 02:18:32,141 - Count: 12128 (33.5%)
+2025-03-28 02:18:32,142 - Mean Correctness: 0.540
+2025-03-28 02:18:32,142 - 
+Practicing Category (>= 0.6 and < 0.8):
+2025-03-28 02:18:32,142 - Count: 15609 (43.2%)
+2025-03-28 02:18:32,143 - Mean Correctness: 0.697
+2025-03-28 02:18:32,143 - 
+Proficient Category (>= 0.8):
+2025-03-28 02:18:32,144 - Count: 8423 (23.3%)
+2025-03-28 02:18:32,144 - Mean Correctness: 0.854
+2025-03-28 02:18:32,145 - Average metrics across all test sets (item aware/item agnostic/skill: proficiency & confidence models & confidence scores):
+2025-03-28 02:18:32,145 - Average ITEM AWARE PROFICIENCY MODEL metrics across all test sets:
+2025-03-28 02:18:32,146 - MSE: 0.18728
+2025-03-28 02:18:32,146 - RMSE: 0.43276
+2025-03-28 02:18:32,147 - Cross Entropy: 0.55719
+2025-03-28 02:18:32,147 - R2: 0.13245
+2025-03-28 02:18:32,147 - (Imputed) Precision (incorrect/0): 0.61424
+2025-03-28 02:18:32,148 - (Imputed) Precision (correct/1): 0.73208
+2025-03-28 02:18:32,148 - (Imputed) Recall (incorrect/0): 0.28800
+2025-03-28 02:18:32,149 - (Imputed) Recall (correct/1): 0.91494
+2025-03-28 02:18:32,149 - (Imputed) F1: 0.81336
+2025-03-28 02:18:32,150 - (Imputed) Accuracy: 0.71441
+2025-03-28 02:18:32,150 - (Imputed) AUC ROC: 0.71792
+2025-03-28 02:18:32,151 - (Imputed) AUC PR: 0.83741
+2025-03-28 02:18:32,151 - Average ITEM AWARE CONFIDENCE MODEL metrics across all test sets:
+2025-03-28 02:18:32,151 - MSE: 0.58840
+2025-03-28 02:18:32,152 - RMSE: 0.76707
+2025-03-28 02:18:32,153 - Cross Entropy: 11.86328
+2025-03-28 02:18:32,153 - R2: -15.99473
+2025-03-28 02:18:32,154 - (Imputed) Precision (incorrect/0): 0.50044
+2025-03-28 02:18:32,154 - (Imputed) Precision (correct/1): 0.00000
+2025-03-28 02:18:32,154 - (Imputed) Recall (incorrect/0): 1.00000
+2025-03-28 02:18:32,155 - (Imputed) Recall (correct/1): 0.00000
+2025-03-28 02:18:32,155 - (Imputed) F1: 0.00000
+2025-03-28 02:18:32,156 - (Imputed) Accuracy: 0.50044
+2025-03-28 02:18:32,156 - (Imputed) AUC ROC: 0.50003
+2025-03-28 02:18:32,157 - (Imputed) AUC PR: 0.49957
+2025-03-28 02:18:32,157 - Average ITEM AWARE CONFIDENCE SCORE metrics across all test sets:
+2025-03-28 02:18:32,158 - MSE: 0.10012
+2025-03-28 02:18:32,158 - RMSE: 0.31642
+2025-03-28 02:18:32,158 - Cross Entropy: 3.06426
+2025-03-28 02:18:32,159 - R2: -1.89185
+2025-03-28 02:18:32,159 - (Imputed) Precision (incorrect/0): 0.88170
+2025-03-28 02:18:32,160 - (Imputed) Precision (correct/1): 0.20000
+2025-03-28 02:18:32,160 - (Imputed) Recall (incorrect/0): 0.99987
+2025-03-28 02:18:32,161 - (Imputed) Recall (correct/1): 0.00023
+2025-03-28 02:18:32,161 - (Imputed) F1: 0.00047
+2025-03-28 02:18:32,162 - (Imputed) Accuracy: 0.88161
+2025-03-28 02:18:32,162 - (Imputed) AUC ROC: 0.50005
+2025-03-28 02:18:32,163 - (Imputed) AUC PR: 0.11833
+2025-03-28 02:18:32,163 - Average ITEM AGNOSTIC PROFICIENCY MODEL metrics across all test sets:
+2025-03-28 02:18:32,164 - MSE: 0.19857
+2025-03-28 02:18:32,164 - RMSE: 0.44561
+2025-03-28 02:18:32,165 - Cross Entropy: 0.58457
+2025-03-28 02:18:32,165 - R2: 0.08018
+2025-03-28 02:18:32,165 - (Imputed) Precision (incorrect/0): 0.57390
+2025-03-28 02:18:32,166 - (Imputed) Precision (correct/1): 0.70764
+2025-03-28 02:18:32,166 - (Imputed) Recall (incorrect/0): 0.17526
+2025-03-28 02:18:32,167 - (Imputed) Recall (correct/1): 0.93881
+2025-03-28 02:18:32,167 - (Imputed) F1: 0.80700
+2025-03-28 02:18:32,168 - (Imputed) Accuracy: 0.69458
+2025-03-28 02:18:32,168 - (Imputed) AUC ROC: 0.67061
+2025-03-28 02:18:32,169 - (Imputed) AUC PR: 0.80736
+2025-03-28 02:18:32,169 - Average ITEM AGNOSTIC CONFIDENCE MODEL metrics across all test sets:
+2025-03-28 02:18:32,170 - MSE: 0.58228
+2025-03-28 02:18:32,170 - RMSE: 0.76307
+2025-03-28 02:18:32,170 - Cross Entropy: 11.81534
+2025-03-28 02:18:32,171 - R2: -16.65180
+2025-03-28 02:18:32,171 - (Imputed) Precision (incorrect/0): 1.00000
+2025-03-28 02:18:32,172 - (Imputed) Precision (correct/1): 0.11585
+2025-03-28 02:18:32,172 - (Imputed) Recall (incorrect/0): 0.00003
+2025-03-28 02:18:32,173 - (Imputed) Recall (correct/1): 1.00000
+2025-03-28 02:18:32,173 - (Imputed) F1: 0.20764
+2025-03-28 02:18:32,174 - (Imputed) Accuracy: 0.11587
+2025-03-28 02:18:32,174 - (Imputed) AUC ROC: 0.49990
+2025-03-28 02:18:32,175 - (Imputed) AUC PR: 0.11582
+2025-03-28 02:18:32,175 - Average ITEM AGNOSTIC CONFIDENCE SCORE metrics across all test sets:
+2025-03-28 02:18:32,176 - MSE: 0.10000
+2025-03-28 02:18:32,176 - RMSE: 0.31623
+2025-03-28 02:18:32,177 - Cross Entropy: 3.10010
+2025-03-28 02:18:32,177 - R2: -2.03145
+2025-03-28 02:18:32,177 - (Imputed) Precision (incorrect/0): 0.88418
+2025-03-28 02:18:32,178 - (Imputed) Precision (correct/1): 0.50000
+2025-03-28 02:18:32,179 - (Imputed) Recall (incorrect/0): 0.99997
+2025-03-28 02:18:32,179 - (Imputed) Recall (correct/1): 0.00024
+2025-03-28 02:18:32,179 - (Imputed) F1: 0.00048
+2025-03-28 02:18:32,180 - (Imputed) Accuracy: 0.88415
+2025-03-28 02:18:32,180 - (Imputed) AUC ROC: 0.50010
+2025-03-28 02:18:32,181 - (Imputed) AUC PR: 0.11594
+2025-03-28 02:18:32,181 - Average SKILL PROFICIENCY MODEL metrics across all test sets:
+2025-03-28 02:18:32,182 - MSE: 0.23888
+2025-03-28 02:18:32,182 - RMSE: 0.48876
+2025-03-28 02:18:32,183 - Cross Entropy: 0.68376
+2025-03-28 02:18:32,183 - R2: -0.09298
+2025-03-28 02:18:32,184 - (Imputed) Precision (incorrect/0): 0.34534
+2025-03-28 02:18:32,184 - (Imputed) Precision (correct/1): 0.67525
+2025-03-28 02:18:32,185 - (Imputed) Recall (incorrect/0): 0.14145
+2025-03-28 02:18:32,185 - (Imputed) Recall (correct/1): 0.86941
+2025-03-28 02:18:32,186 - (Imputed) F1: 0.76013
+2025-03-28 02:18:32,186 - (Imputed) Accuracy: 0.63099
+2025-03-28 02:18:32,186 - (Imputed) AUC ROC: 0.49719
+2025-03-28 02:18:32,187 - (Imputed) AUC PR: 0.66971
+2025-03-28 02:18:32,187 - Average SKILL CONFIDENCE MODEL metrics across all test sets:
+2025-03-28 02:18:32,187 - MSE: 0.59904
+2025-03-28 02:18:32,188 - RMSE: 0.77398
+2025-03-28 02:18:32,189 - Cross Entropy: 12.06977
+2025-03-28 02:18:32,189 - R2: -15.62462
+2025-03-28 02:18:32,189 - (Imputed) Precision (incorrect/0): 0.52174
+2025-03-28 02:18:32,190 - (Imputed) Precision (correct/1): 0.00000
+2025-03-28 02:18:32,191 - (Imputed) Recall (incorrect/0): 1.00000
+2025-03-28 02:18:32,191 - (Imputed) Recall (correct/1): 0.00000
+2025-03-28 02:18:32,191 - (Imputed) F1: 0.00000
+2025-03-28 02:18:32,192 - (Imputed) Accuracy: 0.52174
+2025-03-28 02:18:32,192 - (Imputed) AUC ROC: 0.50076
+2025-03-28 02:18:32,193 - (Imputed) AUC PR: 0.47864
+2025-03-28 02:18:32,193 - Average SKILL CONFIDENCE SCORE metrics across all test sets:
+2025-03-28 02:18:32,194 - MSE: 0.09830
+2025-03-28 02:18:32,194 - RMSE: 0.31353
+2025-03-28 02:18:32,195 - Cross Entropy: 2.98518
+2025-03-28 02:18:32,195 - R2: -1.72809
+2025-03-28 02:18:32,196 - (Imputed) Precision (incorrect/0): 0.88344
+2025-03-28 02:18:32,196 - (Imputed) Precision (correct/1): 0.00000
+2025-03-28 02:18:32,196 - (Imputed) Recall (incorrect/0): 1.00000
+2025-03-28 02:18:32,197 - (Imputed) Recall (correct/1): 0.00000
+2025-03-28 02:18:32,198 - (Imputed) F1: 0.00000
+2025-03-28 02:18:32,198 - (Imputed) Accuracy: 0.88344
+2025-03-28 02:18:32,198 - (Imputed) AUC ROC: 0.51641
+2025-03-28 02:18:32,199 - (Imputed) AUC PR: 0.12082
+2025-03-28 02:18:32,199 - Inference Testing completed
+2025-03-28 02:18:32,332 - Pipeline finished.

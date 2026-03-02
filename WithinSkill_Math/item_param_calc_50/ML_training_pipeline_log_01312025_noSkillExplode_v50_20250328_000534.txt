@@ -1,0 +1,42 @@
+2025-03-28 00:05:34,885 - Starting model training. Logs will be saved to ./ML_training_pipeline_log_01312025_noSkillExplode_v50_20250328_000534.txt
+2025-03-28 00:05:34,885 - Pipeline Configuration:
+2025-03-28 00:05:34,885 - pipeline_id: 01312025_noSkillExplode
+2025-03-28 00:05:34,886 - feature_set_id: v50
+2025-03-28 00:05:34,886 - model_type: ModelOnlyIncompleteIP_future3
+2025-03-28 00:05:34,887 - doSnowflakeETL: False
+2025-03-28 00:05:34,887 - skillExplode: False
+2025-03-28 00:05:34,888 - CorrectnessBinary: False
+2025-03-28 00:05:34,888 - ItemAgnostic: False
+2025-03-28 00:05:34,888 - ItemAgnosticFit: False
+2025-03-28 00:05:34,889 - ItemAgnosticDoubleFit: False
+2025-03-28 00:05:34,889 - F1ObjectiveMeasure: False
+2025-03-28 00:05:34,890 - SigmoidTransformOutputFit: False
+2025-03-28 00:05:34,890 - UseSigmoidTransform: False
+2025-03-28 00:05:34,891 - SigmoidTransformOutput: False
+2025-03-28 00:05:34,891 - pullNewData: False
+2025-03-28 00:05:34,891 - query_file: querytransformedtable.txt
+2025-03-28 00:05:34,892 - raw_data_folder_path: StudentProficiencyData_Math_yearOfData
+2025-03-28 00:05:34,892 - GenerateTestTrainSplit: False
+2025-03-28 00:05:34,893 - ItemParameterCalculate: False
+2025-03-28 00:05:34,893 - item_params_file: Math_ItemParameters_v5_partial031225.csv
+2025-03-28 00:05:34,893 - FeatureEngineering: False
+2025-03-28 00:05:34,894 - ProficiencyModelFit: False
+2025-03-28 00:05:34,894 - ConfidenceModelFit: False
+2025-03-28 00:05:34,895 - InferenceModeOn: False
+2025-03-28 00:05:34,896 - InferenceModeFeatureEngineering: False
+2025-03-28 00:05:34,896 - TestMode: False
+2025-03-28 00:05:34,897 - n_estimators: 1
+2025-03-28 00:05:34,897 - FUTURE_WINDOW: 3
+2025-03-28 00:05:34,898 - scalerFlag: False
+2025-03-28 00:05:34,898 - log_folder: .
+2025-03-28 00:05:34,898 - Folder Locations for input data and output artifacts:
+2025-03-28 00:05:34,899 - feature_engineering_output_folder: feature_engineered_train_parquets_v50/
+2025-03-28 00:05:34,900 - proficiency_input_folder: feature_engineered_train_parquets_v50/
+2025-03-28 00:05:34,900 - proficiency_model_output_folder: proficiency_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3
+2025-03-28 00:05:34,901 - confidence_input_folder: feature_engineered_train_parquets_v50/
+2025-03-28 00:05:34,901 - confidence_model_output_folder: confidence_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3
+2025-03-28 00:05:34,902 - proficiency_model_file : proficiency_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/xgb_model.json
+2025-03-28 00:05:34,903 - column_names.txt (from raw query): ['STUDENTID', 'SKILL', 'QUESTIONID', 'OCCURREDAT', 'CORRECTNESS', 'DURATIONSECONDS', 'ANSWERPOSITIONINSESSION', 'EVENT_RANK', 'QUESTIONID_LAG_1', 'QUESTIONID_LAG_2', 'QUESTIONID_LAG_3', 'QUESTIONID_LAG_4', 'QUESTIONID_LAG_5', 'QUESTIONID_LAG_6', 'QUESTIONID_LAG_7', 'QUESTIONID_LAG_8', 'QUESTIONID_LAG_9', 'QUESTIONID_LAG_10', 'OCCURREDAT_LAG_1', 'OCCURREDAT_LAG_2', 'OCCURREDAT_LAG_3', 'OCCURREDAT_LAG_4', 'OCCURREDAT_LAG_5', 'OCCURREDAT_LAG_6', 'OCCURREDAT_LAG_7', 'OCCURREDAT_LAG_8', 'OCCURREDAT_LAG_9', 'OCCURREDAT_LAG_10', 'CORRECTNESS_LAG_1', 'CORRECTNESS_LAG_2', 'CORRECTNESS_LAG_3', 'CORRECTNESS_LAG_4', 'CORRECTNESS_LAG_5', 'CORRECTNESS_LAG_6', 'CORRECTNESS_LAG_7', 'CORRECTNESS_LAG_8', 'CORRECTNESS_LAG_9', 'CORRECTNESS_LAG_10', 'DURATIONSECONDS_LAG_1', 'DURATIONSECONDS_LAG_2', 'DURATIONSECONDS_LAG_3', 'DURATIONSECONDS_LAG_4', 'DURATIONSECONDS_LAG_5', 'DURATIONSECONDS_LAG_6', 'DURATIONSECONDS_LAG_7', 'DURATIONSECONDS_LAG_8', 'DURATIONSECONDS_LAG_9', 'DURATIONSECONDS_LAG_10', 'FUTURE_CORRECTNESS_LAG_1', 'FUTURE_CORRECTNESS_LAG_2', 'FUTURE_CORRECTNESS_LAG_3', 'FUTURE_CORRECTNESS_LAG_4', 'FUTURE_CORRECTNESS_LAG_5']
+2025-03-28 00:05:34,905 - 844 files found.
+2025-03-28 00:05:35,348 - Imported 1028975 studentids for train split.
+2025-03-28 00:05:35,349 - Pipeline finished.

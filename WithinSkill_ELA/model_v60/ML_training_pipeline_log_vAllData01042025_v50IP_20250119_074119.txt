@@ -1,0 +1,1666 @@
+2025-01-19 07:41:19,432 - Starting model training. Logs will be saved to ./ML_training_pipeline_log_vAllData01042025_v50IP_20250119_074119.txt
+2025-01-19 07:41:19,432 - Pipeline Configuration:
+2025-01-19 07:41:19,432 - pipeline_id: vAllData01042025
+2025-01-19 07:41:19,433 - feature_set_id: v50IP
+2025-01-19 07:41:19,433 - model_type: doublefit_sigmoid
+2025-01-19 07:41:19,434 - doSnowflakeETL: False
+2025-01-19 07:41:19,434 - CorrectnessBinary: False
+2025-01-19 07:41:19,435 - ItemAgnostic: True
+2025-01-19 07:41:19,435 - ItemAgnosticFit: True
+2025-01-19 07:41:19,435 - ItemAgnosticDoubleFit: True
+2025-01-19 07:41:19,436 - F1ObjectiveMeasure: False
+2025-01-19 07:41:19,436 - SigmoidTransformOutputFit: True
+2025-01-19 07:41:19,437 - UseSigmoidTransform: False
+2025-01-19 07:41:19,437 - SigmoidTransformOutput: True
+2025-01-19 07:41:19,437 - pullNewData: False
+2025-01-19 07:41:19,438 - query_file: querytransformedtable.txt
+2025-01-19 07:41:19,438 - raw_data_folder_path: StudentProficiencyData_ELA
+2025-01-19 07:41:19,439 - GenerateTestTrainSplit: False
+2025-01-19 07:41:19,439 - ItemParameterCalculate: False
+2025-01-19 07:41:19,439 - item_params_file: ELA_ItemParameters_v5.csv
+2025-01-19 07:41:19,440 - FeatureEngineering: False
+2025-01-19 07:41:19,440 - ProficiencyModelFit: True
+2025-01-19 07:41:19,440 - ConfidenceModelFit: True
+2025-01-19 07:41:19,441 - InferenceModeOn: True
+2025-01-19 07:41:19,441 - InferenceModeFeatureEngineering: False
+2025-01-19 07:41:19,442 - TestMode: True
+2025-01-19 07:41:19,442 - n_estimators: 1
+2025-01-19 07:41:19,443 - FUTURE_WINDOW: 0
+2025-01-19 07:41:19,443 - scalerFlag: False
+2025-01-19 07:41:19,443 - log_folder: .
+2025-01-19 07:41:19,444 - Folder Locations for input data and output artifacts:
+2025-01-19 07:41:19,444 - feature_engineering_output_folder: feature_engineered_train_parquets_v50IP/
+2025-01-19 07:41:19,444 - proficiency_input_folder: feature_engineered_train_parquets_v50IP/
+2025-01-19 07:41:19,445 - proficiency_model_output_folder: proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid
+2025-01-19 07:41:19,445 - confidence_input_folder: feature_engineered_train_parquets_v50IP/
+2025-01-19 07:41:19,446 - confidence_model_output_folder: confidence_model_vAllData01042025_v50IP_doublefit_sigmoid
+2025-01-19 07:41:19,446 - proficiency_model_file : proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/xgb_model.json
+2025-01-19 07:41:19,447 - column_names.txt (from raw query): ['STUDENTID', 'SKILL', 'QUESTIONID', 'OCCURREDAT', 'CORRECTNESS', 'DURATIONSECONDS', 'ANSWERPOSITIONINSESSION', 'EVENT_RANK', 'QUESTIONID_LAG_1', 'QUESTIONID_LAG_2', 'QUESTIONID_LAG_3', 'QUESTIONID_LAG_4', 'QUESTIONID_LAG_5', 'QUESTIONID_LAG_6', 'QUESTIONID_LAG_7', 'QUESTIONID_LAG_8', 'QUESTIONID_LAG_9', 'QUESTIONID_LAG_10', 'OCCURREDAT_LAG_1', 'OCCURREDAT_LAG_2', 'OCCURREDAT_LAG_3', 'OCCURREDAT_LAG_4', 'OCCURREDAT_LAG_5', 'OCCURREDAT_LAG_6', 'OCCURREDAT_LAG_7', 'OCCURREDAT_LAG_8', 'OCCURREDAT_LAG_9', 'OCCURREDAT_LAG_10', 'CORRECTNESS_LAG_1', 'CORRECTNESS_LAG_2', 'CORRECTNESS_LAG_3', 'CORRECTNESS_LAG_4', 'CORRECTNESS_LAG_5', 'CORRECTNESS_LAG_6', 'CORRECTNESS_LAG_7', 'CORRECTNESS_LAG_8', 'CORRECTNESS_LAG_9', 'CORRECTNESS_LAG_10', 'DURATIONSECONDS_LAG_1', 'DURATIONSECONDS_LAG_2', 'DURATIONSECONDS_LAG_3', 'DURATIONSECONDS_LAG_4', 'DURATIONSECONDS_LAG_5', 'DURATIONSECONDS_LAG_6', 'DURATIONSECONDS_LAG_7', 'DURATIONSECONDS_LAG_8', 'DURATIONSECONDS_LAG_9', 'DURATIONSECONDS_LAG_10', 'FUTURE_CORRECTNESS_LAG_1', 'FUTURE_CORRECTNESS_LAG_2', 'FUTURE_CORRECTNESS_LAG_3', 'FUTURE_CORRECTNESS_LAG_4', 'FUTURE_CORRECTNESS_LAG_5']
+2025-01-19 07:41:19,457 - 823 files found.
+2025-01-19 07:41:19,709 - Imported 529397 studentids for train split.
+2025-01-19 07:41:19,710 - Starting proficiency model training.
+2025-01-19 07:41:19,711 - Starting model training. Logs will be saved to proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/training_log_20250119_074119.txt
+2025-01-19 07:41:19,712 - Loading column names from feature_engineered_train_parquets_v50IP/feature_engineered_column_names.json
+2025-01-19 07:41:19,715 - Excluded columns:
+2025-01-19 07:41:19,715 - ['STUDENTID', 'SKILL', 'QUESTIONID', 'CORRECTNESS', 'ANSWERPOSITIONINSESSION', 'EVENT_RANK']
+2025-01-19 07:41:19,716 - 
+Excluded QUESTIONID_LAG columns:
+2025-01-19 07:41:19,716 - ['QUESTIONID_LAG_1', 'QUESTIONID_LAG_2', 'QUESTIONID_LAG_3', 'QUESTIONID_LAG_4', 'QUESTIONID_LAG_5', 'QUESTIONID_LAG_6', 'QUESTIONID_LAG_7', 'QUESTIONID_LAG_8', 'QUESTIONID_LAG_9', 'QUESTIONID_LAG_10']
+2025-01-19 07:41:19,717 - 
+Model input features:
+2025-01-19 07:41:19,717 - ['CORRECTNESS_LAG_1', 'CORRECTNESS_LAG_2', 'CORRECTNESS_LAG_3', 'CORRECTNESS_LAG_4', 'CORRECTNESS_LAG_5', 'CORRECTNESS_LAG_6', 'CORRECTNESS_LAG_7', 'CORRECTNESS_LAG_8', 'CORRECTNESS_LAG_9', 'CORRECTNESS_LAG_10', 'DURATIONSECONDS_LAG_1', 'DURATIONSECONDS_LAG_2', 'DURATIONSECONDS_LAG_3', 'DURATIONSECONDS_LAG_4', 'DURATIONSECONDS_LAG_5', 'DURATIONSECONDS_LAG_6', 'DURATIONSECONDS_LAG_7', 'DURATIONSECONDS_LAG_8', 'DURATIONSECONDS_LAG_9', 'DURATIONSECONDS_LAG_10', 'OCCURREDAT_DIFF_1', 'OCCURREDAT_DIFF_2', 'OCCURREDAT_DIFF_3', 'OCCURREDAT_DIFF_4', 'OCCURREDAT_DIFF_5', 'OCCURREDAT_DIFF_6', 'OCCURREDAT_DIFF_7', 'OCCURREDAT_DIFF_8', 'OCCURREDAT_DIFF_9', 'OCCURREDAT_DIFF_10', 'LOG_OCCURREDAT_DIFF_1', 'LOG_OCCURREDAT_DIFF_2', 'LOG_OCCURREDAT_DIFF_3', 'LOG_OCCURREDAT_DIFF_4', 'LOG_OCCURREDAT_DIFF_5', 'LOG_OCCURREDAT_DIFF_6', 'LOG_OCCURREDAT_DIFF_7', 'LOG_OCCURREDAT_DIFF_8', 'LOG_OCCURREDAT_DIFF_9', 'LOG_OCCURREDAT_DIFF_10', 'LOG_DURATIONSECONDS_LAG_1', 'LOG_DURATIONSECONDS_LAG_2', 'LOG_DURATIONSECONDS_LAG_3', 'LOG_DURATIONSECONDS_LAG_4', 'LOG_DURATIONSECONDS_LAG_5', 'LOG_DURATIONSECONDS_LAG_6', 'LOG_DURATIONSECONDS_LAG_7', 'LOG_DURATIONSECONDS_LAG_8', 'LOG_DURATIONSECONDS_LAG_9', 'LOG_DURATIONSECONDS_LAG_10', 'discriminability', 'difficulty', 'guessing', 'inattention', 'discriminability_error', 'difficulty_error', 'guessing_error', 'inattention_error', 'auc_roc', 'optimal_threshold', 'tpr', 'tnr', 'skill_optimal_threshold', 'student_mean_accuracy', 'discriminability_LAG_1', 'difficulty_LAG_1', 'guessing_LAG_1', 'inattention_LAG_1', 'discriminability_error_LAG_1', 'difficulty_error_LAG_1', 'guessing_error_LAG_1', 'inattention_error_LAG_1', 'auc_roc_LAG_1', 'optimal_threshold_LAG_1', 'tpr_LAG_1', 'tnr_LAG_1', 'student_mean_accuracy_LAG_1', 'discriminability_LAG_2', 'difficulty_LAG_2', 'guessing_LAG_2', 'inattention_LAG_2', 'discriminability_error_LAG_2', 'difficulty_error_LAG_2', 'guessing_error_LAG_2', 'inattention_error_LAG_2', 'auc_roc_LAG_2', 'optimal_threshold_LAG_2', 'tpr_LAG_2', 'tnr_LAG_2', 'student_mean_accuracy_LAG_2', 'discriminability_LAG_3', 'difficulty_LAG_3', 'guessing_LAG_3', 'inattention_LAG_3', 'discriminability_error_LAG_3', 'difficulty_error_LAG_3', 'guessing_error_LAG_3', 'inattention_error_LAG_3', 'auc_roc_LAG_3', 'optimal_threshold_LAG_3', 'tpr_LAG_3', 'tnr_LAG_3', 'student_mean_accuracy_LAG_3', 'discriminability_LAG_4', 'difficulty_LAG_4', 'guessing_LAG_4', 'inattention_LAG_4', 'discriminability_error_LAG_4', 'difficulty_error_LAG_4', 'guessing_error_LAG_4', 'inattention_error_LAG_4', 'auc_roc_LAG_4', 'optimal_threshold_LAG_4', 'tpr_LAG_4', 'tnr_LAG_4', 'student_mean_accuracy_LAG_4', 'discriminability_LAG_5', 'difficulty_LAG_5', 'guessing_LAG_5', 'inattention_LAG_5', 'discriminability_error_LAG_5', 'difficulty_error_LAG_5', 'guessing_error_LAG_5', 'inattention_error_LAG_5', 'auc_roc_LAG_5', 'optimal_threshold_LAG_5', 'tpr_LAG_5', 'tnr_LAG_5', 'student_mean_accuracy_LAG_5', 'discriminability_LAG_6', 'difficulty_LAG_6', 'guessing_LAG_6', 'inattention_LAG_6', 'discriminability_error_LAG_6', 'difficulty_error_LAG_6', 'guessing_error_LAG_6', 'inattention_error_LAG_6', 'auc_roc_LAG_6', 'optimal_threshold_LAG_6', 'tpr_LAG_6', 'tnr_LAG_6', 'student_mean_accuracy_LAG_6', 'discriminability_LAG_7', 'difficulty_LAG_7', 'guessing_LAG_7', 'inattention_LAG_7', 'discriminability_error_LAG_7', 'difficulty_error_LAG_7', 'guessing_error_LAG_7', 'inattention_error_LAG_7', 'auc_roc_LAG_7', 'optimal_threshold_LAG_7', 'tpr_LAG_7', 'tnr_LAG_7', 'student_mean_accuracy_LAG_7', 'discriminability_LAG_8', 'difficulty_LAG_8', 'guessing_LAG_8', 'inattention_LAG_8', 'discriminability_error_LAG_8', 'difficulty_error_LAG_8', 'guessing_error_LAG_8', 'inattention_error_LAG_8', 'auc_roc_LAG_8', 'optimal_threshold_LAG_8', 'tpr_LAG_8', 'tnr_LAG_8', 'student_mean_accuracy_LAG_8', 'discriminability_LAG_9', 'difficulty_LAG_9', 'guessing_LAG_9', 'inattention_LAG_9', 'discriminability_error_LAG_9', 'difficulty_error_LAG_9', 'guessing_error_LAG_9', 'inattention_error_LAG_9', 'auc_roc_LAG_9', 'optimal_threshold_LAG_9', 'tpr_LAG_9', 'tnr_LAG_9', 'student_mean_accuracy_LAG_9', 'discriminability_LAG_10', 'difficulty_LAG_10', 'guessing_LAG_10', 'inattention_LAG_10', 'discriminability_error_LAG_10', 'difficulty_error_LAG_10', 'guessing_error_LAG_10', 'inattention_error_LAG_10', 'auc_roc_LAG_10', 'optimal_threshold_LAG_10', 'tpr_LAG_10', 'tnr_LAG_10', 'student_mean_accuracy_LAG_10', 'LOG_sample_size', 'LOG_sample_size_LAG_1', 'LOG_sample_size_LAG_2', 'LOG_sample_size_LAG_3', 'LOG_sample_size_LAG_4', 'LOG_sample_size_LAG_5', 'LOG_sample_size_LAG_6', 'LOG_sample_size_LAG_7', 'LOG_sample_size_LAG_8', 'LOG_sample_size_LAG_9', 'LOG_sample_size_LAG_10', 'difficulty_spread', 'optimal_threshold_spread', 'student_mean_accuracy_spread', 'tnr_spread', 'tpr_spread', 'mean_auc_roc', 'mean_discriminability', 'mean_discriminability_error', 'mean_difficulty_error', 'mean_guessing_error', 'mean_inattention_error', 'num_responses']
+2025-01-19 07:41:19,718 - Feature names saved to proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/feature_names.json
+2025-01-19 07:41:19,727 - Test Mode: Finding files with sufficient data...
+2025-01-19 07:41:20,182 - Found valid file: feature_engineered_train_parquets_v50IP/data__0_5_98.snappy.parquet with 101810 rows
+2025-01-19 07:41:20,587 - Found valid file: feature_engineered_train_parquets_v50IP/data__0_3_90.snappy.parquet with 94378 rows
+2025-01-19 07:41:20,588 - Test mode will use these files: ['feature_engineered_train_parquets_v50IP/data__0_5_98.snappy.parquet', 'feature_engineered_train_parquets_v50IP/data__0_3_90.snappy.parquet']
+2025-01-19 07:41:20,590 - Using standard XGBoost...
+2025-01-19 07:41:20,590 - Using regressor,['logloss', 'rmse'], reg:logistic...
+2025-01-19 07:41:20,591 - Starting XGBoost training...
+2025-01-19 07:41:35,431 - Count 0 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.21878, RMSE: 0.46774, Cross Entropy: 0.63736, R2: 0.01289, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.65428, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.7910130505515907, (Imputed) Accuracy: 0.65428, (Imputed) AUC ROC: 0.71478, (Imputed) AUC PR: 0.80744
+2025-01-19 07:41:35,533 - Count 1 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.20588, RMSE: 0.45374, Cross Entropy: 0.61480, R2: 0.00460, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.69124, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.817436848436247, (Imputed) Accuracy: 0.69124, (Imputed) AUC ROC: 0.71268, (Imputed) AUC PR: 0.83202
+2025-01-19 07:41:35,633 - Epoch 1/5, File 1/1, eval-logloss: 0.6148, eval-rmse: 0.4537
+2025-01-19 07:41:35,634 - Backing up model training progress. Saved to proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/xgb_model.json
+2025-01-19 07:41:35,635 - Epoch 1 complete. Avg train-eval-logloss: 0.6374 Avg train-eval-rmse: 0.4677 Avg test-eval-logloss: 0.6148 Avg test-eval-rmse: 0.4537
+2025-01-19 07:41:49,247 - Count 2 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.21647, RMSE: 0.46526, Cross Entropy: 0.63229, R2: 0.02334, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.65428, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.7910130505515907, (Imputed) Accuracy: 0.65428, (Imputed) AUC ROC: 0.72304, (Imputed) AUC PR: 0.82186
+2025-01-19 07:41:49,374 - Count 3 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.20378, RMSE: 0.45142, Cross Entropy: 0.61016, R2: 0.01476, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.69124, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.817436848436247, (Imputed) Accuracy: 0.69124, (Imputed) AUC ROC: 0.72015, (Imputed) AUC PR: 0.84507
+2025-01-19 07:41:49,478 - Epoch 2/5, File 1/1, eval-logloss: 0.6102, eval-rmse: 0.4514
+2025-01-19 07:41:49,480 - Backing up model training progress. Saved to proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/xgb_model.json
+2025-01-19 07:41:49,481 - Epoch 2 complete. Avg train-eval-logloss: 0.6323 Avg train-eval-rmse: 0.4653 Avg test-eval-logloss: 0.6102 Avg test-eval-rmse: 0.4514
+2025-01-19 07:42:01,149 - Count 4 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.21408, RMSE: 0.46268, Cross Entropy: 0.62705, R2: 0.03414, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.65428, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.7910130505515907, (Imputed) Accuracy: 0.65428, (Imputed) AUC ROC: 0.72517, (Imputed) AUC PR: 0.82337
+2025-01-19 07:42:01,251 - Count 5 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.20157, RMSE: 0.44897, Cross Entropy: 0.60527, R2: 0.02545, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.69124, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.817436848436247, (Imputed) Accuracy: 0.69124, (Imputed) AUC ROC: 0.72327, (Imputed) AUC PR: 0.84697
+2025-01-19 07:42:01,346 - Epoch 3/5, File 1/1, eval-logloss: 0.6053, eval-rmse: 0.4490
+2025-01-19 07:42:01,348 - Backing up model training progress. Saved to proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/xgb_model.json
+2025-01-19 07:42:01,348 - Epoch 3 complete. Avg train-eval-logloss: 0.6270 Avg train-eval-rmse: 0.4627 Avg test-eval-logloss: 0.6053 Avg test-eval-rmse: 0.4490
+2025-01-19 07:42:12,934 - Count 6 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.21179, RMSE: 0.46021, Cross Entropy: 0.62205, R2: 0.04443, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.65428, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.7910130505515907, (Imputed) Accuracy: 0.65428, (Imputed) AUC ROC: 0.72658, (Imputed) AUC PR: 0.82419
+2025-01-19 07:42:13,079 - Count 7 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19946, RMSE: 0.44661, Cross Entropy: 0.60057, R2: 0.03565, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.69124, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.817436848436247, (Imputed) Accuracy: 0.69124, (Imputed) AUC ROC: 0.72467, (Imputed) AUC PR: 0.84782
+2025-01-19 07:42:13,208 - Epoch 4/5, File 1/1, eval-logloss: 0.6006, eval-rmse: 0.4466
+2025-01-19 07:42:13,210 - Backing up model training progress. Saved to proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/xgb_model.json
+2025-01-19 07:42:13,211 - Epoch 4 complete. Avg train-eval-logloss: 0.6220 Avg train-eval-rmse: 0.4602 Avg test-eval-logloss: 0.6006 Avg test-eval-rmse: 0.4466
+2025-01-19 07:42:25,062 - Count 8 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.20980, RMSE: 0.45804, Cross Entropy: 0.61766, R2: 0.05343, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.65428, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.7910130505515907, (Imputed) Accuracy: 0.65428, (Imputed) AUC ROC: 0.72859, (Imputed) AUC PR: 0.82602
+2025-01-19 07:42:25,173 - Count 9 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19764, RMSE: 0.44456, Cross Entropy: 0.59649, R2: 0.04447, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.69124, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.817436848436247, (Imputed) Accuracy: 0.69124, (Imputed) AUC ROC: 0.72652, (Imputed) AUC PR: 0.84966
+2025-01-19 07:42:25,280 - Epoch 5/5, File 1/1, eval-logloss: 0.5965, eval-rmse: 0.4446
+2025-01-19 07:42:25,282 - Backing up model training progress. Saved to proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/xgb_model.json
+2025-01-19 07:42:25,283 - Epoch 5 complete. Avg train-eval-logloss: 0.6177 Avg train-eval-rmse: 0.4580 Avg test-eval-logloss: 0.5965 Avg test-eval-rmse: 0.4446
+2025-01-19 07:42:25,284 - Best iteration: 5, Best test-eval-logloss: 0.5965
+2025-01-19 07:42:25,284 - Model training completed.
+2025-01-19 07:42:25,285 - CORRECTNESS_LAG_1: 5718.2759
+CORRECTNESS_LAG_2: 1034.0790
+LOG_OCCURREDAT_DIFF_2: 566.7445
+OCCURREDAT_DIFF_8: 471.0315
+difficulty: 312.7144
+CORRECTNESS_LAG_3: 261.3615
+inattention_error_LAG_2: 200.9978
+CORRECTNESS_LAG_4: 140.2277
+difficulty_LAG_2: 134.6082
+inattention_error: 114.6328
+LOG_OCCURREDAT_DIFF_8: 93.0782
+LOG_DURATIONSECONDS_LAG_8: 91.0754
+inattention: 85.7834
+CORRECTNESS_LAG_8: 78.2818
+CORRECTNESS_LAG_5: 69.2286
+inattention_LAG_2: 68.0330
+CORRECTNESS_LAG_6: 66.9707
+OCCURREDAT_DIFF_9: 61.9671
+discriminability_error_LAG_2: 61.5230
+LOG_DURATIONSECONDS_LAG_10: 61.3597
+DURATIONSECONDS_LAG_3: 58.6417
+CORRECTNESS_LAG_10: 57.4148
+LOG_DURATIONSECONDS_LAG_1: 56.0471
+CORRECTNESS_LAG_7: 55.8121
+DURATIONSECONDS_LAG_9: 55.3475
+LOG_OCCURREDAT_DIFF_1: 54.1656
+DURATIONSECONDS_LAG_4: 52.3662
+difficulty_error: 50.6093
+OCCURREDAT_DIFF_7: 48.6840
+DURATIONSECONDS_LAG_8: 46.0438
+guessing_error: 46.0175
+LOG_DURATIONSECONDS_LAG_7: 44.5608
+difficulty_error_LAG_2: 39.9525
+OCCURREDAT_DIFF_3: 39.4706
+OCCURREDAT_DIFF_2: 37.8322
+OCCURREDAT_DIFF_4: 37.6412
+LOG_OCCURREDAT_DIFF_3: 36.0451
+LOG_OCCURREDAT_DIFF_10: 35.6123
+optimal_threshold: 34.0797
+discriminability_error: 32.5383
+DURATIONSECONDS_LAG_10: 32.3944
+OCCURREDAT_DIFF_5: 32.3887
+guessing: 30.7944
+CORRECTNESS_LAG_9: 30.4270
+DURATIONSECONDS_LAG_6: 29.3074
+discriminability_LAG_2: 27.1326
+inattention_error_LAG_1: 27.1137
+guessing_LAG_2: 26.2779
+tpr_LAG_1: 25.8301
+discriminability_LAG_1: 25.7864
+LOG_DURATIONSECONDS_LAG_6: 24.3505
+guessing_error_LAG_1: 24.2321
+auc_roc_LAG_1: 23.5098
+LOG_OCCURREDAT_DIFF_5: 23.2711
+tpr: 22.9141
+LOG_OCCURREDAT_DIFF_7: 22.4641
+LOG_OCCURREDAT_DIFF_9: 22.3468
+LOG_OCCURREDAT_DIFF_6: 22.0883
+auc_roc: 21.7374
+LOG_DURATIONSECONDS_LAG_4: 21.6715
+DURATIONSECONDS_LAG_5: 21.2022
+optimal_threshold_LAG_1: 20.8624
+OCCURREDAT_DIFF_10: 20.1335
+LOG_DURATIONSECONDS_LAG_9: 19.8776
+discriminability: 19.7193
+difficulty_LAG_1: 19.0159
+student_mean_accuracy: 18.3338
+tnr: 17.2312
+LOG_OCCURREDAT_DIFF_4: 16.9653
+skill_optimal_threshold: 16.9244
+DURATIONSECONDS_LAG_1: 16.7963
+LOG_DURATIONSECONDS_LAG_3: 16.3813
+DURATIONSECONDS_LAG_7: 15.7991
+tnr_LAG_1: 15.7939
+OCCURREDAT_DIFF_1: 15.6562
+OCCURREDAT_DIFF_6: 14.8651
+LOG_DURATIONSECONDS_LAG_2: 14.3896
+student_mean_accuracy_LAG_1: 14.3489
+discriminability_error_LAG_1: 13.9919
+difficulty_error_LAG_1: 13.3878
+inattention_LAG_1: 12.9589
+DURATIONSECONDS_LAG_2: 12.7247
+guessing_LAG_1: 11.0399
+LOG_DURATIONSECONDS_LAG_5: 9.8954
+guessing_error_LAG_2: 5.7146
+2025-01-19 07:42:25,286 - Final model metrics.
+2025-01-19 07:42:25,287 - thresholds tgt, pred: 0.5, 0.65382981300354
+2025-01-19 07:42:30,738 - Test set 1:
+2025-01-19 07:42:30,833 - Count 10 (tgt threshold=0.5000) (pred threshold=0.6538): MSE: 0.19410, RMSE: 0.44057, Cross Entropy: 0.58865, R2: 0.06157, (Imputed) Precision (incorrect/0): 0.49138, (Imputed) Precision (correct/1): 0.83613, (Imputed) Recall (incorrect/0): 0.70405, (Imputed) Recall (correct/1): 0.67448, (Imputed) F1: 0.746657164189235, (Imputed) Accuracy: 0.68361, (Imputed) AUC ROC: 0.75734, (Imputed) AUC PR: 0.87013
+2025-01-19 07:42:30,836 - Average metrics across all test sets:
+2025-01-19 07:42:30,838 - MSE: 0.19410
+2025-01-19 07:42:30,840 - RMSE: 0.44057
+2025-01-19 07:42:30,842 - Cross Entropy: 0.58865
+2025-01-19 07:42:30,844 - R2: 0.06157
+2025-01-19 07:42:30,845 - (Imputed) Precision (incorrect/0): 0.49138
+2025-01-19 07:42:30,847 - (Imputed) Precision (correct/1): 0.83613
+2025-01-19 07:42:30,849 - (Imputed) Recall (incorrect/0): 0.70405
+2025-01-19 07:42:30,851 - (Imputed) Recall (correct/1): 0.67448
+2025-01-19 07:42:30,852 - (Imputed) F1: 0.74666
+2025-01-19 07:42:30,854 - (Imputed) Accuracy: 0.68361
+2025-01-19 07:42:30,856 - (Imputed) AUC ROC: 0.75734
+2025-01-19 07:42:30,858 - (Imputed) AUC PR: 0.87013
+2025-01-19 07:42:30,860 - Model saved to proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/xgb_model.json
+2025-01-19 07:42:30,924 - Starting sigmoid transform training.
+2025-01-19 07:42:30,927 - Starting skill model training. Logs will be saved to proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/skill_training_log_20250119_074230.txt
+2025-01-19 07:42:30,938 - First model uses 217 features
+2025-01-19 07:42:30,942 - Test Mode: Finding files with sufficient data...
+2025-01-19 07:42:31,249 - Found valid file: feature_engineered_train_parquets_v50IP/data__0_5_98.snappy.parquet with 101810 rows
+2025-01-19 07:42:31,468 - Found valid file: feature_engineered_train_parquets_v50IP/data__0_3_90.snappy.parquet with 94378 rows
+2025-01-19 07:42:31,469 - Test mode will use these files: ['feature_engineered_train_parquets_v50IP/data__0_5_98.snappy.parquet', 'feature_engineered_train_parquets_v50IP/data__0_3_90.snappy.parquet']
+2025-01-19 07:42:31,470 - Fitting sigmoid transformation against future window of 0...
+2025-01-19 07:42:31,471 - Note: We use the unclipped predictions to fit the sigmoid transformer (even though Proficiency Model fitting, as of now, uses clipped predictions to drive the loss function.
+2025-01-19 07:42:35,543 - Erasing next-item information.
+2025-01-19 07:42:35,802 - Predictions stats: min=0.568, max=0.700, mean=0.652, nan_count=0 | Targets stats: min=0.000, max=1.000, mean=0.656, nan_count=0
+2025-01-19 07:42:35,945 - Fitted sigmoid parameters: a=24.708, b=0.624
+2025-01-19 07:42:35,946 - Saved skill sigmoid parameters to proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/sigmoid_params.json
+2025-01-19 07:42:35,951 - (Capped NOT CURRENTLY USED) Fitted sigmoid parameters: a=1.000, b=0.500
+2025-01-19 07:42:35,952 - Validating skill model on test set...
+2025-01-19 07:42:35,952 - Sigmoid Transform fit (proficiency model) metrics.
+2025-01-19 07:42:39,921 - Count 11 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.22671, RMSE: 0.47614, Cross Entropy: 0.65842, R2: -0.09608, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.69124, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.817436848436247, (Imputed) Accuracy: 0.69124, (Imputed) AUC ROC: 0.75734, (Imputed) AUC PR: 0.87013
+2025-01-19 07:42:39,922 - Average metrics across all test sets (proficiency model):
+2025-01-19 07:42:39,923 - MSE: 0.22671
+2025-01-19 07:42:39,923 - RMSE: 0.47614
+2025-01-19 07:42:39,924 - Cross Entropy: 0.65842
+2025-01-19 07:42:39,925 - R2: -0.09608
+2025-01-19 07:42:39,925 - (Imputed) Precision (incorrect/0): 0.00000
+2025-01-19 07:42:39,926 - (Imputed) Precision (correct/1): 0.69124
+2025-01-19 07:42:39,926 - (Imputed) Recall (incorrect/0): 0.00000
+2025-01-19 07:42:39,927 - (Imputed) Recall (correct/1): 1.00000
+2025-01-19 07:42:39,927 - (Imputed) F1: 0.81744
+2025-01-19 07:42:39,928 - (Imputed) Accuracy: 0.69124
+2025-01-19 07:42:39,929 - (Imputed) AUC ROC: 0.75734
+2025-01-19 07:42:39,929 - (Imputed) AUC PR: 0.87013
+2025-01-19 07:42:39,960 - Saved threshold parameters to proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/threshold_params.json
+2025-01-19 07:42:39,961 - Thresholds - struggling: 0.500, proficiency: 0.700
+2025-01-19 07:42:39,961 - 
+Item Proficiency Category Analysis:
+2025-01-19 07:42:39,990 - 
+Struggling Category (< 0.5):
+2025-01-19 07:42:39,990 - Count: 0 (0.0%)
+2025-01-19 07:42:39,991 - Mean Correctness: 0.000
+2025-01-19 07:42:39,992 - 
+Practicing Category (>= 0.5 and < 0.7):
+2025-01-19 07:42:39,992 - Count: 94378 (100.0%)
+2025-01-19 07:42:39,993 - Mean Correctness: 0.693
+2025-01-19 07:42:39,993 - 
+Proficient Category (>= 0.7):
+2025-01-19 07:42:39,994 - Count: 0 (0.0%)
+2025-01-19 07:42:39,995 - Mean Correctness: 0.000
+2025-01-19 07:42:40,023 - Starting confidence model training.
+2025-01-19 07:42:40,024 - Starting confidence model training. Logs will be saved to confidence_model_vAllData01042025_v50IP_doublefit_sigmoid/confidence_training_log_20250119_074240.txt
+2025-01-19 07:42:40,025 - Loading column names from feature_engineered_train_parquets_v50IP/feature_engineered_column_names.json
+2025-01-19 07:42:40,028 - Creating DMatrix objects...
+2025-01-19 07:42:40,031 - Loaded Sigmoid Transformer for Proficiency Scores from proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/sigmoid_params.json. Will use this instead of clipping for proficiency model predictions.
+2025-01-19 07:42:40,031 - First model uses 217 features
+2025-01-19 07:42:40,034 - Test Mode: Finding files with sufficient data...
+2025-01-19 07:42:40,305 - Found valid file: feature_engineered_train_parquets_v50IP/data__0_5_98.snappy.parquet with 101810 rows
+2025-01-19 07:42:40,509 - Found valid file: feature_engineered_train_parquets_v50IP/data__0_3_90.snappy.parquet with 94378 rows
+2025-01-19 07:42:40,510 - Test mode will use these files: ['feature_engineered_train_parquets_v50IP/data__0_5_98.snappy.parquet', 'feature_engineered_train_parquets_v50IP/data__0_3_90.snappy.parquet']
+2025-01-19 07:42:40,511 - confidence feature length: 218
+2025-01-19 07:42:40,512 - model features: ['CORRECTNESS_LAG_1', 'CORRECTNESS_LAG_2', 'CORRECTNESS_LAG_3', 'CORRECTNESS_LAG_4', 'CORRECTNESS_LAG_5', 'CORRECTNESS_LAG_6', 'CORRECTNESS_LAG_7', 'CORRECTNESS_LAG_8', 'CORRECTNESS_LAG_9', 'CORRECTNESS_LAG_10', 'DURATIONSECONDS_LAG_1', 'DURATIONSECONDS_LAG_2', 'DURATIONSECONDS_LAG_3', 'DURATIONSECONDS_LAG_4', 'DURATIONSECONDS_LAG_5', 'DURATIONSECONDS_LAG_6', 'DURATIONSECONDS_LAG_7', 'DURATIONSECONDS_LAG_8', 'DURATIONSECONDS_LAG_9', 'DURATIONSECONDS_LAG_10', 'OCCURREDAT_DIFF_1', 'OCCURREDAT_DIFF_2', 'OCCURREDAT_DIFF_3', 'OCCURREDAT_DIFF_4', 'OCCURREDAT_DIFF_5', 'OCCURREDAT_DIFF_6', 'OCCURREDAT_DIFF_7', 'OCCURREDAT_DIFF_8', 'OCCURREDAT_DIFF_9', 'OCCURREDAT_DIFF_10', 'LOG_OCCURREDAT_DIFF_1', 'LOG_OCCURREDAT_DIFF_2', 'LOG_OCCURREDAT_DIFF_3', 'LOG_OCCURREDAT_DIFF_4', 'LOG_OCCURREDAT_DIFF_5', 'LOG_OCCURREDAT_DIFF_6', 'LOG_OCCURREDAT_DIFF_7', 'LOG_OCCURREDAT_DIFF_8', 'LOG_OCCURREDAT_DIFF_9', 'LOG_OCCURREDAT_DIFF_10', 'LOG_DURATIONSECONDS_LAG_1', 'LOG_DURATIONSECONDS_LAG_2', 'LOG_DURATIONSECONDS_LAG_3', 'LOG_DURATIONSECONDS_LAG_4', 'LOG_DURATIONSECONDS_LAG_5', 'LOG_DURATIONSECONDS_LAG_6', 'LOG_DURATIONSECONDS_LAG_7', 'LOG_DURATIONSECONDS_LAG_8', 'LOG_DURATIONSECONDS_LAG_9', 'LOG_DURATIONSECONDS_LAG_10', 'discriminability', 'difficulty', 'guessing', 'inattention', 'discriminability_error', 'difficulty_error', 'guessing_error', 'inattention_error', 'auc_roc', 'optimal_threshold', 'tpr', 'tnr', 'skill_optimal_threshold', 'student_mean_accuracy', 'discriminability_LAG_1', 'difficulty_LAG_1', 'guessing_LAG_1', 'inattention_LAG_1', 'discriminability_error_LAG_1', 'difficulty_error_LAG_1', 'guessing_error_LAG_1', 'inattention_error_LAG_1', 'auc_roc_LAG_1', 'optimal_threshold_LAG_1', 'tpr_LAG_1', 'tnr_LAG_1', 'student_mean_accuracy_LAG_1', 'discriminability_LAG_2', 'difficulty_LAG_2', 'guessing_LAG_2', 'inattention_LAG_2', 'discriminability_error_LAG_2', 'difficulty_error_LAG_2', 'guessing_error_LAG_2', 'inattention_error_LAG_2', 'auc_roc_LAG_2', 'optimal_threshold_LAG_2', 'tpr_LAG_2', 'tnr_LAG_2', 'student_mean_accuracy_LAG_2', 'discriminability_LAG_3', 'difficulty_LAG_3', 'guessing_LAG_3', 'inattention_LAG_3', 'discriminability_error_LAG_3', 'difficulty_error_LAG_3', 'guessing_error_LAG_3', 'inattention_error_LAG_3', 'auc_roc_LAG_3', 'optimal_threshold_LAG_3', 'tpr_LAG_3', 'tnr_LAG_3', 'student_mean_accuracy_LAG_3', 'discriminability_LAG_4', 'difficulty_LAG_4', 'guessing_LAG_4', 'inattention_LAG_4', 'discriminability_error_LAG_4', 'difficulty_error_LAG_4', 'guessing_error_LAG_4', 'inattention_error_LAG_4', 'auc_roc_LAG_4', 'optimal_threshold_LAG_4', 'tpr_LAG_4', 'tnr_LAG_4', 'student_mean_accuracy_LAG_4', 'discriminability_LAG_5', 'difficulty_LAG_5', 'guessing_LAG_5', 'inattention_LAG_5', 'discriminability_error_LAG_5', 'difficulty_error_LAG_5', 'guessing_error_LAG_5', 'inattention_error_LAG_5', 'auc_roc_LAG_5', 'optimal_threshold_LAG_5', 'tpr_LAG_5', 'tnr_LAG_5', 'student_mean_accuracy_LAG_5', 'discriminability_LAG_6', 'difficulty_LAG_6', 'guessing_LAG_6', 'inattention_LAG_6', 'discriminability_error_LAG_6', 'difficulty_error_LAG_6', 'guessing_error_LAG_6', 'inattention_error_LAG_6', 'auc_roc_LAG_6', 'optimal_threshold_LAG_6', 'tpr_LAG_6', 'tnr_LAG_6', 'student_mean_accuracy_LAG_6', 'discriminability_LAG_7', 'difficulty_LAG_7', 'guessing_LAG_7', 'inattention_LAG_7', 'discriminability_error_LAG_7', 'difficulty_error_LAG_7', 'guessing_error_LAG_7', 'inattention_error_LAG_7', 'auc_roc_LAG_7', 'optimal_threshold_LAG_7', 'tpr_LAG_7', 'tnr_LAG_7', 'student_mean_accuracy_LAG_7', 'discriminability_LAG_8', 'difficulty_LAG_8', 'guessing_LAG_8', 'inattention_LAG_8', 'discriminability_error_LAG_8', 'difficulty_error_LAG_8', 'guessing_error_LAG_8', 'inattention_error_LAG_8', 'auc_roc_LAG_8', 'optimal_threshold_LAG_8', 'tpr_LAG_8', 'tnr_LAG_8', 'student_mean_accuracy_LAG_8', 'discriminability_LAG_9', 'difficulty_LAG_9', 'guessing_LAG_9', 'inattention_LAG_9', 'discriminability_error_LAG_9', 'difficulty_error_LAG_9', 'guessing_error_LAG_9', 'inattention_error_LAG_9', 'auc_roc_LAG_9', 'optimal_threshold_LAG_9', 'tpr_LAG_9', 'tnr_LAG_9', 'student_mean_accuracy_LAG_9', 'discriminability_LAG_10', 'difficulty_LAG_10', 'guessing_LAG_10', 'inattention_LAG_10', 'discriminability_error_LAG_10', 'difficulty_error_LAG_10', 'guessing_error_LAG_10', 'inattention_error_LAG_10', 'auc_roc_LAG_10', 'optimal_threshold_LAG_10', 'tpr_LAG_10', 'tnr_LAG_10', 'student_mean_accuracy_LAG_10', 'LOG_sample_size', 'LOG_sample_size_LAG_1', 'LOG_sample_size_LAG_2', 'LOG_sample_size_LAG_3', 'LOG_sample_size_LAG_4', 'LOG_sample_size_LAG_5', 'LOG_sample_size_LAG_6', 'LOG_sample_size_LAG_7', 'LOG_sample_size_LAG_8', 'LOG_sample_size_LAG_9', 'LOG_sample_size_LAG_10', 'difficulty_spread', 'optimal_threshold_spread', 'student_mean_accuracy_spread', 'tnr_spread', 'tpr_spread', 'mean_auc_roc', 'mean_discriminability', 'mean_discriminability_error', 'mean_difficulty_error', 'mean_guessing_error', 'mean_inattention_error', 'num_responses', 'proficiency_model_prediction']
+2025-01-19 07:42:40,513 - Starting confidence XGBoost training...
+2025-01-19 07:42:40,513 - Using regressor, rmse, reg:squarederror...
+2025-01-19 07:42:48,161 - Erasing next-item information.
+2025-01-19 07:42:49,583 - Count 12 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.03761, RMSE: 0.19393, Cross Entropy: 0.67219, R2: 0.01956, (Imputed) Precision (incorrect/0): 0.69417, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.69417, (Imputed) AUC ROC: 0.65290, (Imputed) AUC PR: 0.41093
+2025-01-19 07:42:49,638 - Count 13 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.03856, RMSE: 0.19635, Cross Entropy: 0.66508, R2: 0.01385, (Imputed) Precision (incorrect/0): 0.72024, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.72024, (Imputed) AUC ROC: 0.66287, (Imputed) AUC PR: 0.38784
+2025-01-19 07:42:49,673 - Epoch 1/5, File 1/1, eval-rmse: 0.1964
+2025-01-19 07:42:49,673 - Epoch 1 complete. Avg train-eval-rmse: 0.1939 Avg test-eval-rmse: 0.1964
+2025-01-19 07:43:03,160 - Erasing next-item information.
+2025-01-19 07:43:04,633 - Count 14 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.03692, RMSE: 0.19216, Cross Entropy: 0.67076, R2: 0.03737, (Imputed) Precision (incorrect/0): 0.69417, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.69417, (Imputed) AUC ROC: 0.65810, (Imputed) AUC PR: 0.41802
+2025-01-19 07:43:04,689 - Count 15 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.03779, RMSE: 0.19439, Cross Entropy: 0.66348, R2: 0.03345, (Imputed) Precision (incorrect/0): 0.72024, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.72024, (Imputed) AUC ROC: 0.66490, (Imputed) AUC PR: 0.39135
+2025-01-19 07:43:04,733 - Epoch 2/5, File 1/1, eval-rmse: 0.1944
+2025-01-19 07:43:04,734 - Epoch 2 complete. Avg train-eval-rmse: 0.1922 Avg test-eval-rmse: 0.1944
+2025-01-19 07:43:18,460 - Erasing next-item information.
+2025-01-19 07:43:20,011 - Count 16 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.03631, RMSE: 0.19055, Cross Entropy: 0.66947, R2: 0.05342, (Imputed) Precision (incorrect/0): 0.69417, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.69417, (Imputed) AUC ROC: 0.65957, (Imputed) AUC PR: 0.41849
+2025-01-19 07:43:20,068 - Count 17 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.03711, RMSE: 0.19263, Cross Entropy: 0.66204, R2: 0.05087, (Imputed) Precision (incorrect/0): 0.72024, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.72024, (Imputed) AUC ROC: 0.66573, (Imputed) AUC PR: 0.39249
+2025-01-19 07:43:20,105 - Epoch 3/5, File 1/1, eval-rmse: 0.1926
+2025-01-19 07:43:20,106 - Epoch 3 complete. Avg train-eval-rmse: 0.1906 Avg test-eval-rmse: 0.1926
+2025-01-19 07:43:33,659 - Erasing next-item information.
+2025-01-19 07:43:35,215 - Count 18 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.03575, RMSE: 0.18909, Cross Entropy: 0.66829, R2: 0.06791, (Imputed) Precision (incorrect/0): 0.69417, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.69417, (Imputed) AUC ROC: 0.66024, (Imputed) AUC PR: 0.41806
+2025-01-19 07:43:35,272 - Count 19 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.03650, RMSE: 0.19104, Cross Entropy: 0.66075, R2: 0.06649, (Imputed) Precision (incorrect/0): 0.72024, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.72024, (Imputed) AUC ROC: 0.66632, (Imputed) AUC PR: 0.39316
+2025-01-19 07:43:35,316 - Epoch 4/5, File 1/1, eval-rmse: 0.1910
+2025-01-19 07:43:35,316 - Epoch 4 complete. Avg train-eval-rmse: 0.1891 Avg test-eval-rmse: 0.1910
+2025-01-19 07:43:49,086 - Erasing next-item information.
+2025-01-19 07:43:50,541 - Count 20 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.03525, RMSE: 0.18775, Cross Entropy: 0.66722, R2: 0.08107, (Imputed) Precision (incorrect/0): 0.69417, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.69417, (Imputed) AUC ROC: 0.66080, (Imputed) AUC PR: 0.41837
+2025-01-19 07:43:50,599 - Count 21 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.03593, RMSE: 0.18956, Cross Entropy: 0.65954, R2: 0.08096, (Imputed) Precision (incorrect/0): 0.72024, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.72024, (Imputed) AUC ROC: 0.66698, (Imputed) AUC PR: 0.39399
+2025-01-19 07:43:50,640 - Epoch 5/5, File 1/1, eval-rmse: 0.1896
+2025-01-19 07:43:50,641 - Epoch 5 complete. Avg train-eval-rmse: 0.1877 Avg test-eval-rmse: 0.1896
+2025-01-19 07:43:50,641 - Confidence model training completed. Best iteration: 5, Best test-eval-rmse: 0.1896
+2025-01-19 07:43:50,642 - Feature Importance:
+2025-01-19 07:43:50,643 - proficiency_model_prediction: 48.7589
+2025-01-19 07:43:50,643 - difficulty_LAG_6: 2.8947
+2025-01-19 07:43:50,644 - optimal_threshold_LAG_2: 2.8812
+2025-01-19 07:43:50,645 - CORRECTNESS_LAG_7: 2.3810
+2025-01-19 07:43:50,645 - auc_roc_LAG_7: 2.2924
+2025-01-19 07:43:50,646 - tnr_LAG_1: 2.2850
+2025-01-19 07:43:50,646 - student_mean_accuracy_LAG_4: 2.1548
+2025-01-19 07:43:50,647 - inattention_error_LAG_8: 2.1177
+2025-01-19 07:43:50,648 - discriminability_error_LAG_6: 1.9709
+2025-01-19 07:43:50,648 - tnr_LAG_9: 1.9375
+2025-01-19 07:43:50,649 - discriminability_LAG_8: 1.9191
+2025-01-19 07:43:50,649 - LOG_DURATIONSECONDS_LAG_7: 1.9172
+2025-01-19 07:43:50,650 - guessing_LAG_7: 1.8724
+2025-01-19 07:43:50,650 - auc_roc_LAG_5: 1.8722
+2025-01-19 07:43:50,651 - guessing_error_LAG_2: 1.8599
+2025-01-19 07:43:50,652 - discriminability_LAG_6: 1.8291
+2025-01-19 07:43:50,652 - inattention_error_LAG_6: 1.8185
+2025-01-19 07:43:50,653 - inattention_error_LAG_7: 1.7864
+2025-01-19 07:43:50,653 - tpr_LAG_9: 1.7618
+2025-01-19 07:43:50,654 - guessing_error_LAG_8: 1.7465
+2025-01-19 07:43:50,654 - mean_difficulty_error: 1.7462
+2025-01-19 07:43:50,655 - tpr_LAG_5: 1.7347
+2025-01-19 07:43:50,656 - DURATIONSECONDS_LAG_3: 1.7162
+2025-01-19 07:43:50,656 - difficulty_LAG_8: 1.7108
+2025-01-19 07:43:50,657 - difficulty_LAG_4: 1.6791
+2025-01-19 07:43:50,657 - guessing_LAG_5: 1.6175
+2025-01-19 07:43:50,657 - difficulty_LAG_3: 1.5828
+2025-01-19 07:43:50,658 - mean_discriminability: 1.5828
+2025-01-19 07:43:50,659 - tnr_LAG_4: 1.5616
+2025-01-19 07:43:50,659 - OCCURREDAT_DIFF_1: 1.5146
+2025-01-19 07:43:50,660 - student_mean_accuracy_LAG_10: 1.5046
+2025-01-19 07:43:50,661 - discriminability_error_LAG_7: 1.5041
+2025-01-19 07:43:50,661 - difficulty_LAG_1: 1.4995
+2025-01-19 07:43:50,662 - auc_roc_LAG_8: 1.4927
+2025-01-19 07:43:50,662 - discriminability_error_LAG_9: 1.4830
+2025-01-19 07:43:50,663 - tpr_LAG_1: 1.4830
+2025-01-19 07:43:50,663 - difficulty_spread: 1.4801
+2025-01-19 07:43:50,664 - LOG_OCCURREDAT_DIFF_6: 1.4714
+2025-01-19 07:43:50,664 - inattention_LAG_3: 1.4676
+2025-01-19 07:43:50,665 - student_mean_accuracy_LAG_5: 1.4667
+2025-01-19 07:43:50,666 - DURATIONSECONDS_LAG_5: 1.4391
+2025-01-19 07:43:50,666 - discriminability_LAG_10: 1.4386
+2025-01-19 07:43:50,667 - optimal_threshold_LAG_3: 1.4333
+2025-01-19 07:43:50,667 - student_mean_accuracy_spread: 1.4304
+2025-01-19 07:43:50,668 - LOG_DURATIONSECONDS_LAG_1: 1.4169
+2025-01-19 07:43:50,668 - guessing_LAG_2: 1.4123
+2025-01-19 07:43:50,669 - inattention_LAG_7: 1.3887
+2025-01-19 07:43:50,670 - tnr_LAG_3: 1.3640
+2025-01-19 07:43:50,670 - guessing_LAG_8: 1.3637
+2025-01-19 07:43:50,671 - student_mean_accuracy_LAG_2: 1.3434
+2025-01-19 07:43:50,671 - DURATIONSECONDS_LAG_1: 1.3162
+2025-01-19 07:43:50,672 - auc_roc_LAG_1: 1.3151
+2025-01-19 07:43:50,673 - inattention_LAG_1: 1.3135
+2025-01-19 07:43:50,673 - tnr_LAG_5: 1.2966
+2025-01-19 07:43:50,674 - tnr_spread: 1.2936
+2025-01-19 07:43:50,674 - mean_inattention_error: 1.2896
+2025-01-19 07:43:50,675 - DURATIONSECONDS_LAG_10: 1.2428
+2025-01-19 07:43:50,675 - inattention_LAG_10: 1.2259
+2025-01-19 07:43:50,676 - inattention_error_LAG_2: 1.2109
+2025-01-19 07:43:50,676 - difficulty_error_LAG_2: 1.1882
+2025-01-19 07:43:50,677 - guessing_error_LAG_1: 1.1538
+2025-01-19 07:43:50,677 - inattention_error_LAG_4: 1.1516
+2025-01-19 07:43:50,678 - CORRECTNESS_LAG_4: 1.1204
+2025-01-19 07:43:50,679 - LOG_OCCURREDAT_DIFF_3: 1.1197
+2025-01-19 07:43:50,679 - difficulty_LAG_2: 1.1130
+2025-01-19 07:43:50,680 - tpr_LAG_6: 1.1080
+2025-01-19 07:43:50,680 - student_mean_accuracy_LAG_3: 1.0511
+2025-01-19 07:43:50,681 - discriminability_LAG_5: 1.0342
+2025-01-19 07:43:50,681 - OCCURREDAT_DIFF_8: 1.0222
+2025-01-19 07:43:50,682 - CORRECTNESS_LAG_6: 1.0077
+2025-01-19 07:43:50,683 - inattention_error_LAG_1: 0.9893
+2025-01-19 07:43:50,683 - student_mean_accuracy_LAG_1: 0.9843
+2025-01-19 07:43:50,684 - DURATIONSECONDS_LAG_4: 0.9802
+2025-01-19 07:43:50,684 - DURATIONSECONDS_LAG_7: 0.9434
+2025-01-19 07:43:50,685 - DURATIONSECONDS_LAG_2: 0.9363
+2025-01-19 07:43:50,686 - guessing_LAG_6: 0.9301
+2025-01-19 07:43:50,686 - auc_roc_LAG_2: 0.9268
+2025-01-19 07:43:50,687 - mean_guessing_error: 0.9246
+2025-01-19 07:43:50,687 - inattention_error_LAG_9: 0.9172
+2025-01-19 07:43:50,688 - discriminability_error_LAG_3: 0.9091
+2025-01-19 07:43:50,688 - discriminability_error_LAG_2: 0.8953
+2025-01-19 07:43:50,689 - tnr_LAG_2: 0.8914
+2025-01-19 07:43:50,690 - difficulty_error_LAG_6: 0.8851
+2025-01-19 07:43:50,690 - tpr_LAG_7: 0.8717
+2025-01-19 07:43:50,691 - discriminability_error_LAG_1: 0.8717
+2025-01-19 07:43:50,691 - optimal_threshold_LAG_10: 0.8712
+2025-01-19 07:43:50,692 - discriminability_error_LAG_4: 0.8687
+2025-01-19 07:43:50,693 - CORRECTNESS_LAG_5: 0.8614
+2025-01-19 07:43:50,693 - CORRECTNESS_LAG_1: 0.8564
+2025-01-19 07:43:50,694 - LOG_sample_size_LAG_10: 0.8464
+2025-01-19 07:43:50,694 - guessing_error_LAG_4: 0.8425
+2025-01-19 07:43:50,695 - optimal_threshold_LAG_5: 0.8380
+2025-01-19 07:43:50,696 - LOG_sample_size_LAG_9: 0.7986
+2025-01-19 07:43:50,696 - OCCURREDAT_DIFF_3: 0.7969
+2025-01-19 07:43:50,697 - guessing_error_LAG_5: 0.7846
+2025-01-19 07:43:50,698 - DURATIONSECONDS_LAG_9: 0.7769
+2025-01-19 07:43:50,698 - tpr_spread: 0.7712
+2025-01-19 07:43:50,699 - LOG_sample_size: 0.7661
+2025-01-19 07:43:50,700 - OCCURREDAT_DIFF_10: 0.7498
+2025-01-19 07:43:50,700 - auc_roc_LAG_3: 0.7410
+2025-01-19 07:43:50,701 - difficulty_LAG_5: 0.7307
+2025-01-19 07:43:50,701 - LOG_DURATIONSECONDS_LAG_4: 0.7241
+2025-01-19 07:43:50,702 - DURATIONSECONDS_LAG_8: 0.6912
+2025-01-19 07:43:50,703 - LOG_sample_size_LAG_2: 0.6881
+2025-01-19 07:43:50,703 - auc_roc_LAG_6: 0.6803
+2025-01-19 07:43:50,704 - auc_roc_LAG_4: 0.6791
+2025-01-19 07:43:50,704 - LOG_DURATIONSECONDS_LAG_2: 0.6746
+2025-01-19 07:43:50,705 - difficulty_error_LAG_3: 0.6338
+2025-01-19 07:43:50,705 - guessing_LAG_4: 0.6312
+2025-01-19 07:43:50,706 - tpr_LAG_3: 0.5933
+2025-01-19 07:43:50,707 - OCCURREDAT_DIFF_6: 0.5859
+2025-01-19 07:43:50,707 - optimal_threshold_LAG_1: 0.4667
+2025-01-19 07:43:50,708 - difficulty_error_LAG_5: 0.4212
+2025-01-19 07:43:50,708 - guessing_LAG_3: 0.4047
+2025-01-19 07:43:50,709 - LOG_sample_size_LAG_3: 0.1847
+2025-01-19 07:43:50,710 - OCCURREDAT_DIFF_2: 0.1569
+2025-01-19 07:43:50,710 - Final model metrics.
+2025-01-19 07:43:50,711 - Test set 1:
+2025-01-19 07:43:57,184 - Count 22 (tgt threshold=0.3628) (pred threshold=0.4049): MSE: 0.04619, RMSE: 0.21493, Cross Entropy: 0.64223, R2: 0.05795, (Imputed) Precision (incorrect/0): 0.83366, (Imputed) Precision (correct/1): 0.68662, (Imputed) Recall (incorrect/0): 0.78355, (Imputed) Recall (correct/1): 0.75207, (Imputed) F1: 0.7178555083360575, (Imputed) Accuracy: 0.77138, (Imputed) AUC ROC: 0.85778, (Imputed) AUC PR: 0.83044
+2025-01-19 07:43:57,191 - Average metrics across all test sets:
+2025-01-19 07:43:57,192 - MSE: 0.04619
+2025-01-19 07:43:57,193 - RMSE: 0.21493
+2025-01-19 07:43:57,193 - Cross Entropy: 0.64223
+2025-01-19 07:43:57,194 - R2: 0.05795
+2025-01-19 07:43:57,195 - (Imputed) Precision (incorrect/0): 0.83366
+2025-01-19 07:43:57,195 - (Imputed) Precision (correct/1): 0.68662
+2025-01-19 07:43:57,196 - (Imputed) Recall (incorrect/0): 0.78355
+2025-01-19 07:43:57,196 - (Imputed) Recall (correct/1): 0.75207
+2025-01-19 07:43:57,197 - (Imputed) F1: 0.71786
+2025-01-19 07:43:57,197 - (Imputed) Accuracy: 0.77138
+2025-01-19 07:43:57,198 - (Imputed) AUC ROC: 0.85778
+2025-01-19 07:43:57,199 - (Imputed) AUC PR: 0.83044
+2025-01-19 07:43:57,201 - Confidence model saved to confidence_model_vAllData01042025_v50IP_doublefit_sigmoid/confidence_xgb_model.json
+2025-01-19 07:43:57,202 - Confidence model feature names saved to confidence_model_vAllData01042025_v50IP_doublefit_sigmoid/confidence_feature_names.json
+2025-01-19 07:43:57,202 - Fitting Confidence Score Transformer (percentile ranker)
+2025-01-19 07:43:57,211 - Confidence model Score Transformer names saved to confidence_model_vAllData01042025_v50IP_doublefit_sigmoid/percentile_rank_calculator.pkl
+2025-01-19 07:43:57,233 - The raw probabilities ranks (error_predictions) range from 0.349 to 0.449
+2025-01-19 07:43:57,260 - The percentile ranks range from 0.001 to 99.999
+2025-01-19 07:43:57,290 - Starting inference mode testing.
+2025-01-19 07:43:57,403 - Imported 264699 studentids for test split.
+2025-01-19 07:43:57,404 - Starting Inference Testing on reserved test set
+2025-01-19 07:43:57,407 - Loaded proficiency model from proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid/xgb_model.json
+2025-01-19 07:43:57,408 - Loaded sigmoid transformer for proficiency model: sigmoid_params.json from proficiency_model_vAllData01042025_v50IP_doublefit_sigmoid
+2025-01-19 07:43:57,410 - Sigmoid parameters, a,b: 24.708277569344475,0.62359995887458
+2025-01-19 07:43:57,413 - Loaded confidence model from confidence_model_vAllData01042025_v50IP_doublefit_sigmoid/confidence_xgb_model.json
+2025-01-19 07:43:57,414 - Confidence model Score Transformer loaded from confidence_model_vAllData01042025_v50IP_doublefit_sigmoid/percentile_rank_calculator.pkl
+2025-01-19 07:43:57,932 - Loaded IPD data ELA_ItemParameters_v5.csv
+2025-01-19 07:43:57,944 - Test Mode: Finding files with sufficient data...
+2025-01-19 07:43:58,173 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50IP/data__0_5_98.snappy.parquet with 51098 rows
+2025-01-19 07:43:58,368 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50IP/data__0_3_90.snappy.parquet with 40366 rows
+2025-01-19 07:43:58,369 - Test mode will use these files: ['inferenceTest_feature_engineered_train_parquets_v50IP/data__0_5_98.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50IP/data__0_3_90.snappy.parquet']
+2025-01-19 07:43:58,370 - Loaded threshold parameters: struggling=0.500, proficiency=0.700
+2025-01-19 07:43:58,371 - Final model metrics using reserved test set.
+2025-01-19 07:43:58,371 - Erasing next-item information for item-agnostic inference testing. This is used when we are forecasting more than one item into the future, or testing a non-individual-item probability calculation for skill.
+2025-01-19 07:43:58,372 - Found 2 files.
+2025-01-19 07:43:58,379 - Test set 1:
+2025-01-19 07:45:20,764 - skill_proficiency_predictions - NaN: 4647, non-NaN: 46451
+2025-01-19 07:45:20,780 - item_AWARE_prof_metrics
+2025-01-19 07:45:20,819 - Count 23 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.17887, RMSE: 0.42293, Cross Entropy: 0.54426, R2: 0.19726, (Imputed) Precision (incorrect/0): 0.63122, (Imputed) Precision (correct/1): 0.75963, (Imputed) Recall (incorrect/0): 0.50720, (Imputed) Recall (correct/1): 0.84014, (Imputed) F1: 0.7978598609481846, (Imputed) Accuracy: 0.72347, (Imputed) AUC ROC: 0.76904, (Imputed) AUC PR: 0.85645
+2025-01-19 07:45:20,820 - item_conf_metrics
+2025-01-19 07:45:20,855 - Count 24 (tgt threshold=0.1328) (pred threshold=0.3992): MSE: 0.32621, RMSE: 0.57115, Cross Entropy: 0.51014, R2: -0.82534, (Imputed) Precision (incorrect/0): 0.52260, (Imputed) Precision (correct/1): 0.51458, (Imputed) Recall (incorrect/0): 0.51844, (Imputed) Recall (correct/1): 0.51874, (Imputed) F1: 0.5166525848348495, (Imputed) Accuracy: 0.51859, (Imputed) AUC ROC: 0.56210, (Imputed) AUC PR: 0.52117
+2025-01-19 07:45:20,856 - item_cs_metrics
+2025-01-19 07:45:20,951 - Count 25 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.60612, RMSE: 0.77854, Cross Entropy: 2.05797, R2: -2.39159, (Imputed) Precision (incorrect/0): 0.85558, (Imputed) Precision (correct/1): 0.06794, (Imputed) Recall (incorrect/0): 0.44074, (Imputed) Recall (correct/1): 0.35399, (Imputed) F1: 0.11400323456714778, (Imputed) Accuracy: 0.43178, (Imputed) AUC ROC: 0.31217, (Imputed) AUC PR: 0.07392
+2025-01-19 07:45:20,951 - item_AGNOSTIC_prof_metrics
+2025-01-19 07:45:20,986 - Count 26 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19609, RMSE: 0.44282, Cross Entropy: 0.58627, R2: 0.12000, (Imputed) Precision (incorrect/0): 0.61514, (Imputed) Precision (correct/1): 0.70899, (Imputed) Recall (incorrect/0): 0.32179, (Imputed) Recall (correct/1): 0.89139, (Imputed) F1: 0.7897975254594717, (Imputed) Accuracy: 0.69179, (Imputed) AUC ROC: 0.70734, (Imputed) AUC PR: 0.80129
+2025-01-19 07:45:21,073 - Count 27 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.35996, RMSE: 0.59997, Cross Entropy: 0.51494, R2: -0.83574, (Imputed) Precision (incorrect/0): 0.92998, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.92998, (Imputed) AUC ROC: 0.79898, (Imputed) AUC PR: 0.18234
+2025-01-19 07:45:21,192 - Count 28 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58787, RMSE: 0.76673, Cross Entropy: 1.51320, R2: -1.99809, (Imputed) Precision (incorrect/0): 0.91402, (Imputed) Precision (correct/1): 0.04903, (Imputed) Recall (incorrect/0): 0.55835, (Imputed) Recall (correct/1): 0.30240, (Imputed) F1: 0.08437634031270715, (Imputed) Accuracy: 0.54043, (Imputed) AUC ROC: 0.29638, (Imputed) AUC PR: 0.05672
+2025-01-19 07:45:21,193 - skill_prof_metrics
+2025-01-19 07:45:21,229 - Count 29 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23914, RMSE: 0.48902, Cross Entropy: 0.68724, R2: -0.06918, (Imputed) Precision (incorrect/0): 0.41963, (Imputed) Precision (correct/1): 0.66702, (Imputed) Recall (incorrect/0): 0.25475, (Imputed) Recall (correct/1): 0.80906, (Imputed) F1: 0.7312082802070051, (Imputed) Accuracy: 0.61424, (Imputed) AUC ROC: 0.54257, (Imputed) AUC PR: 0.67001
+2025-01-19 07:45:21,230 - skill_conf_metrics
+2025-01-19 07:45:21,267 - Count 30 (tgt threshold=0.1328) (pred threshold=0.3992): MSE: 0.32572, RMSE: 0.57072, Cross Entropy: 0.51066, R2: -0.82212, (Imputed) Precision (incorrect/0): 0.50271, (Imputed) Precision (correct/1): 0.48303, (Imputed) Recall (incorrect/0): 0.47731, (Imputed) Recall (correct/1): 0.50844, (Imputed) F1: 0.49540813049900456, (Imputed) Accuracy: 0.49256, (Imputed) AUC ROC: 0.48986, (Imputed) AUC PR: 0.47641
+2025-01-19 07:45:21,268 - skill_cs_metrics
+2025-01-19 07:45:21,342 - Count 31 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.41899, RMSE: 0.64729, Cross Entropy: 0.82726, R2: -1.34390, (Imputed) Precision (incorrect/0): 0.88995, (Imputed) Precision (correct/1): 0.09978, (Imputed) Recall (incorrect/0): 0.62017, (Imputed) Recall (correct/1): 0.35442, (Imputed) F1: 0.1557238307349666, (Imputed) Accuracy: 0.59196, (Imputed) AUC ROC: 0.48448, (Imputed) AUC PR: 0.10029
+2025-01-19 07:45:21,343 - Test set 2:
+2025-01-19 07:46:34,591 - skill_proficiency_predictions - NaN: 5578, non-NaN: 34788
+2025-01-19 07:46:34,603 - item_AWARE_prof_metrics
+2025-01-19 07:46:34,640 - Count 32 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.17516, RMSE: 0.41853, Cross Entropy: 0.53811, R2: 0.18505, (Imputed) Precision (incorrect/0): 0.61602, (Imputed) Precision (correct/1): 0.76831, (Imputed) Recall (incorrect/0): 0.47471, (Imputed) Recall (correct/1): 0.85479, (Imputed) F1: 0.8092441088035802, (Imputed) Accuracy: 0.72967, (Imputed) AUC ROC: 0.76411, (Imputed) AUC PR: 0.86298
+2025-01-19 07:46:34,641 - item_conf_metrics
+2025-01-19 07:46:34,724 - Count 33 (tgt threshold=0.1328) (pred threshold=0.3987): MSE: 0.31553, RMSE: 0.56172, Cross Entropy: 0.51167, R2: -0.80559, (Imputed) Precision (incorrect/0): 0.53051, (Imputed) Precision (correct/1): 0.52934, (Imputed) Recall (incorrect/0): 0.53206, (Imputed) Recall (correct/1): 0.52779, (Imputed) F1: 0.5285597157693359, (Imputed) Accuracy: 0.52993, (Imputed) AUC ROC: 0.58495, (Imputed) AUC PR: 0.53715
+2025-01-19 07:46:34,725 - item_cs_metrics
+2025-01-19 07:46:34,835 - Count 34 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.60642, RMSE: 0.77873, Cross Entropy: 2.21898, R2: -2.47020, (Imputed) Precision (incorrect/0): 0.86311, (Imputed) Precision (correct/1): 0.06324, (Imputed) Recall (incorrect/0): 0.43528, (Imputed) Recall (correct/1): 0.35577, (Imputed) F1: 0.10739395812408252, (Imputed) Accuracy: 0.42759, (Imputed) AUC ROC: 0.30315, (Imputed) AUC PR: 0.06816
+2025-01-19 07:46:34,836 - item_AGNOSTIC_prof_metrics
+2025-01-19 07:46:34,864 - Count 35 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19236, RMSE: 0.43859, Cross Entropy: 0.58055, R2: 0.10505, (Imputed) Precision (incorrect/0): 0.59033, (Imputed) Precision (correct/1): 0.71940, (Imputed) Recall (incorrect/0): 0.28131, (Imputed) Recall (correct/1): 0.90420, (Imputed) F1: 0.8012828904306847, (Imputed) Accuracy: 0.69915, (Imputed) AUC ROC: 0.69556, (Imputed) AUC PR: 0.80895
+2025-01-19 07:46:34,947 - Count 36 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.34730, RMSE: 0.58932, Cross Entropy: 0.51672, R2: -0.80607, (Imputed) Precision (incorrect/0): 0.93656, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.93656, (Imputed) AUC ROC: 0.82067, (Imputed) AUC PR: 0.18521
+2025-01-19 07:46:35,042 - Count 37 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58503, RMSE: 0.76487, Cross Entropy: 1.66554, R2: -2.04234, (Imputed) Precision (incorrect/0): 0.92057, (Imputed) Precision (correct/1): 0.04251, (Imputed) Recall (incorrect/0): 0.55736, (Imputed) Recall (correct/1): 0.29012, (Imputed) F1: 0.07415909771434274, (Imputed) Accuracy: 0.54041, (Imputed) AUC ROC: 0.27727, (Imputed) AUC PR: 0.05066
+2025-01-19 07:46:35,043 - skill_prof_metrics
+2025-01-19 07:46:35,072 - Count 38 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.24021, RMSE: 0.49011, Cross Entropy: 0.69320, R2: -0.11505, (Imputed) Precision (incorrect/0): 0.34874, (Imputed) Precision (correct/1): 0.67627, (Imputed) Recall (incorrect/0): 0.21696, (Imputed) Recall (correct/1): 0.80148, (Imputed) F1: 0.7335698465277641, (Imputed) Accuracy: 0.60926, (Imputed) AUC ROC: 0.51642, (Imputed) AUC PR: 0.68376
+2025-01-19 07:46:35,073 - skill_conf_metrics
+2025-01-19 07:46:35,102 - Count 39 (tgt threshold=0.1328) (pred threshold=0.3987): MSE: 0.31252, RMSE: 0.55904, Cross Entropy: 0.51277, R2: -0.80656, (Imputed) Precision (incorrect/0): 0.51997, (Imputed) Precision (correct/1): 0.49267, (Imputed) Recall (incorrect/0): 0.45887, (Imputed) Recall (correct/1): 0.55366, (Imputed) F1: 0.5213886649804041, (Imputed) Accuracy: 0.50503, (Imputed) AUC ROC: 0.51110, (Imputed) AUC PR: 0.49060
+2025-01-19 07:46:35,103 - skill_cs_metrics
+2025-01-19 07:46:35,175 - Count 40 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.42022, RMSE: 0.64825, Cross Entropy: 0.99330, R2: -1.42912, (Imputed) Precision (incorrect/0): 0.89892, (Imputed) Precision (correct/1): 0.10017, (Imputed) Recall (incorrect/0): 0.63763, (Imputed) Recall (correct/1): 0.36006, (Imputed) F1: 0.15674097994162578, (Imputed) Accuracy: 0.60966, (Imputed) AUC ROC: 0.49661, (Imputed) AUC PR: 0.09889
+2025-01-19 07:46:35,176 - Looking for raw files in: StudentProficiencyData_ELA/*.parquet
+2025-01-19 07:46:35,178 - Found 823 raw files.
+2025-01-19 07:46:35,179 - Found matching raw file: StudentProficiencyData_ELA/data__0_3_90.snappy.parquet
+2025-01-19 07:46:36,090 - Loaded raw data with 221184 rows before filtering for test_ids.
+2025-01-19 07:46:36,909 - Loaded raw data with 40366 rows after filtering for test_ids.
+2025-01-19 07:46:36,910 - Feature engineered data has 40366 rows.
+2025-01-19 07:46:37,030 - Average metrics across all test sets (item aware/item agnostic/skill: proficiency & confidence models & confidence scores):
+2025-01-19 07:46:37,031 - Average ITEM AWARE PROFICIENCY MODEL metrics across all test sets:
+2025-01-19 07:46:37,032 - MSE: 0.17516
+2025-01-19 07:46:37,032 - RMSE: 0.41853
+2025-01-19 07:46:37,033 - Cross Entropy: 0.53811
+2025-01-19 07:46:37,033 - R2: 0.18505
+2025-01-19 07:46:37,034 - (Imputed) Precision (incorrect/0): 0.61602
+2025-01-19 07:46:37,034 - (Imputed) Precision (correct/1): 0.76831
+2025-01-19 07:46:37,035 - (Imputed) Recall (incorrect/0): 0.47471
+2025-01-19 07:46:37,036 - (Imputed) Recall (correct/1): 0.85479
+2025-01-19 07:46:37,036 - (Imputed) F1: 0.80924
+2025-01-19 07:46:37,037 - (Imputed) Accuracy: 0.72967
+2025-01-19 07:46:37,037 - (Imputed) AUC ROC: 0.76411
+2025-01-19 07:46:37,038 - (Imputed) AUC PR: 0.86298
+2025-01-19 07:46:37,038 - Average ITEM AWARE CONFIDENCE MODEL metrics across all test sets:
+2025-01-19 07:46:37,039 - MSE: 0.31553
+2025-01-19 07:46:37,039 - RMSE: 0.56172
+2025-01-19 07:46:37,040 - Cross Entropy: 0.51167
+2025-01-19 07:46:37,040 - R2: -0.80559
+2025-01-19 07:46:37,041 - (Imputed) Precision (incorrect/0): 0.53051
+2025-01-19 07:46:37,041 - (Imputed) Precision (correct/1): 0.52934
+2025-01-19 07:46:37,042 - (Imputed) Recall (incorrect/0): 0.53206
+2025-01-19 07:46:37,042 - (Imputed) Recall (correct/1): 0.52779
+2025-01-19 07:46:37,043 - (Imputed) F1: 0.52856
+2025-01-19 07:46:37,043 - (Imputed) Accuracy: 0.52993
+2025-01-19 07:46:37,044 - (Imputed) AUC ROC: 0.58495
+2025-01-19 07:46:37,044 - (Imputed) AUC PR: 0.53715
+2025-01-19 07:46:37,045 - Average ITEM AWARE CONFIDENCE SCORE metrics across all test sets:
+2025-01-19 07:46:37,045 - MSE: 0.60642
+2025-01-19 07:46:37,046 - RMSE: 0.77873
+2025-01-19 07:46:37,046 - Cross Entropy: 2.21898
+2025-01-19 07:46:37,047 - R2: -2.47020
+2025-01-19 07:46:37,047 - (Imputed) Precision (incorrect/0): 0.86311
+2025-01-19 07:46:37,048 - (Imputed) Precision (correct/1): 0.06324
+2025-01-19 07:46:37,048 - (Imputed) Recall (incorrect/0): 0.43528
+2025-01-19 07:46:37,049 - (Imputed) Recall (correct/1): 0.35577
+2025-01-19 07:46:37,049 - (Imputed) F1: 0.10739
+2025-01-19 07:46:37,050 - (Imputed) Accuracy: 0.42759
+2025-01-19 07:46:37,050 - (Imputed) AUC ROC: 0.30315
+2025-01-19 07:46:37,051 - (Imputed) AUC PR: 0.06816
+2025-01-19 07:46:37,051 - Average ITEM AGNOSTIC PROFICIENCY MODEL metrics across all test sets:
+2025-01-19 07:46:37,052 - MSE: 0.19236
+2025-01-19 07:46:37,052 - RMSE: 0.43859
+2025-01-19 07:46:37,053 - Cross Entropy: 0.58055
+2025-01-19 07:46:37,054 - R2: 0.10505
+2025-01-19 07:46:37,054 - (Imputed) Precision (incorrect/0): 0.59033
+2025-01-19 07:46:37,055 - (Imputed) Precision (correct/1): 0.71940
+2025-01-19 07:46:37,055 - (Imputed) Recall (incorrect/0): 0.28131
+2025-01-19 07:46:37,056 - (Imputed) Recall (correct/1): 0.90420
+2025-01-19 07:46:37,056 - (Imputed) F1: 0.80128
+2025-01-19 07:46:37,057 - (Imputed) Accuracy: 0.69915
+2025-01-19 07:46:37,057 - (Imputed) AUC ROC: 0.69556
+2025-01-19 07:46:37,058 - (Imputed) AUC PR: 0.80895
+2025-01-19 07:46:37,058 - Average ITEM AGNOSTIC CONFIDENCE MODEL metrics across all test sets:
+2025-01-19 07:46:37,059 - MSE: 0.34730
+2025-01-19 07:46:37,059 - RMSE: 0.58932
+2025-01-19 07:46:37,060 - Cross Entropy: 0.51672
+2025-01-19 07:46:37,060 - R2: -0.80607
+2025-01-19 07:46:37,061 - (Imputed) Precision (incorrect/0): 0.93656
+2025-01-19 07:46:37,061 - (Imputed) Precision (correct/1): 0.00000
+2025-01-19 07:46:37,062 - (Imputed) Recall (incorrect/0): 1.00000
+2025-01-19 07:46:37,062 - (Imputed) Recall (correct/1): 0.00000
+2025-01-19 07:46:37,063 - (Imputed) F1: 0.00000
+2025-01-19 07:46:37,063 - (Imputed) Accuracy: 0.93656
+2025-01-19 07:46:37,064 - (Imputed) AUC ROC: 0.82067
+2025-01-19 07:46:37,064 - (Imputed) AUC PR: 0.18521
+2025-01-19 07:46:37,065 - Average ITEM AGNOSTIC CONFIDENCE SCORE metrics across all test sets:
+2025-01-19 07:46:37,065 - MSE: 0.58503
+2025-01-19 07:46:37,066 - RMSE: 0.76487
+2025-01-19 07:46:37,067 - Cross Entropy: 1.66554
+2025-01-19 07:46:37,067 - R2: -2.04234
+2025-01-19 07:46:37,068 - (Imputed) Precision (incorrect/0): 0.92057
+2025-01-19 07:46:37,068 - (Imputed) Precision (correct/1): 0.04251
+2025-01-19 07:46:37,069 - (Imputed) Recall (incorrect/0): 0.55736
+2025-01-19 07:46:37,069 - (Imputed) Recall (correct/1): 0.29012
+2025-01-19 07:46:37,070 - (Imputed) F1: 0.07416
+2025-01-19 07:46:37,070 - (Imputed) Accuracy: 0.54041
+2025-01-19 07:46:37,071 - (Imputed) AUC ROC: 0.27727
+2025-01-19 07:46:37,071 - (Imputed) AUC PR: 0.05066
+2025-01-19 07:46:37,072 - Average SKILL PROFICIENCY MODEL metrics across all test sets:
+2025-01-19 07:46:37,072 - MSE: 0.24021
+2025-01-19 07:46:37,073 - RMSE: 0.49011
+2025-01-19 07:46:37,073 - Cross Entropy: 0.69320
+2025-01-19 07:46:37,074 - R2: -0.11505
+2025-01-19 07:46:37,074 - (Imputed) Precision (incorrect/0): 0.34874
+2025-01-19 07:46:37,075 - (Imputed) Precision (correct/1): 0.67627
+2025-01-19 07:46:37,075 - (Imputed) Recall (incorrect/0): 0.21696
+2025-01-19 07:46:37,076 - (Imputed) Recall (correct/1): 0.80148
+2025-01-19 07:46:37,077 - (Imputed) F1: 0.73357
+2025-01-19 07:46:37,077 - (Imputed) Accuracy: 0.60926
+2025-01-19 07:46:37,078 - (Imputed) AUC ROC: 0.51642
+2025-01-19 07:46:37,078 - (Imputed) AUC PR: 0.68376
+2025-01-19 07:46:37,079 - Average SKILL CONFIDENCE MODEL metrics across all test sets:
+2025-01-19 07:46:37,079 - MSE: 0.31252
+2025-01-19 07:46:37,080 - RMSE: 0.55904
+2025-01-19 07:46:37,080 - Cross Entropy: 0.51277
+2025-01-19 07:46:37,081 - R2: -0.80656
+2025-01-19 07:46:37,081 - (Imputed) Precision (incorrect/0): 0.51997
+2025-01-19 07:46:37,082 - (Imputed) Precision (correct/1): 0.49267
+2025-01-19 07:46:37,082 - (Imputed) Recall (incorrect/0): 0.45887
+2025-01-19 07:46:37,083 - (Imputed) Recall (correct/1): 0.55366
+2025-01-19 07:46:37,083 - (Imputed) F1: 0.52139
+2025-01-19 07:46:37,084 - (Imputed) Accuracy: 0.50503
+2025-01-19 07:46:37,084 - (Imputed) AUC ROC: 0.51110
+2025-01-19 07:46:37,085 - (Imputed) AUC PR: 0.49060
+2025-01-19 07:46:37,085 - Average SKILL CONFIDENCE SCORE metrics across all test sets:
+2025-01-19 07:46:37,086 - MSE: 0.42022
+2025-01-19 07:46:37,086 - RMSE: 0.64825
+2025-01-19 07:46:37,087 - Cross Entropy: 0.99330
+2025-01-19 07:46:37,087 - R2: -1.42912
+2025-01-19 07:46:37,088 - (Imputed) Precision (incorrect/0): 0.89892
+2025-01-19 07:46:37,088 - (Imputed) Precision (correct/1): 0.10017
+2025-01-19 07:46:37,089 - (Imputed) Recall (incorrect/0): 0.63763
+2025-01-19 07:46:37,089 - (Imputed) Recall (correct/1): 0.36006
+2025-01-19 07:46:37,090 - (Imputed) F1: 0.15674
+2025-01-19 07:46:37,091 - (Imputed) Accuracy: 0.60966
+2025-01-19 07:46:37,091 - (Imputed) AUC ROC: 0.49661
+2025-01-19 07:46:37,092 - (Imputed) AUC PR: 0.09889
+2025-01-19 07:46:48,964 - 
+Item Level - Metrics by number of previous responses:
+2025-01-19 07:46:48,965 - 
+Responses: 0
+2025-01-19 07:46:48,965 -   Sample count: 5820
+2025-01-19 07:46:48,966 -   Proficiency Model:
+2025-01-19 07:46:48,966 -     MAE: 0.38985
+2025-01-19 07:46:48,967 -     MSE: 0.19373
+2025-01-19 07:46:48,967 -     RMSE: 0.44015
+2025-01-19 07:46:48,968 -   Confidence Model:
+2025-01-19 07:46:48,968 -     MAE: 0.16831
+2025-01-19 07:46:48,969 -     MSE: 0.03903
+2025-01-19 07:46:48,969 -     RMSE: 0.19757
+2025-01-19 07:46:48,969 - 
+Responses: 1
+2025-01-19 07:46:48,970 -   Sample count: 4841
+2025-01-19 07:46:48,970 -   Proficiency Model:
+2025-01-19 07:46:48,971 -     MAE: 0.37250
+2025-01-19 07:46:48,971 -     MSE: 0.18656
+2025-01-19 07:46:48,972 -     RMSE: 0.43193
+2025-01-19 07:46:48,972 -   Confidence Model:
+2025-01-19 07:46:48,973 -     MAE: 0.18401
+2025-01-19 07:46:48,973 -     MSE: 0.04527
+2025-01-19 07:46:48,973 -     RMSE: 0.21277
+2025-01-19 07:46:48,974 - 
+Responses: 2
+2025-01-19 07:46:48,974 -   Sample count: 3894
+2025-01-19 07:46:48,975 -   Proficiency Model:
+2025-01-19 07:46:48,975 -     MAE: 0.36842
+2025-01-19 07:46:48,976 -     MSE: 0.18418
+2025-01-19 07:46:48,976 -     RMSE: 0.42917
+2025-01-19 07:46:48,977 -   Confidence Model:
+2025-01-19 07:46:48,977 -     MAE: 0.18216
+2025-01-19 07:46:48,977 -     MSE: 0.04545
+2025-01-19 07:46:48,978 -     RMSE: 0.21319
+2025-01-19 07:46:48,978 - 
+Responses: 3
+2025-01-19 07:46:48,979 -   Sample count: 3431
+2025-01-19 07:46:48,979 -   Proficiency Model:
+2025-01-19 07:46:48,980 -     MAE: 0.36181
+2025-01-19 07:46:48,980 -     MSE: 0.18219
+2025-01-19 07:46:48,981 -     RMSE: 0.42683
+2025-01-19 07:46:48,981 -   Confidence Model:
+2025-01-19 07:46:48,981 -     MAE: 0.18870
+2025-01-19 07:46:48,982 -     MSE: 0.04818
+2025-01-19 07:46:48,982 -     RMSE: 0.21950
+2025-01-19 07:46:48,983 - 
+Responses: 4
+2025-01-19 07:46:48,983 -   Sample count: 2882
+2025-01-19 07:46:48,984 -   Proficiency Model:
+2025-01-19 07:46:48,984 -     MAE: 0.34630
+2025-01-19 07:46:48,984 -     MSE: 0.17032
+2025-01-19 07:46:48,985 -     RMSE: 0.41269
+2025-01-19 07:46:48,985 -   Confidence Model:
+2025-01-19 07:46:48,986 -     MAE: 0.18832
+2025-01-19 07:46:48,986 -     MSE: 0.04784
+2025-01-19 07:46:48,987 -     RMSE: 0.21873
+2025-01-19 07:46:48,987 - 
+Responses: 5
+2025-01-19 07:46:48,988 -   Sample count: 2616
+2025-01-19 07:46:48,988 -   Proficiency Model:
+2025-01-19 07:46:48,988 -     MAE: 0.34017
+2025-01-19 07:46:48,989 -     MSE: 0.16586
+2025-01-19 07:46:48,989 -     RMSE: 0.40725
+2025-01-19 07:46:48,990 -   Confidence Model:
+2025-01-19 07:46:48,990 -     MAE: 0.19072
+2025-01-19 07:46:48,991 -     MSE: 0.04787
+2025-01-19 07:46:48,991 -     RMSE: 0.21879
+2025-01-19 07:46:48,991 - 
+Responses: 6
+2025-01-19 07:46:48,992 -   Sample count: 2430
+2025-01-19 07:46:48,992 -   Proficiency Model:
+2025-01-19 07:46:48,993 -     MAE: 0.32665
+2025-01-19 07:46:48,993 -     MSE: 0.15577
+2025-01-19 07:46:48,994 -     RMSE: 0.39468
+2025-01-19 07:46:48,994 -   Confidence Model:
+2025-01-19 07:46:48,995 -     MAE: 0.19287
+2025-01-19 07:46:48,995 -     MSE: 0.04836
+2025-01-19 07:46:48,995 -     RMSE: 0.21991
+2025-01-19 07:46:48,996 - 
+Responses: 7
+2025-01-19 07:46:48,996 -   Sample count: 2339
+2025-01-19 07:46:48,997 -   Proficiency Model:
+2025-01-19 07:46:48,997 -     MAE: 0.32597
+2025-01-19 07:46:48,998 -     MSE: 0.15604
+2025-01-19 07:46:48,998 -     RMSE: 0.39502
+2025-01-19 07:46:48,998 -   Confidence Model:
+2025-01-19 07:46:48,999 -     MAE: 0.19324
+2025-01-19 07:46:48,999 -     MSE: 0.04836
+2025-01-19 07:46:49,000 -     RMSE: 0.21992
+2025-01-19 07:46:49,000 - 
+Responses: 8
+2025-01-19 07:46:49,001 -   Sample count: 2160
+2025-01-19 07:46:49,001 -   Proficiency Model:
+2025-01-19 07:46:49,001 -     MAE: 0.32614
+2025-01-19 07:46:49,002 -     MSE: 0.15612
+2025-01-19 07:46:49,002 -     RMSE: 0.39512
+2025-01-19 07:46:49,003 -   Confidence Model:
+2025-01-19 07:46:49,003 -     MAE: 0.19400
+2025-01-19 07:46:49,004 -     MSE: 0.04840
+2025-01-19 07:46:49,004 -     RMSE: 0.21999
+2025-01-19 07:46:49,004 - 
+Responses: 9
+2025-01-19 07:46:49,005 -   Sample count: 2088
+2025-01-19 07:46:49,005 -   Proficiency Model:
+2025-01-19 07:46:49,006 -     MAE: 0.31519
+2025-01-19 07:46:49,006 -     MSE: 0.14775
+2025-01-19 07:46:49,007 -     RMSE: 0.38438
+2025-01-19 07:46:49,007 -   Confidence Model:
+2025-01-19 07:46:49,007 -     MAE: 0.19489
+2025-01-19 07:46:49,008 -     MSE: 0.04853
+2025-01-19 07:46:49,008 -     RMSE: 0.22030
+2025-01-19 07:46:49,009 - 
+Responses: 10
+2025-01-19 07:46:49,009 -   Sample count: 7865
+2025-01-19 07:46:49,010 -   Proficiency Model:
+2025-01-19 07:46:49,010 -     MAE: 0.35237
+2025-01-19 07:46:49,010 -     MSE: 0.17595
+2025-01-19 07:46:49,011 -     RMSE: 0.41946
+2025-01-19 07:46:49,011 -   Confidence Model:
+2025-01-19 07:46:49,012 -     MAE: 0.19199
+2025-01-19 07:46:49,012 -     MSE: 0.04882
+2025-01-19 07:46:49,013 -     RMSE: 0.22094
+2025-01-19 07:46:49,031 - 
+Item-Agnostic Level - Metrics by number of previous responses:
+2025-01-19 07:46:49,032 - 
+Responses: 0
+2025-01-19 07:46:49,032 -   Sample count: 5820
+2025-01-19 07:46:49,033 -   Proficiency Model:
+2025-01-19 07:46:49,033 -     MAE: 0.45447
+2025-01-19 07:46:49,034 -     MSE: 0.22711
+2025-01-19 07:46:49,034 -     RMSE: 0.47656
+2025-01-19 07:46:49,035 -   Confidence Model:
+2025-01-19 07:46:49,035 -     MAE: 0.12066
+2025-01-19 07:46:49,035 -     MSE: 0.02217
+2025-01-19 07:46:49,036 -     RMSE: 0.14890
+2025-01-19 07:46:49,036 - 
+Responses: 1
+2025-01-19 07:46:49,037 -   Sample count: 4841
+2025-01-19 07:46:49,037 -   Proficiency Model:
+2025-01-19 07:46:49,038 -     MAE: 0.41947
+2025-01-19 07:46:49,038 -     MSE: 0.20664
+2025-01-19 07:46:49,039 -     RMSE: 0.45458
+2025-01-19 07:46:49,039 -   Confidence Model:
+2025-01-19 07:46:49,039 -     MAE: 0.14358
+2025-01-19 07:46:49,040 -     MSE: 0.02933
+2025-01-19 07:46:49,040 -     RMSE: 0.17126
+2025-01-19 07:46:49,041 - 
+Responses: 2
+2025-01-19 07:46:49,041 -   Sample count: 3894
+2025-01-19 07:46:49,042 -   Proficiency Model:
+2025-01-19 07:46:49,042 -     MAE: 0.40722
+2025-01-19 07:46:49,042 -     MSE: 0.19850
+2025-01-19 07:46:49,043 -     RMSE: 0.44553
+2025-01-19 07:46:49,043 -   Confidence Model:
+2025-01-19 07:46:49,044 -     MAE: 0.14510
+2025-01-19 07:46:49,044 -     MSE: 0.03066
+2025-01-19 07:46:49,045 -     RMSE: 0.17511
+2025-01-19 07:46:49,045 - 
+Responses: 3
+2025-01-19 07:46:49,045 -   Sample count: 3431
+2025-01-19 07:46:49,046 -   Proficiency Model:
+2025-01-19 07:46:49,046 -     MAE: 0.39417
+2025-01-19 07:46:49,047 -     MSE: 0.19846
+2025-01-19 07:46:49,047 -     RMSE: 0.44549
+2025-01-19 07:46:49,048 -   Confidence Model:
+2025-01-19 07:46:49,048 -     MAE: 0.16990
+2025-01-19 07:46:49,049 -     MSE: 0.04023
+2025-01-19 07:46:49,049 -     RMSE: 0.20058
+2025-01-19 07:46:49,049 - 
+Responses: 4
+2025-01-19 07:46:49,050 -   Sample count: 2882
+2025-01-19 07:46:49,050 -   Proficiency Model:
+2025-01-19 07:46:49,051 -     MAE: 0.38316
+2025-01-19 07:46:49,051 -     MSE: 0.19069
+2025-01-19 07:46:49,052 -     RMSE: 0.43668
+2025-01-19 07:46:49,052 -   Confidence Model:
+2025-01-19 07:46:49,052 -     MAE: 0.16899
+2025-01-19 07:46:49,053 -     MSE: 0.04048
+2025-01-19 07:46:49,053 -     RMSE: 0.20119
+2025-01-19 07:46:49,054 - 
+Responses: 5
+2025-01-19 07:46:49,054 -   Sample count: 2616
+2025-01-19 07:46:49,055 -   Proficiency Model:
+2025-01-19 07:46:49,055 -     MAE: 0.37367
+2025-01-19 07:46:49,056 -     MSE: 0.18229
+2025-01-19 07:46:49,056 -     RMSE: 0.42696
+2025-01-19 07:46:49,056 -   Confidence Model:
+2025-01-19 07:46:49,057 -     MAE: 0.16856
+2025-01-19 07:46:49,057 -     MSE: 0.03907
+2025-01-19 07:46:49,058 -     RMSE: 0.19767
+2025-01-19 07:46:49,058 - 
+Responses: 6
+2025-01-19 07:46:49,059 -   Sample count: 2430
+2025-01-19 07:46:49,059 -   Proficiency Model:
+2025-01-19 07:46:49,059 -     MAE: 0.35856
+2025-01-19 07:46:49,060 -     MSE: 0.17063
+2025-01-19 07:46:49,060 -     RMSE: 0.41308
+2025-01-19 07:46:49,061 -   Confidence Model:
+2025-01-19 07:46:49,061 -     MAE: 0.17066
+2025-01-19 07:46:49,062 -     MSE: 0.03944
+2025-01-19 07:46:49,062 -     RMSE: 0.19860
+2025-01-19 07:46:49,063 - 
+Responses: 7
+2025-01-19 07:46:49,063 -   Sample count: 2339
+2025-01-19 07:46:49,063 -   Proficiency Model:
+2025-01-19 07:46:49,064 -     MAE: 0.35779
+2025-01-19 07:46:49,064 -     MSE: 0.17210
+2025-01-19 07:46:49,065 -     RMSE: 0.41485
+2025-01-19 07:46:49,065 -   Confidence Model:
+2025-01-19 07:46:49,066 -     MAE: 0.17623
+2025-01-19 07:46:49,066 -     MSE: 0.04127
+2025-01-19 07:46:49,066 -     RMSE: 0.20315
+2025-01-19 07:46:49,067 - 
+Responses: 8
+2025-01-19 07:46:49,067 -   Sample count: 2160
+2025-01-19 07:46:49,068 -   Proficiency Model:
+2025-01-19 07:46:49,068 -     MAE: 0.35410
+2025-01-19 07:46:49,069 -     MSE: 0.16845
+2025-01-19 07:46:49,069 -     RMSE: 0.41043
+2025-01-19 07:46:49,069 -   Confidence Model:
+2025-01-19 07:46:49,070 -     MAE: 0.17446
+2025-01-19 07:46:49,070 -     MSE: 0.04077
+2025-01-19 07:46:49,071 -     RMSE: 0.20191
+2025-01-19 07:46:49,071 - 
+Responses: 9
+2025-01-19 07:46:49,072 -   Sample count: 2088
+2025-01-19 07:46:49,072 -   Proficiency Model:
+2025-01-19 07:46:49,072 -     MAE: 0.35206
+2025-01-19 07:46:49,073 -     MSE: 0.16814
+2025-01-19 07:46:49,073 -     RMSE: 0.41005
+2025-01-19 07:46:49,074 -   Confidence Model:
+2025-01-19 07:46:49,074 -     MAE: 0.17706
+2025-01-19 07:46:49,075 -     MSE: 0.04199
+2025-01-19 07:46:49,075 -     RMSE: 0.20492
+2025-01-19 07:46:49,075 - 
+Responses: 10
+2025-01-19 07:46:49,076 -   Sample count: 7865
+2025-01-19 07:46:49,076 -   Proficiency Model:
+2025-01-19 07:46:49,077 -     MAE: 0.36946
+2025-01-19 07:46:49,077 -     MSE: 0.18186
+2025-01-19 07:46:49,078 -     RMSE: 0.42645
+2025-01-19 07:46:49,078 -   Confidence Model:
+2025-01-19 07:46:49,078 -     MAE: 0.17644
+2025-01-19 07:46:49,079 -     MSE: 0.04251
+2025-01-19 07:46:49,079 -     RMSE: 0.20619
+2025-01-19 07:46:49,099 - 
+Skill Level - Metrics by number of previous responses:
+2025-01-19 07:46:49,099 - 
+Responses: 0
+2025-01-19 07:46:49,100 -   Sample count: 5820
+2025-01-19 07:46:49,100 -   Proficiency Model:
+2025-01-19 07:46:49,101 -     MAE: 0.45181
+2025-01-19 07:46:49,101 -     MSE: 0.24936
+2025-01-19 07:46:49,102 -     RMSE: 0.49936
+2025-01-19 07:46:49,102 -   Confidence Model:
+2025-01-19 07:46:49,103 -     MAE: 0.17395
+2025-01-19 07:46:49,103 -     MSE: 0.04768
+2025-01-19 07:46:49,103 -     RMSE: 0.21836
+2025-01-19 07:46:49,104 - 
+Responses: 1
+2025-01-19 07:46:49,104 -   Sample count: 4841
+2025-01-19 07:46:49,105 -   Proficiency Model:
+2025-01-19 07:46:49,105 -     MAE: 0.44790
+2025-01-19 07:46:49,106 -     MSE: 0.24645
+2025-01-19 07:46:49,106 -     RMSE: 0.49644
+2025-01-19 07:46:49,106 -   Confidence Model:
+2025-01-19 07:46:49,107 -     MAE: 0.17561
+2025-01-19 07:46:49,107 -     MSE: 0.04757
+2025-01-19 07:46:49,108 -     RMSE: 0.21811
+2025-01-19 07:46:49,108 - 
+Responses: 2
+2025-01-19 07:46:49,109 -   Sample count: 3894
+2025-01-19 07:46:49,109 -   Proficiency Model:
+2025-01-19 07:46:49,109 -     MAE: 0.44494
+2025-01-19 07:46:49,110 -     MSE: 0.24291
+2025-01-19 07:46:49,110 -     RMSE: 0.49286
+2025-01-19 07:46:49,111 -   Confidence Model:
+2025-01-19 07:46:49,111 -     MAE: 0.17129
+2025-01-19 07:46:49,112 -     MSE: 0.04667
+2025-01-19 07:46:49,112 -     RMSE: 0.21603
+2025-01-19 07:46:49,113 - 
+Responses: 3
+2025-01-19 07:46:49,113 -   Sample count: 3431
+2025-01-19 07:46:49,113 -   Proficiency Model:
+2025-01-19 07:46:49,114 -     MAE: 0.44162
+2025-01-19 07:46:49,114 -     MSE: 0.24069
+2025-01-19 07:46:49,115 -     RMSE: 0.49060
+2025-01-19 07:46:49,115 -   Confidence Model:
+2025-01-19 07:46:49,116 -     MAE: 0.17300
+2025-01-19 07:46:49,116 -     MSE: 0.04620
+2025-01-19 07:46:49,116 -     RMSE: 0.21495
+2025-01-19 07:46:49,117 - 
+Responses: 4
+2025-01-19 07:46:49,117 -   Sample count: 2882
+2025-01-19 07:46:49,118 -   Proficiency Model:
+2025-01-19 07:46:49,118 -     MAE: 0.44048
+2025-01-19 07:46:49,119 -     MSE: 0.23982
+2025-01-19 07:46:49,119 -     RMSE: 0.48971
+2025-01-19 07:46:49,120 -   Confidence Model:
+2025-01-19 07:46:49,120 -     MAE: 0.17297
+2025-01-19 07:46:49,120 -     MSE: 0.04653
+2025-01-19 07:46:49,121 -     RMSE: 0.21570
+2025-01-19 07:46:49,121 - 
+Responses: 5
+2025-01-19 07:46:49,122 -   Sample count: 2616
+2025-01-19 07:46:49,122 -   Proficiency Model:
+2025-01-19 07:46:49,123 -     MAE: 0.44723
+2025-01-19 07:46:49,123 -     MSE: 0.24593
+2025-01-19 07:46:49,123 -     RMSE: 0.49591
+2025-01-19 07:46:49,124 -   Confidence Model:
+2025-01-19 07:46:49,124 -     MAE: 0.17490
+2025-01-19 07:46:49,125 -     MSE: 0.04720
+2025-01-19 07:46:49,125 -     RMSE: 0.21726
+2025-01-19 07:46:49,126 - 
+Responses: 6
+2025-01-19 07:46:49,126 -   Sample count: 2430
+2025-01-19 07:46:49,127 -   Proficiency Model:
+2025-01-19 07:46:49,127 -     MAE: 0.43419
+2025-01-19 07:46:49,127 -     MSE: 0.23332
+2025-01-19 07:46:49,128 -     RMSE: 0.48303
+2025-01-19 07:46:49,128 -   Confidence Model:
+2025-01-19 07:46:49,129 -     MAE: 0.17027
+2025-01-19 07:46:49,129 -     MSE: 0.04467
+2025-01-19 07:46:49,130 -     RMSE: 0.21135
+2025-01-19 07:46:49,130 - 
+Responses: 7
+2025-01-19 07:46:49,130 -   Sample count: 2339
+2025-01-19 07:46:49,131 -   Proficiency Model:
+2025-01-19 07:46:49,131 -     MAE: 0.43367
+2025-01-19 07:46:49,132 -     MSE: 0.23349
+2025-01-19 07:46:49,132 -     RMSE: 0.48321
+2025-01-19 07:46:49,133 -   Confidence Model:
+2025-01-19 07:46:49,133 -     MAE: 0.17190
+2025-01-19 07:46:49,133 -     MSE: 0.04506
+2025-01-19 07:46:49,134 -     RMSE: 0.21228
+2025-01-19 07:46:49,134 - 
+Responses: 8
+2025-01-19 07:46:49,135 -   Sample count: 2160
+2025-01-19 07:46:49,135 -   Proficiency Model:
+2025-01-19 07:46:49,136 -     MAE: 0.43568
+2025-01-19 07:46:49,136 -     MSE: 0.23505
+2025-01-19 07:46:49,137 -     RMSE: 0.48482
+2025-01-19 07:46:49,137 -   Confidence Model:
+2025-01-19 07:46:49,137 -     MAE: 0.17126
+2025-01-19 07:46:49,138 -     MSE: 0.04528
+2025-01-19 07:46:49,138 -     RMSE: 0.21279
+2025-01-19 07:46:49,139 - 
+Responses: 9
+2025-01-19 07:46:49,139 -   Sample count: 2088
+2025-01-19 07:46:49,140 -   Proficiency Model:
+2025-01-19 07:46:49,140 -     MAE: 0.43015
+2025-01-19 07:46:49,140 -     MSE: 0.23024
+2025-01-19 07:46:49,141 -     RMSE: 0.47984
+2025-01-19 07:46:49,141 -   Confidence Model:
+2025-01-19 07:46:49,142 -     MAE: 0.17163
+2025-01-19 07:46:49,142 -     MSE: 0.04460
+2025-01-19 07:46:49,143 -     RMSE: 0.21119
+2025-01-19 07:46:49,143 - 
+Responses: 10
+2025-01-19 07:46:49,144 -   Sample count: 7865
+2025-01-19 07:46:49,144 -   Proficiency Model:
+2025-01-19 07:46:49,144 -     MAE: 0.43590
+2025-01-19 07:46:49,145 -     MSE: 0.23408
+2025-01-19 07:46:49,145 -     RMSE: 0.48382
+2025-01-19 07:46:49,146 -   Confidence Model:
+2025-01-19 07:46:49,146 -     MAE: 0.16904
+2025-01-19 07:46:49,147 -     MSE: 0.04395
+2025-01-19 07:46:49,147 -     RMSE: 0.20964
+2025-01-19 07:46:49,946 - 
+Printing 5 random samples from the last file:
+2025-01-19 07:46:49,949 - 
+Student #1:
+2025-01-19 07:46:49,950 - Raw input (Snowflake SQL):
+2025-01-19 07:46:49,951 -   STUDENTID: 40186555
+2025-01-19 07:46:49,951 -   SKILL: 3011f61e-e69f-e311-9503-005056801da1
+2025-01-19 07:46:49,952 -   QUESTIONID: f19c0910-e6ea-4d09-b551-c01ddeaf8525
+2025-01-19 07:46:49,953 -   OCCURREDAT: 2024-09-12 00:39:34.552000+00:00
+2025-01-19 07:46:49,954 -   CORRECTNESS: 100
+2025-01-19 07:46:49,954 -   DURATIONSECONDS: nan
+2025-01-19 07:46:49,955 -   ANSWERPOSITIONINSESSION: nan
+2025-01-19 07:46:49,955 -   EVENT_RANK: 1
+2025-01-19 07:46:49,955 -   QUESTIONID_LAG_1: None
+2025-01-19 07:46:49,956 -   QUESTIONID_LAG_2: None
+2025-01-19 07:46:49,956 -   QUESTIONID_LAG_3: None
+2025-01-19 07:46:49,957 -   QUESTIONID_LAG_4: None
+2025-01-19 07:46:49,957 -   QUESTIONID_LAG_5: None
+2025-01-19 07:46:49,958 -   QUESTIONID_LAG_6: None
+2025-01-19 07:46:49,958 -   QUESTIONID_LAG_7: None
+2025-01-19 07:46:49,959 -   QUESTIONID_LAG_8: None
+2025-01-19 07:46:49,959 -   QUESTIONID_LAG_9: None
+2025-01-19 07:46:49,959 -   QUESTIONID_LAG_10: None
+2025-01-19 07:46:49,960 -   OCCURREDAT_LAG_1: NaT
+2025-01-19 07:46:49,960 -   OCCURREDAT_LAG_2: NaT
+2025-01-19 07:46:49,961 -   OCCURREDAT_LAG_3: NaT
+2025-01-19 07:46:49,961 -   OCCURREDAT_LAG_4: NaT
+2025-01-19 07:46:49,962 -   OCCURREDAT_LAG_5: NaT
+2025-01-19 07:46:49,962 -   OCCURREDAT_LAG_6: NaT
+2025-01-19 07:46:49,962 -   OCCURREDAT_LAG_7: NaT
+2025-01-19 07:46:49,963 -   OCCURREDAT_LAG_8: NaT
+2025-01-19 07:46:49,963 -   OCCURREDAT_LAG_9: NaT
+2025-01-19 07:46:49,964 -   OCCURREDAT_LAG_10: NaT
+2025-01-19 07:46:49,964 -   CORRECTNESS_LAG_1: None
+2025-01-19 07:46:49,965 -   CORRECTNESS_LAG_2: None
+2025-01-19 07:46:49,965 -   CORRECTNESS_LAG_3: None
+2025-01-19 07:46:49,966 -   CORRECTNESS_LAG_4: None
+2025-01-19 07:46:49,966 -   CORRECTNESS_LAG_5: None
+2025-01-19 07:46:49,966 -   CORRECTNESS_LAG_6: None
+2025-01-19 07:46:49,967 -   CORRECTNESS_LAG_7: None
+2025-01-19 07:46:49,967 -   CORRECTNESS_LAG_8: None
+2025-01-19 07:46:49,968 -   CORRECTNESS_LAG_9: None
+2025-01-19 07:46:49,968 -   CORRECTNESS_LAG_10: None
+2025-01-19 07:46:49,969 -   DURATIONSECONDS_LAG_1: nan
+2025-01-19 07:46:49,969 -   DURATIONSECONDS_LAG_2: nan
+2025-01-19 07:46:49,969 -   DURATIONSECONDS_LAG_3: nan
+2025-01-19 07:46:49,970 -   DURATIONSECONDS_LAG_4: nan
+2025-01-19 07:46:49,970 -   DURATIONSECONDS_LAG_5: nan
+2025-01-19 07:46:49,971 -   DURATIONSECONDS_LAG_6: nan
+2025-01-19 07:46:49,971 -   DURATIONSECONDS_LAG_7: nan
+2025-01-19 07:46:49,972 -   DURATIONSECONDS_LAG_8: nan
+2025-01-19 07:46:49,972 -   DURATIONSECONDS_LAG_9: nan
+2025-01-19 07:46:49,972 -   DURATIONSECONDS_LAG_10: nan
+2025-01-19 07:46:49,973 -   FUTURE_CORRECTNESS_LAG_1: 100
+2025-01-19 07:46:49,973 -   FUTURE_CORRECTNESS_LAG_2: None
+2025-01-19 07:46:49,974 -   FUTURE_CORRECTNESS_LAG_3: None
+2025-01-19 07:46:49,974 -   FUTURE_CORRECTNESS_LAG_4: None
+2025-01-19 07:46:49,975 -   FUTURE_CORRECTNESS_LAG_5: None
+2025-01-19 07:46:49,975 - Feature-engineered inputs (internal):
+2025-01-19 07:46:49,991 - {'CORRECTNESS_LAG_1': nan, 'CORRECTNESS_LAG_2': nan, 'CORRECTNESS_LAG_3': nan, 'CORRECTNESS_LAG_4': nan, 'CORRECTNESS_LAG_5': nan, 'CORRECTNESS_LAG_6': nan, 'CORRECTNESS_LAG_7': nan, 'CORRECTNESS_LAG_8': nan, 'CORRECTNESS_LAG_9': nan, 'CORRECTNESS_LAG_10': nan, 'DURATIONSECONDS_LAG_1': nan, 'DURATIONSECONDS_LAG_2': nan, 'DURATIONSECONDS_LAG_3': nan, 'DURATIONSECONDS_LAG_4': nan, 'DURATIONSECONDS_LAG_5': nan, 'DURATIONSECONDS_LAG_6': nan, 'DURATIONSECONDS_LAG_7': nan, 'DURATIONSECONDS_LAG_8': nan, 'DURATIONSECONDS_LAG_9': nan, 'DURATIONSECONDS_LAG_10': nan, 'OCCURREDAT_DIFF_1': nan, 'OCCURREDAT_DIFF_2': nan, 'OCCURREDAT_DIFF_3': nan, 'OCCURREDAT_DIFF_4': nan, 'OCCURREDAT_DIFF_5': nan, 'OCCURREDAT_DIFF_6': nan, 'OCCURREDAT_DIFF_7': nan, 'OCCURREDAT_DIFF_8': nan, 'OCCURREDAT_DIFF_9': nan, 'OCCURREDAT_DIFF_10': nan, 'LOG_OCCURREDAT_DIFF_1': nan, 'LOG_OCCURREDAT_DIFF_2': nan, 'LOG_OCCURREDAT_DIFF_3': nan, 'LOG_OCCURREDAT_DIFF_4': nan, 'LOG_OCCURREDAT_DIFF_5': nan, 'LOG_OCCURREDAT_DIFF_6': nan, 'LOG_OCCURREDAT_DIFF_7': nan, 'LOG_OCCURREDAT_DIFF_8': nan, 'LOG_OCCURREDAT_DIFF_9': nan, 'LOG_OCCURREDAT_DIFF_10': nan, 'LOG_DURATIONSECONDS_LAG_1': nan, 'LOG_DURATIONSECONDS_LAG_2': nan, 'LOG_DURATIONSECONDS_LAG_3': nan, 'LOG_DURATIONSECONDS_LAG_4': nan, 'LOG_DURATIONSECONDS_LAG_5': nan, 'LOG_DURATIONSECONDS_LAG_6': nan, 'LOG_DURATIONSECONDS_LAG_7': nan, 'LOG_DURATIONSECONDS_LAG_8': nan, 'LOG_DURATIONSECONDS_LAG_9': nan, 'LOG_DURATIONSECONDS_LAG_10': nan, 'discriminability': 99.99999999999916, 'difficulty': nan, 'guessing': 1.9868778977244684e-19, 'inattention': 0.9839253147904008, 'discriminability_error': 66.54800597518467, 'difficulty_error': 0.0150512059629199, 'guessing_error': 0.5511633224645727, 'inattention_error': 0.0485602893217526, 'auc_roc': 0.8854700854700855, 'optimal_threshold': 0.9043125588824544, 'tpr': 0.8307692307692308, 'tnr': 0.8888888888888888, 'skill_optimal_threshold': nan, 'student_mean_accuracy': 0.8783783783783784, 'discriminability_LAG_1': nan, 'difficulty_LAG_1': nan, 'guessing_LAG_1': nan, 'inattention_LAG_1': nan, 'discriminability_error_LAG_1': nan, 'difficulty_error_LAG_1': nan, 'guessing_error_LAG_1': nan, 'inattention_error_LAG_1': nan, 'auc_roc_LAG_1': nan, 'optimal_threshold_LAG_1': nan, 'tpr_LAG_1': nan, 'tnr_LAG_1': nan, 'student_mean_accuracy_LAG_1': nan, 'discriminability_LAG_2': nan, 'difficulty_LAG_2': nan, 'guessing_LAG_2': nan, 'inattention_LAG_2': nan, 'discriminability_error_LAG_2': nan, 'difficulty_error_LAG_2': nan, 'guessing_error_LAG_2': nan, 'inattention_error_LAG_2': nan, 'auc_roc_LAG_2': nan, 'optimal_threshold_LAG_2': nan, 'tpr_LAG_2': nan, 'tnr_LAG_2': nan, 'student_mean_accuracy_LAG_2': nan, 'discriminability_LAG_3': nan, 'difficulty_LAG_3': nan, 'guessing_LAG_3': nan, 'inattention_LAG_3': nan, 'discriminability_error_LAG_3': nan, 'difficulty_error_LAG_3': nan, 'guessing_error_LAG_3': nan, 'inattention_error_LAG_3': nan, 'auc_roc_LAG_3': nan, 'optimal_threshold_LAG_3': nan, 'tpr_LAG_3': nan, 'tnr_LAG_3': nan, 'student_mean_accuracy_LAG_3': nan, 'discriminability_LAG_4': nan, 'difficulty_LAG_4': nan, 'guessing_LAG_4': nan, 'inattention_LAG_4': nan, 'discriminability_error_LAG_4': nan, 'difficulty_error_LAG_4': nan, 'guessing_error_LAG_4': nan, 'inattention_error_LAG_4': nan, 'auc_roc_LAG_4': nan, 'optimal_threshold_LAG_4': nan, 'tpr_LAG_4': nan, 'tnr_LAG_4': nan, 'student_mean_accuracy_LAG_4': nan, 'discriminability_LAG_5': nan, 'difficulty_LAG_5': nan, 'guessing_LAG_5': nan, 'inattention_LAG_5': nan, 'discriminability_error_LAG_5': nan, 'difficulty_error_LAG_5': nan, 'guessing_error_LAG_5': nan, 'inattention_error_LAG_5': nan, 'auc_roc_LAG_5': nan, 'optimal_threshold_LAG_5': nan, 'tpr_LAG_5': nan, 'tnr_LAG_5': nan, 'student_mean_accuracy_LAG_5': nan, 'discriminability_LAG_6': nan, 'difficulty_LAG_6': nan, 'guessing_LAG_6': nan, 'inattention_LAG_6': nan, 'discriminability_error_LAG_6': nan, 'difficulty_error_LAG_6': nan, 'guessing_error_LAG_6': nan, 'inattention_error_LAG_6': nan, 'auc_roc_LAG_6': nan, 'optimal_threshold_LAG_6': nan, 'tpr_LAG_6': nan, 'tnr_LAG_6': nan, 'student_mean_accuracy_LAG_6': nan, 'discriminability_LAG_7': nan, 'difficulty_LAG_7': nan, 'guessing_LAG_7': nan, 'inattention_LAG_7': nan, 'discriminability_error_LAG_7': nan, 'difficulty_error_LAG_7': nan, 'guessing_error_LAG_7': nan, 'inattention_error_LAG_7': nan, 'auc_roc_LAG_7': nan, 'optimal_threshold_LAG_7': nan, 'tpr_LAG_7': nan, 'tnr_LAG_7': nan, 'student_mean_accuracy_LAG_7': nan, 'discriminability_LAG_8': nan, 'difficulty_LAG_8': nan, 'guessing_LAG_8': nan, 'inattention_LAG_8': nan, 'discriminability_error_LAG_8': nan, 'difficulty_error_LAG_8': nan, 'guessing_error_LAG_8': nan, 'inattention_error_LAG_8': nan, 'auc_roc_LAG_8': nan, 'optimal_threshold_LAG_8': nan, 'tpr_LAG_8': nan, 'tnr_LAG_8': nan, 'student_mean_accuracy_LAG_8': nan, 'discriminability_LAG_9': nan, 'difficulty_LAG_9': nan, 'guessing_LAG_9': nan, 'inattention_LAG_9': nan, 'discriminability_error_LAG_9': nan, 'difficulty_error_LAG_9': nan, 'guessing_error_LAG_9': nan, 'inattention_error_LAG_9': nan, 'auc_roc_LAG_9': nan, 'optimal_threshold_LAG_9': nan, 'tpr_LAG_9': nan, 'tnr_LAG_9': nan, 'student_mean_accuracy_LAG_9': nan, 'discriminability_LAG_10': nan, 'difficulty_LAG_10': nan, 'guessing_LAG_10': nan, 'inattention_LAG_10': nan, 'discriminability_error_LAG_10': nan, 'difficulty_error_LAG_10': nan, 'guessing_error_LAG_10': nan, 'inattention_error_LAG_10': nan, 'auc_roc_LAG_10': nan, 'optimal_threshold_LAG_10': nan, 'tpr_LAG_10': nan, 'tnr_LAG_10': nan, 'student_mean_accuracy_LAG_10': nan, 'LOG_sample_size': 4.304065093204169, 'LOG_sample_size_LAG_1': nan, 'LOG_sample_size_LAG_2': nan, 'LOG_sample_size_LAG_3': nan, 'LOG_sample_size_LAG_4': nan, 'LOG_sample_size_LAG_5': nan, 'LOG_sample_size_LAG_6': nan, 'LOG_sample_size_LAG_7': nan, 'LOG_sample_size_LAG_8': nan, 'LOG_sample_size_LAG_9': nan, 'LOG_sample_size_LAG_10': nan, 'difficulty_spread': nan, 'optimal_threshold_spread': nan, 'student_mean_accuracy_spread': nan, 'tnr_spread': nan, 'tpr_spread': nan, 'mean_auc_roc': nan, 'mean_discriminability': nan, 'mean_discriminability_error': nan, 'mean_difficulty_error': nan, 'mean_guessing_error': nan, 'mean_inattention_error': nan, 'num_responses': 0.0}
+2025-01-19 07:46:49,992 - JSON formatted submission input (for live testing, with duplicated current inputs):
+2025-01-19 07:46:49,992 - {
+  "skillId": "3011f61e-e69f-e311-9503-005056801da1",
+  "questionId": "f19c0910-e6ea-4d09-b551-c01ddeaf8525",
+  "eventTime": "2024-09-12 00:39:34.552000+00:00",
+  "questionIdsHistory": [
+    "f19c0910-e6ea-4d09-b551-c01ddeaf8525"
+  ],
+  "correctnessHistory": [
+    100
+  ],
+  "durationSecondsHistory": [],
+  "eventTimesHistory": [
+    "2024-09-12T00:39:34.000Z"
+  ]
+}
+2025-01-19 07:46:49,993 - True value: 1.0
+2025-01-19 07:46:49,993 - Confidence true value: 1.0 (1 value)
+2025-01-19 07:46:49,994 - Item Proficiency model prediction: 0.8784611225128174
+2025-01-19 07:46:49,994 - Item Confidence model prediction: 0.36633747816085815
+2025-01-19 07:46:49,995 - Item Confidence Score Transformer (percentile ranker) prediction: 99.91523538075208
+2025-01-19 07:46:49,995 - Item AGNOSTIC Proficiency model prediction: 0.6372023224830627
+2025-01-19 07:46:49,996 - Item AGNOSTIC Confidence model prediction: 0.41591453552246094
+2025-01-19 07:46:49,996 - Item AGNOSTIC Confidence Score Transformer (percentile ranker) prediction: 13.686307335318237
+2025-01-19 07:46:49,996 - Skill Proficiency model prediction: nan
+2025-01-19 07:46:49,997 - Skill Confidence model prediction: nan
+2025-01-19 07:46:49,997 - Skill Confidence Score Transformer (percentile ranker) prediction: nan
+2025-01-19 07:46:49,998 - 
+Student #2:
+2025-01-19 07:46:49,999 - Raw input (Snowflake SQL):
+2025-01-19 07:46:49,999 -   STUDENTID: 40187433
+2025-01-19 07:46:49,999 -   SKILL: Stub RLSkill Id, see questions_skills column for all skills associated with this question
+2025-01-19 07:46:50,000 -   QUESTIONID: a99efdfd-33ec-4efd-9bf0-763a27400b34
+2025-01-19 07:46:50,000 -   OCCURREDAT: 2024-10-14 17:28:26.973000+00:00
+2025-01-19 07:46:50,001 -   CORRECTNESS: 0
+2025-01-19 07:46:50,001 -   DURATIONSECONDS: nan
+2025-01-19 07:46:50,002 -   ANSWERPOSITIONINSESSION: nan
+2025-01-19 07:46:50,002 -   EVENT_RANK: 4
+2025-01-19 07:46:50,003 -   QUESTIONID_LAG_1: 77a616ea-5009-4ebb-a6f9-a154ed08d44b
+2025-01-19 07:46:50,003 -   QUESTIONID_LAG_2: 57305cd0-ac3a-49e4-b595-c1b9a684ca73
+2025-01-19 07:46:50,004 -   QUESTIONID_LAG_3: 03b1274f-0e45-42d0-9e10-45b55cf901ab
+2025-01-19 07:46:50,004 -   QUESTIONID_LAG_4: None
+2025-01-19 07:46:50,004 -   QUESTIONID_LAG_5: None
+2025-01-19 07:46:50,005 -   QUESTIONID_LAG_6: None
+2025-01-19 07:46:50,005 -   QUESTIONID_LAG_7: None
+2025-01-19 07:46:50,006 -   QUESTIONID_LAG_8: None
+2025-01-19 07:46:50,006 -   QUESTIONID_LAG_9: None
+2025-01-19 07:46:50,007 -   QUESTIONID_LAG_10: None
+2025-01-19 07:46:50,007 -   OCCURREDAT_LAG_1: 2024-10-14 17:28:07.005000+00:00
+2025-01-19 07:46:50,007 -   OCCURREDAT_LAG_2: 2024-10-14 17:27:44.480000+00:00
+2025-01-19 07:46:50,008 -   OCCURREDAT_LAG_3: 2024-10-14 17:27:23.786000+00:00
+2025-01-19 07:46:50,008 -   OCCURREDAT_LAG_4: NaT
+2025-01-19 07:46:50,009 -   OCCURREDAT_LAG_5: NaT
+2025-01-19 07:46:50,009 -   OCCURREDAT_LAG_6: NaT
+2025-01-19 07:46:50,010 -   OCCURREDAT_LAG_7: NaT
+2025-01-19 07:46:50,010 -   OCCURREDAT_LAG_8: NaT
+2025-01-19 07:46:50,011 -   OCCURREDAT_LAG_9: NaT
+2025-01-19 07:46:50,011 -   OCCURREDAT_LAG_10: NaT
+2025-01-19 07:46:50,011 -   CORRECTNESS_LAG_1: 0
+2025-01-19 07:46:50,012 -   CORRECTNESS_LAG_2: 0
+2025-01-19 07:46:50,012 -   CORRECTNESS_LAG_3: 0
+2025-01-19 07:46:50,013 -   CORRECTNESS_LAG_4: None
+2025-01-19 07:46:50,013 -   CORRECTNESS_LAG_5: None
+2025-01-19 07:46:50,014 -   CORRECTNESS_LAG_6: None
+2025-01-19 07:46:50,014 -   CORRECTNESS_LAG_7: None
+2025-01-19 07:46:50,014 -   CORRECTNESS_LAG_8: None
+2025-01-19 07:46:50,015 -   CORRECTNESS_LAG_9: None
+2025-01-19 07:46:50,015 -   CORRECTNESS_LAG_10: None
+2025-01-19 07:46:50,016 -   DURATIONSECONDS_LAG_1: nan
+2025-01-19 07:46:50,016 -   DURATIONSECONDS_LAG_2: nan
+2025-01-19 07:46:50,017 -   DURATIONSECONDS_LAG_3: nan
+2025-01-19 07:46:50,017 -   DURATIONSECONDS_LAG_4: nan
+2025-01-19 07:46:50,017 -   DURATIONSECONDS_LAG_5: nan
+2025-01-19 07:46:50,018 -   DURATIONSECONDS_LAG_6: nan
+2025-01-19 07:46:50,018 -   DURATIONSECONDS_LAG_7: nan
+2025-01-19 07:46:50,019 -   DURATIONSECONDS_LAG_8: nan
+2025-01-19 07:46:50,019 -   DURATIONSECONDS_LAG_9: nan
+2025-01-19 07:46:50,020 -   DURATIONSECONDS_LAG_10: nan
+2025-01-19 07:46:50,020 -   FUTURE_CORRECTNESS_LAG_1: 0
+2025-01-19 07:46:50,021 -   FUTURE_CORRECTNESS_LAG_2: 0
+2025-01-19 07:46:50,021 -   FUTURE_CORRECTNESS_LAG_3: None
+2025-01-19 07:46:50,022 -   FUTURE_CORRECTNESS_LAG_4: None
+2025-01-19 07:46:50,022 -   FUTURE_CORRECTNESS_LAG_5: None
+2025-01-19 07:46:50,023 - Feature-engineered inputs (internal):
+2025-01-19 07:46:50,038 - {'CORRECTNESS_LAG_1': 0.0, 'CORRECTNESS_LAG_2': 0.0, 'CORRECTNESS_LAG_3': 0.0, 'CORRECTNESS_LAG_4': nan, 'CORRECTNESS_LAG_5': nan, 'CORRECTNESS_LAG_6': nan, 'CORRECTNESS_LAG_7': nan, 'CORRECTNESS_LAG_8': nan, 'CORRECTNESS_LAG_9': nan, 'CORRECTNESS_LAG_10': nan, 'DURATIONSECONDS_LAG_1': nan, 'DURATIONSECONDS_LAG_2': nan, 'DURATIONSECONDS_LAG_3': nan, 'DURATIONSECONDS_LAG_4': nan, 'DURATIONSECONDS_LAG_5': nan, 'DURATIONSECONDS_LAG_6': nan, 'DURATIONSECONDS_LAG_7': nan, 'DURATIONSECONDS_LAG_8': nan, 'DURATIONSECONDS_LAG_9': nan, 'DURATIONSECONDS_LAG_10': nan, 'OCCURREDAT_DIFF_1': 0.006, 'OCCURREDAT_DIFF_2': 0.006, 'OCCURREDAT_DIFF_3': 0.006, 'OCCURREDAT_DIFF_4': nan, 'OCCURREDAT_DIFF_5': nan, 'OCCURREDAT_DIFF_6': nan, 'OCCURREDAT_DIFF_7': nan, 'OCCURREDAT_DIFF_8': nan, 'OCCURREDAT_DIFF_9': nan, 'OCCURREDAT_DIFF_10': nan, 'LOG_OCCURREDAT_DIFF_1': -5.115995809754082, 'LOG_OCCURREDAT_DIFF_2': -5.115995809754082, 'LOG_OCCURREDAT_DIFF_3': -5.115995809754082, 'LOG_OCCURREDAT_DIFF_4': nan, 'LOG_OCCURREDAT_DIFF_5': nan, 'LOG_OCCURREDAT_DIFF_6': nan, 'LOG_OCCURREDAT_DIFF_7': nan, 'LOG_OCCURREDAT_DIFF_8': nan, 'LOG_OCCURREDAT_DIFF_9': nan, 'LOG_OCCURREDAT_DIFF_10': nan, 'LOG_DURATIONSECONDS_LAG_1': nan, 'LOG_DURATIONSECONDS_LAG_2': nan, 'LOG_DURATIONSECONDS_LAG_3': nan, 'LOG_DURATIONSECONDS_LAG_4': nan, 'LOG_DURATIONSECONDS_LAG_5': nan, 'LOG_DURATIONSECONDS_LAG_6': nan, 'LOG_DURATIONSECONDS_LAG_7': nan, 'LOG_DURATIONSECONDS_LAG_8': nan, 'LOG_DURATIONSECONDS_LAG_9': nan, 'LOG_DURATIONSECONDS_LAG_10': nan, 'discriminability': nan, 'difficulty': nan, 'guessing': nan, 'inattention': nan, 'discriminability_error': nan, 'difficulty_error': nan, 'guessing_error': nan, 'inattention_error': nan, 'auc_roc': nan, 'optimal_threshold': nan, 'tpr': nan, 'tnr': nan, 'skill_optimal_threshold': nan, 'student_mean_accuracy': nan, 'discriminability_LAG_1': nan, 'difficulty_LAG_1': nan, 'guessing_LAG_1': nan, 'inattention_LAG_1': nan, 'discriminability_error_LAG_1': nan, 'difficulty_error_LAG_1': nan, 'guessing_error_LAG_1': nan, 'inattention_error_LAG_1': nan, 'auc_roc_LAG_1': nan, 'optimal_threshold_LAG_1': nan, 'tpr_LAG_1': nan, 'tnr_LAG_1': nan, 'student_mean_accuracy_LAG_1': nan, 'discriminability_LAG_2': nan, 'difficulty_LAG_2': nan, 'guessing_LAG_2': nan, 'inattention_LAG_2': nan, 'discriminability_error_LAG_2': nan, 'difficulty_error_LAG_2': nan, 'guessing_error_LAG_2': nan, 'inattention_error_LAG_2': nan, 'auc_roc_LAG_2': nan, 'optimal_threshold_LAG_2': nan, 'tpr_LAG_2': nan, 'tnr_LAG_2': nan, 'student_mean_accuracy_LAG_2': nan, 'discriminability_LAG_3': nan, 'difficulty_LAG_3': nan, 'guessing_LAG_3': nan, 'inattention_LAG_3': nan, 'discriminability_error_LAG_3': nan, 'difficulty_error_LAG_3': nan, 'guessing_error_LAG_3': nan, 'inattention_error_LAG_3': nan, 'auc_roc_LAG_3': nan, 'optimal_threshold_LAG_3': nan, 'tpr_LAG_3': nan, 'tnr_LAG_3': nan, 'student_mean_accuracy_LAG_3': nan, 'discriminability_LAG_4': nan, 'difficulty_LAG_4': nan, 'guessing_LAG_4': nan, 'inattention_LAG_4': nan, 'discriminability_error_LAG_4': nan, 'difficulty_error_LAG_4': nan, 'guessing_error_LAG_4': nan, 'inattention_error_LAG_4': nan, 'auc_roc_LAG_4': nan, 'optimal_threshold_LAG_4': nan, 'tpr_LAG_4': nan, 'tnr_LAG_4': nan, 'student_mean_accuracy_LAG_4': nan, 'discriminability_LAG_5': nan, 'difficulty_LAG_5': nan, 'guessing_LAG_5': nan, 'inattention_LAG_5': nan, 'discriminability_error_LAG_5': nan, 'difficulty_error_LAG_5': nan, 'guessing_error_LAG_5': nan, 'inattention_error_LAG_5': nan, 'auc_roc_LAG_5': nan, 'optimal_threshold_LAG_5': nan, 'tpr_LAG_5': nan, 'tnr_LAG_5': nan, 'student_mean_accuracy_LAG_5': nan, 'discriminability_LAG_6': nan, 'difficulty_LAG_6': nan, 'guessing_LAG_6': nan, 'inattention_LAG_6': nan, 'discriminability_error_LAG_6': nan, 'difficulty_error_LAG_6': nan, 'guessing_error_LAG_6': nan, 'inattention_error_LAG_6': nan, 'auc_roc_LAG_6': nan, 'optimal_threshold_LAG_6': nan, 'tpr_LAG_6': nan, 'tnr_LAG_6': nan, 'student_mean_accuracy_LAG_6': nan, 'discriminability_LAG_7': nan, 'difficulty_LAG_7': nan, 'guessing_LAG_7': nan, 'inattention_LAG_7': nan, 'discriminability_error_LAG_7': nan, 'difficulty_error_LAG_7': nan, 'guessing_error_LAG_7': nan, 'inattention_error_LAG_7': nan, 'auc_roc_LAG_7': nan, 'optimal_threshold_LAG_7': nan, 'tpr_LAG_7': nan, 'tnr_LAG_7': nan, 'student_mean_accuracy_LAG_7': nan, 'discriminability_LAG_8': nan, 'difficulty_LAG_8': nan, 'guessing_LAG_8': nan, 'inattention_LAG_8': nan, 'discriminability_error_LAG_8': nan, 'difficulty_error_LAG_8': nan, 'guessing_error_LAG_8': nan, 'inattention_error_LAG_8': nan, 'auc_roc_LAG_8': nan, 'optimal_threshold_LAG_8': nan, 'tpr_LAG_8': nan, 'tnr_LAG_8': nan, 'student_mean_accuracy_LAG_8': nan, 'discriminability_LAG_9': nan, 'difficulty_LAG_9': nan, 'guessing_LAG_9': nan, 'inattention_LAG_9': nan, 'discriminability_error_LAG_9': nan, 'difficulty_error_LAG_9': nan, 'guessing_error_LAG_9': nan, 'inattention_error_LAG_9': nan, 'auc_roc_LAG_9': nan, 'optimal_threshold_LAG_9': nan, 'tpr_LAG_9': nan, 'tnr_LAG_9': nan, 'student_mean_accuracy_LAG_9': nan, 'discriminability_LAG_10': nan, 'difficulty_LAG_10': nan, 'guessing_LAG_10': nan, 'inattention_LAG_10': nan, 'discriminability_error_LAG_10': nan, 'difficulty_error_LAG_10': nan, 'guessing_error_LAG_10': nan, 'inattention_error_LAG_10': nan, 'auc_roc_LAG_10': nan, 'optimal_threshold_LAG_10': nan, 'tpr_LAG_10': nan, 'tnr_LAG_10': nan, 'student_mean_accuracy_LAG_10': nan, 'LOG_sample_size': nan, 'LOG_sample_size_LAG_1': nan, 'LOG_sample_size_LAG_2': nan, 'LOG_sample_size_LAG_3': nan, 'LOG_sample_size_LAG_4': nan, 'LOG_sample_size_LAG_5': nan, 'LOG_sample_size_LAG_6': nan, 'LOG_sample_size_LAG_7': nan, 'LOG_sample_size_LAG_8': nan, 'LOG_sample_size_LAG_9': nan, 'LOG_sample_size_LAG_10': nan, 'difficulty_spread': nan, 'optimal_threshold_spread': nan, 'student_mean_accuracy_spread': nan, 'tnr_spread': nan, 'tpr_spread': nan, 'mean_auc_roc': nan, 'mean_discriminability': nan, 'mean_discriminability_error': nan, 'mean_difficulty_error': nan, 'mean_guessing_error': nan, 'mean_inattention_error': nan, 'num_responses': 3.0}
+2025-01-19 07:46:50,039 - JSON formatted submission input (for live testing, with duplicated current inputs):
+2025-01-19 07:46:50,040 - {
+  "skillId": "Stub RLSkill Id, see questions_skills column for all skills associated with this question",
+  "questionId": "a99efdfd-33ec-4efd-9bf0-763a27400b34",
+  "eventTime": "2024-10-14 17:28:26.973000+00:00",
+  "questionIdsHistory": [
+    "a99efdfd-33ec-4efd-9bf0-763a27400b34",
+    "77a616ea-5009-4ebb-a6f9-a154ed08d44b",
+    "57305cd0-ac3a-49e4-b595-c1b9a684ca73",
+    "03b1274f-0e45-42d0-9e10-45b55cf901ab"
+  ],
+  "correctnessHistory": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "durationSecondsHistory": [],
+  "eventTimesHistory": [
+    "2024-10-14T17:28:26.000Z",
+    "2024-10-14T17:28:07.000Z",
+    "2024-10-14T17:27:44.000Z",
+    "2024-10-14T17:27:23.000Z"
+  ]
+}
+2025-01-19 07:46:50,040 - True value: 0.0
+2025-01-19 07:46:50,041 - Confidence true value: 0.0 (1 value)
+2025-01-19 07:46:50,041 - Item Proficiency model prediction: 0.35618728399276733
+2025-01-19 07:46:50,042 - Item Confidence model prediction: 0.4187149405479431
+2025-01-19 07:46:50,042 - Item Confidence Score Transformer (percentile ranker) prediction: 0.01059557740599074
+2025-01-19 07:46:50,042 - Item AGNOSTIC Proficiency model prediction: 0.35618728399276733
+2025-01-19 07:46:50,043 - Item AGNOSTIC Confidence model prediction: 0.4187149405479431
+2025-01-19 07:46:50,043 - Item AGNOSTIC Confidence Score Transformer (percentile ranker) prediction: 0.01059557740599074
+2025-01-19 07:46:50,044 - Skill Proficiency model prediction: nan
+2025-01-19 07:46:50,044 - Skill Confidence model prediction: nan
+2025-01-19 07:46:50,045 - Skill Confidence Score Transformer (percentile ranker) prediction: nan
+2025-01-19 07:46:50,045 - 
+Student #3:
+2025-01-19 07:46:50,046 - Raw input (Snowflake SQL):
+2025-01-19 07:46:50,046 -   STUDENTID: 40186887
+2025-01-19 07:46:50,047 -   SKILL: ttterdau
+2025-01-19 07:46:50,047 -   QUESTIONID: 57c48105-15ce-4feb-ab07-435f564d70ff
+2025-01-19 07:46:50,048 -   OCCURREDAT: 2024-09-11 13:00:54.438000+00:00
+2025-01-19 07:46:50,048 -   CORRECTNESS: 100
+2025-01-19 07:46:50,049 -   DURATIONSECONDS: 19.0
+2025-01-19 07:46:50,049 -   ANSWERPOSITIONINSESSION: 1.0
+2025-01-19 07:46:50,050 -   EVENT_RANK: 2
+2025-01-19 07:46:50,050 -   QUESTIONID_LAG_1: 06bb8dc3-b9b1-444a-8686-75bd108cfac0
+2025-01-19 07:46:50,050 -   QUESTIONID_LAG_2: None
+2025-01-19 07:46:50,051 -   QUESTIONID_LAG_3: None
+2025-01-19 07:46:50,051 -   QUESTIONID_LAG_4: None
+2025-01-19 07:46:50,052 -   QUESTIONID_LAG_5: None
+2025-01-19 07:46:50,052 -   QUESTIONID_LAG_6: None
+2025-01-19 07:46:50,053 -   QUESTIONID_LAG_7: None
+2025-01-19 07:46:50,053 -   QUESTIONID_LAG_8: None
+2025-01-19 07:46:50,053 -   QUESTIONID_LAG_9: None
+2025-01-19 07:46:50,054 -   QUESTIONID_LAG_10: None
+2025-01-19 07:46:50,054 -   OCCURREDAT_LAG_1: 2024-09-11 13:00:27.714000+00:00
+2025-01-19 07:46:50,055 -   OCCURREDAT_LAG_2: NaT
+2025-01-19 07:46:50,055 -   OCCURREDAT_LAG_3: NaT
+2025-01-19 07:46:50,056 -   OCCURREDAT_LAG_4: NaT
+2025-01-19 07:46:50,056 -   OCCURREDAT_LAG_5: NaT
+2025-01-19 07:46:50,057 -   OCCURREDAT_LAG_6: NaT
+2025-01-19 07:46:50,057 -   OCCURREDAT_LAG_7: NaT
+2025-01-19 07:46:50,057 -   OCCURREDAT_LAG_8: NaT
+2025-01-19 07:46:50,058 -   OCCURREDAT_LAG_9: NaT
+2025-01-19 07:46:50,058 -   OCCURREDAT_LAG_10: NaT
+2025-01-19 07:46:50,059 -   CORRECTNESS_LAG_1: 88
+2025-01-19 07:46:50,059 -   CORRECTNESS_LAG_2: None
+2025-01-19 07:46:50,060 -   CORRECTNESS_LAG_3: None
+2025-01-19 07:46:50,060 -   CORRECTNESS_LAG_4: None
+2025-01-19 07:46:50,060 -   CORRECTNESS_LAG_5: None
+2025-01-19 07:46:50,061 -   CORRECTNESS_LAG_6: None
+2025-01-19 07:46:50,061 -   CORRECTNESS_LAG_7: None
+2025-01-19 07:46:50,062 -   CORRECTNESS_LAG_8: None
+2025-01-19 07:46:50,062 -   CORRECTNESS_LAG_9: None
+2025-01-19 07:46:50,063 -   CORRECTNESS_LAG_10: None
+2025-01-19 07:46:50,063 -   DURATIONSECONDS_LAG_1: 92.0
+2025-01-19 07:46:50,063 -   DURATIONSECONDS_LAG_2: nan
+2025-01-19 07:46:50,064 -   DURATIONSECONDS_LAG_3: nan
+2025-01-19 07:46:50,064 -   DURATIONSECONDS_LAG_4: nan
+2025-01-19 07:46:50,065 -   DURATIONSECONDS_LAG_5: nan
+2025-01-19 07:46:50,065 -   DURATIONSECONDS_LAG_6: nan
+2025-01-19 07:46:50,066 -   DURATIONSECONDS_LAG_7: nan
+2025-01-19 07:46:50,066 -   DURATIONSECONDS_LAG_8: nan
+2025-01-19 07:46:50,067 -   DURATIONSECONDS_LAG_9: nan
+2025-01-19 07:46:50,067 -   DURATIONSECONDS_LAG_10: nan
+2025-01-19 07:46:50,067 -   FUTURE_CORRECTNESS_LAG_1: 100
+2025-01-19 07:46:50,068 -   FUTURE_CORRECTNESS_LAG_2: 100
+2025-01-19 07:46:50,068 -   FUTURE_CORRECTNESS_LAG_3: 88
+2025-01-19 07:46:50,069 -   FUTURE_CORRECTNESS_LAG_4: 100
+2025-01-19 07:46:50,069 -   FUTURE_CORRECTNESS_LAG_5: 100
+2025-01-19 07:46:50,070 - Feature-engineered inputs (internal):
+2025-01-19 07:46:50,085 - {'CORRECTNESS_LAG_1': 0.88, 'CORRECTNESS_LAG_2': nan, 'CORRECTNESS_LAG_3': nan, 'CORRECTNESS_LAG_4': nan, 'CORRECTNESS_LAG_5': nan, 'CORRECTNESS_LAG_6': nan, 'CORRECTNESS_LAG_7': nan, 'CORRECTNESS_LAG_8': nan, 'CORRECTNESS_LAG_9': nan, 'CORRECTNESS_LAG_10': nan, 'DURATIONSECONDS_LAG_1': 92.0, 'DURATIONSECONDS_LAG_2': nan, 'DURATIONSECONDS_LAG_3': nan, 'DURATIONSECONDS_LAG_4': nan, 'DURATIONSECONDS_LAG_5': nan, 'DURATIONSECONDS_LAG_6': nan, 'DURATIONSECONDS_LAG_7': nan, 'DURATIONSECONDS_LAG_8': nan, 'DURATIONSECONDS_LAG_9': nan, 'DURATIONSECONDS_LAG_10': nan, 'OCCURREDAT_DIFF_1': 0.007, 'OCCURREDAT_DIFF_2': nan, 'OCCURREDAT_DIFF_3': nan, 'OCCURREDAT_DIFF_4': nan, 'OCCURREDAT_DIFF_5': nan, 'OCCURREDAT_DIFF_6': nan, 'OCCURREDAT_DIFF_7': nan, 'OCCURREDAT_DIFF_8': nan, 'OCCURREDAT_DIFF_9': nan, 'OCCURREDAT_DIFF_10': nan, 'LOG_OCCURREDAT_DIFF_1': -4.961845129926823, 'LOG_OCCURREDAT_DIFF_2': nan, 'LOG_OCCURREDAT_DIFF_3': nan, 'LOG_OCCURREDAT_DIFF_4': nan, 'LOG_OCCURREDAT_DIFF_5': nan, 'LOG_OCCURREDAT_DIFF_6': nan, 'LOG_OCCURREDAT_DIFF_7': nan, 'LOG_OCCURREDAT_DIFF_8': nan, 'LOG_OCCURREDAT_DIFF_9': nan, 'LOG_OCCURREDAT_DIFF_10': nan, 'LOG_DURATIONSECONDS_LAG_1': 4.5217885770490405, 'LOG_DURATIONSECONDS_LAG_2': nan, 'LOG_DURATIONSECONDS_LAG_3': nan, 'LOG_DURATIONSECONDS_LAG_4': nan, 'LOG_DURATIONSECONDS_LAG_5': nan, 'LOG_DURATIONSECONDS_LAG_6': nan, 'LOG_DURATIONSECONDS_LAG_7': nan, 'LOG_DURATIONSECONDS_LAG_8': nan, 'LOG_DURATIONSECONDS_LAG_9': nan, 'LOG_DURATIONSECONDS_LAG_10': nan, 'discriminability': 3.930931148403176, 'difficulty': 0.1453094637772225, 'guessing': 1.3301469037920788e-11, 'inattention': 0.9999999999958205, 'discriminability_error': 0.2796849645829637, 'difficulty_error': 0.0205667327507624, 'guessing_error': 0.0397628919606376, 'inattention_error': 0.0160183017492671, 'auc_roc': 0.6976619086207404, 'optimal_threshold': 0.7197677552112918, 'tpr': 0.3535186524749406, 'tnr': 0.9317783233953, 'skill_optimal_threshold': 0.7970210039334183, 'student_mean_accuracy': 0.629234670654789, 'discriminability_LAG_1': 5.846592764297944, 'difficulty_LAG_1': -0.0207315210556072, 'guessing_LAG_1': 1.3736905947752694e-11, 'inattention_LAG_1': 0.9485587100509444, 'discriminability_error_LAG_1': 0.4183322623638254, 'difficulty_error_LAG_1': 0.0223150767682725, 'guessing_error_LAG_1': 0.0479360599479113, 'inattention_error_LAG_1': 0.0111713466766422, 'auc_roc_LAG_1': 0.7050115520356665, 'optimal_threshold_LAG_1': 0.7406472763182302, 'tpr_LAG_1': 0.8703174965738046, 'tnr_LAG_1': 0.4069292865518136, 'student_mean_accuracy_LAG_1': 0.770455486542443, 'discriminability_LAG_2': nan, 'difficulty_LAG_2': nan, 'guessing_LAG_2': nan, 'inattention_LAG_2': nan, 'discriminability_error_LAG_2': nan, 'difficulty_error_LAG_2': nan, 'guessing_error_LAG_2': nan, 'inattention_error_LAG_2': nan, 'auc_roc_LAG_2': nan, 'optimal_threshold_LAG_2': nan, 'tpr_LAG_2': nan, 'tnr_LAG_2': nan, 'student_mean_accuracy_LAG_2': nan, 'discriminability_LAG_3': nan, 'difficulty_LAG_3': nan, 'guessing_LAG_3': nan, 'inattention_LAG_3': nan, 'discriminability_error_LAG_3': nan, 'difficulty_error_LAG_3': nan, 'guessing_error_LAG_3': nan, 'inattention_error_LAG_3': nan, 'auc_roc_LAG_3': nan, 'optimal_threshold_LAG_3': nan, 'tpr_LAG_3': nan, 'tnr_LAG_3': nan, 'student_mean_accuracy_LAG_3': nan, 'discriminability_LAG_4': nan, 'difficulty_LAG_4': nan, 'guessing_LAG_4': nan, 'inattention_LAG_4': nan, 'discriminability_error_LAG_4': nan, 'difficulty_error_LAG_4': nan, 'guessing_error_LAG_4': nan, 'inattention_error_LAG_4': nan, 'auc_roc_LAG_4': nan, 'optimal_threshold_LAG_4': nan, 'tpr_LAG_4': nan, 'tnr_LAG_4': nan, 'student_mean_accuracy_LAG_4': nan, 'discriminability_LAG_5': nan, 'difficulty_LAG_5': nan, 'guessing_LAG_5': nan, 'inattention_LAG_5': nan, 'discriminability_error_LAG_5': nan, 'difficulty_error_LAG_5': nan, 'guessing_error_LAG_5': nan, 'inattention_error_LAG_5': nan, 'auc_roc_LAG_5': nan, 'optimal_threshold_LAG_5': nan, 'tpr_LAG_5': nan, 'tnr_LAG_5': nan, 'student_mean_accuracy_LAG_5': nan, 'discriminability_LAG_6': nan, 'difficulty_LAG_6': nan, 'guessing_LAG_6': nan, 'inattention_LAG_6': nan, 'discriminability_error_LAG_6': nan, 'difficulty_error_LAG_6': nan, 'guessing_error_LAG_6': nan, 'inattention_error_LAG_6': nan, 'auc_roc_LAG_6': nan, 'optimal_threshold_LAG_6': nan, 'tpr_LAG_6': nan, 'tnr_LAG_6': nan, 'student_mean_accuracy_LAG_6': nan, 'discriminability_LAG_7': nan, 'difficulty_LAG_7': nan, 'guessing_LAG_7': nan, 'inattention_LAG_7': nan, 'discriminability_error_LAG_7': nan, 'difficulty_error_LAG_7': nan, 'guessing_error_LAG_7': nan, 'inattention_error_LAG_7': nan, 'auc_roc_LAG_7': nan, 'optimal_threshold_LAG_7': nan, 'tpr_LAG_7': nan, 'tnr_LAG_7': nan, 'student_mean_accuracy_LAG_7': nan, 'discriminability_LAG_8': nan, 'difficulty_LAG_8': nan, 'guessing_LAG_8': nan, 'inattention_LAG_8': nan, 'discriminability_error_LAG_8': nan, 'difficulty_error_LAG_8': nan, 'guessing_error_LAG_8': nan, 'inattention_error_LAG_8': nan, 'auc_roc_LAG_8': nan, 'optimal_threshold_LAG_8': nan, 'tpr_LAG_8': nan, 'tnr_LAG_8': nan, 'student_mean_accuracy_LAG_8': nan, 'discriminability_LAG_9': nan, 'difficulty_LAG_9': nan, 'guessing_LAG_9': nan, 'inattention_LAG_9': nan, 'discriminability_error_LAG_9': nan, 'difficulty_error_LAG_9': nan, 'guessing_error_LAG_9': nan, 'inattention_error_LAG_9': nan, 'auc_roc_LAG_9': nan, 'optimal_threshold_LAG_9': nan, 'tpr_LAG_9': nan, 'tnr_LAG_9': nan, 'student_mean_accuracy_LAG_9': nan, 'discriminability_LAG_10': nan, 'difficulty_LAG_10': nan, 'guessing_LAG_10': nan, 'inattention_LAG_10': nan, 'discriminability_error_LAG_10': nan, 'difficulty_error_LAG_10': nan, 'guessing_error_LAG_10': nan, 'inattention_error_LAG_10': nan, 'auc_roc_LAG_10': nan, 'optimal_threshold_LAG_10': nan, 'tpr_LAG_10': nan, 'tnr_LAG_10': nan, 'student_mean_accuracy_LAG_10': nan, 'LOG_sample_size': 9.640758221439922, 'LOG_sample_size_LAG_1': 8.259458195332408, 'LOG_sample_size_LAG_2': nan, 'LOG_sample_size_LAG_3': nan, 'LOG_sample_size_LAG_4': nan, 'LOG_sample_size_LAG_5': nan, 'LOG_sample_size_LAG_6': nan, 'LOG_sample_size_LAG_7': nan, 'LOG_sample_size_LAG_8': nan, 'LOG_sample_size_LAG_9': nan, 'LOG_sample_size_LAG_10': nan, 'difficulty_spread': 0.0, 'optimal_threshold_spread': 0.0, 'student_mean_accuracy_spread': 0.0, 'tnr_spread': 0.0, 'tpr_spread': 0.0, 'mean_auc_roc': 0.7050115520356665, 'mean_discriminability': 5.846592764297944, 'mean_discriminability_error': 0.4183322623638254, 'mean_difficulty_error': 0.0223150767682725, 'mean_guessing_error': 0.0479360599479113, 'mean_inattention_error': 0.0111713466766422, 'num_responses': 1.0}
+2025-01-19 07:46:50,086 - JSON formatted submission input (for live testing, with duplicated current inputs):
+2025-01-19 07:46:50,087 - {
+  "skillId": "ttterdau",
+  "questionId": "57c48105-15ce-4feb-ab07-435f564d70ff",
+  "eventTime": "2024-09-11 13:00:54.438000+00:00",
+  "questionIdsHistory": [
+    "57c48105-15ce-4feb-ab07-435f564d70ff",
+    "06bb8dc3-b9b1-444a-8686-75bd108cfac0"
+  ],
+  "correctnessHistory": [
+    100,
+    88
+  ],
+  "durationSecondsHistory": [
+    19.0,
+    92.0
+  ],
+  "eventTimesHistory": [
+    "2024-09-11T13:00:54.000Z",
+    "2024-09-11T13:00:27.000Z"
+  ]
+}
+2025-01-19 07:46:50,087 - True value: 1.0
+2025-01-19 07:46:50,088 - Confidence true value: 1.0 (1 value)
+2025-01-19 07:46:50,088 - Item Proficiency model prediction: 0.7160761952400208
+2025-01-19 07:46:50,089 - Item Confidence model prediction: 0.40060240030288696
+2025-01-19 07:46:50,089 - Item Confidence Score Transformer (percentile ranker) prediction: 44.26302461352631
+2025-01-19 07:46:50,089 - Item AGNOSTIC Proficiency model prediction: 0.7160761952400208
+2025-01-19 07:46:50,090 - Item AGNOSTIC Confidence model prediction: 0.40060240030288696
+2025-01-19 07:46:50,090 - Item AGNOSTIC Confidence Score Transformer (percentile ranker) prediction: 0.6569257991714259
+2025-01-19 07:46:50,091 - Skill Proficiency model prediction: 0.8134363889694214
+2025-01-19 07:46:50,091 - Skill Confidence model prediction: 0.382894366979599
+2025-01-19 07:46:50,092 - Skill Confidence Score Transformer (percentile ranker) prediction: 39.031680434651086
+2025-01-19 07:46:50,092 - 
+Student #4:
+2025-01-19 07:46:50,093 - Raw input (Snowflake SQL):
+2025-01-19 07:46:50,093 -   STUDENTID: 40186796
+2025-01-19 07:46:50,094 -   SKILL: yksirhsm
+2025-01-19 07:46:50,094 -   QUESTIONID: bd68481c-defa-481a-927c-78804a03bee8
+2025-01-19 07:46:50,095 -   OCCURREDAT: 2024-05-22 18:13:46.038000+00:00
+2025-01-19 07:46:50,095 -   CORRECTNESS: 83
+2025-01-19 07:46:50,096 -   DURATIONSECONDS: nan
+2025-01-19 07:46:50,096 -   ANSWERPOSITIONINSESSION: 1.0
+2025-01-19 07:46:50,097 -   EVENT_RANK: 14
+2025-01-19 07:46:50,097 -   QUESTIONID_LAG_1: aea492be-4792-4362-ad5d-12b4cfdc3fe7
+2025-01-19 07:46:50,097 -   QUESTIONID_LAG_2: 510b615b-f7a5-4872-a182-6e02c0b7a9e4
+2025-01-19 07:46:50,098 -   QUESTIONID_LAG_3: d7aa90d5-09d1-41c1-a07c-33705fe9151b
+2025-01-19 07:46:50,098 -   QUESTIONID_LAG_4: 938ae3b7-6ae7-4ddf-8810-e359dd4cdb01
+2025-01-19 07:46:50,099 -   QUESTIONID_LAG_5: 3b27f124-87b3-45aa-8dbf-029fbc405f24
+2025-01-19 07:46:50,099 -   QUESTIONID_LAG_6: f2b42c12-0cf7-45e5-8981-c75b93275caf
+2025-01-19 07:46:50,100 -   QUESTIONID_LAG_7: e8df380e-6be9-44ca-930a-4eb03ac6bc0b
+2025-01-19 07:46:50,100 -   QUESTIONID_LAG_8: d7aa90d5-09d1-41c1-a07c-33705fe9151b
+2025-01-19 07:46:50,100 -   QUESTIONID_LAG_9: 15a97680-5907-458d-9e24-34ddcca493b0
+2025-01-19 07:46:50,101 -   QUESTIONID_LAG_10: f2b42c12-0cf7-45e5-8981-c75b93275caf
+2025-01-19 07:46:50,101 -   OCCURREDAT_LAG_1: 2024-05-22 18:12:58.497000+00:00
+2025-01-19 07:46:50,102 -   OCCURREDAT_LAG_2: 2024-05-21 17:32:20.669000+00:00
+2025-01-19 07:46:50,102 -   OCCURREDAT_LAG_3: 2024-05-21 17:27:55.770000+00:00
+2025-01-19 07:46:50,103 -   OCCURREDAT_LAG_4: 2024-05-21 17:27:49.827000+00:00
+2025-01-19 07:46:50,103 -   OCCURREDAT_LAG_5: 2024-05-21 17:26:37.985000+00:00
+2025-01-19 07:46:50,103 -   OCCURREDAT_LAG_6: 2024-05-21 17:23:21.822000+00:00
+2025-01-19 07:46:50,104 -   OCCURREDAT_LAG_7: 2024-05-21 17:22:41.744000+00:00
+2025-01-19 07:46:50,104 -   OCCURREDAT_LAG_8: 2024-05-21 17:22:05.674000+00:00
+2025-01-19 07:46:50,105 -   OCCURREDAT_LAG_9: 2024-05-21 17:21:57.405000+00:00
+2025-01-19 07:46:50,105 -   OCCURREDAT_LAG_10: 2024-05-21 17:20:11.035000+00:00
+2025-01-19 07:46:50,106 -   CORRECTNESS_LAG_1: 100
+2025-01-19 07:46:50,106 -   CORRECTNESS_LAG_2: 100
+2025-01-19 07:46:50,107 -   CORRECTNESS_LAG_3: 100
+2025-01-19 07:46:50,107 -   CORRECTNESS_LAG_4: 100
+2025-01-19 07:46:50,108 -   CORRECTNESS_LAG_5: 83
+2025-01-19 07:46:50,108 -   CORRECTNESS_LAG_6: 86
+2025-01-19 07:46:50,108 -   CORRECTNESS_LAG_7: 100
+2025-01-19 07:46:50,109 -   CORRECTNESS_LAG_8: 100
+2025-01-19 07:46:50,109 -   CORRECTNESS_LAG_9: 100
+2025-01-19 07:46:50,110 -   CORRECTNESS_LAG_10: 86
+2025-01-19 07:46:50,110 -   DURATIONSECONDS_LAG_1: nan
+2025-01-19 07:46:50,111 -   DURATIONSECONDS_LAG_2: nan
+2025-01-19 07:46:50,111 -   DURATIONSECONDS_LAG_3: nan
+2025-01-19 07:46:50,111 -   DURATIONSECONDS_LAG_4: nan
+2025-01-19 07:46:50,112 -   DURATIONSECONDS_LAG_5: nan
+2025-01-19 07:46:50,112 -   DURATIONSECONDS_LAG_6: nan
+2025-01-19 07:46:50,113 -   DURATIONSECONDS_LAG_7: nan
+2025-01-19 07:46:50,113 -   DURATIONSECONDS_LAG_8: nan
+2025-01-19 07:46:50,114 -   DURATIONSECONDS_LAG_9: nan
+2025-01-19 07:46:50,114 -   DURATIONSECONDS_LAG_10: nan
+2025-01-19 07:46:50,115 -   FUTURE_CORRECTNESS_LAG_1: 100
+2025-01-19 07:46:50,115 -   FUTURE_CORRECTNESS_LAG_2: 88
+2025-01-19 07:46:50,115 -   FUTURE_CORRECTNESS_LAG_3: None
+2025-01-19 07:46:50,116 -   FUTURE_CORRECTNESS_LAG_4: None
+2025-01-19 07:46:50,116 -   FUTURE_CORRECTNESS_LAG_5: None
+2025-01-19 07:46:50,117 - Feature-engineered inputs (internal):
+2025-01-19 07:46:50,132 - {'CORRECTNESS_LAG_1': 1.0, 'CORRECTNESS_LAG_2': 1.0, 'CORRECTNESS_LAG_3': 1.0, 'CORRECTNESS_LAG_4': 1.0, 'CORRECTNESS_LAG_5': 0.83, 'CORRECTNESS_LAG_6': 0.86, 'CORRECTNESS_LAG_7': 1.0, 'CORRECTNESS_LAG_8': 1.0, 'CORRECTNESS_LAG_9': 1.0, 'CORRECTNESS_LAG_10': 0.86, 'DURATIONSECONDS_LAG_1': nan, 'DURATIONSECONDS_LAG_2': nan, 'DURATIONSECONDS_LAG_3': nan, 'DURATIONSECONDS_LAG_4': nan, 'DURATIONSECONDS_LAG_5': nan, 'DURATIONSECONDS_LAG_6': nan, 'DURATIONSECONDS_LAG_7': nan, 'DURATIONSECONDS_LAG_8': nan, 'DURATIONSECONDS_LAG_9': nan, 'DURATIONSECONDS_LAG_10': nan, 'OCCURREDAT_DIFF_1': 0.013, 'OCCURREDAT_DIFF_2': 24.677, 'OCCURREDAT_DIFF_3': 0.074, 'OCCURREDAT_DIFF_4': 0.002, 'OCCURREDAT_DIFF_5': 0.02, 'OCCURREDAT_DIFF_6': 0.054, 'OCCURREDAT_DIFF_7': 0.011, 'OCCURREDAT_DIFF_8': 0.01, 'OCCURREDAT_DIFF_9': 0.002, 'OCCURREDAT_DIFF_10': 0.03, 'LOG_OCCURREDAT_DIFF_1': -4.3428059215206005, 'LOG_OCCURREDAT_DIFF_2': 3.2058716357329464, 'LOG_OCCURREDAT_DIFF_3': -2.603690185777967, 'LOG_OCCURREDAT_DIFF_4': -6.214608098422191, 'LOG_OCCURREDAT_DIFF_5': -3.912023005428146, 'LOG_OCCURREDAT_DIFF_6': -2.9187712324178627, 'LOG_OCCURREDAT_DIFF_7': -4.509860006183766, 'LOG_OCCURREDAT_DIFF_8': -4.605170185988091, 'LOG_OCCURREDAT_DIFF_9': -6.214608098422191, 'LOG_OCCURREDAT_DIFF_10': -3.506557897319982, 'LOG_DURATIONSECONDS_LAG_1': nan, 'LOG_DURATIONSECONDS_LAG_2': nan, 'LOG_DURATIONSECONDS_LAG_3': nan, 'LOG_DURATIONSECONDS_LAG_4': nan, 'LOG_DURATIONSECONDS_LAG_5': nan, 'LOG_DURATIONSECONDS_LAG_6': nan, 'LOG_DURATIONSECONDS_LAG_7': nan, 'LOG_DURATIONSECONDS_LAG_8': nan, 'LOG_DURATIONSECONDS_LAG_9': nan, 'LOG_DURATIONSECONDS_LAG_10': nan, 'discriminability': 1.0000000000459428, 'difficulty': -0.1238631478782552, 'guessing': 4.399993954169685e-11, 'inattention': 0.9189541327031748, 'discriminability_error': 0.5811826275353523, 'difficulty_error': 0.9333489107464108, 'guessing_error': 0.5028656145085594, 'inattention_error': 0.1203139450129498, 'auc_roc': 0.6035036826386491, 'optimal_threshold': 0.6374013714391098, 'tpr': 0.4249227974568573, 'tnr': 0.7552256186317322, 'skill_optimal_threshold': 0.8077633129823379, 'student_mean_accuracy': 0.6157718120805369, 'discriminability_LAG_1': 99.99999999987196, 'difficulty_LAG_1': 0.1883270288038088, 'guessing_LAG_1': 2.4213748153423184e-15, 'inattention_LAG_1': 0.9900125370429697, 'discriminability_error_LAG_1': 11.595982972318565, 'difficulty_error_LAG_1': 0.0018297432235932, 'guessing_error_LAG_1': 0.0216711108443861, 'inattention_error_LAG_1': 0.0038709490711162, 'auc_roc_LAG_1': 0.9525317916407026, 'optimal_threshold_LAG_1': 0.9891765303675372, 'tpr_LAG_1': 0.7797202797202797, 'tnr_LAG_1': 0.9603960396039604, 'student_mean_accuracy_LAG_1': 0.9444138690148596, 'discriminability_LAG_2': 5.420592330540594, 'difficulty_LAG_2': -0.2206505041672353, 'guessing_LAG_2': 6.332689618315815e-16, 'inattention_LAG_2': 0.9525345097810208, 'discriminability_error_LAG_2': 1.17575217246404, 'difficulty_error_LAG_2': 0.1746126009649214, 'guessing_error_LAG_2': 0.4493402353625871, 'inattention_error_LAG_2': 0.0095486920314091, 'auc_roc_LAG_2': 0.6659576909009064, 'optimal_threshold_LAG_2': 0.9338220321501164, 'tpr_LAG_2': 0.4130058225681904, 'tnr_LAG_2': 0.8147790854717347, 'student_mean_accuracy_LAG_2': 0.902391713747646, 'discriminability_LAG_3': 6.307023785546133, 'difficulty_LAG_3': -0.0226350344563008, 'guessing_LAG_3': 1.2466819671559773e-21, 'inattention_LAG_3': 0.9996666814025492, 'discriminability_error_LAG_3': 1.038097084870405, 'difficulty_error_LAG_3': 0.0677526114355832, 'guessing_error_LAG_3': 0.1711579886536383, 'inattention_error_LAG_3': 0.0112868295793873, 'auc_roc_LAG_3': 0.7892654610404108, 'optimal_threshold_LAG_3': 0.9023068253589124, 'tpr_LAG_3': 0.5833891493636972, 'tnr_LAG_3': 0.9533333333333334, 'student_mean_accuracy_LAG_3': 0.9087035909920876, 'discriminability_LAG_4': 3.3949723377313727, 'difficulty_LAG_4': -0.341459952088448, 'guessing_LAG_4': 2.3895544826584838e-14, 'inattention_LAG_4': 0.9648143848248858, 'discriminability_error_LAG_4': 0.8651800148300685, 'difficulty_error_LAG_4': 0.2920721395644783, 'guessing_error_LAG_4': 0.49368060008444, 'inattention_error_LAG_4': 0.0122222377036957, 'auc_roc_LAG_4': 0.6648453010841364, 'optimal_threshold_LAG_4': 0.9157772317075976, 'tpr_LAG_4': 0.4405251707127928, 'tnr_LAG_4': 0.8207817823202439, 'student_mean_accuracy_LAG_4': 0.89275, 'discriminability_LAG_5': 1.0000000000000002, 'difficulty_LAG_5': 0.0055502336627919, 'guessing_LAG_5': 0.0234930238078976, 'inattention_LAG_5': 0.9658490329754515, 'discriminability_error_LAG_5': 0.7245154789915196, 'difficulty_error_LAG_5': 1.3658456057601382, 'guessing_error_LAG_5': 0.7512828716888209, 'inattention_error_LAG_5': 0.1420218810306604, 'auc_roc_LAG_5': 0.6024835453228756, 'optimal_threshold_LAG_5': 0.6582402085147008, 'tpr_LAG_5': 0.4081119244315326, 'tnr_LAG_5': 0.7912233675076683, 'student_mean_accuracy_LAG_5': 0.6299897750511247, 'discriminability_LAG_6': 2.717048923173371, 'difficulty_LAG_6': 0.8136674723453555, 'guessing_LAG_6': 0.4999999999281503, 'inattention_LAG_6': 0.9834494200147608, 'discriminability_error_LAG_6': 1.2405133124417174, 'difficulty_error_LAG_6': 0.16517784595269, 'guessing_error_LAG_6': 0.0960200077465105, 'inattention_error_LAG_6': 0.0591842052212264, 'auc_roc_LAG_6': 0.640355586443425, 'optimal_threshold_LAG_6': 0.6954267034715177, 'tpr_LAG_6': 0.4188479941720905, 'tnr_LAG_6': 0.8485264603359036, 'student_mean_accuracy_LAG_6': 0.680168918918919, 'discriminability_LAG_7': 4.499203263746467, 'difficulty_LAG_7': -0.3285258092898109, 'guessing_LAG_7': 1.1708448129503177e-13, 'inattention_LAG_7': 0.9763700100758844, 'discriminability_error_LAG_7': 0.8028588095112245, 'difficulty_error_LAG_7': 0.1031702993617297, 'guessing_error_LAG_7': 0.1636778889090652, 'inattention_error_LAG_7': 0.0088528064451582, 'auc_roc_LAG_7': 0.674984468485356, 'optimal_threshold_LAG_7': 0.9414320356254922, 'tpr_LAG_7': 0.4921320262036736, 'tnr_LAG_7': 0.7946189839572194, 'student_mean_accuracy_LAG_7': 0.9358628081457662, 'discriminability_LAG_8': 6.307023785546133, 'difficulty_LAG_8': -0.0226350344563008, 'guessing_LAG_8': 1.2466819671559773e-21, 'inattention_LAG_8': 0.9996666814025492, 'discriminability_error_LAG_8': 1.038097084870405, 'difficulty_error_LAG_8': 0.0677526114355832, 'guessing_error_LAG_8': 0.1711579886536383, 'inattention_error_LAG_8': 0.0112868295793873, 'auc_roc_LAG_8': 0.7892654610404108, 'optimal_threshold_LAG_8': 0.9023068253589124, 'tpr_LAG_8': 0.5833891493636972, 'tnr_LAG_8': 0.9533333333333334, 'student_mean_accuracy_LAG_8': 0.9087035909920876, 'discriminability_LAG_9': 13.071559459079207, 'difficulty_LAG_9': 0.118479741977969, 'guessing_LAG_9': 3.529777333526952e-16, 'inattention_LAG_9': 0.98627574067238, 'discriminability_error_LAG_9': 1.2230623325273036, 'difficulty_error_LAG_9': 0.0146690266292376, 'guessing_error_LAG_9': 0.0613397991426504, 'inattention_error_LAG_9': 0.0090757714676938, 'auc_roc_LAG_9': 0.8584595536059865, 'optimal_threshold_LAG_9': 0.9189536815222824, 'tpr_LAG_9': 0.6255192878338279, 'tnr_LAG_9': 1.0, 'student_mean_accuracy_LAG_9': 0.8798955613577023, 'discriminability_LAG_10': 2.717048923173371, 'difficulty_LAG_10': 0.8136674723453555, 'guessing_LAG_10': 0.4999999999281503, 'inattention_LAG_10': 0.9834494200147608, 'discriminability_error_LAG_10': 1.2405133124417174, 'difficulty_error_LAG_10': 0.16517784595269, 'guessing_error_LAG_10': 0.0960200077465105, 'inattention_error_LAG_10': 0.0591842052212264, 'auc_roc_LAG_10': 0.640355586443425, 'optimal_threshold_LAG_10': 0.6954267034715177, 'tpr_LAG_10': 0.4188479941720905, 'tnr_LAG_10': 0.8485264603359036, 'student_mean_accuracy_LAG_10': 0.680168918918919, 'LOG_sample_size': 6.795705775173514, 'LOG_sample_size_LAG_1': 7.504942068396171, 'LOG_sample_size_LAG_2': 6.967909201801884, 'LOG_sample_size_LAG_3': 7.404279118037268, 'LOG_sample_size_LAG_4': 6.946975992135418, 'LOG_sample_size_LAG_5': 6.885509670034817, 'LOG_sample_size_LAG_6': 6.78897174299217, 'LOG_sample_size_LAG_7': 6.838405200847344, 'LOG_sample_size_LAG_8': 7.404279118037268, 'LOG_sample_size_LAG_9': 7.557472901614746, 'LOG_sample_size_LAG_10': 6.78897174299217, 'difficulty_spread': 1.1551274244338035, 'optimal_threshold_spread': 0.3309363218528364, 'student_mean_accuracy_spread': 0.31442409396373483, 'tnr_spread': 0.2087766324923317, 'tpr_spread': 0.3716083552887471, 'mean_auc_roc': 0.7278504446007635, 'mean_discriminability': 14.54344728084086, 'mean_discriminability_error': 2.094457257526696, 'mean_difficulty_error': 0.24180603302806447, 'mean_guessing_error': 0.24753484988322474, 'mean_inattention_error': 0.03265344073509608, 'num_responses': 10.0}
+2025-01-19 07:46:50,133 - JSON formatted submission input (for live testing, with duplicated current inputs):
+2025-01-19 07:46:50,134 - {
+  "skillId": "yksirhsm",
+  "questionId": "bd68481c-defa-481a-927c-78804a03bee8",
+  "eventTime": "2024-05-22 18:13:46.038000+00:00",
+  "questionIdsHistory": [
+    "bd68481c-defa-481a-927c-78804a03bee8",
+    "aea492be-4792-4362-ad5d-12b4cfdc3fe7",
+    "510b615b-f7a5-4872-a182-6e02c0b7a9e4",
+    "d7aa90d5-09d1-41c1-a07c-33705fe9151b",
+    "938ae3b7-6ae7-4ddf-8810-e359dd4cdb01",
+    "3b27f124-87b3-45aa-8dbf-029fbc405f24",
+    "f2b42c12-0cf7-45e5-8981-c75b93275caf",
+    "e8df380e-6be9-44ca-930a-4eb03ac6bc0b",
+    "d7aa90d5-09d1-41c1-a07c-33705fe9151b",
+    "15a97680-5907-458d-9e24-34ddcca493b0",
+    "f2b42c12-0cf7-45e5-8981-c75b93275caf"
+  ],
+  "correctnessHistory": [
+    83,
+    100,
+    100,
+    100,
+    100,
+    83,
+    86,
+    100,
+    100,
+    100,
+    86
+  ],
+  "durationSecondsHistory": [],
+  "eventTimesHistory": [
+    "2024-05-22T18:13:46.000Z",
+    "2024-05-22T18:12:58.000Z",
+    "2024-05-21T17:32:20.000Z",
+    "2024-05-21T17:27:55.000Z",
+    "2024-05-21T17:27:49.000Z",
+    "2024-05-21T17:26:37.000Z",
+    "2024-05-21T17:23:21.000Z",
+    "2024-05-21T17:22:41.000Z",
+    "2024-05-21T17:22:05.000Z",
+    "2024-05-21T17:21:57.000Z",
+    "2024-05-21T17:20:11.000Z"
+  ]
+}
+2025-01-19 07:46:50,135 - True value: 0.83
+2025-01-19 07:46:50,135 - Confidence true value: 0.83 (1 value)
+2025-01-19 07:46:50,135 - Item Proficiency model prediction: 0.8183016777038574
+2025-01-19 07:46:50,136 - Item Confidence model prediction: 0.37892448902130127
+2025-01-19 07:46:50,136 - Item Confidence Score Transformer (percentile ranker) prediction: 98.73382849998411
+2025-01-19 07:46:50,137 - Item AGNOSTIC Proficiency model prediction: 0.8183016777038574
+2025-01-19 07:46:50,137 - Item AGNOSTIC Confidence model prediction: 0.37892448902130127
+2025-01-19 07:46:50,138 - Item AGNOSTIC Confidence Score Transformer (percentile ranker) prediction: 95.34430328780768
+2025-01-19 07:46:50,138 - Skill Proficiency model prediction: 0.6432275772094727
+2025-01-19 07:46:50,139 - Skill Confidence model prediction: 0.40757888555526733
+2025-01-19 07:46:50,139 - Skill Confidence Score Transformer (percentile ranker) prediction: 38.88186017102407
+2025-01-19 07:46:50,139 - 
+Student #5:
+2025-01-19 07:46:50,140 - Raw input (Snowflake SQL):
+2025-01-19 07:46:50,141 -   STUDENTID: 40187688
+2025-01-19 07:46:50,141 -   SKILL: Stub RLSkill Id, see questions_skills column for all skills associated with this question
+2025-01-19 07:46:50,142 -   QUESTIONID: e597ccac-cf20-4dcf-a224-a91e189401fe
+2025-01-19 07:46:50,142 -   OCCURREDAT: 2024-10-24 14:24:11.549000+00:00
+2025-01-19 07:46:50,142 -   CORRECTNESS: 100
+2025-01-19 07:46:50,143 -   DURATIONSECONDS: nan
+2025-01-19 07:46:50,143 -   ANSWERPOSITIONINSESSION: nan
+2025-01-19 07:46:50,144 -   EVENT_RANK: 12
+2025-01-19 07:46:50,144 -   QUESTIONID_LAG_1: e0965659-476d-4a34-a8d3-8844cc1eac9e
+2025-01-19 07:46:50,145 -   QUESTIONID_LAG_2: 7c08d927-1e08-4714-ad02-08cd105d1e53
+2025-01-19 07:46:50,145 -   QUESTIONID_LAG_3: 6686c51a-f216-4dc2-82eb-56595dc382fc
+2025-01-19 07:46:50,145 -   QUESTIONID_LAG_4: 2ba64321-c80b-4f3f-99d5-775591b2721d
+2025-01-19 07:46:50,146 -   QUESTIONID_LAG_5: 0322041c-75a8-49e1-8b58-5e4b85381603
+2025-01-19 07:46:50,146 -   QUESTIONID_LAG_6: ee8bffe5-d6a0-4997-8bf4-76d64b826344
+2025-01-19 07:46:50,147 -   QUESTIONID_LAG_7: f8626227-4a21-4931-9c9c-bde2788d5d4f
+2025-01-19 07:46:50,147 -   QUESTIONID_LAG_8: fba59939-8b5a-4996-be1c-8cb49c75e096
+2025-01-19 07:46:50,148 -   QUESTIONID_LAG_9: a652f049-001b-4692-b254-91d4ee89aed7
+2025-01-19 07:46:50,148 -   QUESTIONID_LAG_10: 6406e60d-62ab-4e20-bb8b-2cf39c32797d
+2025-01-19 07:46:50,148 -   OCCURREDAT_LAG_1: 2024-10-24 14:23:57.348000+00:00
+2025-01-19 07:46:50,149 -   OCCURREDAT_LAG_2: 2024-10-24 14:23:21.438000+00:00
+2025-01-19 07:46:50,149 -   OCCURREDAT_LAG_3: 2024-10-24 14:11:25.207000+00:00
+2025-01-19 07:46:50,150 -   OCCURREDAT_LAG_4: 2024-10-24 14:10:11.570000+00:00
+2025-01-19 07:46:50,150 -   OCCURREDAT_LAG_5: 2024-10-24 14:09:30.847000+00:00
+2025-01-19 07:46:50,151 -   OCCURREDAT_LAG_6: 2024-09-24 13:52:01.918000+00:00
+2025-01-19 07:46:50,151 -   OCCURREDAT_LAG_7: 2024-09-24 13:51:53.974000+00:00
+2025-01-19 07:46:50,152 -   OCCURREDAT_LAG_8: 2024-09-24 13:51:44.381000+00:00
+2025-01-19 07:46:50,152 -   OCCURREDAT_LAG_9: 2024-09-24 13:51:13.708000+00:00
+2025-01-19 07:46:50,153 -   OCCURREDAT_LAG_10: 2024-09-24 13:50:41.832000+00:00
+2025-01-19 07:46:50,153 -   CORRECTNESS_LAG_1: 100
+2025-01-19 07:46:50,153 -   CORRECTNESS_LAG_2: 100
+2025-01-19 07:46:50,154 -   CORRECTNESS_LAG_3: 100
+2025-01-19 07:46:50,154 -   CORRECTNESS_LAG_4: 50
+2025-01-19 07:46:50,155 -   CORRECTNESS_LAG_5: 100
+2025-01-19 07:46:50,155 -   CORRECTNESS_LAG_6: 0
+2025-01-19 07:46:50,156 -   CORRECTNESS_LAG_7: 0
+2025-01-19 07:46:50,156 -   CORRECTNESS_LAG_8: 100
+2025-01-19 07:46:50,157 -   CORRECTNESS_LAG_9: 0
+2025-01-19 07:46:50,157 -   CORRECTNESS_LAG_10: 100
+2025-01-19 07:46:50,157 -   DURATIONSECONDS_LAG_1: nan
+2025-01-19 07:46:50,158 -   DURATIONSECONDS_LAG_2: nan
+2025-01-19 07:46:50,158 -   DURATIONSECONDS_LAG_3: nan
+2025-01-19 07:46:50,159 -   DURATIONSECONDS_LAG_4: nan
+2025-01-19 07:46:50,159 -   DURATIONSECONDS_LAG_5: nan
+2025-01-19 07:46:50,160 -   DURATIONSECONDS_LAG_6: nan
+2025-01-19 07:46:50,160 -   DURATIONSECONDS_LAG_7: nan
+2025-01-19 07:46:50,161 -   DURATIONSECONDS_LAG_8: nan
+2025-01-19 07:46:50,161 -   DURATIONSECONDS_LAG_9: nan
+2025-01-19 07:46:50,161 -   DURATIONSECONDS_LAG_10: nan
+2025-01-19 07:46:50,162 -   FUTURE_CORRECTNESS_LAG_1: 100
+2025-01-19 07:46:50,162 -   FUTURE_CORRECTNESS_LAG_2: 100
+2025-01-19 07:46:50,163 -   FUTURE_CORRECTNESS_LAG_3: 0
+2025-01-19 07:46:50,163 -   FUTURE_CORRECTNESS_LAG_4: 0
+2025-01-19 07:46:50,164 -   FUTURE_CORRECTNESS_LAG_5: None
+2025-01-19 07:46:50,164 - Feature-engineered inputs (internal):
+2025-01-19 07:46:50,179 - {'CORRECTNESS_LAG_1': 1.0, 'CORRECTNESS_LAG_2': 1.0, 'CORRECTNESS_LAG_3': 1.0, 'CORRECTNESS_LAG_4': 0.5, 'CORRECTNESS_LAG_5': 1.0, 'CORRECTNESS_LAG_6': 0.0, 'CORRECTNESS_LAG_7': 0.0, 'CORRECTNESS_LAG_8': 1.0, 'CORRECTNESS_LAG_9': 0.0, 'CORRECTNESS_LAG_10': 1.0, 'DURATIONSECONDS_LAG_1': nan, 'DURATIONSECONDS_LAG_2': nan, 'DURATIONSECONDS_LAG_3': nan, 'DURATIONSECONDS_LAG_4': nan, 'DURATIONSECONDS_LAG_5': nan, 'DURATIONSECONDS_LAG_6': nan, 'DURATIONSECONDS_LAG_7': nan, 'DURATIONSECONDS_LAG_8': nan, 'DURATIONSECONDS_LAG_9': nan, 'DURATIONSECONDS_LAG_10': nan, 'OCCURREDAT_DIFF_1': 0.004, 'OCCURREDAT_DIFF_2': 0.01, 'OCCURREDAT_DIFF_3': 0.199, 'OCCURREDAT_DIFF_4': 0.02, 'OCCURREDAT_DIFF_5': 0.011, 'OCCURREDAT_DIFF_6': 720.291, 'OCCURREDAT_DIFF_7': 0.002, 'OCCURREDAT_DIFF_8': 0.003, 'OCCURREDAT_DIFF_9': 0.009, 'OCCURREDAT_DIFF_10': 0.009, 'LOG_OCCURREDAT_DIFF_1': -5.521460917862246, 'LOG_OCCURREDAT_DIFF_2': -4.605170185988091, 'LOG_OCCURREDAT_DIFF_3': -1.6144504542576446, 'LOG_OCCURREDAT_DIFF_4': -3.912023005428146, 'LOG_OCCURREDAT_DIFF_5': -4.509860006183766, 'LOG_OCCURREDAT_DIFF_6': 6.579655297023421, 'LOG_OCCURREDAT_DIFF_7': -6.214608098422191, 'LOG_OCCURREDAT_DIFF_8': -5.809142990314027, 'LOG_OCCURREDAT_DIFF_9': -4.710530701645918, 'LOG_OCCURREDAT_DIFF_10': -4.710530701645918, 'LOG_DURATIONSECONDS_LAG_1': nan, 'LOG_DURATIONSECONDS_LAG_2': nan, 'LOG_DURATIONSECONDS_LAG_3': nan, 'LOG_DURATIONSECONDS_LAG_4': nan, 'LOG_DURATIONSECONDS_LAG_5': nan, 'LOG_DURATIONSECONDS_LAG_6': nan, 'LOG_DURATIONSECONDS_LAG_7': nan, 'LOG_DURATIONSECONDS_LAG_8': nan, 'LOG_DURATIONSECONDS_LAG_9': nan, 'LOG_DURATIONSECONDS_LAG_10': nan, 'discriminability': nan, 'difficulty': nan, 'guessing': nan, 'inattention': nan, 'discriminability_error': nan, 'difficulty_error': nan, 'guessing_error': nan, 'inattention_error': nan, 'auc_roc': nan, 'optimal_threshold': nan, 'tpr': nan, 'tnr': nan, 'skill_optimal_threshold': nan, 'student_mean_accuracy': nan, 'discriminability_LAG_1': nan, 'difficulty_LAG_1': nan, 'guessing_LAG_1': nan, 'inattention_LAG_1': nan, 'discriminability_error_LAG_1': nan, 'difficulty_error_LAG_1': nan, 'guessing_error_LAG_1': nan, 'inattention_error_LAG_1': nan, 'auc_roc_LAG_1': nan, 'optimal_threshold_LAG_1': nan, 'tpr_LAG_1': nan, 'tnr_LAG_1': nan, 'student_mean_accuracy_LAG_1': nan, 'discriminability_LAG_2': nan, 'difficulty_LAG_2': nan, 'guessing_LAG_2': nan, 'inattention_LAG_2': nan, 'discriminability_error_LAG_2': nan, 'difficulty_error_LAG_2': nan, 'guessing_error_LAG_2': nan, 'inattention_error_LAG_2': nan, 'auc_roc_LAG_2': nan, 'optimal_threshold_LAG_2': nan, 'tpr_LAG_2': nan, 'tnr_LAG_2': nan, 'student_mean_accuracy_LAG_2': nan, 'discriminability_LAG_3': nan, 'difficulty_LAG_3': nan, 'guessing_LAG_3': nan, 'inattention_LAG_3': nan, 'discriminability_error_LAG_3': nan, 'difficulty_error_LAG_3': nan, 'guessing_error_LAG_3': nan, 'inattention_error_LAG_3': nan, 'auc_roc_LAG_3': nan, 'optimal_threshold_LAG_3': nan, 'tpr_LAG_3': nan, 'tnr_LAG_3': nan, 'student_mean_accuracy_LAG_3': nan, 'discriminability_LAG_4': nan, 'difficulty_LAG_4': nan, 'guessing_LAG_4': nan, 'inattention_LAG_4': nan, 'discriminability_error_LAG_4': nan, 'difficulty_error_LAG_4': nan, 'guessing_error_LAG_4': nan, 'inattention_error_LAG_4': nan, 'auc_roc_LAG_4': nan, 'optimal_threshold_LAG_4': nan, 'tpr_LAG_4': nan, 'tnr_LAG_4': nan, 'student_mean_accuracy_LAG_4': nan, 'discriminability_LAG_5': nan, 'difficulty_LAG_5': nan, 'guessing_LAG_5': nan, 'inattention_LAG_5': nan, 'discriminability_error_LAG_5': nan, 'difficulty_error_LAG_5': nan, 'guessing_error_LAG_5': nan, 'inattention_error_LAG_5': nan, 'auc_roc_LAG_5': nan, 'optimal_threshold_LAG_5': nan, 'tpr_LAG_5': nan, 'tnr_LAG_5': nan, 'student_mean_accuracy_LAG_5': nan, 'discriminability_LAG_6': nan, 'difficulty_LAG_6': nan, 'guessing_LAG_6': nan, 'inattention_LAG_6': nan, 'discriminability_error_LAG_6': nan, 'difficulty_error_LAG_6': nan, 'guessing_error_LAG_6': nan, 'inattention_error_LAG_6': nan, 'auc_roc_LAG_6': nan, 'optimal_threshold_LAG_6': nan, 'tpr_LAG_6': nan, 'tnr_LAG_6': nan, 'student_mean_accuracy_LAG_6': nan, 'discriminability_LAG_7': nan, 'difficulty_LAG_7': nan, 'guessing_LAG_7': nan, 'inattention_LAG_7': nan, 'discriminability_error_LAG_7': nan, 'difficulty_error_LAG_7': nan, 'guessing_error_LAG_7': nan, 'inattention_error_LAG_7': nan, 'auc_roc_LAG_7': nan, 'optimal_threshold_LAG_7': nan, 'tpr_LAG_7': nan, 'tnr_LAG_7': nan, 'student_mean_accuracy_LAG_7': nan, 'discriminability_LAG_8': nan, 'difficulty_LAG_8': nan, 'guessing_LAG_8': nan, 'inattention_LAG_8': nan, 'discriminability_error_LAG_8': nan, 'difficulty_error_LAG_8': nan, 'guessing_error_LAG_8': nan, 'inattention_error_LAG_8': nan, 'auc_roc_LAG_8': nan, 'optimal_threshold_LAG_8': nan, 'tpr_LAG_8': nan, 'tnr_LAG_8': nan, 'student_mean_accuracy_LAG_8': nan, 'discriminability_LAG_9': nan, 'difficulty_LAG_9': nan, 'guessing_LAG_9': nan, 'inattention_LAG_9': nan, 'discriminability_error_LAG_9': nan, 'difficulty_error_LAG_9': nan, 'guessing_error_LAG_9': nan, 'inattention_error_LAG_9': nan, 'auc_roc_LAG_9': nan, 'optimal_threshold_LAG_9': nan, 'tpr_LAG_9': nan, 'tnr_LAG_9': nan, 'student_mean_accuracy_LAG_9': nan, 'discriminability_LAG_10': nan, 'difficulty_LAG_10': nan, 'guessing_LAG_10': nan, 'inattention_LAG_10': nan, 'discriminability_error_LAG_10': nan, 'difficulty_error_LAG_10': nan, 'guessing_error_LAG_10': nan, 'inattention_error_LAG_10': nan, 'auc_roc_LAG_10': nan, 'optimal_threshold_LAG_10': nan, 'tpr_LAG_10': nan, 'tnr_LAG_10': nan, 'student_mean_accuracy_LAG_10': nan, 'LOG_sample_size': nan, 'LOG_sample_size_LAG_1': nan, 'LOG_sample_size_LAG_2': nan, 'LOG_sample_size_LAG_3': nan, 'LOG_sample_size_LAG_4': nan, 'LOG_sample_size_LAG_5': nan, 'LOG_sample_size_LAG_6': nan, 'LOG_sample_size_LAG_7': nan, 'LOG_sample_size_LAG_8': nan, 'LOG_sample_size_LAG_9': nan, 'LOG_sample_size_LAG_10': nan, 'difficulty_spread': nan, 'optimal_threshold_spread': nan, 'student_mean_accuracy_spread': nan, 'tnr_spread': nan, 'tpr_spread': nan, 'mean_auc_roc': nan, 'mean_discriminability': nan, 'mean_discriminability_error': nan, 'mean_difficulty_error': nan, 'mean_guessing_error': nan, 'mean_inattention_error': nan, 'num_responses': 10.0}
+2025-01-19 07:46:50,181 - JSON formatted submission input (for live testing, with duplicated current inputs):
+2025-01-19 07:46:50,181 - {
+  "skillId": "Stub RLSkill Id, see questions_skills column for all skills associated with this question",
+  "questionId": "e597ccac-cf20-4dcf-a224-a91e189401fe",
+  "eventTime": "2024-10-24 14:24:11.549000+00:00",
+  "questionIdsHistory": [
+    "e597ccac-cf20-4dcf-a224-a91e189401fe",
+    "e0965659-476d-4a34-a8d3-8844cc1eac9e",
+    "7c08d927-1e08-4714-ad02-08cd105d1e53",
+    "6686c51a-f216-4dc2-82eb-56595dc382fc",
+    "2ba64321-c80b-4f3f-99d5-775591b2721d",
+    "0322041c-75a8-49e1-8b58-5e4b85381603",
+    "ee8bffe5-d6a0-4997-8bf4-76d64b826344",
+    "f8626227-4a21-4931-9c9c-bde2788d5d4f",
+    "fba59939-8b5a-4996-be1c-8cb49c75e096",
+    "a652f049-001b-4692-b254-91d4ee89aed7",
+    "6406e60d-62ab-4e20-bb8b-2cf39c32797d"
+  ],
+  "correctnessHistory": [
+    100,
+    100,
+    100,
+    100,
+    50,
+    100,
+    0,
+    0,
+    100,
+    0,
+    100
+  ],
+  "durationSecondsHistory": [],
+  "eventTimesHistory": [
+    "2024-10-24T14:24:11.000Z",
+    "2024-10-24T14:23:57.000Z",
+    "2024-10-24T14:23:21.000Z",
+    "2024-10-24T14:11:25.000Z",
+    "2024-10-24T14:10:11.000Z",
+    "2024-10-24T14:09:30.000Z",
+    "2024-09-24T13:52:01.000Z",
+    "2024-09-24T13:51:53.000Z",
+    "2024-09-24T13:51:44.000Z",
+    "2024-09-24T13:51:13.000Z",
+    "2024-09-24T13:50:41.000Z"
+  ]
+}
+2025-01-19 07:46:50,182 - True value: 1.0
+2025-01-19 07:46:50,182 - Confidence true value: 1.0 (1 value)
+2025-01-19 07:46:50,183 - Item Proficiency model prediction: 0.7872620224952698
+2025-01-19 07:46:50,183 - Item Confidence model prediction: 0.3803867697715759
+2025-01-19 07:46:50,184 - Item Confidence Score Transformer (percentile ranker) prediction: 98.96481208743471
+2025-01-19 07:46:50,184 - Item AGNOSTIC Proficiency model prediction: 0.7872620224952698
+2025-01-19 07:46:50,184 - Item AGNOSTIC Confidence model prediction: 0.3803867697715759
+2025-01-19 07:46:50,185 - Item AGNOSTIC Confidence Score Transformer (percentile ranker) prediction: 97.4729547886712
+2025-01-19 07:46:50,185 - Skill Proficiency model prediction: nan
+2025-01-19 07:46:50,186 - Skill Confidence model prediction: nan
+2025-01-19 07:46:50,186 - Skill Confidence Score Transformer (percentile ranker) prediction: nan
+2025-01-19 07:46:50,187 - 
+Skill Proficiency Category Analysis (Custom Thresholds):
+2025-01-19 07:46:50,189 - 
+Struggling Category (< 0.5):
+2025-01-19 07:46:50,189 - Count: 7117 (17.6%)
+2025-01-19 07:46:50,190 - Mean Correctness: 0.651
+2025-01-19 07:46:50,190 - 
+Practicing Category (>= 0.5 and < 0.7):
+2025-01-19 07:46:50,191 - Count: 14249 (35.3%)
+2025-01-19 07:46:50,191 - Mean Correctness: 0.674
+2025-01-19 07:46:50,191 - 
+Proficient Category (>= 0.7):
+2025-01-19 07:46:50,192 - Count: 13422 (33.3%)
+2025-01-19 07:46:50,192 - Mean Correctness: 0.680
+2025-01-19 07:46:50,193 - 
+Skill Proficiency Category Analysis (Default Thresholds):
+2025-01-19 07:46:50,195 - 
+Struggling Category (< 0.6):
+2025-01-19 07:46:50,195 - Count: 12730 (31.5%)
+2025-01-19 07:46:50,196 - Mean Correctness: 0.656
+2025-01-19 07:46:50,196 - 
+Practicing Category (>= 0.6 and < 0.8):
+2025-01-19 07:46:50,197 - Count: 15932 (39.5%)
+2025-01-19 07:46:50,197 - Mean Correctness: 0.678
+2025-01-19 07:46:50,197 - 
+Proficient Category (>= 0.8):
+2025-01-19 07:46:50,198 - Count: 6126 (15.2%)
+2025-01-19 07:46:50,198 - Mean Correctness: 0.687
+2025-01-19 07:46:50,199 - 
+Item Proficiency Category Analysis (Custom Thresholds):
+2025-01-19 07:46:50,201 - 
+Struggling Category (< 0.5):
+2025-01-19 07:46:50,201 - Count: 10240 (25.4%)
+2025-01-19 07:46:50,202 - Mean Correctness: 0.387
+2025-01-19 07:46:50,202 - 
+Practicing Category (>= 0.5 and < 0.7):
+2025-01-19 07:46:50,203 - Count: 8999 (22.3%)
+2025-01-19 07:46:50,203 - Mean Correctness: 0.616
+2025-01-19 07:46:50,204 - 
+Proficient Category (>= 0.7):
+2025-01-19 07:46:50,204 - Count: 21127 (52.3%)
+2025-01-19 07:46:50,205 - Mean Correctness: 0.834
+2025-01-19 07:46:50,205 - 
+Item Proficiency Category Analysis (Default Thresholds):
+2025-01-19 07:46:50,207 - 
+Struggling Category (< 0.6):
+2025-01-19 07:46:50,208 - Count: 13809 (34.2%)
+2025-01-19 07:46:50,208 - Mean Correctness: 0.431
+2025-01-19 07:46:50,209 - 
+Practicing Category (>= 0.6 and < 0.8):
+2025-01-19 07:46:50,209 - Count: 13578 (33.6%)
+2025-01-19 07:46:50,210 - Mean Correctness: 0.710
+2025-01-19 07:46:50,210 - 
+Proficient Category (>= 0.8):
+2025-01-19 07:46:50,210 - Count: 12979 (32.2%)
+2025-01-19 07:46:50,211 - Mean Correctness: 0.888
+2025-01-19 07:46:50,211 - 
+Item Agnostic Proficiency Category Analysis (Custom Thresholds):
+2025-01-19 07:46:50,214 - 
+Struggling Category (< 0.5):
+2025-01-19 07:46:50,214 - Count: 6332 (15.7%)
+2025-01-19 07:46:50,215 - Mean Correctness: 0.411
+2025-01-19 07:46:50,215 - 
+Practicing Category (>= 0.5 and < 0.7):
+2025-01-19 07:46:50,215 - Count: 15323 (38.0%)
+2025-01-19 07:46:50,216 - Mean Correctness: 0.620
+2025-01-19 07:46:50,216 - 
+Proficient Category (>= 0.7):
+2025-01-19 07:46:50,217 - Count: 18711 (46.4%)
+2025-01-19 07:46:50,217 - Mean Correctness: 0.803
+2025-01-19 07:46:50,218 - 
+Item Agnostic Proficiency Category Analysis (Default Thresholds):
+2025-01-19 07:46:50,220 - 
+Struggling Category (< 0.6):
+2025-01-19 07:46:50,220 - Count: 10631 (26.3%)
+2025-01-19 07:46:50,221 - Mean Correctness: 0.471
+2025-01-19 07:46:50,221 - 
+Practicing Category (>= 0.6 and < 0.8):
+2025-01-19 07:46:50,222 - Count: 22159 (54.9%)
+2025-01-19 07:46:50,222 - Mean Correctness: 0.703
+2025-01-19 07:46:50,222 - 
+Proficient Category (>= 0.8):
+2025-01-19 07:46:50,223 - Count: 7576 (18.8%)
+2025-01-19 07:46:50,223 - Mean Correctness: 0.865
+2025-01-19 07:46:50,224 - Average metrics across all test sets (item aware/item agnostic/skill: proficiency & confidence models & confidence scores):
+2025-01-19 07:46:50,224 - Average ITEM AWARE PROFICIENCY MODEL metrics across all test sets:
+2025-01-19 07:46:50,225 - MSE: 0.17516
+2025-01-19 07:46:50,225 - RMSE: 0.41853
+2025-01-19 07:46:50,226 - Cross Entropy: 0.53811
+2025-01-19 07:46:50,226 - R2: 0.18505
+2025-01-19 07:46:50,227 - (Imputed) Precision (incorrect/0): 0.61602
+2025-01-19 07:46:50,227 - (Imputed) Precision (correct/1): 0.76831
+2025-01-19 07:46:50,228 - (Imputed) Recall (incorrect/0): 0.47471
+2025-01-19 07:46:50,228 - (Imputed) Recall (correct/1): 0.85479
+2025-01-19 07:46:50,229 - (Imputed) F1: 0.80924
+2025-01-19 07:46:50,229 - (Imputed) Accuracy: 0.72967
+2025-01-19 07:46:50,230 - (Imputed) AUC ROC: 0.76411
+2025-01-19 07:46:50,230 - (Imputed) AUC PR: 0.86298
+2025-01-19 07:46:50,231 - Average ITEM AWARE CONFIDENCE MODEL metrics across all test sets:
+2025-01-19 07:46:50,231 - MSE: 0.31553
+2025-01-19 07:46:50,232 - RMSE: 0.56172
+2025-01-19 07:46:50,232 - Cross Entropy: 0.51167
+2025-01-19 07:46:50,233 - R2: -0.80559
+2025-01-19 07:46:50,233 - (Imputed) Precision (incorrect/0): 0.53051
+2025-01-19 07:46:50,234 - (Imputed) Precision (correct/1): 0.52934
+2025-01-19 07:46:50,234 - (Imputed) Recall (incorrect/0): 0.53206
+2025-01-19 07:46:50,235 - (Imputed) Recall (correct/1): 0.52779
+2025-01-19 07:46:50,235 - (Imputed) F1: 0.52856
+2025-01-19 07:46:50,236 - (Imputed) Accuracy: 0.52993
+2025-01-19 07:46:50,236 - (Imputed) AUC ROC: 0.58495
+2025-01-19 07:46:50,237 - (Imputed) AUC PR: 0.53715
+2025-01-19 07:46:50,237 - Average ITEM AWARE CONFIDENCE SCORE metrics across all test sets:
+2025-01-19 07:46:50,237 - MSE: 0.60642
+2025-01-19 07:46:50,238 - RMSE: 0.77873
+2025-01-19 07:46:50,238 - Cross Entropy: 2.21898
+2025-01-19 07:46:50,239 - R2: -2.47020
+2025-01-19 07:46:50,239 - (Imputed) Precision (incorrect/0): 0.86311
+2025-01-19 07:46:50,240 - (Imputed) Precision (correct/1): 0.06324
+2025-01-19 07:46:50,241 - (Imputed) Recall (incorrect/0): 0.43528
+2025-01-19 07:46:50,241 - (Imputed) Recall (correct/1): 0.35577
+2025-01-19 07:46:50,242 - (Imputed) F1: 0.10739
+2025-01-19 07:46:50,242 - (Imputed) Accuracy: 0.42759
+2025-01-19 07:46:50,243 - (Imputed) AUC ROC: 0.30315
+2025-01-19 07:46:50,243 - (Imputed) AUC PR: 0.06816
+2025-01-19 07:46:50,243 - Average ITEM AGNOSTIC PROFICIENCY MODEL metrics across all test sets:
+2025-01-19 07:46:50,244 - MSE: 0.19236
+2025-01-19 07:46:50,244 - RMSE: 0.43859
+2025-01-19 07:46:50,245 - Cross Entropy: 0.58055
+2025-01-19 07:46:50,246 - R2: 0.10505
+2025-01-19 07:46:50,246 - (Imputed) Precision (incorrect/0): 0.59033
+2025-01-19 07:46:50,247 - (Imputed) Precision (correct/1): 0.71940
+2025-01-19 07:46:50,247 - (Imputed) Recall (incorrect/0): 0.28131
+2025-01-19 07:46:50,248 - (Imputed) Recall (correct/1): 0.90420
+2025-01-19 07:46:50,248 - (Imputed) F1: 0.80128
+2025-01-19 07:46:50,249 - (Imputed) Accuracy: 0.69915
+2025-01-19 07:46:50,249 - (Imputed) AUC ROC: 0.69556
+2025-01-19 07:46:50,250 - (Imputed) AUC PR: 0.80895
+2025-01-19 07:46:50,250 - Average ITEM AGNOSTIC CONFIDENCE MODEL metrics across all test sets:
+2025-01-19 07:46:50,251 - MSE: 0.34730
+2025-01-19 07:46:50,251 - RMSE: 0.58932
+2025-01-19 07:46:50,252 - Cross Entropy: 0.51672
+2025-01-19 07:46:50,252 - R2: -0.80607
+2025-01-19 07:46:50,253 - (Imputed) Precision (incorrect/0): 0.93656
+2025-01-19 07:46:50,253 - (Imputed) Precision (correct/1): 0.00000
+2025-01-19 07:46:50,254 - (Imputed) Recall (incorrect/0): 1.00000
+2025-01-19 07:46:50,254 - (Imputed) Recall (correct/1): 0.00000
+2025-01-19 07:46:50,255 - (Imputed) F1: 0.00000
+2025-01-19 07:46:50,255 - (Imputed) Accuracy: 0.93656
+2025-01-19 07:46:50,256 - (Imputed) AUC ROC: 0.82067
+2025-01-19 07:46:50,256 - (Imputed) AUC PR: 0.18521
+2025-01-19 07:46:50,257 - Average ITEM AGNOSTIC CONFIDENCE SCORE metrics across all test sets:
+2025-01-19 07:46:50,257 - MSE: 0.58503
+2025-01-19 07:46:50,258 - RMSE: 0.76487
+2025-01-19 07:46:50,258 - Cross Entropy: 1.66554
+2025-01-19 07:46:50,259 - R2: -2.04234
+2025-01-19 07:46:50,259 - (Imputed) Precision (incorrect/0): 0.92057
+2025-01-19 07:46:50,260 - (Imputed) Precision (correct/1): 0.04251
+2025-01-19 07:46:50,260 - (Imputed) Recall (incorrect/0): 0.55736
+2025-01-19 07:46:50,261 - (Imputed) Recall (correct/1): 0.29012
+2025-01-19 07:46:50,261 - (Imputed) F1: 0.07416
+2025-01-19 07:46:50,262 - (Imputed) Accuracy: 0.54041
+2025-01-19 07:46:50,262 - (Imputed) AUC ROC: 0.27727
+2025-01-19 07:46:50,263 - (Imputed) AUC PR: 0.05066
+2025-01-19 07:46:50,263 - Average SKILL PROFICIENCY MODEL metrics across all test sets:
+2025-01-19 07:46:50,264 - MSE: 0.24021
+2025-01-19 07:46:50,264 - RMSE: 0.49011
+2025-01-19 07:46:50,265 - Cross Entropy: 0.69320
+2025-01-19 07:46:50,265 - R2: -0.11505
+2025-01-19 07:46:50,266 - (Imputed) Precision (incorrect/0): 0.34874
+2025-01-19 07:46:50,266 - (Imputed) Precision (correct/1): 0.67627
+2025-01-19 07:46:50,267 - (Imputed) Recall (incorrect/0): 0.21696
+2025-01-19 07:46:50,267 - (Imputed) Recall (correct/1): 0.80148
+2025-01-19 07:46:50,268 - (Imputed) F1: 0.73357
+2025-01-19 07:46:50,268 - (Imputed) Accuracy: 0.60926
+2025-01-19 07:46:50,269 - (Imputed) AUC ROC: 0.51642
+2025-01-19 07:46:50,269 - (Imputed) AUC PR: 0.68376
+2025-01-19 07:46:50,270 - Average SKILL CONFIDENCE MODEL metrics across all test sets:
+2025-01-19 07:46:50,270 - MSE: 0.31252
+2025-01-19 07:46:50,271 - RMSE: 0.55904
+2025-01-19 07:46:50,271 - Cross Entropy: 0.51277
+2025-01-19 07:46:50,272 - R2: -0.80656
+2025-01-19 07:46:50,272 - (Imputed) Precision (incorrect/0): 0.51997
+2025-01-19 07:46:50,273 - (Imputed) Precision (correct/1): 0.49267
+2025-01-19 07:46:50,273 - (Imputed) Recall (incorrect/0): 0.45887
+2025-01-19 07:46:50,274 - (Imputed) Recall (correct/1): 0.55366
+2025-01-19 07:46:50,274 - (Imputed) F1: 0.52139
+2025-01-19 07:46:50,275 - (Imputed) Accuracy: 0.50503
+2025-01-19 07:46:50,275 - (Imputed) AUC ROC: 0.51110
+2025-01-19 07:46:50,276 - (Imputed) AUC PR: 0.49060
+2025-01-19 07:46:50,276 - Average SKILL CONFIDENCE SCORE metrics across all test sets:
+2025-01-19 07:46:50,277 - MSE: 0.42022
+2025-01-19 07:46:50,277 - RMSE: 0.64825
+2025-01-19 07:46:50,278 - Cross Entropy: 0.99330
+2025-01-19 07:46:50,278 - R2: -1.42912
+2025-01-19 07:46:50,279 - (Imputed) Precision (incorrect/0): 0.89892
+2025-01-19 07:46:50,279 - (Imputed) Precision (correct/1): 0.10017
+2025-01-19 07:46:50,280 - (Imputed) Recall (incorrect/0): 0.63763
+2025-01-19 07:46:50,280 - (Imputed) Recall (correct/1): 0.36006
+2025-01-19 07:46:50,281 - (Imputed) F1: 0.15674
+2025-01-19 07:46:50,281 - (Imputed) Accuracy: 0.60966
+2025-01-19 07:46:50,282 - (Imputed) AUC ROC: 0.49661
+2025-01-19 07:46:50,282 - (Imputed) AUC PR: 0.09889
+2025-01-19 07:46:50,282 - Inference Testing completed
+2025-01-19 07:46:50,390 - Pipeline finished.

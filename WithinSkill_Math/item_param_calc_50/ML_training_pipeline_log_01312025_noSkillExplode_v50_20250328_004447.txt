@@ -1,0 +1,778 @@
+2025-03-28 00:44:47,279 - Starting model training. Logs will be saved to ./ML_training_pipeline_log_01312025_noSkillExplode_v50_20250328_004447.txt
+2025-03-28 00:44:47,280 - Pipeline Configuration:
+2025-03-28 00:44:47,280 - pipeline_id: 01312025_noSkillExplode
+2025-03-28 00:44:47,280 - feature_set_id: v50
+2025-03-28 00:44:47,281 - model_type: ModelOnlyIncompleteIP_future3
+2025-03-28 00:44:47,281 - doSnowflakeETL: False
+2025-03-28 00:44:47,282 - skillExplode: False
+2025-03-28 00:44:47,282 - CorrectnessBinary: False
+2025-03-28 00:44:47,283 - ItemAgnostic: False
+2025-03-28 00:44:47,283 - ItemAgnosticFit: False
+2025-03-28 00:44:47,283 - ItemAgnosticDoubleFit: False
+2025-03-28 00:44:47,284 - F1ObjectiveMeasure: False
+2025-03-28 00:44:47,284 - SigmoidTransformOutputFit: False
+2025-03-28 00:44:47,285 - UseSigmoidTransform: False
+2025-03-28 00:44:47,285 - SigmoidTransformOutput: False
+2025-03-28 00:44:47,285 - pullNewData: False
+2025-03-28 00:44:47,286 - query_file: querytransformedtable.txt
+2025-03-28 00:44:47,286 - raw_data_folder_path: StudentProficiencyData_Math_yearOfData
+2025-03-28 00:44:47,287 - GenerateTestTrainSplit: False
+2025-03-28 00:44:47,287 - ItemParameterCalculate: False
+2025-03-28 00:44:47,288 - item_params_file: Math_ItemParameters_v5_partial031225.csv
+2025-03-28 00:44:47,288 - FeatureEngineering: False
+2025-03-28 00:44:47,288 - ProficiencyModelFit: False
+2025-03-28 00:44:47,289 - ConfidenceModelFit: False
+2025-03-28 00:44:47,289 - InferenceModeOn: True
+2025-03-28 00:44:47,290 - InferenceModeFeatureEngineering: False
+2025-03-28 00:44:47,290 - TestMode: False
+2025-03-28 00:44:47,290 - n_estimators: 1
+2025-03-28 00:44:47,291 - FUTURE_WINDOW: 3
+2025-03-28 00:44:47,291 - scalerFlag: False
+2025-03-28 00:44:47,291 - log_folder: .
+2025-03-28 00:44:47,292 - Folder Locations for input data and output artifacts:
+2025-03-28 00:44:47,292 - feature_engineering_output_folder: feature_engineered_train_parquets_v50/
+2025-03-28 00:44:47,293 - proficiency_input_folder: feature_engineered_train_parquets_v50/
+2025-03-28 00:44:47,293 - proficiency_model_output_folder: proficiency_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3
+2025-03-28 00:44:47,293 - confidence_input_folder: feature_engineered_train_parquets_v50/
+2025-03-28 00:44:47,294 - confidence_model_output_folder: confidence_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3
+2025-03-28 00:44:47,294 - proficiency_model_file : proficiency_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/xgb_model.json
+2025-03-28 00:44:47,295 - column_names.txt (from raw query): ['STUDENTID', 'SKILL', 'QUESTIONID', 'OCCURREDAT', 'CORRECTNESS', 'DURATIONSECONDS', 'ANSWERPOSITIONINSESSION', 'EVENT_RANK', 'QUESTIONID_LAG_1', 'QUESTIONID_LAG_2', 'QUESTIONID_LAG_3', 'QUESTIONID_LAG_4', 'QUESTIONID_LAG_5', 'QUESTIONID_LAG_6', 'QUESTIONID_LAG_7', 'QUESTIONID_LAG_8', 'QUESTIONID_LAG_9', 'QUESTIONID_LAG_10', 'OCCURREDAT_LAG_1', 'OCCURREDAT_LAG_2', 'OCCURREDAT_LAG_3', 'OCCURREDAT_LAG_4', 'OCCURREDAT_LAG_5', 'OCCURREDAT_LAG_6', 'OCCURREDAT_LAG_7', 'OCCURREDAT_LAG_8', 'OCCURREDAT_LAG_9', 'OCCURREDAT_LAG_10', 'CORRECTNESS_LAG_1', 'CORRECTNESS_LAG_2', 'CORRECTNESS_LAG_3', 'CORRECTNESS_LAG_4', 'CORRECTNESS_LAG_5', 'CORRECTNESS_LAG_6', 'CORRECTNESS_LAG_7', 'CORRECTNESS_LAG_8', 'CORRECTNESS_LAG_9', 'CORRECTNESS_LAG_10', 'DURATIONSECONDS_LAG_1', 'DURATIONSECONDS_LAG_2', 'DURATIONSECONDS_LAG_3', 'DURATIONSECONDS_LAG_4', 'DURATIONSECONDS_LAG_5', 'DURATIONSECONDS_LAG_6', 'DURATIONSECONDS_LAG_7', 'DURATIONSECONDS_LAG_8', 'DURATIONSECONDS_LAG_9', 'DURATIONSECONDS_LAG_10', 'FUTURE_CORRECTNESS_LAG_1', 'FUTURE_CORRECTNESS_LAG_2', 'FUTURE_CORRECTNESS_LAG_3', 'FUTURE_CORRECTNESS_LAG_4', 'FUTURE_CORRECTNESS_LAG_5']
+2025-03-28 00:44:47,297 - 844 files found.
+2025-03-28 00:44:47,729 - Imported 1028975 studentids for train split.
+2025-03-28 00:44:47,729 - Starting inference mode testing.
+2025-03-28 00:44:47,821 - Imported 228661 studentids for test split.
+2025-03-28 00:44:47,821 - Starting Inference Testing on reserved test set
+2025-03-28 00:44:48,030 - Loaded proficiency model from proficiency_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/xgb_model.json
+2025-03-28 00:44:48,259 - Loaded confidence model from confidence_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/confidence_xgb_model.json
+2025-03-28 00:44:48,261 - Confidence model Score Transformer loaded from confidence_model_01312025_noSkillExplode_v50_ModelOnlyIncompleteIP_future3/percentile_rank_calculator.pkl
+2025-03-28 00:44:48,626 - Loaded IPD data Math_ItemParameters_v5_partial031225.csv
+2025-03-28 00:44:48,628 - Small Inference Run Mode: Finding 30 files with sufficient data...
+2025-03-28 00:44:48,744 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_7_19.snappy.parquet with 35664 rows
+2025-03-28 00:44:48,896 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_3_1.snappy.parquet with 36160 rows
+2025-03-28 00:44:49,023 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_6_50.snappy.parquet with 27702 rows
+2025-03-28 00:44:49,143 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_3_93.snappy.parquet with 34659 rows
+2025-03-28 00:44:49,238 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_70.snappy.parquet with 32721 rows
+2025-03-28 00:44:49,387 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_3_13.snappy.parquet with 38921 rows
+2025-03-28 00:44:49,539 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_7_56.snappy.parquet with 32971 rows
+2025-03-28 00:44:49,626 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_4_88.snappy.parquet with 35822 rows
+2025-03-28 00:44:49,699 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_57.snappy.parquet with 33574 rows
+2025-03-28 00:44:49,776 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_62.snappy.parquet with 33851 rows
+2025-03-28 00:44:49,854 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_1_91.snappy.parquet with 36399 rows
+2025-03-28 00:44:49,924 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_6_70.snappy.parquet with 30113 rows
+2025-03-28 00:44:49,985 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_6_71.snappy.parquet with 27983 rows
+2025-03-28 00:44:50,056 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_7_47.snappy.parquet with 31666 rows
+2025-03-28 00:44:50,151 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_4_41.snappy.parquet with 38252 rows
+2025-03-28 00:44:50,239 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_1_40.snappy.parquet with 37372 rows
+2025-03-28 00:44:50,325 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_17.snappy.parquet with 39365 rows
+2025-03-28 00:44:50,405 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_4_40.snappy.parquet with 35179 rows
+2025-03-28 00:44:50,489 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_26.snappy.parquet with 38296 rows
+2025-03-28 00:44:50,560 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_48.snappy.parquet with 32486 rows
+2025-03-28 00:44:50,644 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_1_54.snappy.parquet with 40020 rows
+2025-03-28 00:44:50,723 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_0_35.snappy.parquet with 38891 rows
+2025-03-28 00:44:50,797 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_5_66.snappy.parquet with 34288 rows
+2025-03-28 00:44:50,878 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_2_85.snappy.parquet with 39186 rows
+2025-03-28 00:44:50,948 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_7_39.snappy.parquet with 34279 rows
+2025-03-28 00:44:51,017 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_4_49.snappy.parquet with 33882 rows
+2025-03-28 00:44:51,092 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_4_75.snappy.parquet with 32289 rows
+2025-03-28 00:44:51,188 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_2_18.snappy.parquet with 39024 rows
+2025-03-28 00:44:51,270 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_5_14.snappy.parquet with 38832 rows
+2025-03-28 00:44:51,343 - Found valid file: inferenceTest_feature_engineered_train_parquets_v50/data__0_1_57.snappy.parquet with 34187 rows
+2025-03-28 00:44:51,344 - Small inference run mode will use these files: ['inferenceTest_feature_engineered_train_parquets_v50/data__0_7_19.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_3_1.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_6_50.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_3_93.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_70.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_3_13.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_7_56.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_4_88.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_57.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_62.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_1_91.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_6_70.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_6_71.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_7_47.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_4_41.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_1_40.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_17.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_4_40.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_26.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_48.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_1_54.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_0_35.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_5_66.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_2_85.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_7_39.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_4_49.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_4_75.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_2_18.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_5_14.snappy.parquet', 'inferenceTest_feature_engineered_train_parquets_v50/data__0_1_57.snappy.parquet']
+2025-03-28 00:44:51,344 - Using DEFAULT threshold parameters: struggling=0.600, proficiency=0.800
+2025-03-28 00:44:51,345 - Final model metrics using reserved test set.
+2025-03-28 00:44:51,345 - Erasing next-item information for item-agnostic inference testing. This is used when we are forecasting more than one item into the future, or testing a non-individual-item probability calculation for skill.
+2025-03-28 00:44:51,346 - Found 30 files.
+2025-03-28 00:44:51,353 - Test set 1:
+2025-03-28 00:44:54,583 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:45:34,901 - skill_proficiency_predictions - NaN: 27197, non-NaN: 8467
+2025-03-28 00:45:34,904 - item_AWARE_prof_metrics
+2025-03-28 00:45:34,933 - Count 0 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18330, RMSE: 0.42814, Cross Entropy: 0.54762, R2: 0.17052, (Imputed) Precision (incorrect/0): 0.64733, (Imputed) Precision (correct/1): 0.73705, (Imputed) Recall (incorrect/0): 0.35862, (Imputed) Recall (correct/1): 0.90197, (Imputed) F1: 0.8112171476179656, (Imputed) Accuracy: 0.72045, (Imputed) AUC ROC: 0.74422, (Imputed) AUC PR: 0.84334
+2025-03-28 00:45:34,934 - item_conf_metrics
+2025-03-28 00:45:34,956 - Count 1 (tgt threshold=0.2120) (pred threshold=1.0000): MSE: 0.58741, RMSE: 0.76642, Cross Entropy: 11.85394, R2: -16.03192, (Imputed) Precision (incorrect/0): 0.50000, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50000, (Imputed) AUC ROC: 0.50006, (Imputed) AUC PR: 0.50003
+2025-03-28 00:45:34,956 - item_cs_metrics
+2025-03-28 00:45:35,002 - Count 2 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10031, RMSE: 0.31671, Cross Entropy: 3.07129, R2: -1.90840, (Imputed) Precision (incorrect/0): 0.88294, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99981, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88279, (Imputed) AUC ROC: 0.49990, (Imputed) AUC PR: 0.11704
+2025-03-28 00:45:35,003 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:45:35,030 - Count 3 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19429, RMSE: 0.44078, Cross Entropy: 0.57452, R2: 0.12081, (Imputed) Precision (incorrect/0): 0.63308, (Imputed) Precision (correct/1): 0.71201, (Imputed) Recall (incorrect/0): 0.25313, (Imputed) Recall (correct/1): 0.92640, (Imputed) F1: 0.805174843089535, (Imputed) Accuracy: 0.70146, (Imputed) AUC ROC: 0.70314, (Imputed) AUC PR: 0.81458
+2025-03-28 00:45:35,069 - Count 4 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.57811, RMSE: 0.76034, Cross Entropy: 11.77377, R2: -16.68160, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.11625, (Imputed) Recall (incorrect/0): 0.00003, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.20829460674721798, (Imputed) Accuracy: 0.11628, (Imputed) AUC ROC: 0.50002, (Imputed) AUC PR: 0.11625
+2025-03-28 00:45:35,120 - Count 5 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10107, RMSE: 0.31792, Cross Entropy: 3.13152, R2: -2.09125, (Imputed) Precision (incorrect/0): 0.88375, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88372, (Imputed) AUC ROC: 0.49998, (Imputed) AUC PR: 0.11625
+2025-03-28 00:45:35,121 - skill_prof_metrics
+2025-03-28 00:45:35,139 - Count 6 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.24450, RMSE: 0.49447, Cross Entropy: 0.69759, R2: -0.11819, (Imputed) Precision (incorrect/0): 0.31422, (Imputed) Precision (correct/1): 0.67056, (Imputed) Recall (incorrect/0): 0.14440, (Imputed) Recall (correct/1): 0.84676, (Imputed) F1: 0.7484291366069351, (Imputed) Accuracy: 0.61698, (Imputed) AUC ROC: 0.49142, (Imputed) AUC PR: 0.66552
+2025-03-28 00:45:35,139 - skill_conf_metrics
+2025-03-28 00:45:35,156 - Count 7 (tgt threshold=0.2120) (pred threshold=1.0000): MSE: 0.60090, RMSE: 0.77518, Cross Entropy: 12.07238, R2: -15.20354, (Imputed) Precision (incorrect/0): 0.53336, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.53336, (Imputed) AUC ROC: 0.50131, (Imputed) AUC PR: 0.46729
+2025-03-28 00:45:35,157 - skill_cs_metrics
+2025-03-28 00:45:35,180 - Count 8 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09897, RMSE: 0.31460, Cross Entropy: 2.97477, R2: -1.66882, (Imputed) Precision (incorrect/0): 0.88071, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88071, (Imputed) AUC ROC: 0.49908, (Imputed) AUC PR: 0.11918
+2025-03-28 00:45:35,181 - Test set 2:
+2025-03-28 00:45:37,628 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:46:21,135 - skill_proficiency_predictions - NaN: 28087, non-NaN: 8073
+2025-03-28 00:46:21,138 - item_AWARE_prof_metrics
+2025-03-28 00:46:21,166 - Count 9 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18728, RMSE: 0.43276, Cross Entropy: 0.55719, R2: 0.13245, (Imputed) Precision (incorrect/0): 0.61424, (Imputed) Precision (correct/1): 0.73208, (Imputed) Recall (incorrect/0): 0.28800, (Imputed) Recall (correct/1): 0.91494, (Imputed) F1: 0.8133595995011837, (Imputed) Accuracy: 0.71441, (Imputed) AUC ROC: 0.71792, (Imputed) AUC PR: 0.83741
+2025-03-28 00:46:21,166 - item_conf_metrics
+2025-03-28 00:46:21,186 - Count 10 (tgt threshold=0.2118) (pred threshold=1.0000): MSE: 0.58840, RMSE: 0.76707, Cross Entropy: 11.86328, R2: -15.99473, (Imputed) Precision (incorrect/0): 0.50044, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50044, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.49957
+2025-03-28 00:46:21,187 - item_cs_metrics
+2025-03-28 00:46:21,233 - Count 11 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10012, RMSE: 0.31642, Cross Entropy: 3.06426, R2: -1.89185, (Imputed) Precision (incorrect/0): 0.88170, (Imputed) Precision (correct/1): 0.20000, (Imputed) Recall (incorrect/0): 0.99987, (Imputed) Recall (correct/1): 0.00023, (Imputed) F1: 0.00046696240952603317, (Imputed) Accuracy: 0.88161, (Imputed) AUC ROC: 0.50005, (Imputed) AUC PR: 0.11833
+2025-03-28 00:46:21,233 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:46:21,260 - Count 12 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19857, RMSE: 0.44561, Cross Entropy: 0.58457, R2: 0.08018, (Imputed) Precision (incorrect/0): 0.57390, (Imputed) Precision (correct/1): 0.70764, (Imputed) Recall (incorrect/0): 0.17526, (Imputed) Recall (correct/1): 0.93881, (Imputed) F1: 0.8069973087274125, (Imputed) Accuracy: 0.69458, (Imputed) AUC ROC: 0.67061, (Imputed) AUC PR: 0.80736
+2025-03-28 00:46:21,298 - Count 13 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58228, RMSE: 0.76307, Cross Entropy: 11.81534, R2: -16.65180, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.11585, (Imputed) Recall (incorrect/0): 0.00003, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.2076435015366313, (Imputed) Accuracy: 0.11587, (Imputed) AUC ROC: 0.49990, (Imputed) AUC PR: 0.11582
+2025-03-28 00:46:21,344 - Count 14 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10000, RMSE: 0.31623, Cross Entropy: 3.10010, R2: -2.03145, (Imputed) Precision (incorrect/0): 0.88418, (Imputed) Precision (correct/1): 0.50000, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00024, (Imputed) F1: 0.0004772130756382725, (Imputed) Accuracy: 0.88415, (Imputed) AUC ROC: 0.50010, (Imputed) AUC PR: 0.11594
+2025-03-28 00:46:21,344 - skill_prof_metrics
+2025-03-28 00:46:21,358 - Count 15 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23888, RMSE: 0.48876, Cross Entropy: 0.68376, R2: -0.09298, (Imputed) Precision (incorrect/0): 0.34534, (Imputed) Precision (correct/1): 0.67525, (Imputed) Recall (incorrect/0): 0.14145, (Imputed) Recall (correct/1): 0.86941, (Imputed) F1: 0.7601256139785812, (Imputed) Accuracy: 0.63099, (Imputed) AUC ROC: 0.49719, (Imputed) AUC PR: 0.66971
+2025-03-28 00:46:21,359 - skill_conf_metrics
+2025-03-28 00:46:21,371 - Count 16 (tgt threshold=0.2118) (pred threshold=1.0000): MSE: 0.59904, RMSE: 0.77398, Cross Entropy: 12.06977, R2: -15.62462, (Imputed) Precision (incorrect/0): 0.52174, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.52174, (Imputed) AUC ROC: 0.50076, (Imputed) AUC PR: 0.47864
+2025-03-28 00:46:21,372 - skill_cs_metrics
+2025-03-28 00:46:21,388 - Count 17 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09830, RMSE: 0.31353, Cross Entropy: 2.98518, R2: -1.72809, (Imputed) Precision (incorrect/0): 0.88344, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88344, (Imputed) AUC ROC: 0.51641, (Imputed) AUC PR: 0.12082
+2025-03-28 00:46:21,388 - Test set 3:
+2025-03-28 00:46:23,156 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:47:00,525 - skill_proficiency_predictions - NaN: 20487, non-NaN: 7215
+2025-03-28 00:47:00,527 - item_AWARE_prof_metrics
+2025-03-28 00:47:00,551 - Count 18 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.17953, RMSE: 0.42371, Cross Entropy: 0.53667, R2: 0.18309, (Imputed) Precision (incorrect/0): 0.64849, (Imputed) Precision (correct/1): 0.73647, (Imputed) Recall (incorrect/0): 0.34567, (Imputed) Recall (correct/1): 0.90706, (Imputed) F1: 0.8129129056457662, (Imputed) Accuracy: 0.72092, (Imputed) AUC ROC: 0.75828, (Imputed) AUC PR: 0.86095
+2025-03-28 00:47:00,552 - item_conf_metrics
+2025-03-28 00:47:00,570 - Count 19 (tgt threshold=0.2115) (pred threshold=1.0000): MSE: 0.58905, RMSE: 0.76750, Cross Entropy: 11.86326, R2: -15.69067, (Imputed) Precision (incorrect/0): 0.50137, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50137, (Imputed) AUC ROC: 0.50004, (Imputed) AUC PR: 0.49865
+2025-03-28 00:47:00,571 - item_cs_metrics
+2025-03-28 00:47:00,608 - Count 20 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10078, RMSE: 0.31746, Cross Entropy: 3.06430, R2: -1.85561, (Imputed) Precision (incorrect/0): 0.87812, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99988, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87802, (Imputed) AUC ROC: 0.49994, (Imputed) AUC PR: 0.12187
+2025-03-28 00:47:00,609 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:47:00,632 - Count 21 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19269, RMSE: 0.43896, Cross Entropy: 0.56963, R2: 0.12322, (Imputed) Precision (incorrect/0): 0.60323, (Imputed) Precision (correct/1): 0.70657, (Imputed) Recall (incorrect/0): 0.22395, (Imputed) Recall (correct/1): 0.92693, (Imputed) F1: 0.8018874535728469, (Imputed) Accuracy: 0.69385, (Imputed) AUC ROC: 0.71400, (Imputed) AUC PR: 0.83116
+2025-03-28 00:47:00,663 - Count 22 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.57807, RMSE: 0.76031, Cross Entropy: 11.76011, R2: -16.05370, (Imputed) Precision (incorrect/0): 0.50000, (Imputed) Precision (correct/1): 0.12776, (Imputed) Recall (incorrect/0): 0.00004, (Imputed) Recall (correct/1): 0.99972, (Imputed) F1: 0.2265685019206146, (Imputed) Accuracy: 0.12779, (Imputed) AUC ROC: 0.49988, (Imputed) AUC PR: 0.12776
+2025-03-28 00:47:00,701 - Count 23 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10271, RMSE: 0.32049, Cross Entropy: 3.14155, R2: -2.03017, (Imputed) Precision (incorrect/0): 0.87224, (Imputed) Precision (correct/1): 0.50000, (Imputed) Recall (incorrect/0): 0.99996, (Imputed) Recall (correct/1): 0.00028, (Imputed) F1: 0.000564652738565782, (Imputed) Accuracy: 0.87221, (Imputed) AUC ROC: 0.50012, (Imputed) AUC PR: 0.12789
+2025-03-28 00:47:00,702 - skill_prof_metrics
+2025-03-28 00:47:00,716 - Count 24 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23769, RMSE: 0.48753, Cross Entropy: 0.68227, R2: -0.08837, (Imputed) Precision (incorrect/0): 0.33728, (Imputed) Precision (correct/1): 0.67568, (Imputed) Recall (incorrect/0): 0.13308, (Imputed) Recall (correct/1): 0.87353, (Imputed) F1: 0.7619730941704036, (Imputed) Accuracy: 0.63216, (Imputed) AUC ROC: 0.51176, (Imputed) AUC PR: 0.68936
+2025-03-28 00:47:00,717 - skill_conf_metrics
+2025-03-28 00:47:00,729 - Count 25 (tgt threshold=0.2115) (pred threshold=1.0000): MSE: 0.61302, RMSE: 0.78296, Cross Entropy: 12.21190, R2: -15.65269, (Imputed) Precision (incorrect/0): 0.54595, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.54595, (Imputed) AUC ROC: 0.49946, (Imputed) AUC PR: 0.45379
+2025-03-28 00:47:00,730 - skill_cs_metrics
+2025-03-28 00:47:00,747 - Count 26 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09481, RMSE: 0.30792, Cross Entropy: 2.87852, R2: -1.57558, (Imputed) Precision (incorrect/0): 0.88855, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99984, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88843, (Imputed) AUC ROC: 0.49968, (Imputed) AUC PR: 0.11143
+2025-03-28 00:47:00,747 - Test set 4:
+2025-03-28 00:47:02,888 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:47:42,962 - skill_proficiency_predictions - NaN: 26477, non-NaN: 8182
+2025-03-28 00:47:42,965 - item_AWARE_prof_metrics
+2025-03-28 00:47:42,992 - Count 27 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18481, RMSE: 0.42989, Cross Entropy: 0.55190, R2: 0.16202, (Imputed) Precision (incorrect/0): 0.65053, (Imputed) Precision (correct/1): 0.72646, (Imputed) Recall (incorrect/0): 0.31322, (Imputed) Recall (correct/1): 0.91554, (Imputed) F1: 0.8101154185359868, (Imputed) Accuracy: 0.71424, (Imputed) AUC ROC: 0.74054, (Imputed) AUC PR: 0.84290
+2025-03-28 00:47:42,992 - item_conf_metrics
+2025-03-28 00:47:43,012 - Count 28 (tgt threshold=0.2109) (pred threshold=1.0000): MSE: 0.59254, RMSE: 0.76977, Cross Entropy: 11.91021, R2: -16.24343, (Imputed) Precision (incorrect/0): 0.50302, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50302, (Imputed) AUC ROC: 0.50011, (Imputed) AUC PR: 0.49704
+2025-03-28 00:47:43,013 - item_cs_metrics
+2025-03-28 00:47:43,057 - Count 29 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09838, RMSE: 0.31365, Cross Entropy: 3.02900, R2: -1.86286, (Imputed) Precision (incorrect/0): 0.88388, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99987, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88378, (Imputed) AUC ROC: 0.49993, (Imputed) AUC PR: 0.11610
+2025-03-28 00:47:43,058 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:47:43,084 - Count 30 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19751, RMSE: 0.44443, Cross Entropy: 0.58241, R2: 0.10440, (Imputed) Precision (incorrect/0): 0.61389, (Imputed) Precision (correct/1): 0.70084, (Imputed) Recall (incorrect/0): 0.20452, (Imputed) Recall (correct/1): 0.93543, (Imputed) F1: 0.8013215531962283, (Imputed) Accuracy: 0.69116, (Imputed) AUC ROC: 0.69295, (Imputed) AUC PR: 0.81195
+2025-03-28 00:47:43,121 - Count 31 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58543, RMSE: 0.76513, Cross Entropy: 11.85411, R2: -16.99185, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.11487, (Imputed) Recall (incorrect/0): 0.00003, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.20606123346877508, (Imputed) Accuracy: 0.11489, (Imputed) AUC ROC: 0.50002, (Imputed) AUC PR: 0.11487
+2025-03-28 00:47:43,166 - Count 32 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09831, RMSE: 0.31354, Cross Entropy: 3.07117, R2: -2.02121, (Imputed) Precision (incorrect/0): 0.88513, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88511, (Imputed) AUC ROC: 0.49998, (Imputed) AUC PR: 0.11486
+2025-03-28 00:47:43,166 - skill_prof_metrics
+2025-03-28 00:47:43,180 - Count 33 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23482, RMSE: 0.48459, Cross Entropy: 0.67655, R2: -0.08804, (Imputed) Precision (incorrect/0): 0.33425, (Imputed) Precision (correct/1): 0.67841, (Imputed) Recall (incorrect/0): 0.13724, (Imputed) Recall (correct/1): 0.86942, (Imputed) F1: 0.7621309269373863, (Imputed) Accuracy: 0.63273, (Imputed) AUC ROC: 0.51519, (Imputed) AUC PR: 0.68504
+2025-03-28 00:47:43,181 - skill_conf_metrics
+2025-03-28 00:47:43,193 - Count 34 (tgt threshold=0.2109) (pred threshold=1.0000): MSE: 0.60643, RMSE: 0.77873, Cross Entropy: 12.15084, R2: -15.73207, (Imputed) Precision (incorrect/0): 0.53447, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.53447, (Imputed) AUC ROC: 0.49947, (Imputed) AUC PR: 0.46527
+2025-03-28 00:47:43,194 - skill_cs_metrics
+2025-03-28 00:47:43,207 - Count 35 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09611, RMSE: 0.31001, Cross Entropy: 2.92645, R2: -1.65176, (Imputed) Precision (incorrect/0): 0.88658, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88658, (Imputed) AUC ROC: 0.50260, (Imputed) AUC PR: 0.11417
+2025-03-28 00:47:43,207 - Test set 5:
+2025-03-28 00:47:45,260 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:48:23,520 - skill_proficiency_predictions - NaN: 25671, non-NaN: 7050
+2025-03-28 00:48:23,523 - item_AWARE_prof_metrics
+2025-03-28 00:48:23,549 - Count 36 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.17025, RMSE: 0.41261, Cross Entropy: 0.51515, R2: 0.14771, (Imputed) Precision (incorrect/0): 0.58835, (Imputed) Precision (correct/1): 0.77185, (Imputed) Recall (incorrect/0): 0.29942, (Imputed) Recall (correct/1): 0.91879, (Imputed) F1: 0.8389320219171716, (Imputed) Accuracy: 0.74576, (Imputed) AUC ROC: 0.74089, (Imputed) AUC PR: 0.87663
+2025-03-28 00:48:23,549 - item_conf_metrics
+2025-03-28 00:48:23,570 - Count 37 (tgt threshold=0.2085) (pred threshold=1.0000): MSE: 0.60451, RMSE: 0.77751, Cross Entropy: 12.05491, R2: -17.48655, (Imputed) Precision (incorrect/0): 0.52089, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.52089, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.47912
+2025-03-28 00:48:23,570 - item_cs_metrics
+2025-03-28 00:48:23,612 - Count 38 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09216, RMSE: 0.30359, Cross Entropy: 2.92005, R2: -1.81847, (Imputed) Precision (incorrect/0): 0.89749, (Imputed) Precision (correct/1): 0.33333, (Imputed) Recall (incorrect/0): 0.99993, (Imputed) Recall (correct/1): 0.00030, (Imputed) F1: 0.0005955926146515784, (Imputed) Accuracy: 0.89744, (Imputed) AUC ROC: 0.50011, (Imputed) AUC PR: 0.10260
+2025-03-28 00:48:23,612 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:48:23,638 - Count 39 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18196, RMSE: 0.42657, Cross Entropy: 0.54556, R2: 0.08906, (Imputed) Precision (incorrect/0): 0.54549, (Imputed) Precision (correct/1): 0.74665, (Imputed) Recall (incorrect/0): 0.17383, (Imputed) Recall (correct/1): 0.94385, (Imputed) F1: 0.8337454109537724, (Imputed) Accuracy: 0.72874, (Imputed) AUC ROC: 0.69161, (Imputed) AUC PR: 0.84874
+2025-03-28 00:48:23,672 - Count 40 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.59694, RMSE: 0.77262, Cross Entropy: 11.99778, R2: -18.53131, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.09630, (Imputed) Recall (incorrect/0): 0.00003, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.1756850938083689, (Imputed) Accuracy: 0.09633, (Imputed) AUC ROC: 0.50002, (Imputed) AUC PR: 0.09630
+2025-03-28 00:48:23,714 - Count 41 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09179, RMSE: 0.30297, Cross Entropy: 2.96324, R2: -2.00336, (Imputed) Precision (incorrect/0): 0.90370, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.90367, (Imputed) AUC ROC: 0.49998, (Imputed) AUC PR: 0.09630
+2025-03-28 00:48:23,715 - skill_prof_metrics
+2025-03-28 00:48:23,728 - Count 42 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.21890, RMSE: 0.46786, Cross Entropy: 0.63927, R2: -0.11653, (Imputed) Precision (incorrect/0): 0.27690, (Imputed) Precision (correct/1): 0.72987, (Imputed) Recall (incorrect/0): 0.11990, (Imputed) Recall (correct/1): 0.88366, (Imputed) F1: 0.7994367684590337, (Imputed) Accuracy: 0.67674, (Imputed) AUC ROC: 0.50053, (Imputed) AUC PR: 0.73257
+2025-03-28 00:48:23,729 - skill_conf_metrics
+2025-03-28 00:48:23,741 - Count 43 (tgt threshold=0.2085) (pred threshold=1.0000): MSE: 0.62135, RMSE: 0.78826, Cross Entropy: 12.32707, R2: -17.00527, (Imputed) Precision (incorrect/0): 0.55858, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.55858, (Imputed) AUC ROC: 0.50031, (Imputed) AUC PR: 0.44157
+2025-03-28 00:48:23,742 - skill_cs_metrics
+2025-03-28 00:48:23,757 - Count 44 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.08914, RMSE: 0.29856, Cross Entropy: 2.79606, R2: -1.58309, (Imputed) Precision (incorrect/0): 0.89716, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.89716, (Imputed) AUC ROC: 0.51176, (Imputed) AUC PR: 0.10672
+2025-03-28 00:48:23,758 - Test set 6:
+2025-03-28 00:48:26,168 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:49:05,045 - skill_proficiency_predictions - NaN: 27535, non-NaN: 11386
+2025-03-28 00:49:05,049 - item_AWARE_prof_metrics
+2025-03-28 00:49:05,078 - Count 45 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18937, RMSE: 0.43516, Cross Entropy: 0.55997, R2: 0.17952, (Imputed) Precision (incorrect/0): 0.68187, (Imputed) Precision (correct/1): 0.70892, (Imputed) Recall (incorrect/0): 0.35851, (Imputed) Recall (correct/1): 0.90329, (Imputed) F1: 0.794387191099383, (Imputed) Accuracy: 0.70371, (Imputed) AUC ROC: 0.75267, (Imputed) AUC PR: 0.83568
+2025-03-28 00:49:05,079 - item_conf_metrics
+2025-03-28 00:49:05,101 - Count 46 (tgt threshold=0.2081) (pred threshold=1.0000): MSE: 0.59319, RMSE: 0.77019, Cross Entropy: 11.90805, R2: -15.88545, (Imputed) Precision (incorrect/0): 0.50392, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50392, (Imputed) AUC ROC: 0.50023, (Imputed) AUC PR: 0.49620
+2025-03-28 00:49:05,102 - item_cs_metrics
+2025-03-28 00:49:05,152 - Count 47 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09928, RMSE: 0.31509, Cross Entropy: 3.03060, R2: -1.82602, (Imputed) Precision (incorrect/0): 0.88213, (Imputed) Precision (correct/1): 0.13333, (Imputed) Recall (incorrect/0): 0.99962, (Imputed) Recall (correct/1): 0.00044, (Imputed) F1: 0.0008689984792526613, (Imputed) Accuracy: 0.88184, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.11789
+2025-03-28 00:49:05,152 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:49:05,182 - Count 48 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.20391, RMSE: 0.45157, Cross Entropy: 0.59544, R2: 0.11649, (Imputed) Precision (incorrect/0): 0.63940, (Imputed) Precision (correct/1): 0.68059, (Imputed) Recall (incorrect/0): 0.25605, (Imputed) Recall (correct/1): 0.91651, (Imputed) F1: 0.781124185717001, (Imputed) Accuracy: 0.67455, (Imputed) AUC ROC: 0.70241, (Imputed) AUC PR: 0.79690
+2025-03-28 00:49:05,223 - Count 49 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58487, RMSE: 0.76477, Cross Entropy: 11.83595, R2: -16.38076, (Imputed) Precision (incorrect/0): 0.50000, (Imputed) Precision (correct/1): 0.11902, (Imputed) Recall (incorrect/0): 0.00006, (Imputed) Recall (correct/1): 0.99957, (Imputed) F1: 0.2127161259213336, (Imputed) Accuracy: 0.11906, (Imputed) AUC ROC: 0.49983, (Imputed) AUC PR: 0.11903
+2025-03-28 00:49:05,274 - Count 50 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10001, RMSE: 0.31624, Cross Entropy: 3.08474, R2: -1.97190, (Imputed) Precision (incorrect/0): 0.88097, (Imputed) Precision (correct/1): 0.40000, (Imputed) Recall (incorrect/0): 0.99991, (Imputed) Recall (correct/1): 0.00043, (Imputed) F1: 0.0008622547962923044, (Imputed) Accuracy: 0.88091, (Imputed) AUC ROC: 0.50017, (Imputed) AUC PR: 0.11918
+2025-03-28 00:49:05,275 - skill_prof_metrics
+2025-03-28 00:49:05,291 - Count 51 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.25378, RMSE: 0.50377, Cross Entropy: 0.72004, R2: -0.12463, (Imputed) Precision (incorrect/0): 0.33949, (Imputed) Precision (correct/1): 0.65034, (Imputed) Recall (incorrect/0): 0.15317, (Imputed) Recall (correct/1): 0.84090, (Imputed) F1: 0.7334469185124258, (Imputed) Accuracy: 0.60153, (Imputed) AUC ROC: 0.48888, (Imputed) AUC PR: 0.63983
+2025-03-28 00:49:05,292 - skill_conf_metrics
+2025-03-28 00:49:05,306 - Count 52 (tgt threshold=0.2081) (pred threshold=1.0000): MSE: 0.61125, RMSE: 0.78182, Cross Entropy: 12.19308, R2: -16.31870, (Imputed) Precision (incorrect/0): 0.54699, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.54699, (Imputed) AUC ROC: 0.49902, (Imputed) AUC PR: 0.45253
+2025-03-28 00:49:05,307 - skill_cs_metrics
+2025-03-28 00:49:05,328 - Count 53 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09307, RMSE: 0.30507, Cross Entropy: 2.87155, R2: -1.63688, (Imputed) Precision (incorrect/0): 0.89317, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99971, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.89294, (Imputed) AUC ROC: 0.49658, (Imputed) AUC PR: 0.10637
+2025-03-28 00:49:05,329 - Test set 7:
+2025-03-28 00:49:07,416 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:49:46,748 - skill_proficiency_predictions - NaN: 25409, non-NaN: 7562
+2025-03-28 00:49:46,752 - item_AWARE_prof_metrics
+2025-03-28 00:49:46,784 - Count 54 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18710, RMSE: 0.43255, Cross Entropy: 0.55544, R2: 0.14991, (Imputed) Precision (incorrect/0): 0.62896, (Imputed) Precision (correct/1): 0.72221, (Imputed) Recall (incorrect/0): 0.29212, (Imputed) Recall (correct/1): 0.91438, (Imputed) F1: 0.8070119202644496, (Imputed) Accuracy: 0.70783, (Imputed) AUC ROC: 0.73486, (Imputed) AUC PR: 0.84369
+2025-03-28 00:49:46,785 - item_conf_metrics
+2025-03-28 00:49:46,810 - Count 55 (tgt threshold=0.2086) (pred threshold=1.0000): MSE: 0.58758, RMSE: 0.76654, Cross Entropy: 11.84266, R2: -15.43793, (Imputed) Precision (incorrect/0): 0.49401, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.49401, (Imputed) AUC ROC: 0.50006, (Imputed) AUC PR: 0.50602
+2025-03-28 00:49:46,811 - item_cs_metrics
+2025-03-28 00:49:46,858 - Count 56 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10190, RMSE: 0.31921, Cross Entropy: 3.07977, R2: -1.85063, (Imputed) Precision (incorrect/0): 0.87476, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99993, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87471, (Imputed) AUC ROC: 0.49997, (Imputed) AUC PR: 0.12523
+2025-03-28 00:49:46,859 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:49:46,884 - Count 57 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19868, RMSE: 0.44574, Cross Entropy: 0.58337, R2: 0.09727, (Imputed) Precision (incorrect/0): 0.57753, (Imputed) Precision (correct/1): 0.69517, (Imputed) Recall (incorrect/0): 0.17288, (Imputed) Recall (correct/1): 0.93717, (Imputed) F1: 0.7982289934650633, (Imputed) Accuracy: 0.68348, (Imputed) AUC ROC: 0.69070, (Imputed) AUC PR: 0.81549
+2025-03-28 00:49:46,919 - Count 58 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.57824, RMSE: 0.76042, Cross Entropy: 11.76186, R2: -16.04571, (Imputed) Precision (incorrect/0): 0.33333, (Imputed) Precision (correct/1): 0.12697, (Imputed) Recall (incorrect/0): 0.00003, (Imputed) Recall (correct/1): 0.99952, (Imputed) F1: 0.22532027128862095, (Imputed) Accuracy: 0.12699, (Imputed) AUC ROC: 0.49978, (Imputed) AUC PR: 0.12697
+2025-03-28 00:49:46,961 - Count 59 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10269, RMSE: 0.32045, Cross Entropy: 3.14047, R2: -2.02708, (Imputed) Precision (incorrect/0): 0.87303, (Imputed) Precision (correct/1): 0.66667, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00048, (Imputed) F1: 0.000954426151276545, (Imputed) Accuracy: 0.87301, (Imputed) AUC ROC: 0.50022, (Imputed) AUC PR: 0.12728
+2025-03-28 00:49:46,962 - skill_prof_metrics
+2025-03-28 00:49:46,976 - Count 60 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.24540, RMSE: 0.49538, Cross Entropy: 0.70167, R2: -0.09760, (Imputed) Precision (incorrect/0): 0.31586, (Imputed) Precision (correct/1): 0.65434, (Imputed) Recall (incorrect/0): 0.09768, (Imputed) Recall (correct/1): 0.88978, (Imputed) F1: 0.7541123327367255, (Imputed) Accuracy: 0.61849, (Imputed) AUC ROC: 0.49310, (Imputed) AUC PR: 0.65145
+2025-03-28 00:49:46,976 - skill_conf_metrics
+2025-03-28 00:49:46,989 - Count 61 (tgt threshold=0.2086) (pred threshold=1.0000): MSE: 0.60016, RMSE: 0.77470, Cross Entropy: 12.07267, R2: -14.54410, (Imputed) Precision (incorrect/0): 0.52645, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.52645, (Imputed) AUC ROC: 0.50050, (Imputed) AUC PR: 0.47380
+2025-03-28 00:49:46,989 - skill_cs_metrics
+2025-03-28 00:49:47,005 - Count 62 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10141, RMSE: 0.31845, Cross Entropy: 3.00090, R2: -1.62648, (Imputed) Precision (incorrect/0): 0.87741, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87741, (Imputed) AUC ROC: 0.48815, (Imputed) AUC PR: 0.12006
+2025-03-28 00:49:47,005 - Test set 8:
+2025-03-28 00:49:49,247 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:50:26,815 - skill_proficiency_predictions - NaN: 26934, non-NaN: 8888
+2025-03-28 00:50:26,818 - item_AWARE_prof_metrics
+2025-03-28 00:50:26,845 - Count 63 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18514, RMSE: 0.43028, Cross Entropy: 0.55019, R2: 0.14972, (Imputed) Precision (incorrect/0): 0.62985, (Imputed) Precision (correct/1): 0.72773, (Imputed) Recall (incorrect/0): 0.28563, (Imputed) Recall (correct/1): 0.91919, (Imputed) F1: 0.8123309699583364, (Imputed) Accuracy: 0.71330, (Imputed) AUC ROC: 0.73459, (Imputed) AUC PR: 0.84889
+2025-03-28 00:50:26,846 - item_conf_metrics
+2025-03-28 00:50:26,887 - Count 64 (tgt threshold=0.2074) (pred threshold=1.0000): MSE: 0.60170, RMSE: 0.77569, Cross Entropy: 12.00818, R2: -16.54174, (Imputed) Precision (incorrect/0): 0.51731, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.51731, (Imputed) AUC ROC: 0.50008, (Imputed) AUC PR: 0.48273
+2025-03-28 00:50:26,888 - item_cs_metrics
+2025-03-28 00:50:26,934 - Count 65 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09523, RMSE: 0.30859, Cross Entropy: 2.95539, R2: -1.77630, (Imputed) Precision (incorrect/0): 0.88922, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99991, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88915, (Imputed) AUC ROC: 0.49995, (Imputed) AUC PR: 0.11077
+2025-03-28 00:50:26,935 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:50:26,962 - Count 66 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19673, RMSE: 0.44354, Cross Entropy: 0.57936, R2: 0.09652, (Imputed) Precision (incorrect/0): 0.58962, (Imputed) Precision (correct/1): 0.70638, (Imputed) Recall (incorrect/0): 0.19217, (Imputed) Recall (correct/1): 0.93561, (Imputed) F1: 0.8049956412674127, (Imputed) Accuracy: 0.69401, (Imputed) AUC ROC: 0.68784, (Imputed) AUC PR: 0.81701
+2025-03-28 00:50:27,000 - Count 67 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.59347, RMSE: 0.77037, Cross Entropy: 11.93856, R2: -17.17376, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.10927, (Imputed) Recall (incorrect/0): 0.00006, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.1970101172799114, (Imputed) Accuracy: 0.10932, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.10927
+2025-03-28 00:50:27,047 - Count 68 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09575, RMSE: 0.30943, Cross Entropy: 3.00771, R2: -1.93203, (Imputed) Precision (incorrect/0): 0.89073, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99994, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.89068, (Imputed) AUC ROC: 0.49997, (Imputed) AUC PR: 0.10926
+2025-03-28 00:50:27,047 - skill_prof_metrics
+2025-03-28 00:50:27,062 - Count 69 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23243, RMSE: 0.48211, Cross Entropy: 0.67274, R2: -0.10825, (Imputed) Precision (incorrect/0): 0.30955, (Imputed) Precision (correct/1): 0.69679, (Imputed) Recall (incorrect/0): 0.10922, (Imputed) Recall (correct/1): 0.89365, (Imputed) F1: 0.7830335646508993, (Imputed) Accuracy: 0.65527, (Imputed) AUC ROC: 0.48860, (Imputed) AUC PR: 0.68629
+2025-03-28 00:50:27,062 - skill_conf_metrics
+2025-03-28 00:50:27,080 - Count 70 (tgt threshold=0.2074) (pred threshold=1.0000): MSE: 0.62361, RMSE: 0.78969, Cross Entropy: 12.33658, R2: -16.24531, (Imputed) Precision (incorrect/0): 0.56019, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.56019, (Imputed) AUC ROC: 0.49975, (Imputed) AUC PR: 0.43968
+2025-03-28 00:50:27,080 - skill_cs_metrics
+2025-03-28 00:50:27,097 - Count 71 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09065, RMSE: 0.30109, Cross Entropy: 2.79226, R2: -1.50691, (Imputed) Precision (incorrect/0): 0.89300, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.89300, (Imputed) AUC ROC: 0.49304, (Imputed) AUC PR: 0.10568
+2025-03-28 00:50:27,098 - Test set 9:
+2025-03-28 00:50:29,255 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:51:06,507 - skill_proficiency_predictions - NaN: 25490, non-NaN: 8084
+2025-03-28 00:51:06,510 - item_AWARE_prof_metrics
+2025-03-28 00:51:06,543 - Count 72 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18778, RMSE: 0.43333, Cross Entropy: 0.55884, R2: 0.15639, (Imputed) Precision (incorrect/0): 0.65672, (Imputed) Precision (correct/1): 0.72061, (Imputed) Recall (incorrect/0): 0.31050, (Imputed) Recall (correct/1): 0.91637, (Imputed) F1: 0.8067867999125822, (Imputed) Accuracy: 0.71034, (Imputed) AUC ROC: 0.73641, (Imputed) AUC PR: 0.83650
+2025-03-28 00:51:06,545 - item_conf_metrics
+2025-03-28 00:51:06,570 - Count 73 (tgt threshold=0.2073) (pred threshold=1.0000): MSE: 0.59535, RMSE: 0.77159, Cross Entropy: 11.93695, R2: -16.15666, (Imputed) Precision (incorrect/0): 0.50125, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50125, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.49876
+2025-03-28 00:51:06,571 - item_cs_metrics
+2025-03-28 00:51:06,639 - Count 74 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09783, RMSE: 0.31278, Cross Entropy: 3.00893, R2: -1.81935, (Imputed) Precision (incorrect/0): 0.88449, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88446, (Imputed) AUC ROC: 0.49998, (Imputed) AUC PR: 0.11551
+2025-03-28 00:51:06,640 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:51:06,683 - Count 75 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.20011, RMSE: 0.44733, Cross Entropy: 0.58854, R2: 0.10100, (Imputed) Precision (incorrect/0): 0.61031, (Imputed) Precision (correct/1): 0.69666, (Imputed) Recall (incorrect/0): 0.21468, (Imputed) Recall (correct/1): 0.92937, (Imputed) F1: 0.7963646910954268, (Imputed) Accuracy: 0.68633, (Imputed) AUC ROC: 0.69094, (Imputed) AUC PR: 0.80490
+2025-03-28 00:51:06,742 - Count 76 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58930, RMSE: 0.76766, Cross Entropy: 11.88881, R2: -16.77605, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.11492, (Imputed) Recall (incorrect/0): 0.00007, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.20614480363344911, (Imputed) Accuracy: 0.11497, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.11492
+2025-03-28 00:51:06,814 - Count 77 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09781, RMSE: 0.31275, Cross Entropy: 3.04502, R2: -1.95052, (Imputed) Precision (incorrect/0): 0.88508, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99993, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88503, (Imputed) AUC ROC: 0.49997, (Imputed) AUC PR: 0.11491
+2025-03-28 00:51:06,816 - skill_prof_metrics
+2025-03-28 00:51:06,838 - Count 78 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.24538, RMSE: 0.49536, Cross Entropy: 0.69729, R2: -0.08674, (Imputed) Precision (incorrect/0): 0.35322, (Imputed) Precision (correct/1): 0.65167, (Imputed) Recall (incorrect/0): 0.13010, (Imputed) Recall (correct/1): 0.87232, (Imputed) F1: 0.7460188495287617, (Imputed) Accuracy: 0.61331, (Imputed) AUC ROC: 0.50298, (Imputed) AUC PR: 0.65102
+2025-03-28 00:51:06,840 - skill_conf_metrics
+2025-03-28 00:51:06,861 - Count 79 (tgt threshold=0.2073) (pred threshold=1.0000): MSE: 0.61006, RMSE: 0.78107, Cross Entropy: 12.19905, R2: -15.68618, (Imputed) Precision (incorrect/0): 0.53513, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.53513, (Imputed) AUC ROC: 0.49981, (Imputed) AUC PR: 0.46478
+2025-03-28 00:51:06,862 - skill_cs_metrics
+2025-03-28 00:51:06,888 - Count 80 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09543, RMSE: 0.30892, Cross Entropy: 2.90421, R2: -1.61022, (Imputed) Precision (incorrect/0): 0.88607, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88607, (Imputed) AUC ROC: 0.48422, (Imputed) AUC PR: 0.11160
+2025-03-28 00:51:06,890 - Test set 10:
+2025-03-28 00:51:09,265 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:51:48,332 - skill_proficiency_predictions - NaN: 25865, non-NaN: 7986
+2025-03-28 00:51:48,334 - item_AWARE_prof_metrics
+2025-03-28 00:51:48,361 - Count 81 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.17378, RMSE: 0.41686, Cross Entropy: 0.52459, R2: 0.15607, (Imputed) Precision (incorrect/0): 0.61079, (Imputed) Precision (correct/1): 0.76647, (Imputed) Recall (incorrect/0): 0.33051, (Imputed) Recall (correct/1): 0.91253, (Imputed) F1: 0.8331488338359354, (Imputed) Accuracy: 0.74175, (Imputed) AUC ROC: 0.74267, (Imputed) AUC PR: 0.86615
+2025-03-28 00:51:48,361 - item_conf_metrics
+2025-03-28 00:51:48,382 - Count 82 (tgt threshold=0.2068) (pred threshold=1.0000): MSE: 0.59938, RMSE: 0.77420, Cross Entropy: 11.99826, R2: -17.26143, (Imputed) Precision (incorrect/0): 0.51056, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.51056, (Imputed) AUC ROC: 0.50017, (Imputed) AUC PR: 0.48952
+2025-03-28 00:51:48,382 - item_cs_metrics
+2025-03-28 00:51:48,426 - Count 83 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09416, RMSE: 0.30685, Cross Entropy: 2.96274, R2: -1.86863, (Imputed) Precision (incorrect/0): 0.89579, (Imputed) Precision (correct/1): 0.07143, (Imputed) Recall (incorrect/0): 0.99957, (Imputed) Recall (correct/1): 0.00028, (Imputed) F1: 0.0005648121999435188, (Imputed) Accuracy: 0.89545, (Imputed) AUC ROC: 0.49993, (Imputed) AUC PR: 0.10418
+2025-03-28 00:51:48,427 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:51:48,453 - Count 84 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18390, RMSE: 0.42884, Cross Entropy: 0.55032, R2: 0.10690, (Imputed) Precision (incorrect/0): 0.59799, (Imputed) Precision (correct/1): 0.74266, (Imputed) Recall (incorrect/0): 0.21595, (Imputed) Recall (correct/1): 0.93971, (Imputed) F1: 0.8296482226569709, (Imputed) Accuracy: 0.72733, (Imputed) AUC ROC: 0.70022, (Imputed) AUC PR: 0.84088
+2025-03-28 00:51:48,489 - Count 85 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.59310, RMSE: 0.77013, Cross Entropy: 11.95763, R2: -18.48890, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.09682, (Imputed) Recall (incorrect/0): 0.00020, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.17655298744679704, (Imputed) Accuracy: 0.09698, (Imputed) AUC ROC: 0.50011, (Imputed) AUC PR: 0.09683
+2025-03-28 00:51:48,532 - Count 86 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09297, RMSE: 0.30491, Cross Entropy: 2.99330, R2: -2.05495, (Imputed) Precision (incorrect/0): 0.90317, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99977, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.90299, (Imputed) AUC ROC: 0.49989, (Imputed) AUC PR: 0.09681
+2025-03-28 00:51:48,533 - skill_prof_metrics
+2025-03-28 00:51:48,546 - Count 87 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23095, RMSE: 0.48058, Cross Entropy: 0.66452, R2: -0.11646, (Imputed) Precision (incorrect/0): 0.30621, (Imputed) Precision (correct/1): 0.70758, (Imputed) Recall (incorrect/0): 0.14887, (Imputed) Recall (correct/1): 0.85927, (Imputed) F1: 0.7760859112037185, (Imputed) Accuracy: 0.65014, (Imputed) AUC ROC: 0.50752, (Imputed) AUC PR: 0.71341
+2025-03-28 00:51:48,547 - skill_conf_metrics
+2025-03-28 00:51:48,559 - Count 88 (tgt threshold=0.2068) (pred threshold=1.0000): MSE: 0.61405, RMSE: 0.78361, Cross Entropy: 12.25582, R2: -16.95910, (Imputed) Precision (incorrect/0): 0.53819, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.53819, (Imputed) AUC ROC: 0.50022, (Imputed) AUC PR: 0.46192
+2025-03-28 00:51:48,560 - skill_cs_metrics
+2025-03-28 00:51:48,576 - Count 89 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09099, RMSE: 0.30165, Cross Entropy: 2.85015, R2: -1.66122, (Imputed) Precision (incorrect/0): 0.89857, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.89857, (Imputed) AUC ROC: 0.48419, (Imputed) AUC PR: 0.09895
+2025-03-28 00:51:48,576 - Test set 11:
+2025-03-28 00:51:50,863 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:52:34,645 - skill_proficiency_predictions - NaN: 28084, non-NaN: 8315
+2025-03-28 00:52:34,648 - item_AWARE_prof_metrics
+2025-03-28 00:52:34,676 - Count 90 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18924, RMSE: 0.43502, Cross Entropy: 0.56171, R2: 0.17138, (Imputed) Precision (incorrect/0): 0.66269, (Imputed) Precision (correct/1): 0.70681, (Imputed) Recall (incorrect/0): 0.33443, (Imputed) Recall (correct/1): 0.90408, (Imputed) F1: 0.7933660007538635, (Imputed) Accuracy: 0.69878, (Imputed) AUC ROC: 0.74495, (Imputed) AUC PR: 0.83163
+2025-03-28 00:52:34,676 - item_conf_metrics
+2025-03-28 00:52:34,697 - Count 91 (tgt threshold=0.2084) (pred threshold=1.0000): MSE: 0.57328, RMSE: 0.75716, Cross Entropy: 11.68048, R2: -14.73520, (Imputed) Precision (incorrect/0): 0.46891, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.46891, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.53110
+2025-03-28 00:52:34,698 - item_cs_metrics
+2025-03-28 00:52:34,745 - Count 92 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10791, RMSE: 0.32850, Cross Entropy: 3.20148, R2: -1.96197, (Imputed) Precision (incorrect/0): 0.86023, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99990, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.86016, (Imputed) AUC ROC: 0.49995, (Imputed) AUC PR: 0.13976
+2025-03-28 00:52:34,745 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:52:34,772 - Count 93 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.20216, RMSE: 0.44962, Cross Entropy: 0.59276, R2: 0.11482, (Imputed) Precision (incorrect/0): 0.63224, (Imputed) Precision (correct/1): 0.67769, (Imputed) Recall (incorrect/0): 0.21558, (Imputed) Recall (correct/1): 0.92934, (Imputed) F1: 0.7838136468201496, (Imputed) Accuracy: 0.67211, (Imputed) AUC ROC: 0.70147, (Imputed) AUC PR: 0.79968
+2025-03-28 00:52:34,811 - Count 94 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.56398, RMSE: 0.75099, Cross Entropy: 11.59595, R2: -15.15491, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.14446, (Imputed) Recall (incorrect/0): 0.00003, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.2524486268484732, (Imputed) Accuracy: 0.14448, (Imputed) AUC ROC: 0.50002, (Imputed) AUC PR: 0.14446
+2025-03-28 00:52:34,858 - Count 95 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10925, RMSE: 0.33052, Cross Entropy: 3.26509, R2: -2.12928, (Imputed) Precision (incorrect/0): 0.85554, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.85552, (Imputed) AUC ROC: 0.49998, (Imputed) AUC PR: 0.14445
+2025-03-28 00:52:34,858 - skill_prof_metrics
+2025-03-28 00:52:34,872 - Count 96 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.24784, RMSE: 0.49783, Cross Entropy: 0.70527, R2: -0.08054, (Imputed) Precision (incorrect/0): 0.39413, (Imputed) Precision (correct/1): 0.63999, (Imputed) Recall (incorrect/0): 0.12426, (Imputed) Recall (correct/1): 0.89072, (Imputed) F1: 0.7448221343873518, (Imputed) Accuracy: 0.61179, (Imputed) AUC ROC: 0.50502, (Imputed) AUC PR: 0.63661
+2025-03-28 00:52:34,873 - skill_conf_metrics
+2025-03-28 00:52:34,885 - Count 97 (tgt threshold=0.2084) (pred threshold=1.0000): MSE: 0.59087, RMSE: 0.76868, Cross Entropy: 11.96373, R2: -14.15621, (Imputed) Precision (incorrect/0): 0.51485, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.51485, (Imputed) AUC ROC: 0.50057, (Imputed) AUC PR: 0.48543
+2025-03-28 00:52:34,886 - skill_cs_metrics
+2025-03-28 00:52:34,902 - Count 98 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10507, RMSE: 0.32414, Cross Entropy: 3.07762, R2: -1.69507, (Imputed) Precision (incorrect/0): 0.86831, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.86831, (Imputed) AUC ROC: 0.50139, (Imputed) AUC PR: 0.13292
+2025-03-28 00:52:34,903 - Test set 12:
+2025-03-28 00:52:36,740 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:53:07,921 - skill_proficiency_predictions - NaN: 22655, non-NaN: 7458
+2025-03-28 00:53:07,924 - item_AWARE_prof_metrics
+2025-03-28 00:53:07,954 - Count 99 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18663, RMSE: 0.43201, Cross Entropy: 0.55391, R2: 0.18995, (Imputed) Precision (incorrect/0): 0.67791, (Imputed) Precision (correct/1): 0.71795, (Imputed) Recall (incorrect/0): 0.38794, (Imputed) Recall (correct/1): 0.89421, (Imputed) F1: 0.7964432857708154, (Imputed) Accuracy: 0.70959, (Imputed) AUC ROC: 0.75479, (Imputed) AUC PR: 0.83605
+2025-03-28 00:53:07,955 - item_conf_metrics
+2025-03-28 00:53:08,000 - Count 100 (tgt threshold=0.2089) (pred threshold=1.0000): MSE: 0.58432, RMSE: 0.76441, Cross Entropy: 11.81451, R2: -15.78203, (Imputed) Precision (incorrect/0): 0.48796, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.48796, (Imputed) AUC ROC: 0.50055, (Imputed) AUC PR: 0.51231
+2025-03-28 00:53:08,001 - item_cs_metrics
+2025-03-28 00:53:08,053 - Count 101 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10209, RMSE: 0.31951, Cross Entropy: 3.10055, R2: -1.93207, (Imputed) Precision (incorrect/0): 0.87843, (Imputed) Precision (correct/1): 0.08333, (Imputed) Recall (incorrect/0): 0.99917, (Imputed) Recall (correct/1): 0.00055, (Imputed) F1: 0.0010857763300760044, (Imputed) Accuracy: 0.87779, (Imputed) AUC ROC: 0.49986, (Imputed) AUC PR: 0.12152
+2025-03-28 00:53:08,054 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:53:08,083 - Count 102 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19820, RMSE: 0.44520, Cross Entropy: 0.58262, R2: 0.13972, (Imputed) Precision (incorrect/0): 0.66611, (Imputed) Precision (correct/1): 0.69277, (Imputed) Recall (incorrect/0): 0.29232, (Imputed) Recall (correct/1): 0.91590, (Imputed) F1: 0.788862377886823, (Imputed) Accuracy: 0.68851, (Imputed) AUC ROC: 0.71503, (Imputed) AUC PR: 0.80408
+2025-03-28 00:53:08,123 - Count 103 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.57576, RMSE: 0.75879, Cross Entropy: 11.74278, R2: -16.40104, (Imputed) Precision (incorrect/0): 0.88889, (Imputed) Precision (correct/1): 0.12075, (Imputed) Recall (incorrect/0): 0.00030, (Imputed) Recall (correct/1): 0.99972, (Imputed) F1: 0.2154712507409603, (Imputed) Accuracy: 0.12098, (Imputed) AUC ROC: 0.50005, (Imputed) AUC PR: 0.12076
+2025-03-28 00:53:08,162 - Count 104 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10256, RMSE: 0.32025, Cross Entropy: 3.15464, R2: -2.09969, (Imputed) Precision (incorrect/0): 0.87924, (Imputed) Precision (correct/1): 0.09091, (Imputed) Recall (incorrect/0): 0.99962, (Imputed) Recall (correct/1): 0.00028, (Imputed) F1: 0.0005483959418700301, (Imputed) Accuracy: 0.87896, (Imputed) AUC ROC: 0.49995, (Imputed) AUC PR: 0.12074
+2025-03-28 00:53:08,163 - skill_prof_metrics
+2025-03-28 00:53:08,177 - Count 105 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.25206, RMSE: 0.50205, Cross Entropy: 0.71304, R2: -0.10090, (Imputed) Precision (incorrect/0): 0.37769, (Imputed) Precision (correct/1): 0.64566, (Imputed) Recall (incorrect/0): 0.18369, (Imputed) Recall (correct/1): 0.83093, (Imputed) F1: 0.7266745864936489, (Imputed) Accuracy: 0.59895, (Imputed) AUC ROC: 0.51145, (Imputed) AUC PR: 0.65266
+2025-03-28 00:53:08,177 - skill_conf_metrics
+2025-03-28 00:53:08,190 - Count 106 (tgt threshold=0.2089) (pred threshold=1.0000): MSE: 0.59636, RMSE: 0.77224, Cross Entropy: 12.00659, R2: -15.18176, (Imputed) Precision (incorrect/0): 0.52212, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.52212, (Imputed) AUC ROC: 0.50081, (Imputed) AUC PR: 0.47828
+2025-03-28 00:53:08,190 - skill_cs_metrics
+2025-03-28 00:53:08,205 - Count 107 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10000, RMSE: 0.31623, Cross Entropy: 2.99931, R2: -1.71350, (Imputed) Precision (incorrect/0): 0.87954, (Imputed) Precision (correct/1): 0.33333, (Imputed) Recall (incorrect/0): 0.99970, (Imputed) Recall (correct/1): 0.00111, (Imputed) F1: 0.0022172949002217295, (Imputed) Accuracy: 0.87932, (Imputed) AUC ROC: 0.51527, (Imputed) AUC PR: 0.12423
+2025-03-28 00:53:08,206 - Test set 13:
+2025-03-28 00:53:10,056 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:53:46,122 - skill_proficiency_predictions - NaN: 21630, non-NaN: 6353
+2025-03-28 00:53:46,125 - item_AWARE_prof_metrics
+2025-03-28 00:53:46,148 - Count 108 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18796, RMSE: 0.43354, Cross Entropy: 0.55778, R2: 0.17433, (Imputed) Precision (incorrect/0): 0.65687, (Imputed) Precision (correct/1): 0.72527, (Imputed) Recall (incorrect/0): 0.39255, (Imputed) Recall (correct/1): 0.88663, (Imputed) F1: 0.7978726060575795, (Imputed) Accuracy: 0.71072, (Imputed) AUC ROC: 0.74675, (Imputed) AUC PR: 0.83618
+2025-03-28 00:53:46,149 - item_conf_metrics
+2025-03-28 00:53:46,167 - Count 109 (tgt threshold=0.2098) (pred threshold=1.0000): MSE: 0.57967, RMSE: 0.76136, Cross Entropy: 11.76384, R2: -15.55074, (Imputed) Precision (incorrect/0): 0.47818, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.47818, (Imputed) AUC ROC: 0.50027, (Imputed) AUC PR: 0.52195
+2025-03-28 00:53:46,168 - item_cs_metrics
+2025-03-28 00:53:46,191 - Count 110 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10386, RMSE: 0.32227, Cross Entropy: 3.13889, R2: -1.96532, (Imputed) Precision (incorrect/0): 0.87805, (Imputed) Precision (correct/1): 0.07692, (Imputed) Recall (incorrect/0): 0.99951, (Imputed) Recall (correct/1): 0.00029, (Imputed) F1: 0.0005839416058394161, (Imputed) Accuracy: 0.87768, (Imputed) AUC ROC: 0.49990, (Imputed) AUC PR: 0.12192
+2025-03-28 00:53:46,192 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:53:46,215 - Count 111 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19761, RMSE: 0.44453, Cross Entropy: 0.58109, R2: 0.13195, (Imputed) Precision (incorrect/0): 0.64115, (Imputed) Precision (correct/1): 0.70002, (Imputed) Recall (incorrect/0): 0.29589, (Imputed) Recall (correct/1): 0.90844, (Imputed) F1: 0.7907257577587248, (Imputed) Accuracy: 0.69035, (Imputed) AUC ROC: 0.71359, (Imputed) AUC PR: 0.81284
+2025-03-28 00:53:46,233 - Count 112 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.57287, RMSE: 0.75688, Cross Entropy: 11.71140, R2: -16.30089, (Imputed) Precision (incorrect/0): 0.85714, (Imputed) Precision (correct/1): 0.11996, (Imputed) Recall (incorrect/0): 0.00024, (Imputed) Recall (correct/1): 0.99970, (Imputed) F1: 0.21421504484090256, (Imputed) Accuracy: 0.12014, (Imputed) AUC ROC: 0.49999, (Imputed) AUC PR: 0.11996
+2025-03-28 00:53:46,256 - Count 113 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10360, RMSE: 0.32186, Cross Entropy: 3.17800, R2: -2.12865, (Imputed) Precision (incorrect/0): 0.88004, (Imputed) Precision (correct/1): 0.12500, (Imputed) Recall (incorrect/0): 0.99972, (Imputed) Recall (correct/1): 0.00030, (Imputed) F1: 0.0005943536404160475, (Imputed) Accuracy: 0.87982, (Imputed) AUC ROC: 0.50001, (Imputed) AUC PR: 0.11997
+2025-03-28 00:53:46,257 - skill_prof_metrics
+2025-03-28 00:53:46,270 - Count 114 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.25097, RMSE: 0.50097, Cross Entropy: 0.70998, R2: -0.11671, (Imputed) Precision (incorrect/0): 0.33904, (Imputed) Precision (correct/1): 0.64963, (Imputed) Recall (incorrect/0): 0.18807, (Imputed) Recall (correct/1): 0.80415, (Imputed) F1: 0.7186791842020072, (Imputed) Accuracy: 0.58964, (Imputed) AUC ROC: 0.49275, (Imputed) AUC PR: 0.65236
+2025-03-28 00:53:46,270 - skill_conf_metrics
+2025-03-28 00:53:46,283 - Count 115 (tgt threshold=0.2098) (pred threshold=1.0000): MSE: 0.58810, RMSE: 0.76687, Cross Entropy: 11.94771, R2: -15.09088, (Imputed) Precision (incorrect/0): 0.50197, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50197, (Imputed) AUC ROC: 0.49873, (Imputed) AUC PR: 0.49740
+2025-03-28 00:53:46,283 - skill_cs_metrics
+2025-03-28 00:53:46,298 - Count 116 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10264, RMSE: 0.32038, Cross Entropy: 3.07382, R2: -1.80837, (Imputed) Precision (incorrect/0): 0.87927, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87927, (Imputed) AUC ROC: 0.49872, (Imputed) AUC PR: 0.12031
+2025-03-28 00:53:46,299 - Test set 14:
+2025-03-28 00:53:48,224 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:54:27,587 - skill_proficiency_predictions - NaN: 24398, non-NaN: 7268
+2025-03-28 00:54:27,591 - item_AWARE_prof_metrics
+2025-03-28 00:54:27,622 - Count 117 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18316, RMSE: 0.42797, Cross Entropy: 0.54675, R2: 0.14488, (Imputed) Precision (incorrect/0): 0.61725, (Imputed) Precision (correct/1): 0.74166, (Imputed) Recall (incorrect/0): 0.31036, (Imputed) Recall (correct/1): 0.91141, (Imputed) F1: 0.8178187912519915, (Imputed) Accuracy: 0.72194, (Imputed) AUC ROC: 0.72867, (Imputed) AUC PR: 0.84829
+2025-03-28 00:54:27,622 - item_conf_metrics
+2025-03-28 00:54:27,647 - Count 118 (tgt threshold=0.2099) (pred threshold=1.0000): MSE: 0.58894, RMSE: 0.76743, Cross Entropy: 11.86925, R2: -16.05527, (Imputed) Precision (incorrect/0): 0.49763, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.49763, (Imputed) AUC ROC: 0.50013, (Imputed) AUC PR: 0.50243
+2025-03-28 00:54:27,648 - item_cs_metrics
+2025-03-28 00:54:27,699 - Count 119 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09988, RMSE: 0.31605, Cross Entropy: 3.05976, R2: -1.89257, (Imputed) Precision (incorrect/0): 0.88455, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99971, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88432, (Imputed) AUC ROC: 0.49986, (Imputed) AUC PR: 0.11542
+2025-03-28 00:54:27,700 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:54:27,730 - Count 120 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19457, RMSE: 0.44110, Cross Entropy: 0.57502, R2: 0.09160, (Imputed) Precision (incorrect/0): 0.57776, (Imputed) Precision (correct/1): 0.71643, (Imputed) Recall (incorrect/0): 0.19726, (Imputed) Recall (correct/1): 0.93364, (Imputed) F1: 0.8107404589323616, (Imputed) Accuracy: 0.70151, (Imputed) AUC ROC: 0.68204, (Imputed) AUC PR: 0.81855
+2025-03-28 00:54:27,764 - Count 121 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58075, RMSE: 0.76207, Cross Entropy: 11.80148, R2: -16.75911, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.11275, (Imputed) Recall (incorrect/0): 0.00011, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.2026509238497999, (Imputed) Accuracy: 0.11283, (Imputed) AUC ROC: 0.50007, (Imputed) AUC PR: 0.11275
+2025-03-28 00:54:27,804 - Count 122 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10020, RMSE: 0.31655, Cross Entropy: 3.11068, R2: -2.06418, (Imputed) Precision (incorrect/0): 0.88725, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99986, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88713, (Imputed) AUC ROC: 0.49993, (Imputed) AUC PR: 0.11274
+2025-03-28 00:54:27,805 - skill_prof_metrics
+2025-03-28 00:54:27,818 - Count 123 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23310, RMSE: 0.48281, Cross Entropy: 0.66949, R2: -0.10121, (Imputed) Precision (incorrect/0): 0.29222, (Imputed) Precision (correct/1): 0.68861, (Imputed) Recall (incorrect/0): 0.13732, (Imputed) Recall (correct/1): 0.85154, (Imputed) F1: 0.7614556455200641, (Imputed) Accuracy: 0.63112, (Imputed) AUC ROC: 0.50682, (Imputed) AUC PR: 0.69688
+2025-03-28 00:54:27,819 - skill_conf_metrics
+2025-03-28 00:54:27,831 - Count 124 (tgt threshold=0.2099) (pred threshold=1.0000): MSE: 0.60903, RMSE: 0.78040, Cross Entropy: 12.17403, R2: -15.65388, (Imputed) Precision (incorrect/0): 0.54444, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.54444, (Imputed) AUC ROC: 0.50036, (Imputed) AUC PR: 0.45574
+2025-03-28 00:54:27,831 - skill_cs_metrics
+2025-03-28 00:54:27,844 - Count 125 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09571, RMSE: 0.30937, Cross Entropy: 2.90988, R2: -1.61724, (Imputed) Precision (incorrect/0): 0.88814, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88814, (Imputed) AUC ROC: 0.51219, (Imputed) AUC PR: 0.11420
+2025-03-28 00:54:27,844 - Test set 15:
+2025-03-28 00:54:30,312 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:55:15,167 - skill_proficiency_predictions - NaN: 29411, non-NaN: 8841
+2025-03-28 00:55:15,170 - item_AWARE_prof_metrics
+2025-03-28 00:55:15,199 - Count 126 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.17919, RMSE: 0.42330, Cross Entropy: 0.53677, R2: 0.15627, (Imputed) Precision (incorrect/0): 0.61780, (Imputed) Precision (correct/1): 0.74246, (Imputed) Recall (incorrect/0): 0.29033, (Imputed) Recall (correct/1): 0.91930, (Imputed) F1: 0.8214721018418202, (Imputed) Accuracy: 0.72430, (Imputed) AUC ROC: 0.74064, (Imputed) AUC PR: 0.85861
+2025-03-28 00:55:15,200 - item_conf_metrics
+2025-03-28 00:55:15,221 - Count 127 (tgt threshold=0.2100) (pred threshold=1.0000): MSE: 0.58899, RMSE: 0.76746, Cross Entropy: 11.87403, R2: -16.20414, (Imputed) Precision (incorrect/0): 0.49869, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.49869, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.50132
+2025-03-28 00:55:15,221 - item_cs_metrics
+2025-03-28 00:55:15,270 - Count 128 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09937, RMSE: 0.31523, Cross Entropy: 3.05621, R2: -1.90250, (Imputed) Precision (incorrect/0): 0.88039, (Imputed) Precision (correct/1): 0.33333, (Imputed) Recall (incorrect/0): 0.99994, (Imputed) Recall (correct/1): 0.00022, (Imputed) F1: 0.00043677658877484165, (Imputed) Accuracy: 0.88035, (Imputed) AUC ROC: 0.50008, (Imputed) AUC PR: 0.11967
+2025-03-28 00:55:15,270 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:55:15,298 - Count 129 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19101, RMSE: 0.43704, Cross Entropy: 0.56648, R2: 0.10062, (Imputed) Precision (incorrect/0): 0.58178, (Imputed) Precision (correct/1): 0.71549, (Imputed) Recall (incorrect/0): 0.16106, (Imputed) Recall (correct/1): 0.94798, (Imputed) F1: 0.8154884130243473, (Imputed) Accuracy: 0.70402, (Imputed) AUC ROC: 0.69503, (Imputed) AUC PR: 0.82929
+2025-03-28 00:55:15,338 - Count 130 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58000, RMSE: 0.76158, Cross Entropy: 11.79427, R2: -16.74388, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.12127, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.21631577720267656, (Imputed) Accuracy: 0.12127, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.12127
+2025-03-28 00:55:15,379 - Count 131 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10039, RMSE: 0.31684, Cross Entropy: 3.11612, R2: -2.07107, (Imputed) Precision (incorrect/0): 0.87873, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87873, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.12127
+2025-03-28 00:55:15,380 - skill_prof_metrics
+2025-03-28 00:55:15,394 - Count 132 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23443, RMSE: 0.48418, Cross Entropy: 0.67429, R2: -0.10213, (Imputed) Precision (incorrect/0): 0.29600, (Imputed) Precision (correct/1): 0.68675, (Imputed) Recall (incorrect/0): 0.12109, (Imputed) Recall (correct/1): 0.86997, (Imputed) F1: 0.7675816614760629, (Imputed) Accuracy: 0.63703, (Imputed) AUC ROC: 0.49038, (Imputed) AUC PR: 0.68091
+2025-03-28 00:55:15,394 - skill_conf_metrics
+2025-03-28 00:55:15,407 - Count 133 (tgt threshold=0.2100) (pred threshold=1.0000): MSE: 0.60461, RMSE: 0.77756, Cross Entropy: 12.11907, R2: -15.47639, (Imputed) Precision (incorrect/0): 0.53727, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.53727, (Imputed) AUC ROC: 0.50023, (Imputed) AUC PR: 0.46285
+2025-03-28 00:55:15,408 - skill_cs_metrics
+2025-03-28 00:55:15,425 - Count 134 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09730, RMSE: 0.31193, Cross Entropy: 2.94472, R2: -1.65159, (Imputed) Precision (incorrect/0): 0.88327, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88327, (Imputed) AUC ROC: 0.49767, (Imputed) AUC PR: 0.11705
+2025-03-28 00:55:15,425 - Test set 16:
+2025-03-28 00:55:17,769 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:55:59,598 - skill_proficiency_predictions - NaN: 28586, non-NaN: 8786
+2025-03-28 00:55:59,602 - item_AWARE_prof_metrics
+2025-03-28 00:55:59,643 - Count 135 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19461, RMSE: 0.44115, Cross Entropy: 0.57458, R2: 0.13798, (Imputed) Precision (incorrect/0): 0.62681, (Imputed) Precision (correct/1): 0.70854, (Imputed) Recall (incorrect/0): 0.31427, (Imputed) Recall (correct/1): 0.89909, (Imputed) F1: 0.7925206499046927, (Imputed) Accuracy: 0.69418, (Imputed) AUC ROC: 0.72087, (Imputed) AUC PR: 0.82223
+2025-03-28 00:55:59,645 - item_conf_metrics
+2025-03-28 00:55:59,676 - Count 136 (tgt threshold=0.2101) (pred threshold=1.0000): MSE: 0.58968, RMSE: 0.76791, Cross Entropy: 11.87171, R2: -15.78072, (Imputed) Precision (incorrect/0): 0.49692, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.49692, (Imputed) AUC ROC: 0.49997, (Imputed) AUC PR: 0.50306
+2025-03-28 00:55:59,677 - item_cs_metrics
+2025-03-28 00:55:59,750 - Count 137 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10034, RMSE: 0.31677, Cross Entropy: 3.05784, R2: -1.85541, (Imputed) Precision (incorrect/0): 0.88041, (Imputed) Precision (correct/1): 0.33333, (Imputed) Recall (incorrect/0): 0.99994, (Imputed) Recall (correct/1): 0.00022, (Imputed) F1: 0.000447127207690588, (Imputed) Accuracy: 0.88036, (Imputed) AUC ROC: 0.50008, (Imputed) AUC PR: 0.11966
+2025-03-28 00:55:59,751 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:55:59,785 - Count 138 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.20768, RMSE: 0.45572, Cross Entropy: 0.60588, R2: 0.08011, (Imputed) Precision (incorrect/0): 0.56865, (Imputed) Precision (correct/1): 0.68163, (Imputed) Recall (incorrect/0): 0.20750, (Imputed) Recall (correct/1): 0.91511, (Imputed) F1: 0.7812983541989028, (Imputed) Accuracy: 0.66718, (Imputed) AUC ROC: 0.67072, (Imputed) AUC PR: 0.78517
+2025-03-28 00:55:59,838 - Count 139 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58164, RMSE: 0.76265, Cross Entropy: 11.80117, R2: -16.26303, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.12044, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 0.99978, (Imputed) F1: 0.21498340219234352, (Imputed) Accuracy: 0.12044, (Imputed) AUC ROC: 0.49989, (Imputed) AUC PR: 0.12044
+2025-03-28 00:55:59,902 - Count 140 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10116, RMSE: 0.31806, Cross Entropy: 3.11093, R2: -2.00242, (Imputed) Precision (incorrect/0): 0.87956, (Imputed) Precision (correct/1): 1.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00022, (Imputed) F1: 0.00044414834554741284, (Imputed) Accuracy: 0.87956, (Imputed) AUC ROC: 0.50011, (Imputed) AUC PR: 0.12066
+2025-03-28 00:55:59,902 - skill_prof_metrics
+2025-03-28 00:55:59,920 - Count 141 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.24805, RMSE: 0.49804, Cross Entropy: 0.70271, R2: -0.09869, (Imputed) Precision (incorrect/0): 0.33410, (Imputed) Precision (correct/1): 0.64803, (Imputed) Recall (incorrect/0): 0.14272, (Imputed) Recall (correct/1): 0.84730, (Imputed) F1: 0.7343844754396605, (Imputed) Accuracy: 0.60118, (Imputed) AUC ROC: 0.49667, (Imputed) AUC PR: 0.65139
+2025-03-28 00:55:59,921 - skill_conf_metrics
+2025-03-28 00:55:59,937 - Count 142 (tgt threshold=0.2101) (pred threshold=1.0000): MSE: 0.59992, RMSE: 0.77455, Cross Entropy: 12.07648, R2: -15.19786, (Imputed) Precision (incorrect/0): 0.52219, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.52219, (Imputed) AUC ROC: 0.49957, (Imputed) AUC PR: 0.47759
+2025-03-28 00:55:59,938 - skill_cs_metrics
+2025-03-28 00:55:59,959 - Count 143 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09931, RMSE: 0.31513, Cross Entropy: 2.98542, R2: -1.68126, (Imputed) Precision (incorrect/0): 0.88448, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88448, (Imputed) AUC ROC: 0.50174, (Imputed) AUC PR: 0.11676
+2025-03-28 00:55:59,960 - Test set 17:
+2025-03-28 00:56:02,588 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:56:53,592 - skill_proficiency_predictions - NaN: 30596, non-NaN: 8769
+2025-03-28 00:56:53,595 - item_AWARE_prof_metrics
+2025-03-28 00:56:53,624 - Count 144 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.17880, RMSE: 0.42284, Cross Entropy: 0.53687, R2: 0.14451, (Imputed) Precision (incorrect/0): 0.60021, (Imputed) Precision (correct/1): 0.74693, (Imputed) Recall (incorrect/0): 0.28643, (Imputed) Recall (correct/1): 0.91694, (Imputed) F1: 0.8232501800563086, (Imputed) Accuracy: 0.72570, (Imputed) AUC ROC: 0.73398, (Imputed) AUC PR: 0.85973
+2025-03-28 00:56:53,624 - item_conf_metrics
+2025-03-28 00:56:53,646 - Count 145 (tgt threshold=0.2102) (pred threshold=1.0000): MSE: 0.58732, RMSE: 0.76637, Cross Entropy: 11.85145, R2: -15.96109, (Imputed) Precision (incorrect/0): 0.49676, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.49676, (Imputed) AUC ROC: 0.50005, (Imputed) AUC PR: 0.50326
+2025-03-28 00:56:53,647 - item_cs_metrics
+2025-03-28 00:56:53,698 - Count 146 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10050, RMSE: 0.31702, Cross Entropy: 3.07304, R2: -1.90232, (Imputed) Precision (incorrect/0): 0.87914, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99988, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87905, (Imputed) AUC ROC: 0.49994, (Imputed) AUC PR: 0.12084
+2025-03-28 00:56:53,698 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:56:53,728 - Count 147 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19115, RMSE: 0.43720, Cross Entropy: 0.56796, R2: 0.08541, (Imputed) Precision (incorrect/0): 0.55828, (Imputed) Precision (correct/1): 0.72037, (Imputed) Recall (incorrect/0): 0.15645, (Imputed) Recall (correct/1): 0.94611, (Imputed) F1: 0.8179496879137507, (Imputed) Accuracy: 0.70659, (Imputed) AUC ROC: 0.68026, (Imputed) AUC PR: 0.82705
+2025-03-28 00:56:53,770 - Count 148 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.57756, RMSE: 0.75998, Cross Entropy: 11.76744, R2: -16.64940, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.11915, (Imputed) Recall (incorrect/0): 0.00006, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.21292533993144622, (Imputed) Accuracy: 0.11919, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.11915
+2025-03-28 00:56:53,821 - Count 149 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10131, RMSE: 0.31830, Cross Entropy: 3.13625, R2: -2.09593, (Imputed) Precision (incorrect/0): 0.88085, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99994, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88081, (Imputed) AUC ROC: 0.49997, (Imputed) AUC PR: 0.11914
+2025-03-28 00:56:53,821 - skill_prof_metrics
+2025-03-28 00:56:53,836 - Count 150 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23019, RMSE: 0.47978, Cross Entropy: 0.66791, R2: -0.10353, (Imputed) Precision (incorrect/0): 0.31038, (Imputed) Precision (correct/1): 0.69743, (Imputed) Recall (incorrect/0): 0.13035, (Imputed) Recall (correct/1): 0.87375, (Imputed) F1: 0.7756941415903474, (Imputed) Accuracy: 0.64808, (Imputed) AUC ROC: 0.49634, (Imputed) AUC PR: 0.69017
+2025-03-28 00:56:53,837 - skill_conf_metrics
+2025-03-28 00:56:53,850 - Count 151 (tgt threshold=0.2102) (pred threshold=1.0000): MSE: 0.60326, RMSE: 0.77670, Cross Entropy: 12.10956, R2: -15.29809, (Imputed) Precision (incorrect/0): 0.53472, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.53472, (Imputed) AUC ROC: 0.50030, (Imputed) AUC PR: 0.46542
+2025-03-28 00:56:53,850 - skill_cs_metrics
+2025-03-28 00:56:53,868 - Count 152 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09817, RMSE: 0.31332, Cross Entropy: 2.95767, R2: -1.65214, (Imputed) Precision (incorrect/0): 0.88125, (Imputed) Precision (correct/1): 0.33333, (Imputed) Recall (incorrect/0): 0.99974, (Imputed) Recall (correct/1): 0.00096, (Imputed) F1: 0.0019138755980861245, (Imputed) Accuracy: 0.88106, (Imputed) AUC ROC: 0.49555, (Imputed) AUC PR: 0.11814
+2025-03-28 00:56:53,869 - Test set 18:
+2025-03-28 00:56:56,472 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:57:38,685 - skill_proficiency_predictions - NaN: 27030, non-NaN: 8149
+2025-03-28 00:57:38,689 - item_AWARE_prof_metrics
+2025-03-28 00:57:38,716 - Count 153 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18642, RMSE: 0.43177, Cross Entropy: 0.55449, R2: 0.15576, (Imputed) Precision (incorrect/0): 0.63135, (Imputed) Precision (correct/1): 0.72453, (Imputed) Recall (incorrect/0): 0.31712, (Imputed) Recall (correct/1): 0.90654, (Imputed) F1: 0.8053808591894511, (Imputed) Accuracy: 0.70883, (Imputed) AUC ROC: 0.73518, (Imputed) AUC PR: 0.84303
+2025-03-28 00:57:38,716 - item_conf_metrics
+2025-03-28 00:57:38,756 - Count 154 (tgt threshold=0.2101) (pred threshold=1.0000): MSE: 0.59294, RMSE: 0.77002, Cross Entropy: 11.92101, R2: -16.56105, (Imputed) Precision (incorrect/0): 0.50132, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50132, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.49868
+2025-03-28 00:57:38,757 - item_cs_metrics
+2025-03-28 00:57:38,801 - Count 155 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09739, RMSE: 0.31208, Cross Entropy: 3.02062, R2: -1.88451, (Imputed) Precision (incorrect/0): 0.88699, (Imputed) Precision (correct/1): 0.25000, (Imputed) Recall (incorrect/0): 0.99990, (Imputed) Recall (correct/1): 0.00025, (Imputed) F1: 0.0005025125628140704, (Imputed) Accuracy: 0.88692, (Imputed) AUC ROC: 0.50008, (Imputed) AUC PR: 0.11306
+2025-03-28 00:57:38,802 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:57:38,828 - Count 156 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19941, RMSE: 0.44656, Cross Entropy: 0.58630, R2: 0.09694, (Imputed) Precision (incorrect/0): 0.58712, (Imputed) Precision (correct/1): 0.69634, (Imputed) Recall (incorrect/0): 0.19619, (Imputed) Recall (correct/1): 0.93036, (Imputed) F1: 0.7965211022612835, (Imputed) Accuracy: 0.68410, (Imputed) AUC ROC: 0.68581, (Imputed) AUC PR: 0.80998
+2025-03-28 00:57:38,865 - Count 157 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58413, RMSE: 0.76429, Cross Entropy: 11.84373, R2: -17.13787, (Imputed) Precision (incorrect/0): 0.66667, (Imputed) Precision (correct/1): 0.11363, (Imputed) Recall (incorrect/0): 0.00006, (Imputed) Recall (correct/1): 0.99975, (Imputed) F1: 0.20406391994690357, (Imputed) Accuracy: 0.11368, (Imputed) AUC ROC: 0.49991, (Imputed) AUC PR: 0.11363
+2025-03-28 00:57:38,909 - Count 158 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09830, RMSE: 0.31354, Cross Entropy: 3.07890, R2: -2.05245, (Imputed) Precision (incorrect/0): 0.88637, (Imputed) Precision (correct/1): 0.33333, (Imputed) Recall (incorrect/0): 0.99994, (Imputed) Recall (correct/1): 0.00025, (Imputed) F1: 0.0004998750312421895, (Imputed) Accuracy: 0.88632, (Imputed) AUC ROC: 0.50009, (Imputed) AUC PR: 0.11370
+2025-03-28 00:57:38,910 - skill_prof_metrics
+2025-03-28 00:57:38,924 - Count 159 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23781, RMSE: 0.48765, Cross Entropy: 0.68153, R2: -0.09584, (Imputed) Precision (incorrect/0): 0.34967, (Imputed) Precision (correct/1): 0.68098, (Imputed) Recall (incorrect/0): 0.17834, (Imputed) Recall (correct/1): 0.84096, (Imputed) F1: 0.7525588952071487, (Imputed) Accuracy: 0.62621, (Imputed) AUC ROC: 0.51712, (Imputed) AUC PR: 0.68602
+2025-03-28 00:57:38,924 - skill_conf_metrics
+2025-03-28 00:57:38,937 - Count 160 (tgt threshold=0.2101) (pred threshold=1.0000): MSE: 0.61158, RMSE: 0.78203, Cross Entropy: 12.21397, R2: -16.24667, (Imputed) Precision (incorrect/0): 0.54215, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.54215, (Imputed) AUC ROC: 0.49981, (Imputed) AUC PR: 0.45775
+2025-03-28 00:57:38,937 - skill_cs_metrics
+2025-03-28 00:57:38,954 - Count 161 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09344, RMSE: 0.30568, Cross Entropy: 2.88046, R2: -1.63507, (Imputed) Precision (incorrect/0): 0.89287, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.89287, (Imputed) AUC ROC: 0.50439, (Imputed) AUC PR: 0.10829
+2025-03-28 00:57:38,954 - Test set 19:
+2025-03-28 00:57:41,248 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:58:27,187 - skill_proficiency_predictions - NaN: 30013, non-NaN: 8283
+2025-03-28 00:58:27,190 - item_AWARE_prof_metrics
+2025-03-28 00:58:27,219 - Count 162 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18047, RMSE: 0.42482, Cross Entropy: 0.53882, R2: 0.14179, (Imputed) Precision (incorrect/0): 0.60528, (Imputed) Precision (correct/1): 0.75148, (Imputed) Recall (incorrect/0): 0.30761, (Imputed) Recall (correct/1): 0.91256, (Imputed) F1: 0.8242266208367903, (Imputed) Accuracy: 0.72893, (Imputed) AUC ROC: 0.73058, (Imputed) AUC PR: 0.85765
+2025-03-28 00:58:27,219 - item_conf_metrics
+2025-03-28 00:58:27,240 - Count 163 (tgt threshold=0.2102) (pred threshold=1.0000): MSE: 0.59198, RMSE: 0.76940, Cross Entropy: 11.92035, R2: -17.00226, (Imputed) Precision (incorrect/0): 0.49927, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.49927, (Imputed) AUC ROC: 0.50005, (Imputed) AUC PR: 0.50076
+2025-03-28 00:58:27,241 - item_cs_metrics
+2025-03-28 00:58:27,289 - Count 164 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09655, RMSE: 0.31073, Cross Entropy: 3.02140, R2: -1.93612, (Imputed) Precision (incorrect/0): 0.89147, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99994, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.89142, (Imputed) AUC ROC: 0.49997, (Imputed) AUC PR: 0.10852
+2025-03-28 00:58:27,290 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:58:27,319 - Count 165 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19247, RMSE: 0.43871, Cross Entropy: 0.56894, R2: 0.08475, (Imputed) Precision (incorrect/0): 0.57025, (Imputed) Precision (correct/1): 0.72767, (Imputed) Recall (incorrect/0): 0.19690, (Imputed) Recall (correct/1): 0.93532, (Imputed) F1: 0.8185323117812084, (Imputed) Accuracy: 0.71117, (Imputed) AUC ROC: 0.67913, (Imputed) AUC PR: 0.82562
+2025-03-28 00:58:27,359 - Count 166 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58226, RMSE: 0.76306, Cross Entropy: 11.83262, R2: -17.55127, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.10508, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.19017013232514177, (Imputed) Accuracy: 0.10508, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.10508
+2025-03-28 00:58:27,400 - Count 167 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09784, RMSE: 0.31279, Cross Entropy: 3.08731, R2: -2.11719, (Imputed) Precision (incorrect/0): 0.89492, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.89492, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.10508
+2025-03-28 00:58:27,401 - skill_prof_metrics
+2025-03-28 00:58:27,415 - Count 168 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23655, RMSE: 0.48636, Cross Entropy: 0.67666, R2: -0.09021, (Imputed) Precision (incorrect/0): 0.31954, (Imputed) Precision (correct/1): 0.67794, (Imputed) Recall (incorrect/0): 0.12458, (Imputed) Recall (correct/1): 0.87415, (Imputed) F1: 0.7636448452806718, (Imputed) Accuracy: 0.63298, (Imputed) AUC ROC: 0.50843, (Imputed) AUC PR: 0.68840
+2025-03-28 00:58:27,416 - skill_conf_metrics
+2025-03-28 00:58:27,428 - Count 169 (tgt threshold=0.2102) (pred threshold=1.0000): MSE: 0.60038, RMSE: 0.77484, Cross Entropy: 12.10902, R2: -16.23941, (Imputed) Precision (incorrect/0): 0.52433, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.52433, (Imputed) AUC ROC: 0.49932, (Imputed) AUC PR: 0.47533
+2025-03-28 00:58:27,429 - skill_cs_metrics
+2025-03-28 00:58:27,445 - Count 170 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09626, RMSE: 0.31026, Cross Entropy: 2.96506, R2: -1.76412, (Imputed) Precision (incorrect/0): 0.88808, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88808, (Imputed) AUC ROC: 0.50270, (Imputed) AUC PR: 0.11245
+2025-03-28 00:58:27,446 - Test set 20:
+2025-03-28 00:58:29,491 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 00:59:09,465 - skill_proficiency_predictions - NaN: 24650, non-NaN: 7836
+2025-03-28 00:59:09,468 - item_AWARE_prof_metrics
+2025-03-28 00:59:09,500 - Count 171 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18303, RMSE: 0.42782, Cross Entropy: 0.54538, R2: 0.16501, (Imputed) Precision (incorrect/0): 0.63041, (Imputed) Precision (correct/1): 0.72903, (Imputed) Recall (incorrect/0): 0.30732, (Imputed) Recall (correct/1): 0.91184, (Imputed) F1: 0.8102493074792244, (Imputed) Accuracy: 0.71323, (Imputed) AUC ROC: 0.74402, (Imputed) AUC PR: 0.84956
+2025-03-28 00:59:09,501 - item_conf_metrics
+2025-03-28 00:59:09,525 - Count 172 (tgt threshold=0.2100) (pred threshold=1.0000): MSE: 0.59029, RMSE: 0.76831, Cross Entropy: 11.87887, R2: -15.82911, (Imputed) Precision (incorrect/0): 0.50619, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50619, (Imputed) AUC ROC: 0.50006, (Imputed) AUC PR: 0.49384
+2025-03-28 00:59:09,526 - item_cs_metrics
+2025-03-28 00:59:09,556 - Count 173 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10007, RMSE: 0.31633, Cross Entropy: 3.05256, R2: -1.85286, (Imputed) Precision (incorrect/0): 0.87668, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99993, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87662, (Imputed) AUC ROC: 0.49996, (Imputed) AUC PR: 0.12331
+2025-03-28 00:59:09,557 - item_AGNOSTIC_prof_metrics
+2025-03-28 00:59:09,581 - Count 174 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19401, RMSE: 0.44047, Cross Entropy: 0.57197, R2: 0.11494, (Imputed) Precision (incorrect/0): 0.59540, (Imputed) Precision (correct/1): 0.70478, (Imputed) Recall (incorrect/0): 0.20116, (Imputed) Recall (correct/1): 0.93311, (Imputed) F1: 0.8030300041425837, (Imputed) Accuracy: 0.69264, (Imputed) AUC ROC: 0.70360, (Imputed) AUC PR: 0.82502
+2025-03-28 00:59:09,600 - Count 175 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58213, RMSE: 0.76298, Cross Entropy: 11.80763, R2: -16.35673, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.12293, (Imputed) Recall (incorrect/0): 0.00011, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.2189384800965018, (Imputed) Accuracy: 0.12301, (Imputed) AUC ROC: 0.50005, (Imputed) AUC PR: 0.12293
+2025-03-28 00:59:09,625 - Count 176 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10084, RMSE: 0.31755, Cross Entropy: 3.10607, R2: -2.00656, (Imputed) Precision (incorrect/0): 0.87707, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99989, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87699, (Imputed) AUC ROC: 0.49995, (Imputed) AUC PR: 0.12291
+2025-03-28 00:59:09,626 - skill_prof_metrics
+2025-03-28 00:59:09,639 - Count 177 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23736, RMSE: 0.48719, Cross Entropy: 0.68199, R2: -0.08959, (Imputed) Precision (incorrect/0): 0.34389, (Imputed) Precision (correct/1): 0.67808, (Imputed) Recall (incorrect/0): 0.11959, (Imputed) Recall (correct/1): 0.89044, (Imputed) F1: 0.7698840437693941, (Imputed) Accuracy: 0.64038, (Imputed) AUC ROC: 0.50239, (Imputed) AUC PR: 0.67786
+2025-03-28 00:59:09,640 - skill_conf_metrics
+2025-03-28 00:59:09,652 - Count 178 (tgt threshold=0.2100) (pred threshold=1.0000): MSE: 0.60228, RMSE: 0.77607, Cross Entropy: 12.10831, R2: -15.07272, (Imputed) Precision (incorrect/0): 0.53624, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.53624, (Imputed) AUC ROC: 0.49955, (Imputed) AUC PR: 0.46353
+2025-03-28 00:59:09,652 - skill_cs_metrics
+2025-03-28 00:59:09,669 - Count 179 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09906, RMSE: 0.31474, Cross Entropy: 2.97095, R2: -1.64350, (Imputed) Precision (incorrect/0): 0.87924, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99971, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87902, (Imputed) AUC ROC: 0.50670, (Imputed) AUC PR: 0.12427
+2025-03-28 00:59:09,670 - Test set 21:
+2025-03-28 00:59:12,193 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 01:00:00,842 - skill_proficiency_predictions - NaN: 30375, non-NaN: 9645
+2025-03-28 01:00:00,847 - item_AWARE_prof_metrics
+2025-03-28 01:00:00,901 - Count 180 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18497, RMSE: 0.43009, Cross Entropy: 0.55081, R2: 0.17952, (Imputed) Precision (incorrect/0): 0.66199, (Imputed) Precision (correct/1): 0.71598, (Imputed) Recall (incorrect/0): 0.33262, (Imputed) Recall (correct/1): 0.90831, (Imputed) F1: 0.8007598500652996, (Imputed) Accuracy: 0.70647, (Imputed) AUC ROC: 0.75310, (Imputed) AUC PR: 0.84591
+2025-03-28 01:00:00,902 - item_conf_metrics
+2025-03-28 01:00:00,930 - Count 181 (tgt threshold=0.2104) (pred threshold=1.0000): MSE: 0.58234, RMSE: 0.76311, Cross Entropy: 11.78968, R2: -15.44200, (Imputed) Precision (incorrect/0): 0.48433, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.48433, (Imputed) AUC ROC: 0.50008, (Imputed) AUC PR: 0.51571
+2025-03-28 01:00:00,931 - item_cs_metrics
+2025-03-28 01:00:01,047 - Count 182 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10330, RMSE: 0.32140, Cross Entropy: 3.11957, R2: -1.91654, (Imputed) Precision (incorrect/0): 0.86973, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99991, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.86967, (Imputed) AUC ROC: 0.49996, (Imputed) AUC PR: 0.13026
+2025-03-28 01:00:01,048 - item_AGNOSTIC_prof_metrics
+2025-03-28 01:00:01,089 - Count 183 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19799, RMSE: 0.44496, Cross Entropy: 0.58257, R2: 0.12179, (Imputed) Precision (incorrect/0): 0.62374, (Imputed) Precision (correct/1): 0.68634, (Imputed) Recall (incorrect/0): 0.21196, (Imputed) Recall (correct/1): 0.93097, (Imputed) F1: 0.7901569210169658, (Imputed) Accuracy: 0.67889, (Imputed) AUC ROC: 0.70923, (Imputed) AUC PR: 0.81524
+2025-03-28 01:00:01,135 - Count 184 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.57058, RMSE: 0.75537, Cross Entropy: 11.67928, R2: -15.88424, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.13465, (Imputed) Recall (incorrect/0): 0.00012, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.2373359175403048, (Imputed) Accuracy: 0.13473, (Imputed) AUC ROC: 0.50010, (Imputed) AUC PR: 0.13466
+2025-03-28 01:00:01,185 - Count 185 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10534, RMSE: 0.32456, Cross Entropy: 3.20238, R2: -2.11718, (Imputed) Precision (incorrect/0): 0.86534, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99980, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.86519, (Imputed) AUC ROC: 0.49990, (Imputed) AUC PR: 0.13463
+2025-03-28 01:00:01,186 - skill_prof_metrics
+2025-03-28 01:00:01,200 - Count 186 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.24724, RMSE: 0.49724, Cross Entropy: 0.70443, R2: -0.11255, (Imputed) Precision (incorrect/0): 0.32279, (Imputed) Precision (correct/1): 0.65721, (Imputed) Recall (incorrect/0): 0.13388, (Imputed) Recall (correct/1): 0.85533, (Imputed) F1: 0.7432939731076377, (Imputed) Accuracy: 0.61006, (Imputed) AUC ROC: 0.48027, (Imputed) AUC PR: 0.64277
+2025-03-28 01:00:01,201 - skill_conf_metrics
+2025-03-28 01:00:01,214 - Count 187 (tgt threshold=0.2104) (pred threshold=1.0000): MSE: 0.60583, RMSE: 0.77835, Cross Entropy: 12.14092, R2: -15.31469, (Imputed) Precision (incorrect/0): 0.53655, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.53655, (Imputed) AUC ROC: 0.50050, (Imputed) AUC PR: 0.46370
+2025-03-28 01:00:01,214 - skill_cs_metrics
+2025-03-28 01:00:01,233 - Count 188 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09756, RMSE: 0.31234, Cross Entropy: 2.94074, R2: -1.62718, (Imputed) Precision (incorrect/0): 0.88158, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99988, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88149, (Imputed) AUC ROC: 0.52011, (Imputed) AUC PR: 0.12300
+2025-03-28 01:00:01,234 - Test set 22:
+2025-03-28 01:00:03,703 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 01:00:49,412 - skill_proficiency_predictions - NaN: 29092, non-NaN: 9799
+2025-03-28 01:00:49,416 - item_AWARE_prof_metrics
+2025-03-28 01:00:49,445 - Count 189 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18008, RMSE: 0.42436, Cross Entropy: 0.54026, R2: 0.17135, (Imputed) Precision (incorrect/0): 0.63491, (Imputed) Precision (correct/1): 0.74436, (Imputed) Recall (incorrect/0): 0.35989, (Imputed) Recall (correct/1): 0.90006, (Imputed) F1: 0.8148365494148918, (Imputed) Accuracy: 0.72415, (Imputed) AUC ROC: 0.74768, (Imputed) AUC PR: 0.85433
+2025-03-28 01:00:49,445 - item_conf_metrics
+2025-03-28 01:00:49,468 - Count 190 (tgt threshold=0.2101) (pred threshold=1.0000): MSE: 0.59818, RMSE: 0.77342, Cross Entropy: 11.97343, R2: -16.56343, (Imputed) Precision (incorrect/0): 0.51536, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.51536, (Imputed) AUC ROC: 0.50010, (Imputed) AUC PR: 0.48469
+2025-03-28 01:00:49,468 - item_cs_metrics
+2025-03-28 01:00:49,517 - Count 191 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09609, RMSE: 0.30998, Cross Entropy: 2.98153, R2: -1.82134, (Imputed) Precision (incorrect/0): 0.88973, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99983, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88959, (Imputed) AUC ROC: 0.49991, (Imputed) AUC PR: 0.11026
+2025-03-28 01:00:49,518 - item_AGNOSTIC_prof_metrics
+2025-03-28 01:00:49,546 - Count 192 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19239, RMSE: 0.43862, Cross Entropy: 0.57055, R2: 0.11473, (Imputed) Precision (incorrect/0): 0.60776, (Imputed) Precision (correct/1): 0.71795, (Imputed) Recall (incorrect/0): 0.24982, (Imputed) Recall (correct/1): 0.92214, (Imputed) F1: 0.8073308741299594, (Imputed) Accuracy: 0.70320, (Imputed) AUC ROC: 0.70178, (Imputed) AUC PR: 0.82485
+2025-03-28 01:00:49,588 - Count 193 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.59151, RMSE: 0.76909, Cross Entropy: 11.91520, R2: -17.03399, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.11035, (Imputed) Recall (incorrect/0): 0.00020, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.19877243775332948, (Imputed) Accuracy: 0.11051, (Imputed) AUC ROC: 0.50013, (Imputed) AUC PR: 0.11036
+2025-03-28 01:00:49,639 - Count 194 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09669, RMSE: 0.31095, Cross Entropy: 3.02524, R2: -1.94794, (Imputed) Precision (incorrect/0): 0.88964, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99974, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88943, (Imputed) AUC ROC: 0.49987, (Imputed) AUC PR: 0.11033
+2025-03-28 01:00:49,640 - skill_prof_metrics
+2025-03-28 01:00:49,655 - Count 195 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.24558, RMSE: 0.49556, Cross Entropy: 0.70253, R2: -0.12081, (Imputed) Precision (incorrect/0): 0.33801, (Imputed) Precision (correct/1): 0.66924, (Imputed) Recall (incorrect/0): 0.17030, (Imputed) Recall (correct/1): 0.83425, (Imputed) F1: 0.7426900584795322, (Imputed) Accuracy: 0.61384, (Imputed) AUC ROC: 0.49794, (Imputed) AUC PR: 0.66180
+2025-03-28 01:00:49,655 - skill_conf_metrics
+2025-03-28 01:00:49,669 - Count 196 (tgt threshold=0.2101) (pred threshold=1.0000): MSE: 0.60915, RMSE: 0.78048, Cross Entropy: 12.17646, R2: -16.42461, (Imputed) Precision (incorrect/0): 0.53301, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.53301, (Imputed) AUC ROC: 0.50054, (Imputed) AUC PR: 0.46725
+2025-03-28 01:00:49,669 - skill_cs_metrics
+2025-03-28 01:00:49,689 - Count 197 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09343, RMSE: 0.30566, Cross Entropy: 2.88889, R2: -1.67255, (Imputed) Precision (incorrect/0): 0.89411, (Imputed) Precision (correct/1): 0.16667, (Imputed) Recall (incorrect/0): 0.99943, (Imputed) Recall (correct/1): 0.00096, (Imputed) F1: 0.0019157088122605363, (Imputed) Accuracy: 0.89366, (Imputed) AUC ROC: 0.50593, (Imputed) AUC PR: 0.10815
+2025-03-28 01:00:49,690 - Test set 23:
+2025-03-28 01:00:51,934 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 01:01:36,009 - skill_proficiency_predictions - NaN: 26320, non-NaN: 7968
+2025-03-28 01:01:36,012 - item_AWARE_prof_metrics
+2025-03-28 01:01:36,045 - Count 198 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18534, RMSE: 0.43051, Cross Entropy: 0.55148, R2: 0.15285, (Imputed) Precision (incorrect/0): 0.61581, (Imputed) Precision (correct/1): 0.73187, (Imputed) Recall (incorrect/0): 0.32338, (Imputed) Recall (correct/1): 0.90152, (Imputed) F1: 0.8078875211481243, (Imputed) Accuracy: 0.71188, (Imputed) AUC ROC: 0.73490, (Imputed) AUC PR: 0.84470
+2025-03-28 01:01:36,046 - item_conf_metrics
+2025-03-28 01:01:36,065 - Count 199 (tgt threshold=0.2104) (pred threshold=1.0000): MSE: 0.58231, RMSE: 0.76309, Cross Entropy: 11.79045, R2: -15.48116, (Imputed) Precision (incorrect/0): 0.48615, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.48615, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.51387
+2025-03-28 01:01:36,066 - item_cs_metrics
+2025-03-28 01:01:36,110 - Count 200 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10317, RMSE: 0.32120, Cross Entropy: 3.11896, R2: -1.92007, (Imputed) Precision (incorrect/0): 0.87476, (Imputed) Precision (correct/1): 0.33333, (Imputed) Recall (incorrect/0): 0.99993, (Imputed) Recall (correct/1): 0.00023, (Imputed) F1: 0.00046533271288971617, (Imputed) Accuracy: 0.87471, (Imputed) AUC ROC: 0.50008, (Imputed) AUC PR: 0.12531
+2025-03-28 01:01:36,110 - item_AGNOSTIC_prof_metrics
+2025-03-28 01:01:36,136 - Count 201 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19692, RMSE: 0.44376, Cross Entropy: 0.57998, R2: 0.09990, (Imputed) Precision (incorrect/0): 0.57728, (Imputed) Precision (correct/1): 0.70429, (Imputed) Recall (incorrect/0): 0.20192, (Imputed) Recall (correct/1): 0.92782, (Imputed) F1: 0.8007491338140276, (Imputed) Accuracy: 0.68972, (Imputed) AUC ROC: 0.69071, (Imputed) AUC PR: 0.81502
+2025-03-28 01:01:36,173 - Count 202 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.57333, RMSE: 0.75719, Cross Entropy: 11.71000, R2: -15.95746, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.12748, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.22613104322408753, (Imputed) Accuracy: 0.12748, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.12748
+2025-03-28 01:01:36,212 - Count 203 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10429, RMSE: 0.32293, Cross Entropy: 3.17942, R2: -2.08449, (Imputed) Precision (incorrect/0): 0.87252, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87252, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.12748
+2025-03-28 01:01:36,212 - skill_prof_metrics
+2025-03-28 01:01:36,226 - Count 204 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23486, RMSE: 0.48462, Cross Entropy: 0.67287, R2: -0.09437, (Imputed) Precision (incorrect/0): 0.33394, (Imputed) Precision (correct/1): 0.68860, (Imputed) Recall (incorrect/0): 0.14645, (Imputed) Recall (correct/1): 0.86598, (Imputed) F1: 0.7671721677074042, (Imputed) Accuracy: 0.63968, (Imputed) AUC ROC: 0.50092, (Imputed) AUC PR: 0.68506
+2025-03-28 01:01:36,227 - skill_conf_metrics
+2025-03-28 01:01:36,239 - Count 205 (tgt threshold=0.2104) (pred threshold=1.0000): MSE: 0.59692, RMSE: 0.77261, Cross Entropy: 12.03915, R2: -14.97433, (Imputed) Precision (incorrect/0): 0.52058, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.52058, (Imputed) AUC ROC: 0.50017, (Imputed) AUC PR: 0.47950
+2025-03-28 01:01:36,239 - skill_cs_metrics
+2025-03-28 01:01:36,256 - Count 206 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10075, RMSE: 0.31742, Cross Entropy: 3.01186, R2: -1.69629, (Imputed) Precision (incorrect/0): 0.87713, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87713, (Imputed) AUC ROC: 0.50240, (Imputed) AUC PR: 0.12333
+2025-03-28 01:01:36,256 - Test set 24:
+2025-03-28 01:01:38,736 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 01:02:27,113 - skill_proficiency_predictions - NaN: 30305, non-NaN: 8881
+2025-03-28 01:02:27,117 - item_AWARE_prof_metrics
+2025-03-28 01:02:27,153 - Count 207 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18320, RMSE: 0.42802, Cross Entropy: 0.54644, R2: 0.15421, (Imputed) Precision (incorrect/0): 0.62789, (Imputed) Precision (correct/1): 0.73272, (Imputed) Recall (incorrect/0): 0.29704, (Imputed) Recall (correct/1): 0.91630, (Imputed) F1: 0.8142881044002007, (Imputed) Accuracy: 0.71674, (Imputed) AUC ROC: 0.73677, (Imputed) AUC PR: 0.85041
+2025-03-28 01:02:27,154 - item_conf_metrics
+2025-03-28 01:02:27,176 - Count 208 (tgt threshold=0.2106) (pred threshold=1.0000): MSE: 0.58539, RMSE: 0.76511, Cross Entropy: 11.82322, R2: -15.55062, (Imputed) Precision (incorrect/0): 0.49280, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.49280, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.50720
+2025-03-28 01:02:27,177 - item_cs_metrics
+2025-03-28 01:02:27,226 - Count 209 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10211, RMSE: 0.31955, Cross Entropy: 3.09410, R2: -1.88709, (Imputed) Precision (incorrect/0): 0.87579, (Imputed) Precision (correct/1): 0.50000, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00021, (Imputed) F1: 0.0004106776180698152, (Imputed) Accuracy: 0.87577, (Imputed) AUC ROC: 0.50009, (Imputed) AUC PR: 0.12431
+2025-03-28 01:02:27,227 - item_AGNOSTIC_prof_metrics
+2025-03-28 01:02:27,255 - Count 210 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19606, RMSE: 0.44279, Cross Entropy: 0.57850, R2: 0.09481, (Imputed) Precision (incorrect/0): 0.59011, (Imputed) Precision (correct/1): 0.70466, (Imputed) Recall (incorrect/0): 0.16725, (Imputed) Recall (correct/1): 0.94476, (Imputed) F1: 0.8072387999678275, (Imputed) Accuracy: 0.69420, (Imputed) AUC ROC: 0.68648, (Imputed) AUC PR: 0.81704
+2025-03-28 01:02:27,296 - Count 211 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.57537, RMSE: 0.75853, Cross Entropy: 11.73338, R2: -16.08642, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.12464, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.22164737916950306, (Imputed) Accuracy: 0.12464, (Imputed) AUC ROC: 0.50001, (Imputed) AUC PR: 0.12464
+2025-03-28 01:02:27,345 - Count 212 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10338, RMSE: 0.32153, Cross Entropy: 3.16185, R2: -2.07013, (Imputed) Precision (incorrect/0): 0.87536, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87534, (Imputed) AUC ROC: 0.49999, (Imputed) AUC PR: 0.12464
+2025-03-28 01:02:27,346 - skill_prof_metrics
+2025-03-28 01:02:27,360 - Count 213 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23309, RMSE: 0.48279, Cross Entropy: 0.67297, R2: -0.07882, (Imputed) Precision (incorrect/0): 0.34431, (Imputed) Precision (correct/1): 0.68086, (Imputed) Recall (incorrect/0): 0.11337, (Imputed) Recall (correct/1): 0.89756, (Imputed) F1: 0.7743321635751629, (Imputed) Accuracy: 0.64520, (Imputed) AUC ROC: 0.51091, (Imputed) AUC PR: 0.68463
+2025-03-28 01:02:27,360 - skill_conf_metrics
+2025-03-28 01:02:27,373 - Count 214 (tgt threshold=0.2106) (pred threshold=1.0000): MSE: 0.59999, RMSE: 0.77459, Cross Entropy: 12.09215, R2: -15.36462, (Imputed) Precision (incorrect/0): 0.52629, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.52629, (Imputed) AUC ROC: 0.49962, (Imputed) AUC PR: 0.47352
+2025-03-28 01:02:27,373 - skill_cs_metrics
+2025-03-28 01:02:27,390 - Count 215 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09881, RMSE: 0.31434, Cross Entropy: 2.98388, R2: -1.69499, (Imputed) Precision (incorrect/0): 0.88098, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88098, (Imputed) AUC ROC: 0.51540, (Imputed) AUC PR: 0.12276
+2025-03-28 01:02:27,390 - Test set 25:
+2025-03-28 01:02:29,622 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 01:03:11,880 - skill_proficiency_predictions - NaN: 26247, non-NaN: 8032
+2025-03-28 01:03:11,884 - item_AWARE_prof_metrics
+2025-03-28 01:03:11,916 - Count 216 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18474, RMSE: 0.42982, Cross Entropy: 0.54999, R2: 0.16069, (Imputed) Precision (incorrect/0): 0.64430, (Imputed) Precision (correct/1): 0.73117, (Imputed) Recall (incorrect/0): 0.32374, (Imputed) Recall (correct/1): 0.91143, (Imputed) F1: 0.8114112597828831, (Imputed) Accuracy: 0.71671, (Imputed) AUC ROC: 0.73892, (Imputed) AUC PR: 0.84447
+2025-03-28 01:03:11,917 - item_conf_metrics
+2025-03-28 01:03:11,938 - Count 217 (tgt threshold=0.2106) (pred threshold=1.0000): MSE: 0.58893, RMSE: 0.76742, Cross Entropy: 11.87216, R2: -16.15485, (Imputed) Precision (incorrect/0): 0.49704, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.49704, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.50298
+2025-03-28 01:03:11,938 - item_cs_metrics
+2025-03-28 01:03:11,983 - Count 218 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09954, RMSE: 0.31550, Cross Entropy: 3.05761, R2: -1.89952, (Imputed) Precision (incorrect/0): 0.88374, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99990, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88366, (Imputed) AUC ROC: 0.49995, (Imputed) AUC PR: 0.11625
+2025-03-28 01:03:11,984 - item_AGNOSTIC_prof_metrics
+2025-03-28 01:03:12,011 - Count 219 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19640, RMSE: 0.44318, Cross Entropy: 0.57891, R2: 0.10770, (Imputed) Precision (incorrect/0): 0.61678, (Imputed) Precision (correct/1): 0.70732, (Imputed) Recall (incorrect/0): 0.22205, (Imputed) Recall (correct/1): 0.93163, (Imputed) F1: 0.8041272052870404, (Imputed) Accuracy: 0.69652, (Imputed) AUC ROC: 0.69509, (Imputed) AUC PR: 0.81365
+2025-03-28 01:03:12,048 - Count 220 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58080, RMSE: 0.76210, Cross Entropy: 11.80615, R2: -16.93677, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.11363, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.20406559438361188, (Imputed) Accuracy: 0.11363, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.11363
+2025-03-28 01:03:12,086 - Count 221 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09969, RMSE: 0.31574, Cross Entropy: 3.10719, R2: -2.07875, (Imputed) Precision (incorrect/0): 0.88637, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88637, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.11363
+2025-03-28 01:03:12,087 - skill_prof_metrics
+2025-03-28 01:03:12,102 - Count 222 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.23884, RMSE: 0.48871, Cross Entropy: 0.68309, R2: -0.09664, (Imputed) Precision (incorrect/0): 0.28537, (Imputed) Precision (correct/1): 0.67110, (Imputed) Recall (incorrect/0): 0.08979, (Imputed) Recall (correct/1): 0.89200, (Imputed) F1: 0.7659439784776072, (Imputed) Accuracy: 0.63172, (Imputed) AUC ROC: 0.48996, (Imputed) AUC PR: 0.67462
+2025-03-28 01:03:12,102 - skill_conf_metrics
+2025-03-28 01:03:12,115 - Count 223 (tgt threshold=0.2106) (pred threshold=1.0000): MSE: 0.60746, RMSE: 0.77940, Cross Entropy: 12.16619, R2: -15.83438, (Imputed) Precision (incorrect/0): 0.53872, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.53872, (Imputed) AUC ROC: 0.50073, (Imputed) AUC PR: 0.46164
+2025-03-28 01:03:12,115 - skill_cs_metrics
+2025-03-28 01:03:12,132 - Count 224 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09561, RMSE: 0.30921, Cross Entropy: 2.91939, R2: -1.64969, (Imputed) Precision (incorrect/0): 0.89056, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.89056, (Imputed) AUC ROC: 0.49183, (Imputed) AUC PR: 0.10804
+2025-03-28 01:03:12,132 - Test set 26:
+2025-03-28 01:03:14,489 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 01:03:57,265 - skill_proficiency_predictions - NaN: 26320, non-NaN: 7562
+2025-03-28 01:03:57,268 - item_AWARE_prof_metrics
+2025-03-28 01:03:57,295 - Count 225 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19612, RMSE: 0.44285, Cross Entropy: 0.57744, R2: 0.13115, (Imputed) Precision (incorrect/0): 0.62837, (Imputed) Precision (correct/1): 0.70790, (Imputed) Recall (incorrect/0): 0.30363, (Imputed) Recall (correct/1): 0.90383, (Imputed) F1: 0.7939566455003284, (Imputed) Accuracy: 0.69450, (Imputed) AUC ROC: 0.71554, (Imputed) AUC PR: 0.81822
+2025-03-28 01:03:57,295 - item_conf_metrics
+2025-03-28 01:03:57,315 - Count 226 (tgt threshold=0.2108) (pred threshold=1.0000): MSE: 0.58443, RMSE: 0.76448, Cross Entropy: 11.80858, R2: -15.35328, (Imputed) Precision (incorrect/0): 0.48982, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.48982, (Imputed) AUC ROC: 0.50003, (Imputed) AUC PR: 0.51020
+2025-03-28 01:03:57,315 - item_cs_metrics
+2025-03-28 01:03:57,359 - Count 227 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10302, RMSE: 0.32097, Cross Entropy: 3.10535, R2: -1.88262, (Imputed) Precision (incorrect/0): 0.87661, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99983, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87648, (Imputed) AUC ROC: 0.49992, (Imputed) AUC PR: 0.12337
+2025-03-28 01:03:57,360 - item_AGNOSTIC_prof_metrics
+2025-03-28 01:03:57,386 - Count 228 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.20587, RMSE: 0.45373, Cross Entropy: 0.60125, R2: 0.08796, (Imputed) Precision (incorrect/0): 0.60729, (Imputed) Precision (correct/1): 0.68831, (Imputed) Recall (incorrect/0): 0.21841, (Imputed) Recall (correct/1): 0.92436, (Imputed) F1: 0.7890593264599494, (Imputed) Accuracy: 0.67815, (Imputed) AUC ROC: 0.67472, (Imputed) AUC PR: 0.78565
+2025-03-28 01:03:57,422 - Count 229 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.57821, RMSE: 0.76040, Cross Entropy: 11.76339, R2: -16.14284, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.12049, (Imputed) Recall (incorrect/0): 0.00010, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.21506282763889253, (Imputed) Accuracy: 0.12057, (Imputed) AUC ROC: 0.50005, (Imputed) AUC PR: 0.12049
+2025-03-28 01:03:57,466 - Count 230 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10247, RMSE: 0.32011, Cross Entropy: 3.13931, R2: -2.03806, (Imputed) Precision (incorrect/0): 0.87951, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99990, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87943, (Imputed) AUC ROC: 0.49995, (Imputed) AUC PR: 0.12048
+2025-03-28 01:03:57,467 - skill_prof_metrics
+2025-03-28 01:03:57,481 - Count 231 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.24577, RMSE: 0.49576, Cross Entropy: 0.69811, R2: -0.08412, (Imputed) Precision (incorrect/0): 0.39766, (Imputed) Precision (correct/1): 0.65628, (Imputed) Recall (incorrect/0): 0.16585, (Imputed) Recall (correct/1): 0.86376, (Imputed) F1: 0.7458612187389926, (Imputed) Accuracy: 0.61835, (Imputed) AUC ROC: 0.51417, (Imputed) AUC PR: 0.65180
+2025-03-28 01:03:57,481 - skill_conf_metrics
+2025-03-28 01:03:57,494 - Count 232 (tgt threshold=0.2108) (pred threshold=1.0000): MSE: 0.59223, RMSE: 0.76956, Cross Entropy: 11.95541, R2: -14.10252, (Imputed) Precision (incorrect/0): 0.51759, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.51759, (Imputed) AUC ROC: 0.49947, (Imputed) AUC PR: 0.48215
+2025-03-28 01:03:57,494 - skill_cs_metrics
+2025-03-28 01:03:57,511 - Count 233 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10465, RMSE: 0.32349, Cross Entropy: 3.05708, R2: -1.66863, (Imputed) Precision (incorrect/0): 0.87118, (Imputed) Precision (correct/1): 1.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00103, (Imputed) F1: 0.0020491803278688526, (Imputed) Accuracy: 0.87120, (Imputed) AUC ROC: 0.48806, (Imputed) AUC PR: 0.12752
+2025-03-28 01:03:57,512 - Test set 27:
+2025-03-28 01:03:59,474 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 01:04:35,397 - skill_proficiency_predictions - NaN: 24135, non-NaN: 8154
+2025-03-28 01:04:35,400 - item_AWARE_prof_metrics
+2025-03-28 01:04:35,432 - Count 234 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18742, RMSE: 0.43292, Cross Entropy: 0.55548, R2: 0.17496, (Imputed) Precision (incorrect/0): 0.67348, (Imputed) Precision (correct/1): 0.72005, (Imputed) Recall (incorrect/0): 0.35286, (Imputed) Recall (correct/1): 0.90680, (Imputed) F1: 0.802710428798306, (Imputed) Accuracy: 0.71145, (Imputed) AUC ROC: 0.74796, (Imputed) AUC PR: 0.83882
+2025-03-28 01:04:35,433 - item_conf_metrics
+2025-03-28 01:04:35,457 - Count 235 (tgt threshold=0.2108) (pred threshold=1.0000): MSE: 0.59135, RMSE: 0.76899, Cross Entropy: 11.89163, R2: -15.91930, (Imputed) Precision (incorrect/0): 0.50225, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50225, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.49775
+2025-03-28 01:04:35,458 - item_cs_metrics
+2025-03-28 01:04:35,508 - Count 236 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09952, RMSE: 0.31547, Cross Entropy: 3.04298, R2: -1.84746, (Imputed) Precision (incorrect/0): 0.88231, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99993, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88225, (Imputed) AUC ROC: 0.49996, (Imputed) AUC PR: 0.11769
+2025-03-28 01:04:35,509 - item_AGNOSTIC_prof_metrics
+2025-03-28 01:04:35,534 - Count 237 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19998, RMSE: 0.44719, Cross Entropy: 0.58597, R2: 0.11965, (Imputed) Precision (incorrect/0): 0.64080, (Imputed) Precision (correct/1): 0.69615, (Imputed) Recall (incorrect/0): 0.26319, (Imputed) Recall (correct/1): 0.91962, (Imputed) F1: 0.7924310508306881, (Imputed) Accuracy: 0.68813, (Imputed) AUC ROC: 0.70357, (Imputed) AUC PR: 0.80691
+2025-03-28 01:04:35,568 - Count 238 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58163, RMSE: 0.76265, Cross Entropy: 11.80325, R2: -16.38848, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.11680, (Imputed) Recall (incorrect/0): 0.00014, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.20917461726203684, (Imputed) Accuracy: 0.11691, (Imputed) AUC ROC: 0.50007, (Imputed) AUC PR: 0.11680
+2025-03-28 01:04:35,609 - Count 239 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10089, RMSE: 0.31764, Cross Entropy: 3.10938, R2: -2.01632, (Imputed) Precision (incorrect/0): 0.88320, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99986, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88309, (Imputed) AUC ROC: 0.49993, (Imputed) AUC PR: 0.11679
+2025-03-28 01:04:35,609 - skill_prof_metrics
+2025-03-28 01:04:35,623 - Count 240 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.24091, RMSE: 0.49083, Cross Entropy: 0.68920, R2: -0.09976, (Imputed) Precision (incorrect/0): 0.33396, (Imputed) Precision (correct/1): 0.67368, (Imputed) Recall (incorrect/0): 0.13413, (Imputed) Recall (correct/1): 0.86983, (Imputed) F1: 0.7592902045038593, (Imputed) Accuracy: 0.62902, (Imputed) AUC ROC: 0.50344, (Imputed) AUC PR: 0.67496
+2025-03-28 01:04:35,624 - skill_conf_metrics
+2025-03-28 01:04:35,636 - Count 241 (tgt threshold=0.2108) (pred threshold=1.0000): MSE: 0.62000, RMSE: 0.78740, Cross Entropy: 12.30562, R2: -16.56318, (Imputed) Precision (incorrect/0): 0.56451, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.56451, (Imputed) AUC ROC: 0.50021, (Imputed) AUC PR: 0.43560
+2025-03-28 01:04:35,637 - skill_cs_metrics
+2025-03-28 01:04:35,654 - Count 242 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09060, RMSE: 0.30100, Cross Entropy: 2.81217, R2: -1.56649, (Imputed) Precision (incorrect/0): 0.89623, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99986, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.89612, (Imputed) AUC ROC: 0.50712, (Imputed) AUC PR: 0.10516
+2025-03-28 01:04:35,654 - Test set 28:
+2025-03-28 01:04:38,004 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 01:05:24,224 - skill_proficiency_predictions - NaN: 30135, non-NaN: 8889
+2025-03-28 01:05:24,227 - item_AWARE_prof_metrics
+2025-03-28 01:05:24,255 - Count 243 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18921, RMSE: 0.43498, Cross Entropy: 0.56160, R2: 0.15164, (Imputed) Precision (incorrect/0): 0.63825, (Imputed) Precision (correct/1): 0.71823, (Imputed) Recall (incorrect/0): 0.31616, (Imputed) Recall (correct/1): 0.90678, (Imputed) F1: 0.8015633877993767, (Imputed) Accuracy: 0.70467, (Imputed) AUC ROC: 0.73177, (Imputed) AUC PR: 0.83512
+2025-03-28 01:05:24,256 - item_conf_metrics
+2025-03-28 01:05:24,277 - Count 244 (tgt threshold=0.2112) (pred threshold=1.0000): MSE: 0.57908, RMSE: 0.76097, Cross Entropy: 11.75187, R2: -15.24333, (Imputed) Precision (incorrect/0): 0.47942, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.47942, (Imputed) AUC ROC: 0.50001, (Imputed) AUC PR: 0.52058
+2025-03-28 01:05:24,278 - item_cs_metrics
+2025-03-28 01:05:24,328 - Count 245 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10474, RMSE: 0.32363, Cross Entropy: 3.14761, R2: -1.93791, (Imputed) Precision (incorrect/0): 0.87229, (Imputed) Precision (correct/1): 0.33333, (Imputed) Recall (incorrect/0): 0.99988, (Imputed) Recall (correct/1): 0.00040, (Imputed) F1: 0.0008014425966740132, (Imputed) Accuracy: 0.87221, (Imputed) AUC ROC: 0.50014, (Imputed) AUC PR: 0.12782
+2025-03-28 01:05:24,328 - item_AGNOSTIC_prof_metrics
+2025-03-28 01:05:24,357 - Count 246 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.20130, RMSE: 0.44867, Cross Entropy: 0.59109, R2: 0.09741, (Imputed) Precision (incorrect/0): 0.59866, (Imputed) Precision (correct/1): 0.68971, (Imputed) Recall (incorrect/0): 0.19357, (Imputed) Recall (correct/1): 0.93249, (Imputed) F1: 0.7929309659467338, (Imputed) Accuracy: 0.67963, (Imputed) AUC ROC: 0.68629, (Imputed) AUC PR: 0.80247
+2025-03-28 01:05:24,399 - Count 247 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.57064, RMSE: 0.75541, Cross Entropy: 11.67924, R2: -15.83636, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.12918, (Imputed) Recall (incorrect/0): 0.00006, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.22880875110637042, (Imputed) Accuracy: 0.12923, (Imputed) AUC ROC: 0.50006, (Imputed) AUC PR: 0.12919
+2025-03-28 01:05:24,450 - Count 248 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10543, RMSE: 0.32470, Cross Entropy: 3.20250, R2: -2.11071, (Imputed) Precision (incorrect/0): 0.87081, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99988, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87072, (Imputed) AUC ROC: 0.49994, (Imputed) AUC PR: 0.12918
+2025-03-28 01:05:24,451 - skill_prof_metrics
+2025-03-28 01:05:24,465 - Count 249 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.24090, RMSE: 0.49082, Cross Entropy: 0.69036, R2: -0.09676, (Imputed) Precision (incorrect/0): 0.34089, (Imputed) Precision (correct/1): 0.66941, (Imputed) Recall (incorrect/0): 0.12746, (Imputed) Recall (correct/1): 0.87759, (Imputed) F1: 0.7594899817850638, (Imputed) Accuracy: 0.62864, (Imputed) AUC ROC: 0.49587, (Imputed) AUC PR: 0.66009
+2025-03-28 01:05:24,466 - skill_conf_metrics
+2025-03-28 01:05:24,479 - Count 250 (tgt threshold=0.2112) (pred threshold=1.0000): MSE: 0.59389, RMSE: 0.77064, Cross Entropy: 12.00097, R2: -15.12899, (Imputed) Precision (incorrect/0): 0.51401, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.51401, (Imputed) AUC ROC: 0.49934, (Imputed) AUC PR: 0.48566
+2025-03-28 01:05:24,479 - skill_cs_metrics
+2025-03-28 01:05:24,496 - Count 251 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.10096, RMSE: 0.31774, Cross Entropy: 3.02736, R2: -1.74187, (Imputed) Precision (incorrect/0): 0.87906, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.87906, (Imputed) AUC ROC: 0.51762, (Imputed) AUC PR: 0.12680
+2025-03-28 01:05:24,496 - Test set 29:
+2025-03-28 01:05:26,924 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 01:06:11,973 - skill_proficiency_predictions - NaN: 30209, non-NaN: 8623
+2025-03-28 01:06:11,976 - item_AWARE_prof_metrics
+2025-03-28 01:06:12,004 - Count 252 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.18045, RMSE: 0.42480, Cross Entropy: 0.54005, R2: 0.14665, (Imputed) Precision (incorrect/0): 0.60925, (Imputed) Precision (correct/1): 0.74541, (Imputed) Recall (incorrect/0): 0.29831, (Imputed) Recall (correct/1): 0.91481, (Imputed) F1: 0.8214631863908292, (Imputed) Accuracy: 0.72487, (Imputed) AUC ROC: 0.73253, (Imputed) AUC PR: 0.85523
+2025-03-28 01:06:12,005 - item_conf_metrics
+2025-03-28 01:06:12,026 - Count 253 (tgt threshold=0.2111) (pred threshold=1.0000): MSE: 0.59304, RMSE: 0.77009, Cross Entropy: 11.92380, R2: -16.64836, (Imputed) Precision (incorrect/0): 0.50675, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.50675, (Imputed) AUC ROC: 0.50008, (Imputed) AUC PR: 0.49329
+2025-03-28 01:06:12,026 - item_cs_metrics
+2025-03-28 01:06:12,075 - Count 254 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09718, RMSE: 0.31174, Cross Entropy: 3.01881, R2: -1.89196, (Imputed) Precision (incorrect/0): 0.88930, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99986, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88919, (Imputed) AUC ROC: 0.49993, (Imputed) AUC PR: 0.11068
+2025-03-28 01:06:12,076 - item_AGNOSTIC_prof_metrics
+2025-03-28 01:06:12,103 - Count 255 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19202, RMSE: 0.43821, Cross Entropy: 0.56901, R2: 0.09193, (Imputed) Precision (incorrect/0): 0.57980, (Imputed) Precision (correct/1): 0.72173, (Imputed) Recall (incorrect/0): 0.18614, (Imputed) Recall (correct/1): 0.93993, (Imputed) F1: 0.8165020449732456, (Imputed) Accuracy: 0.70769, (Imputed) AUC ROC: 0.68491, (Imputed) AUC PR: 0.82575
+2025-03-28 01:06:12,144 - Count 256 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.58502, RMSE: 0.76487, Cross Entropy: 11.85740, R2: -17.37849, (Imputed) Precision (incorrect/0): 1.00000, (Imputed) Precision (correct/1): 0.10687, (Imputed) Recall (incorrect/0): 0.00003, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.19310858286219493, (Imputed) Accuracy: 0.10690, (Imputed) AUC ROC: 0.50001, (Imputed) AUC PR: 0.10687
+2025-03-28 01:06:12,193 - Count 257 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09749, RMSE: 0.31223, Cross Entropy: 3.06869, R2: -2.06255, (Imputed) Precision (incorrect/0): 0.89313, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.89310, (Imputed) AUC ROC: 0.49999, (Imputed) AUC PR: 0.10687
+2025-03-28 01:06:12,193 - skill_prof_metrics
+2025-03-28 01:06:12,207 - Count 258 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.22702, RMSE: 0.47647, Cross Entropy: 0.65511, R2: -0.08700, (Imputed) Precision (incorrect/0): 0.30075, (Imputed) Precision (correct/1): 0.69758, (Imputed) Recall (incorrect/0): 0.12279, (Imputed) Recall (correct/1): 0.87635, (Imputed) F1: 0.7768120212139069, (Imputed) Accuracy: 0.64861, (Imputed) AUC ROC: 0.51065, (Imputed) AUC PR: 0.71045
+2025-03-28 01:06:12,208 - skill_conf_metrics
+2025-03-28 01:06:12,220 - Count 259 (tgt threshold=0.2111) (pred threshold=1.0000): MSE: 0.60870, RMSE: 0.78019, Cross Entropy: 12.17770, R2: -16.22530, (Imputed) Precision (incorrect/0): 0.54192, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.54192, (Imputed) AUC ROC: 0.50021, (Imputed) AUC PR: 0.45818
+2025-03-28 01:06:12,221 - skill_cs_metrics
+2025-03-28 01:06:12,237 - Count 260 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.09416, RMSE: 0.30685, Cross Entropy: 2.90008, R2: -1.66452, (Imputed) Precision (incorrect/0): 0.88913, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.88913, (Imputed) AUC ROC: 0.50710, (Imputed) AUC PR: 0.11253
+2025-03-28 01:06:12,238 - Test set 30:
+2025-03-28 01:06:14,304 - Using future window of 3 for confidence model inference metrics.
+2025-03-28 01:07:01,590 - skill_proficiency_predictions - NaN: 26221, non-NaN: 7966
+2025-03-28 01:07:01,593 - item_AWARE_prof_metrics
+2025-03-28 01:07:01,627 - Count 261 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.19660, RMSE: 0.44340, Cross Entropy: 0.57765, R2: 0.14946, (Imputed) Precision (incorrect/0): 0.65313, (Imputed) Precision (correct/1): 0.69321, (Imputed) Recall (incorrect/0): 0.31432, (Imputed) Recall (correct/1): 0.90274, (Imputed) F1: 0.7842190987512819, (Imputed) Accuracy: 0.68611, (Imputed) AUC ROC: 0.73035, (Imputed) AUC PR: 0.81901
+2025-03-28 01:07:01,628 - item_conf_metrics
+2025-03-28 01:07:01,653 - Count 262 (tgt threshold=0.2118) (pred threshold=1.0000): MSE: 0.56284, RMSE: 0.75022, Cross Entropy: 11.54861, R2: -13.77420, (Imputed) Precision (incorrect/0): 0.45936, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.45936, (Imputed) AUC ROC: 0.49995, (Imputed) AUC PR: 0.54062
+2025-03-28 01:07:01,655 - item_cs_metrics
+2025-03-28 01:07:01,683 - Count 263 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.11404, RMSE: 0.33770, Cross Entropy: 3.30066, R2: -1.99348, (Imputed) Precision (incorrect/0): 0.85119, (Imputed) Precision (correct/1): 0.50000, (Imputed) Recall (incorrect/0): 0.99997, (Imputed) Recall (correct/1): 0.00020, (Imputed) F1: 0.0003929273084479371, (Imputed) Accuracy: 0.85117, (Imputed) AUC ROC: 0.50008, (Imputed) AUC PR: 0.14890
+2025-03-28 01:07:01,684 - item_AGNOSTIC_prof_metrics
+2025-03-28 01:07:01,710 - Count 264 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.20879, RMSE: 0.45693, Cross Entropy: 0.60653, R2: 0.09673, (Imputed) Precision (incorrect/0): 0.61316, (Imputed) Precision (correct/1): 0.66569, (Imputed) Recall (incorrect/0): 0.20213, (Imputed) Recall (correct/1): 0.92570, (Imputed) F1: 0.7744534169910339, (Imputed) Accuracy: 0.65931, (Imputed) AUC ROC: 0.68630, (Imputed) AUC PR: 0.78605
+2025-03-28 01:07:01,731 - Count 265 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.55289, RMSE: 0.74357, Cross Entropy: 11.45836, R2: -14.22547, (Imputed) Precision (incorrect/0): 0.00000, (Imputed) Precision (correct/1): 0.15430, (Imputed) Recall (incorrect/0): 0.00000, (Imputed) Recall (correct/1): 1.00000, (Imputed) F1: 0.2673458010237697, (Imputed) Accuracy: 0.15430, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.15430
+2025-03-28 01:07:01,752 - Count 266 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.11542, RMSE: 0.33973, Cross Entropy: 3.36845, R2: -2.17840, (Imputed) Precision (incorrect/0): 0.84570, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.84570, (Imputed) AUC ROC: 0.50000, (Imputed) AUC PR: 0.15430
+2025-03-28 01:07:01,753 - skill_prof_metrics
+2025-03-28 01:07:01,767 - Count 267 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.25448, RMSE: 0.50446, Cross Entropy: 0.71769, R2: -0.08639, (Imputed) Precision (incorrect/0): 0.39500, (Imputed) Precision (correct/1): 0.62179, (Imputed) Recall (incorrect/0): 0.15628, (Imputed) Recall (correct/1): 0.85283, (Imputed) F1: 0.7192067698093855, (Imputed) Accuracy: 0.58762, (Imputed) AUC ROC: 0.50748, (Imputed) AUC PR: 0.62247
+2025-03-28 01:07:01,768 - skill_conf_metrics
+2025-03-28 01:07:01,780 - Count 268 (tgt threshold=0.2118) (pred threshold=1.0000): MSE: 0.57230, RMSE: 0.75651, Cross Entropy: 11.74561, R2: -13.20245, (Imputed) Precision (incorrect/0): 0.48594, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.48594, (Imputed) AUC ROC: 0.49941, (Imputed) AUC PR: 0.51377
+2025-03-28 01:07:01,781 - skill_cs_metrics
+2025-03-28 01:07:01,826 - Count 269 (tgt threshold=0.5000) (pred threshold=0.5000): MSE: 0.11342, RMSE: 0.33678, Cross Entropy: 3.23585, R2: -1.81465, (Imputed) Precision (incorrect/0): 0.85626, (Imputed) Precision (correct/1): 0.00000, (Imputed) Recall (incorrect/0): 1.00000, (Imputed) Recall (correct/1): 0.00000, (Imputed) F1: 0.0, (Imputed) Accuracy: 0.85626, (Imputed) AUC ROC: 0.50766, (Imputed) AUC PR: 0.14568
+2025-03-28 01:07:01,835 - Looking for raw files in: StudentProficiencyData_Math_yearOfData/*.parquet
+2025-03-28 01:07:01,839 - Found 844 raw files.
+2025-03-28 01:07:01,840 - Found matching raw file: StudentProficiencyData_Math_yearOfData/data__0_1_57.snappy.parquet
+2025-03-28 01:07:03,598 - Loaded raw data with 376832 rows before filtering for test_ids.
+2025-03-28 01:07:04,412 - Loaded raw data with 34187 rows after filtering for test_ids.
+2025-03-28 01:07:04,413 - Feature engineered data has 34187 rows.
+2025-03-28 01:07:04,488 - Average metrics across all test sets (item aware/item agnostic/skill: proficiency & confidence models & confidence scores):
+2025-03-28 01:07:04,490 - Average ITEM AWARE PROFICIENCY MODEL metrics across all test sets:
+2025-03-28 01:07:04,491 - MSE: 0.19660
+2025-03-28 01:07:04,492 - RMSE: 0.44340
+2025-03-28 01:07:04,492 - Cross Entropy: 0.57765
+2025-03-28 01:07:04,493 - R2: 0.14946
+2025-03-28 01:07:04,494 - (Imputed) Precision (incorrect/0): 0.65313
+2025-03-28 01:07:04,494 - (Imputed) Precision (correct/1): 0.69321
+2025-03-28 01:07:04,495 - (Imputed) Recall (incorrect/0): 0.31432
+2025-03-28 01:07:04,496 - (Imputed) Recall (correct/1): 0.90274
+2025-03-28 01:07:04,497 - (Imputed) F1: 0.78422
+2025-03-28 01:07:04,497 - (Imputed) Accuracy: 0.68611
+2025-03-28 01:07:04,498 - (Imputed) AUC ROC: 0.73035
+2025-03-28 01:07:04,498 - (Imputed) AUC PR: 0.81901
+2025-03-28 01:07:04,499 - Average ITEM AWARE CONFIDENCE MODEL metrics across all test sets:
+2025-03-28 01:07:04,500 - MSE: 0.56284
+2025-03-28 01:07:04,501 - RMSE: 0.75022
+2025-03-28 01:07:04,501 - Cross Entropy: 11.54861
+2025-03-28 01:07:04,502 - R2: -13.77420
+2025-03-28 01:07:04,503 - (Imputed) Precision (incorrect/0): 0.45936
+2025-03-28 01:07:04,504 - (Imputed) Precision (correct/1): 0.00000
+2025-03-28 01:07:04,504 - (Imputed) Recall (incorrect/0): 1.00000
+2025-03-28 01:07:04,505 - (Imputed) Recall (correct/1): 0.00000
+2025-03-28 01:07:04,506 - (Imputed) F1: 0.00000
+2025-03-28 01:07:04,506 - (Imputed) Accuracy: 0.45936
+2025-03-28 01:07:04,507 - (Imputed) AUC ROC: 0.49995
+2025-03-28 01:07:04,508 - (Imputed) AUC PR: 0.54062
+2025-03-28 01:07:04,508 - Average ITEM AWARE CONFIDENCE SCORE metrics across all test sets:
+2025-03-28 01:07:04,509 - MSE: 0.11404
+2025-03-28 01:07:04,510 - RMSE: 0.33770
+2025-03-28 01:07:04,510 - Cross Entropy: 3.30066
+2025-03-28 01:07:04,511 - R2: -1.99348
+2025-03-28 01:07:04,512 - (Imputed) Precision (incorrect/0): 0.85119
+2025-03-28 01:07:04,513 - (Imputed) Precision (correct/1): 0.50000
+2025-03-28 01:07:04,513 - (Imputed) Recall (incorrect/0): 0.99997
+2025-03-28 01:07:04,514 - (Imputed) Recall (correct/1): 0.00020
+2025-03-28 01:07:04,515 - (Imputed) F1: 0.00039
+2025-03-28 01:07:04,515 - (Imputed) Accuracy: 0.85117
+2025-03-28 01:07:04,516 - (Imputed) AUC ROC: 0.50008
+2025-03-28 01:07:04,517 - (Imputed) AUC PR: 0.14890
+2025-03-28 01:07:04,517 - Average ITEM AGNOSTIC PROFICIENCY MODEL metrics across all test sets:
+2025-03-28 01:07:04,518 - MSE: 0.20879
+2025-03-28 01:07:04,519 - RMSE: 0.45693
+2025-03-28 01:07:04,520 - Cross Entropy: 0.60653
+2025-03-28 01:07:04,520 - R2: 0.09673
+2025-03-28 01:07:04,521 - (Imputed) Precision (incorrect/0): 0.61316
+2025-03-28 01:07:04,522 - (Imputed) Precision (correct/1): 0.66569
+2025-03-28 01:07:04,522 - (Imputed) Recall (incorrect/0): 0.20213
+2025-03-28 01:07:04,523 - (Imputed) Recall (correct/1): 0.92570
+2025-03-28 01:07:04,524 - (Imputed) F1: 0.77445
+2025-03-28 01:07:04,525 - (Imputed) Accuracy: 0.65931
+2025-03-28 01:07:04,526 - (Imputed) AUC ROC: 0.68630
+2025-03-28 01:07:04,527 - (Imputed) AUC PR: 0.78605
+2025-03-28 01:07:04,527 - Average ITEM AGNOSTIC CONFIDENCE MODEL metrics across all test sets:
+2025-03-28 01:07:04,528 - MSE: 0.55289
+2025-03-28 01:07:04,528 - RMSE: 0.74357
+2025-03-28 01:07:04,529 - Cross Entropy: 11.45836
+2025-03-28 01:07:04,530 - R2: -14.22547
+2025-03-28 01:07:04,531 - (Imputed) Precision (incorrect/0): 0.00000
+2025-03-28 01:07:04,531 - (Imputed) Precision (correct/1): 0.15430
+2025-03-28 01:07:04,532 - (Imputed) Recall (incorrect/0): 0.00000
+2025-03-28 01:07:04,533 - (Imputed) Recall (correct/1): 1.00000
+2025-03-28 01:07:04,534 - (Imputed) F1: 0.26735
+2025-03-28 01:07:04,534 - (Imputed) Accuracy: 0.15430
+2025-03-28 01:07:04,535 - (Imputed) AUC ROC: 0.50000
+2025-03-28 01:07:04,536 - (Imputed) AUC PR: 0.15430
+2025-03-28 01:07:04,537 - Average ITEM AGNOSTIC CONFIDENCE SCORE metrics across all test sets:
+2025-03-28 01:07:04,537 - MSE: 0.11542
+2025-03-28 01:07:04,539 - RMSE: 0.33973
+2025-03-28 01:07:04,540 - Cross Entropy: 3.36845
+2025-03-28 01:07:04,541 - R2: -2.17840
+2025-03-28 01:07:04,541 - (Imputed) Precision (incorrect/0): 0.84570
+2025-03-28 01:07:04,542 - (Imputed) Precision (correct/1): 0.00000
+2025-03-28 01:07:04,543 - (Imputed) Recall (incorrect/0): 1.00000
+2025-03-28 01:07:04,543 - (Imputed) Recall (correct/1): 0.00000
+2025-03-28 01:07:04,544 - (Imputed) F1: 0.00000
+2025-03-28 01:07:04,545 - (Imputed) Accuracy: 0.84570
+2025-03-28 01:07:04,545 - (Imputed) AUC ROC: 0.50000
+2025-03-28 01:07:04,546 - (Imputed) AUC PR: 0.15430
+2025-03-28 01:07:04,547 - Average SKILL PROFICIENCY MODEL metrics across all test sets:
+2025-03-28 01:07:04,547 - MSE: 0.25448
+2025-03-28 01:07:04,548 - RMSE: 0.50446
+2025-03-28 01:07:04,549 - Cross Entropy: 0.71769
+2025-03-28 01:07:04,550 - R2: -0.08639
+2025-03-28 01:07:04,550 - (Imputed) Precision (incorrect/0): 0.39500
+2025-03-28 01:07:04,551 - (Imputed) Precision (correct/1): 0.62179
+2025-03-28 01:07:04,552 - (Imputed) Recall (incorrect/0): 0.15628
+2025-03-28 01:07:04,553 - (Imputed) Recall (correct/1): 0.85283
+2025-03-28 01:07:04,553 - (Imputed) F1: 0.71921
+2025-03-28 01:07:04,554 - (Imputed) Accuracy: 0.58762
+2025-03-28 01:07:04,554 - (Imputed) AUC ROC: 0.50748
+2025-03-28 01:07:04,555 - (Imputed) AUC PR: 0.62247
+2025-03-28 01:07:04,556 - Average SKILL CONFIDENCE MODEL metrics across all test sets:
+2025-03-28 01:07:04,556 - MSE: 0.57230
+2025-03-28 01:07:04,557 - RMSE: 0.75651
+2025-03-28 01:07:04,558 - Cross Entropy: 11.74561
+2025-03-28 01:07:04,558 - R2: -13.20245
+2025-03-28 01:07:04,559 - (Imputed) Precision (incorrect/0): 0.48594
+2025-03-28 01:07:04,560 - (Imputed) Precision (correct/1): 0.00000
+2025-03-28 01:07:04,560 - (Imputed) Recall (incorrect/0): 1.00000
+2025-03-28 01:07:04,561 - (Imputed) Recall (correct/1): 0.00000
+2025-03-28 01:07:04,562 - (Imputed) F1: 0.00000
+2025-03-28 01:07:04,562 - (Imputed) Accuracy: 0.48594
+2025-03-28 01:07:04,563 - (Imputed) AUC ROC: 0.49941
+2025-03-28 01:07:04,564 - (Imputed) AUC PR: 0.51377
+2025-03-28 01:07:04,564 - Average SKILL CONFIDENCE SCORE metrics across all test sets:
+2025-03-28 01:07:04,565 - MSE: 0.11342
+2025-03-28 01:07:04,566 - RMSE: 0.33678
+2025-03-28 01:07:04,566 - Cross Entropy: 3.23585
+2025-03-28 01:07:04,567 - R2: -1.81465
+2025-03-28 01:07:04,568 - (Imputed) Precision (incorrect/0): 0.85626
+2025-03-28 01:07:04,569 - (Imputed) Precision (correct/1): 0.00000
+2025-03-28 01:07:04,569 - (Imputed) Recall (incorrect/0): 1.00000
+2025-03-28 01:07:04,570 - (Imputed) Recall (correct/1): 0.00000
+2025-03-28 01:07:04,571 - (Imputed) F1: 0.00000
+2025-03-28 01:07:04,571 - (Imputed) Accuracy: 0.85626
+2025-03-28 01:07:04,572 - (Imputed) AUC ROC: 0.50766
+2025-03-28 01:07:04,573 - (Imputed) AUC PR: 0.14568

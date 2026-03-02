@@ -1,0 +1,52 @@
+2025-04-17 03:52:35,341 - Starting model training. Logs will be saved to ./ML_training_pipeline_log_01312025_noSkillExplode_v50Full_20250417_035235.txt
+2025-04-17 03:52:35,341 - Pipeline Configuration:
+2025-04-17 03:52:35,342 - pipeline_id: 01312025_noSkillExplode
+2025-04-17 03:52:35,342 - feature_set_id: v50Full
+2025-04-17 03:52:35,343 - model_type: standard
+2025-04-17 03:52:35,343 - doSnowflakeETL: False
+2025-04-17 03:52:35,343 - skillExplode: False
+2025-04-17 03:52:35,344 - CorrectnessBinary: False
+2025-04-17 03:52:35,344 - ItemAgnostic: False
+2025-04-17 03:52:35,344 - ItemAgnosticFit: False
+2025-04-17 03:52:35,345 - ItemAgnosticDoubleFit: True
+2025-04-17 03:52:35,345 - F1ObjectiveMeasure: False
+2025-04-17 03:52:35,345 - SigmoidTransformOutputFit: False
+2025-04-17 03:52:35,346 - UseSigmoidTransform: False
+2025-04-17 03:52:35,347 - SigmoidTransformOutput: False
+2025-04-17 03:52:35,347 - pullNewData: False
+2025-04-17 03:52:35,348 - query_file: querytransformedtable.txt
+2025-04-17 03:52:35,348 - raw_data_folder_path: StudentProficiencyData_Math_yearOfData
+2025-04-17 03:52:35,348 - GenerateTestTrainSplit: False
+2025-04-17 03:52:35,348 - ItemParameterCalculate: False
+2025-04-17 03:52:35,349 - item_params_file: Math_ItemParameters_v5.csv
+2025-04-17 03:52:35,349 - FeatureEngineering: True
+2025-04-17 03:52:35,350 - ProficiencyModelFit: True
+2025-04-17 03:52:35,350 - ConfidenceModelFit: True
+2025-04-17 03:52:35,350 - InferenceModeOn: True
+2025-04-17 03:52:35,351 - InferenceModeFeatureEngineering: True
+2025-04-17 03:52:35,351 - TestMode: False
+2025-04-17 03:52:35,352 - n_estimators: 1
+2025-04-17 03:52:35,352 - FUTURE_WINDOW: 0
+2025-04-17 03:52:35,353 - scalerFlag: False
+2025-04-17 03:52:35,353 - log_folder: .
+2025-04-17 03:52:35,353 - Folder Locations for input data and output artifacts:
+2025-04-17 03:52:35,354 - feature_engineering_output_folder: feature_engineered_train_parquets_v50Full/
+2025-04-17 03:52:35,354 - proficiency_input_folder: feature_engineered_train_parquets_v50Full/
+2025-04-17 03:52:35,355 - proficiency_model_output_folder: proficiency_model_01312025_noSkillExplode_v50Full_standard
+2025-04-17 03:52:35,355 - confidence_input_folder: feature_engineered_train_parquets_v50Full/
+2025-04-17 03:52:35,355 - confidence_model_output_folder: confidence_model_01312025_noSkillExplode_v50Full_standard
+2025-04-17 03:52:35,356 - proficiency_model_file : proficiency_model_01312025_noSkillExplode_v50Full_standard/xgb_model.json
+2025-04-17 03:52:35,357 - column_names.txt (from raw query): ['STUDENTID', 'SKILL', 'QUESTIONID', 'OCCURREDAT', 'CORRECTNESS', 'DURATIONSECONDS', 'ANSWERPOSITIONINSESSION', 'EVENT_RANK', 'QUESTIONID_LAG_1', 'QUESTIONID_LAG_2', 'QUESTIONID_LAG_3', 'QUESTIONID_LAG_4', 'QUESTIONID_LAG_5', 'QUESTIONID_LAG_6', 'QUESTIONID_LAG_7', 'QUESTIONID_LAG_8', 'QUESTIONID_LAG_9', 'QUESTIONID_LAG_10', 'OCCURREDAT_LAG_1', 'OCCURREDAT_LAG_2', 'OCCURREDAT_LAG_3', 'OCCURREDAT_LAG_4', 'OCCURREDAT_LAG_5', 'OCCURREDAT_LAG_6', 'OCCURREDAT_LAG_7', 'OCCURREDAT_LAG_8', 'OCCURREDAT_LAG_9', 'OCCURREDAT_LAG_10', 'CORRECTNESS_LAG_1', 'CORRECTNESS_LAG_2', 'CORRECTNESS_LAG_3', 'CORRECTNESS_LAG_4', 'CORRECTNESS_LAG_5', 'CORRECTNESS_LAG_6', 'CORRECTNESS_LAG_7', 'CORRECTNESS_LAG_8', 'CORRECTNESS_LAG_9', 'CORRECTNESS_LAG_10', 'DURATIONSECONDS_LAG_1', 'DURATIONSECONDS_LAG_2', 'DURATIONSECONDS_LAG_3', 'DURATIONSECONDS_LAG_4', 'DURATIONSECONDS_LAG_5', 'DURATIONSECONDS_LAG_6', 'DURATIONSECONDS_LAG_7', 'DURATIONSECONDS_LAG_8', 'DURATIONSECONDS_LAG_9', 'DURATIONSECONDS_LAG_10', 'FUTURE_CORRECTNESS_LAG_1', 'FUTURE_CORRECTNESS_LAG_2', 'FUTURE_CORRECTNESS_LAG_3', 'FUTURE_CORRECTNESS_LAG_4', 'FUTURE_CORRECTNESS_LAG_5']
+2025-04-17 03:52:35,362 - 2237 files found.
+2025-04-17 03:52:35,831 - Imported 1028975 studentids for train split.
+2025-04-17 03:52:35,831 - Starting Feature Engineering.
+2025-04-17 03:52:54,470 - finished file: StudentProficiencyData_Math_yearOfData/data__0_0_227.snappy.parquet
+2025-04-17 03:53:14,884 - finished file: StudentProficiencyData_Math_yearOfData/data__0_2_136.snappy.parquet
+2025-04-17 03:53:33,334 - finished file: StudentProficiencyData_Math_yearOfData/data__0_4_208.snappy.parquet
+2025-04-17 03:53:48,627 - finished file: StudentProficiencyData_Math_yearOfData/data__0_7_193.snappy.parquet
+2025-04-17 03:54:07,941 - finished file: StudentProficiencyData_Math_yearOfData/data__0_7_19.snappy.parquet
+2025-04-17 03:54:24,290 - finished file: StudentProficiencyData_Math_yearOfData/data__0_3_1.snappy.parquet
+2025-04-17 03:54:42,111 - finished file: StudentProficiencyData_Math_yearOfData/data__0_7_117.snappy.parquet
+2025-04-17 03:54:56,644 - finished file: StudentProficiencyData_Math_yearOfData/data__0_6_272.snappy.parquet
+2025-04-17 03:54:58,165 - No such comm target registered: jupyter.widget.control
+2025-04-17 03:54:58,167 - No such comm: 9046f617-ac3e-40e3-87b4-051c924544bf

@@ -1,0 +1,2341 @@
+03/01/2024 01:52:19: fetched 4608 skills.
+03/01/2024 01:53:24: skill #: 1 skill_id: bc7b5e8e21eae311b64a005056801da1
+03/01/2024 01:53:24: attempting to load skill from local data: bc7b5e8e21eae311b64a005056801da1
+03/01/2024 01:54:54: loading time: 90.22681260108948 for : 1421213(1421213, 3)
+03/01/2024 01:54:54: converting into table...
+03/01/2024 01:54:55: table size: (123157, 139)
+03/01/2024 01:54:55: solving for item parameters...
+03/01/2024 02:02:02: parameter calculation time: 427.17680764198303 seconds.
+03/01/2024 03:51:37: skill #: 1 skill_id: bc7b5e8e21eae311b64a005056801da1
+03/01/2024 03:51:37: attempting to load skill from local data: bc7b5e8e21eae311b64a005056801da1
+03/01/2024 03:51:53: fetched 4608 skills.
+03/01/2024 03:52:20: skill #: 1 skill_id: bc7b5e8e21eae311b64a005056801da1
+03/01/2024 03:52:20: attempting to load skill from local data: bc7b5e8e21eae311b64a005056801da1
+03/01/2024 03:54:24: loading time: 124.64577388763428 for : 1421213(1421213, 3)
+03/01/2024 03:54:24: converting into table...
+03/01/2024 03:54:25: table size: (123157, 139)
+03/01/2024 03:54:25: solving for item parameters...
+03/01/2024 04:04:33: parameter calculation time: 607.8479442596436 seconds.
+03/01/2024 04:04:33: skipping bc7b5e8e21eae311b64a005056801da1 either loading or estimating broke.
+03/01/2024 04:04:33: skill #: 2 skill_id: iewietia
+03/01/2024 04:04:33: attempting to load skill from local data: iewietia
+03/01/2024 04:06:34: loading time: 121.11382794380188 for : 157566(157566, 3)
+03/01/2024 04:06:34: converting into table...
+03/01/2024 04:06:35: table size: (41139, 77)
+03/01/2024 04:06:35: solving for item parameters...
+03/01/2024 04:09:19: parameter calculation time: 164.18222737312317 seconds.
+03/01/2024 04:09:19: skipping iewietia either loading or estimating broke.
+03/01/2024 04:09:19: skill #: 3 skill_id: iefaezei
+03/01/2024 04:09:19: attempting to load skill from local data: iefaezei
+03/01/2024 04:11:20: loading time: 121.38803672790527 for : 107838(107838, 3)
+03/01/2024 04:11:20: converting into table...
+03/01/2024 04:11:20: table size: (35223, 49)
+03/01/2024 04:11:20: solving for item parameters...
+03/01/2024 04:13:13: parameter calculation time: 112.40112471580505 seconds.
+03/01/2024 04:13:13: skipping iefaezei either loading or estimating broke.
+03/01/2024 04:13:13: skill #: 4 skill_id: 7db6668c36134063a06b6e23e391f5a5
+03/01/2024 04:13:13: attempting to load skill from local data: 7db6668c36134063a06b6e23e391f5a5
+03/01/2024 04:15:14: loading time: 121.51358127593994 for : 168759(168759, 3)
+03/01/2024 04:15:14: converting into table...
+03/01/2024 04:15:14: table size: (25119, 81)
+03/01/2024 04:15:14: solving for item parameters...
+03/01/2024 04:17:37: parameter calculation time: 143.07697677612305 seconds.
+03/01/2024 04:17:37: skipping 7db6668c36134063a06b6e23e391f5a5 either loading or estimating broke.
+03/01/2024 04:17:37: skill #: 5 skill_id: 7ca4bfaa479de311b77c005056801da1
+03/01/2024 04:17:37: attempting to load skill from local data: 7ca4bfaa479de311b77c005056801da1
+03/01/2024 04:19:38: loading time: 120.9486391544342 for : 158816(158816, 3)
+03/01/2024 04:19:38: converting into table...
+03/01/2024 04:19:38: table size: (19942, 43)
+03/01/2024 04:19:38: solving for item parameters...
+03/01/2024 04:21:00: parameter calculation time: 81.62801456451416 seconds.
+03/01/2024 04:21:00: skipping 7ca4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 04:21:00: skill #: 6 skill_id: 38a3bfaa479de311b77c005056801da1
+03/01/2024 04:21:00: attempting to load skill from local data: 38a3bfaa479de311b77c005056801da1
+03/01/2024 04:23:03: loading time: 123.27381253242493 for : 1522545(1522545, 3)
+03/01/2024 04:23:03: converting into table...
+03/01/2024 04:23:05: table size: (241248, 66)
+03/01/2024 04:23:05: solving for item parameters...
+03/01/2024 04:31:18: parameter calculation time: 493.2235338687897 seconds.
+03/01/2024 04:31:18: skipping 38a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 04:31:18: skill #: 7 skill_id: 39a3bfaa479de311b77c005056801da1
+03/01/2024 04:31:18: attempting to load skill from local data: 39a3bfaa479de311b77c005056801da1
+03/01/2024 04:33:21: loading time: 123.38834929466248 for : 1414994(1414994, 3)
+03/01/2024 04:33:21: converting into table...
+03/01/2024 04:33:23: table size: (214502, 79)
+03/01/2024 04:33:23: solving for item parameters...
+03/01/2024 04:41:43: parameter calculation time: 500.20808577537537 seconds.
+03/01/2024 04:41:43: skipping 39a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 04:41:43: skill #: 8 skill_id: 3aa3bfaa479de311b77c005056801da1
+03/01/2024 04:41:43: attempting to load skill from local data: 3aa3bfaa479de311b77c005056801da1
+03/01/2024 04:43:46: loading time: 123.45846319198608 for : 1140832(1140832, 3)
+03/01/2024 04:43:46: converting into table...
+03/01/2024 04:43:47: table size: (181607, 52)
+03/01/2024 04:43:47: solving for item parameters...
+03/01/2024 04:49:22: parameter calculation time: 334.3287236690521 seconds.
+03/01/2024 04:49:22: skipping 3aa3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 04:49:22: skill #: 9 skill_id: 44a3bfaa479de311b77c005056801da1
+03/01/2024 04:49:22: attempting to load skill from local data: 44a3bfaa479de311b77c005056801da1
+03/01/2024 04:51:28: loading time: 126.1328535079956 for : 3416023(3416023, 3)
+03/01/2024 04:51:28: converting into table...
+03/01/2024 04:51:31: table size: (340631, 75)
+03/01/2024 04:51:31: solving for item parameters...
+03/01/2024 05:04:09: parameter calculation time: 758.1624987125397 seconds.
+03/01/2024 05:04:09: skipping 44a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 05:04:09: skill #: 10 skill_id: oochiavi
+03/01/2024 05:04:09: attempting to load skill from local data: oochiavi
+03/01/2024 05:06:09: loading time: 119.73084211349487 for : 526137(526137, 3)
+03/01/2024 05:06:09: converting into table...
+03/01/2024 05:06:09: table size: (169479, 26)
+03/01/2024 05:06:09: solving for item parameters...
+03/01/2024 05:09:08: parameter calculation time: 178.8044810295105 seconds.
+03/01/2024 05:09:08: skipping oochiavi either loading or estimating broke.
+03/01/2024 05:09:08: skill #: 11 skill_id: 4ea3bfaa479de311b77c005056801da1
+03/01/2024 05:09:08: attempting to load skill from local data: 4ea3bfaa479de311b77c005056801da1
+03/01/2024 05:11:09: loading time: 121.29278039932251 for : 1528844(1528844, 3)
+03/01/2024 05:11:09: converting into table...
+03/01/2024 05:11:10: table size: (216613, 30)
+03/01/2024 05:11:10: solving for item parameters...
+03/01/2024 05:15:48: parameter calculation time: 277.537814617157 seconds.
+03/01/2024 05:15:48: skipping 4ea3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 05:15:48: skill #: 12 skill_id: 60a3bfaa479de311b77c005056801da1
+03/01/2024 05:15:48: attempting to load skill from local data: 60a3bfaa479de311b77c005056801da1
+03/01/2024 05:17:49: loading time: 120.97483253479004 for : 1156259(1156259, 3)
+03/01/2024 05:17:49: converting into table...
+03/01/2024 05:17:50: table size: (195236, 53)
+03/01/2024 05:17:50: solving for item parameters...
+03/01/2024 05:23:28: parameter calculation time: 338.10919642448425 seconds.
+03/01/2024 05:23:28: skipping 60a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 05:23:28: skill #: 13 skill_id: 5ea3bfaa479de311b77c005056801da1
+03/01/2024 05:23:28: attempting to load skill from local data: 5ea3bfaa479de311b77c005056801da1
+03/01/2024 05:25:29: loading time: 121.13623523712158 for : 1378141(1378141, 3)
+03/01/2024 05:25:29: converting into table...
+03/01/2024 05:25:30: table size: (190847, 47)
+03/01/2024 05:25:30: solving for item parameters...
+03/01/2024 05:30:55: parameter calculation time: 324.4377601146698 seconds.
+03/01/2024 05:30:55: skipping 5ea3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 05:30:55: skill #: 14 skill_id: 62a3bfaa479de311b77c005056801da1
+03/01/2024 05:30:55: attempting to load skill from local data: 62a3bfaa479de311b77c005056801da1
+03/01/2024 05:32:54: loading time: 119.92653012275696 for : 802933(802933, 3)
+03/01/2024 05:32:54: converting into table...
+03/01/2024 05:32:55: table size: (141825, 43)
+03/01/2024 05:32:55: solving for item parameters...
+03/01/2024 05:36:47: parameter calculation time: 231.67873239517212 seconds.
+03/01/2024 05:36:47: skipping 62a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 05:36:47: skill #: 15 skill_id: 65a3bfaa479de311b77c005056801da1
+03/01/2024 05:36:47: attempting to load skill from local data: 65a3bfaa479de311b77c005056801da1
+03/01/2024 05:38:48: loading time: 121.00713753700256 for : 1667990(1667990, 3)
+03/01/2024 05:38:48: converting into table...
+03/01/2024 05:38:49: table size: (178133, 56)
+03/01/2024 05:38:49: solving for item parameters...
+03/01/2024 05:44:23: parameter calculation time: 333.8116338253021 seconds.
+03/01/2024 05:44:23: skipping 65a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 05:44:23: skill #: 16 skill_id: 28a5bfaa479de311b77c005056801da1
+03/01/2024 05:44:23: attempting to load skill from local data: 28a5bfaa479de311b77c005056801da1
+03/01/2024 05:46:23: loading time: 119.90237045288086 for : 871928(871928, 3)
+03/01/2024 05:46:23: converting into table...
+03/01/2024 05:46:23: table size: (135990, 52)
+03/01/2024 05:46:23: solving for item parameters...
+03/01/2024 05:50:36: parameter calculation time: 252.92529559135437 seconds.
+03/01/2024 05:50:36: skipping 28a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 05:50:36: skill #: 17 skill_id: dahteeco
+03/01/2024 05:50:36: attempting to load skill from local data: dahteeco
+03/01/2024 05:52:35: loading time: 118.72023940086365 for : 241193(241193, 3)
+03/01/2024 05:52:35: converting into table...
+03/01/2024 05:52:35: table size: (51264, 65)
+03/01/2024 05:52:35: solving for item parameters...
+03/01/2024 05:55:20: parameter calculation time: 164.4257357120514 seconds.
+03/01/2024 05:55:20: skipping dahteeco either loading or estimating broke.
+03/01/2024 05:55:20: skill #: 18 skill_id: 3ea5bfaa479de311b77c005056801da1
+03/01/2024 05:55:20: attempting to load skill from local data: 3ea5bfaa479de311b77c005056801da1
+03/01/2024 05:57:19: loading time: 119.14719033241272 for : 536517(536517, 3)
+03/01/2024 05:57:19: converting into table...
+03/01/2024 05:57:19: table size: (47586, 116)
+03/01/2024 05:57:19: solving for item parameters...
+03/01/2024 06:01:56: parameter calculation time: 276.82994079589844 seconds.
+03/01/2024 06:01:56: skipping 3ea5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 06:01:56: skill #: 19 skill_id: 57a5bfaa479de311b77c005056801da1
+03/01/2024 06:01:56: attempting to load skill from local data: 57a5bfaa479de311b77c005056801da1
+03/01/2024 06:03:55: loading time: 118.61766982078552 for : 89498(89498, 3)
+03/01/2024 06:03:55: converting into table...
+03/01/2024 06:03:55: table size: (11095, 18)
+03/01/2024 06:03:55: solving for item parameters...
+03/01/2024 06:04:47: parameter calculation time: 51.95799422264099 seconds.
+03/01/2024 06:04:47: skipping 57a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 06:04:47: skill #: 20 skill_id: 5ea5bfaa479de311b77c005056801da1
+03/01/2024 06:04:47: attempting to load skill from local data: 5ea5bfaa479de311b77c005056801da1
+03/01/2024 06:06:46: loading time: 118.90183973312378 for : 189030(189030, 3)
+03/01/2024 06:06:46: converting into table...
+03/01/2024 06:06:46: table size: (18649, 38)
+03/01/2024 06:06:46: solving for item parameters...
+03/01/2024 06:07:59: parameter calculation time: 73.6899561882019 seconds.
+03/01/2024 06:07:59: skipping 5ea5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 06:07:59: skill #: 21 skill_id: aikaevoy
+03/01/2024 06:07:59: attempting to load skill from local data: aikaevoy
+03/01/2024 06:10:00: loading time: 120.33466529846191 for : 1773642(1773642, 3)
+03/01/2024 06:10:00: converting into table...
+03/01/2024 06:10:01: table size: (236138, 34)
+03/01/2024 06:10:01: solving for item parameters...
+03/01/2024 06:15:07: parameter calculation time: 306.3628304004669 seconds.
+03/01/2024 06:15:07: skipping aikaevoy either loading or estimating broke.
+03/01/2024 06:15:07: skill #: 22 skill_id: edouthie
+03/01/2024 06:15:07: attempting to load skill from local data: edouthie
+03/01/2024 06:17:07: loading time: 119.52052617073059 for : 845409(845409, 3)
+03/01/2024 06:17:07: converting into table...
+03/01/2024 06:17:07: table size: (198844, 28)
+03/01/2024 06:17:07: solving for item parameters...
+03/01/2024 06:22:07: parameter calculation time: 300.10261821746826 seconds.
+03/01/2024 06:22:07: skipping edouthie either loading or estimating broke.
+03/01/2024 06:22:07: skill #: 23 skill_id: 0ea4bfaa479de311b77c005056801da1
+03/01/2024 06:22:07: attempting to load skill from local data: 0ea4bfaa479de311b77c005056801da1
+03/01/2024 06:24:07: loading time: 119.56762766838074 for : 572193(572193, 3)
+03/01/2024 06:24:07: converting into table...
+03/01/2024 06:24:07: table size: (76508, 58)
+03/01/2024 06:24:07: solving for item parameters...
+03/01/2024 06:27:53: parameter calculation time: 225.56595253944397 seconds.
+03/01/2024 06:27:53: skipping 0ea4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 06:27:53: skill #: 24 skill_id: 0d619fd001694317a3ca451ea88a9b72
+03/01/2024 06:27:53: attempting to load skill from local data: 0d619fd001694317a3ca451ea88a9b72
+03/01/2024 06:29:53: loading time: 119.91470742225647 for : 972511(972511, 3)
+03/01/2024 06:29:53: converting into table...
+03/01/2024 06:29:54: table size: (147409, 29)
+03/01/2024 06:29:54: solving for item parameters...
+03/01/2024 06:33:01: parameter calculation time: 187.25751447677612 seconds.
+03/01/2024 06:33:01: skipping 0d619fd001694317a3ca451ea88a9b72 either loading or estimating broke.
+03/01/2024 06:33:01: skill #: 25 skill_id: 1da4bfaa479de311b77c005056801da1
+03/01/2024 06:33:01: attempting to load skill from local data: 1da4bfaa479de311b77c005056801da1
+03/01/2024 06:35:00: loading time: 119.1131956577301 for : 561865(561865, 3)
+03/01/2024 06:35:00: converting into table...
+03/01/2024 06:35:00: table size: (96682, 25)
+03/01/2024 06:35:00: solving for item parameters...
+03/01/2024 06:37:25: parameter calculation time: 144.55816411972046 seconds.
+03/01/2024 06:37:25: skipping 1da4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 06:37:25: skill #: 26 skill_id: 42a3bfaa479de311b77c005056801da1
+03/01/2024 06:37:25: attempting to load skill from local data: 42a3bfaa479de311b77c005056801da1
+03/01/2024 06:39:30: loading time: 124.70364165306091 for : 4205058(4205058, 3)
+03/01/2024 06:39:30: converting into table...
+03/01/2024 06:39:35: table size: (415203, 177)
+03/01/2024 06:39:35: solving for item parameters...
+03/01/2024 07:09:30: parameter calculation time: 1794.8057577610016 seconds.
+03/01/2024 07:09:30: skipping 42a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 07:09:30: skill #: 27 skill_id: 2ea5bfaa479de311b77c005056801da1
+03/01/2024 07:09:30: attempting to load skill from local data: 2ea5bfaa479de311b77c005056801da1
+03/01/2024 07:11:30: loading time: 119.61251306533813 for : 317260(317260, 3)
+03/01/2024 07:11:30: converting into table...
+03/01/2024 07:11:30: table size: (52719, 46)
+03/01/2024 07:11:30: solving for item parameters...
+03/01/2024 07:13:51: parameter calculation time: 140.89596962928772 seconds.
+03/01/2024 07:13:51: skipping 2ea5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 07:13:51: skill #: 28 skill_id: 1ba4bfaa479de311b77c005056801da1
+03/01/2024 07:13:51: attempting to load skill from local data: 1ba4bfaa479de311b77c005056801da1
+03/01/2024 07:15:50: loading time: 119.25478911399841 for : 518894(518894, 3)
+03/01/2024 07:15:50: converting into table...
+03/01/2024 07:15:50: table size: (81862, 53)
+03/01/2024 07:15:50: solving for item parameters...
+03/01/2024 07:19:35: parameter calculation time: 224.6842110157013 seconds.
+03/01/2024 07:19:35: skipping 1ba4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 07:19:35: skill #: 29 skill_id: 2aa4bfaa479de311b77c005056801da1
+03/01/2024 07:19:35: attempting to load skill from local data: 2aa4bfaa479de311b77c005056801da1
+03/01/2024 07:21:35: loading time: 120.25174736976624 for : 815047(815047, 3)
+03/01/2024 07:21:35: converting into table...
+03/01/2024 07:21:36: table size: (90527, 83)
+03/01/2024 07:21:36: solving for item parameters...
+03/01/2024 07:27:19: parameter calculation time: 343.0729308128357 seconds.
+03/01/2024 07:27:19: skipping 2aa4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 07:27:19: skill #: 30 skill_id: eighaich
+03/01/2024 07:27:19: attempting to load skill from local data: eighaich
+03/01/2024 07:29:19: loading time: 119.80155277252197 for : 498860(498860, 3)
+03/01/2024 07:29:19: converting into table...
+03/01/2024 07:29:19: table size: (109550, 35)
+03/01/2024 07:29:19: solving for item parameters...
+03/01/2024 07:32:33: parameter calculation time: 193.70058155059814 seconds.
+03/01/2024 07:32:33: skipping eighaich either loading or estimating broke.
+03/01/2024 07:32:33: skill #: 31 skill_id: dda3108b5fbf4c28afd1fec18e021e7a
+03/01/2024 07:32:33: attempting to load skill from local data: dda3108b5fbf4c28afd1fec18e021e7a
+03/01/2024 07:34:35: loading time: 121.7104058265686 for : 1746827(1746827, 3)
+03/01/2024 07:34:35: converting into table...
+03/01/2024 07:34:36: table size: (253935, 54)
+03/01/2024 07:34:36: solving for item parameters...
+03/01/2024 07:41:27: parameter calculation time: 410.4915452003479 seconds.
+03/01/2024 07:41:27: skipping dda3108b5fbf4c28afd1fec18e021e7a either loading or estimating broke.
+03/01/2024 07:41:27: skill #: 32 skill_id: a5a3bfaa479de311b77c005056801da1
+03/01/2024 07:41:27: attempting to load skill from local data: a5a3bfaa479de311b77c005056801da1
+03/01/2024 07:43:26: loading time: 119.6982033252716 for : 326331(326331, 3)
+03/01/2024 07:43:26: converting into table...
+03/01/2024 07:43:27: table size: (69841, 38)
+03/01/2024 07:43:27: solving for item parameters...
+03/01/2024 07:46:01: parameter calculation time: 154.37136459350586 seconds.
+03/01/2024 07:46:01: skipping a5a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 07:46:01: skill #: 33 skill_id: ouchotha
+03/01/2024 07:46:01: attempting to load skill from local data: ouchotha
+03/01/2024 07:48:06: loading time: 125.09544730186462 for : 3606396(3606396, 3)
+03/01/2024 07:48:06: converting into table...
+03/01/2024 07:48:09: table size: (441656, 55)
+03/01/2024 07:48:09: solving for item parameters...
+03/01/2024 08:01:01: parameter calculation time: 771.2607476711273 seconds.
+03/01/2024 08:01:01: skipping ouchotha either loading or estimating broke.
+03/01/2024 08:01:01: skill #: 34 skill_id: a8a3bfaa479de311b77c005056801da1
+03/01/2024 08:01:01: attempting to load skill from local data: a8a3bfaa479de311b77c005056801da1
+03/01/2024 08:03:03: loading time: 122.7518367767334 for : 2254067(2254067, 3)
+03/01/2024 08:03:03: converting into table...
+03/01/2024 08:03:05: table size: (303655, 39)
+03/01/2024 08:03:05: solving for item parameters...
+03/01/2024 08:10:11: parameter calculation time: 425.4118130207062 seconds.
+03/01/2024 08:10:11: skipping a8a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 08:10:11: skill #: 35 skill_id: aba3bfaa479de311b77c005056801da1
+03/01/2024 08:10:11: attempting to load skill from local data: aba3bfaa479de311b77c005056801da1
+03/01/2024 08:12:14: loading time: 123.00420761108398 for : 2393782(2393782, 3)
+03/01/2024 08:12:14: converting into table...
+03/01/2024 08:12:16: table size: (274258, 43)
+03/01/2024 08:12:16: solving for item parameters...
+03/01/2024 08:19:11: parameter calculation time: 415.1200873851776 seconds.
+03/01/2024 08:19:11: skipping aba3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 08:19:11: skill #: 36 skill_id: b4a3bfaa479de311b77c005056801da1
+03/01/2024 08:19:11: attempting to load skill from local data: b4a3bfaa479de311b77c005056801da1
+03/01/2024 08:21:15: loading time: 123.84986925125122 for : 2453558(2453558, 3)
+03/01/2024 08:21:15: converting into table...
+03/01/2024 08:21:16: table size: (275539, 39)
+03/01/2024 08:21:16: solving for item parameters...
+03/01/2024 08:28:07: parameter calculation time: 410.68086552619934 seconds.
+03/01/2024 08:28:07: skipping b4a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 08:28:07: skill #: 37 skill_id: b7a3bfaa479de311b77c005056801da1
+03/01/2024 08:28:07: attempting to load skill from local data: b7a3bfaa479de311b77c005056801da1
+03/01/2024 08:30:10: loading time: 123.29892945289612 for : 2417507(2417507, 3)
+03/01/2024 08:30:11: converting into table...
+03/01/2024 08:30:12: table size: (268762, 37)
+03/01/2024 08:30:12: solving for item parameters...
+03/01/2024 08:36:26: parameter calculation time: 373.360812664032 seconds.
+03/01/2024 08:36:26: skipping b7a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 08:36:26: skill #: 38 skill_id: 85cec1c3502d4b1fa0b184152a643466
+03/01/2024 08:36:26: attempting to load skill from local data: 85cec1c3502d4b1fa0b184152a643466
+03/01/2024 08:38:26: loading time: 120.55724334716797 for : 759335(759335, 3)
+03/01/2024 08:38:26: converting into table...
+03/01/2024 08:38:27: table size: (141793, 43)
+03/01/2024 08:38:27: solving for item parameters...
+03/01/2024 08:42:10: parameter calculation time: 222.7714433670044 seconds.
+03/01/2024 08:42:10: skipping 85cec1c3502d4b1fa0b184152a643466 either loading or estimating broke.
+03/01/2024 08:42:10: skill #: 39 skill_id: 63d4b6cd4fc7437db8ea0d3e4f04b953
+03/01/2024 08:42:10: attempting to load skill from local data: 63d4b6cd4fc7437db8ea0d3e4f04b953
+03/01/2024 08:44:09: loading time: 119.92817163467407 for : 1285060(1285060, 3)
+03/01/2024 08:44:10: converting into table...
+03/01/2024 08:44:10: table size: (131574, 73)
+03/01/2024 08:44:10: solving for item parameters...
+03/01/2024 08:49:47: parameter calculation time: 336.9013080596924 seconds.
+03/01/2024 08:49:47: skipping 63d4b6cd4fc7437db8ea0d3e4f04b953 either loading or estimating broke.
+03/01/2024 08:49:47: skill #: 40 skill_id: 79817d8de6b049c1b6afecd50c65bf16
+03/01/2024 08:49:47: attempting to load skill from local data: 79817d8de6b049c1b6afecd50c65bf16
+03/01/2024 08:51:49: loading time: 122.01339626312256 for : 2054751(2054751, 3)
+03/01/2024 08:51:49: converting into table...
+03/01/2024 08:51:51: table size: (184267, 78)
+03/01/2024 08:51:51: solving for item parameters...
+03/01/2024 08:58:43: parameter calculation time: 411.5516903400421 seconds.
+03/01/2024 08:58:43: skipping 79817d8de6b049c1b6afecd50c65bf16 either loading or estimating broke.
+03/01/2024 08:58:43: skill #: 41 skill_id: oemaethe
+03/01/2024 08:58:43: attempting to load skill from local data: oemaethe
+03/01/2024 09:00:44: loading time: 121.07391881942749 for : 1488439(1488439, 3)
+03/01/2024 09:00:44: converting into table...
+03/01/2024 09:00:45: table size: (181049, 55)
+03/01/2024 09:00:45: solving for item parameters...
+03/01/2024 09:06:37: parameter calculation time: 352.334269285202 seconds.
+03/01/2024 09:06:37: skipping oemaethe either loading or estimating broke.
+03/01/2024 09:06:37: skill #: 42 skill_id: d2a4bfaa479de311b77c005056801da1
+03/01/2024 09:06:37: attempting to load skill from local data: d2a4bfaa479de311b77c005056801da1
+03/01/2024 09:08:38: loading time: 120.94567322731018 for : 931576(931576, 3)
+03/01/2024 09:08:38: converting into table...
+03/01/2024 09:08:39: table size: (113244, 42)
+03/01/2024 09:08:39: solving for item parameters...
+03/01/2024 09:12:43: parameter calculation time: 243.77841758728027 seconds.
+03/01/2024 09:12:43: skipping d2a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 09:12:43: skill #: 43 skill_id: dc4ce0cddb9b4b2995b79a3cb076b595
+03/01/2024 09:12:43: attempting to load skill from local data: dc4ce0cddb9b4b2995b79a3cb076b595
+03/01/2024 09:14:43: loading time: 120.39997696876526 for : 512259(512259, 3)
+03/01/2024 09:14:43: converting into table...
+03/01/2024 09:14:43: table size: (64410, 53)
+03/01/2024 09:14:43: solving for item parameters...
+03/01/2024 09:17:34: parameter calculation time: 170.52205419540405 seconds.
+03/01/2024 09:17:34: skipping dc4ce0cddb9b4b2995b79a3cb076b595 either loading or estimating broke.
+03/01/2024 09:17:34: skill #: 44 skill_id: 02a5bfaa479de311b77c005056801da1
+03/01/2024 09:17:34: attempting to load skill from local data: 02a5bfaa479de311b77c005056801da1
+03/01/2024 09:19:34: loading time: 119.84092164039612 for : 347143(347143, 3)
+03/01/2024 09:19:34: converting into table...
+03/01/2024 09:19:34: table size: (38939, 58)
+03/01/2024 09:19:34: solving for item parameters...
+03/01/2024 09:22:01: parameter calculation time: 147.42664074897766 seconds.
+03/01/2024 09:22:01: skipping 02a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 09:22:01: skill #: 45 skill_id: 11a5bfaa479de311b77c005056801da1
+03/01/2024 09:22:01: attempting to load skill from local data: 11a5bfaa479de311b77c005056801da1
+03/01/2024 09:24:01: loading time: 119.64058208465576 for : 406415(406415, 3)
+03/01/2024 09:24:01: converting into table...
+03/01/2024 09:24:01: table size: (92790, 39)
+03/01/2024 09:24:01: solving for item parameters...
+03/01/2024 09:26:51: parameter calculation time: 169.50825476646423 seconds.
+03/01/2024 09:26:51: skipping 11a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 09:26:51: skill #: 46 skill_id: 17a5bfaa479de311b77c005056801da1
+03/01/2024 09:26:51: attempting to load skill from local data: 17a5bfaa479de311b77c005056801da1
+03/01/2024 09:28:51: loading time: 120.0062689781189 for : 382139(382139, 3)
+03/01/2024 09:28:51: converting into table...
+03/01/2024 09:28:51: table size: (41685, 68)
+03/01/2024 09:28:51: solving for item parameters...
+03/01/2024 09:31:34: parameter calculation time: 162.8213164806366 seconds.
+03/01/2024 09:31:34: skipping 17a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 09:31:34: skill #: 47 skill_id: b1a3bfaa479de311b77c005056801da1
+03/01/2024 09:31:34: attempting to load skill from local data: b1a3bfaa479de311b77c005056801da1
+03/01/2024 09:33:36: loading time: 121.5177059173584 for : 1687985(1687985, 3)
+03/01/2024 09:33:36: converting into table...
+03/01/2024 09:33:37: table size: (221531, 39)
+03/01/2024 09:33:37: solving for item parameters...
+03/01/2024 09:38:43: parameter calculation time: 305.73855447769165 seconds.
+03/01/2024 09:38:43: skipping b1a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 09:38:43: skill #: 48 skill_id: 9aa4bfaa479de311b77c005056801da1
+03/01/2024 09:38:43: attempting to load skill from local data: 9aa4bfaa479de311b77c005056801da1
+03/01/2024 09:40:48: loading time: 125.6468997001648 for : 3551575(3551575, 3)
+03/01/2024 09:40:48: converting into table...
+03/01/2024 09:40:51: table size: (306256, 54)
+03/01/2024 09:40:51: solving for item parameters...
+03/01/2024 09:50:23: parameter calculation time: 572.1942782402039 seconds.
+03/01/2024 09:50:23: skipping 9aa4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 09:50:23: skill #: 49 skill_id: afa4bfaa479de311b77c005056801da1
+03/01/2024 09:50:23: attempting to load skill from local data: afa4bfaa479de311b77c005056801da1
+03/01/2024 09:52:25: loading time: 121.88915061950684 for : 1310926(1310926, 3)
+03/01/2024 09:52:25: converting into table...
+03/01/2024 09:52:26: table size: (151840, 43)
+03/01/2024 09:52:26: solving for item parameters...
+03/01/2024 09:56:27: parameter calculation time: 241.39564514160156 seconds.
+03/01/2024 09:56:27: skipping afa4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 09:56:27: skill #: 50 skill_id: d0a4bfaa479de311b77c005056801da1
+03/01/2024 09:56:27: attempting to load skill from local data: d0a4bfaa479de311b77c005056801da1
+03/01/2024 09:58:28: loading time: 121.24205207824707 for : 1102517(1102517, 3)
+03/01/2024 09:58:28: converting into table...
+03/01/2024 09:58:29: table size: (150787, 43)
+03/01/2024 09:58:29: solving for item parameters...
+03/01/2024 10:02:17: parameter calculation time: 227.3088276386261 seconds.
+03/01/2024 10:02:17: skipping d0a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 10:02:17: skill #: 51 skill_id: eca4bfaa479de311b77c005056801da1
+03/01/2024 10:02:17: attempting to load skill from local data: eca4bfaa479de311b77c005056801da1
+03/01/2024 10:04:16: loading time: 119.66861295700073 for : 339879(339879, 3)
+03/01/2024 10:04:16: converting into table...
+03/01/2024 10:04:16: table size: (53051, 83)
+03/01/2024 10:04:16: solving for item parameters...
+03/01/2024 10:07:56: parameter calculation time: 219.99768257141113 seconds.
+03/01/2024 10:07:56: skipping eca4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 10:07:56: skill #: 52 skill_id: 00a5bfaa479de311b77c005056801da1
+03/01/2024 10:07:56: attempting to load skill from local data: 00a5bfaa479de311b77c005056801da1
+03/01/2024 10:09:55: loading time: 119.00900864601135 for : 434261(434261, 3)
+03/01/2024 10:09:55: converting into table...
+03/01/2024 10:09:56: table size: (62316, 45)
+03/01/2024 10:09:56: solving for item parameters...
+03/01/2024 10:12:36: parameter calculation time: 160.43107891082764 seconds.
+03/01/2024 10:12:36: skipping 00a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 10:12:36: skill #: 53 skill_id: oongiosi
+03/01/2024 10:12:36: attempting to load skill from local data: oongiosi
+03/01/2024 10:14:34: loading time: 118.29214334487915 for : 131555(131555, 3)
+03/01/2024 10:14:34: converting into table...
+03/01/2024 10:14:35: table size: (35888, 26)
+03/01/2024 10:14:35: solving for item parameters...
+03/01/2024 10:15:54: parameter calculation time: 79.24423408508301 seconds.
+03/01/2024 10:15:54: skipping oongiosi either loading or estimating broke.
+03/01/2024 10:15:54: skill #: 54 skill_id: 69a5bfaa479de311b77c005056801da1
+03/01/2024 10:15:54: attempting to load skill from local data: 69a5bfaa479de311b77c005056801da1
+03/01/2024 10:17:53: loading time: 119.39329648017883 for : 181199(181199, 3)
+03/01/2024 10:17:53: converting into table...
+03/01/2024 10:17:53: table size: (42212, 33)
+03/01/2024 10:17:53: solving for item parameters...
+03/01/2024 10:19:35: parameter calculation time: 101.18451237678528 seconds.
+03/01/2024 10:19:35: skipping 69a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 10:19:35: skill #: 55 skill_id: 6ea5bfaa479de311b77c005056801da1
+03/01/2024 10:19:35: attempting to load skill from local data: 6ea5bfaa479de311b77c005056801da1
+03/01/2024 10:21:34: loading time: 118.97008943557739 for : 568629(568629, 3)
+03/01/2024 10:21:34: converting into table...
+03/01/2024 10:21:34: table size: (94567, 82)
+03/01/2024 10:21:34: solving for item parameters...
+03/01/2024 10:26:44: parameter calculation time: 310.3340365886688 seconds.
+03/01/2024 10:26:44: skipping 6ea5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 10:26:44: skill #: 56 skill_id: shisoowi
+03/01/2024 10:26:44: attempting to load skill from local data: shisoowi
+03/01/2024 10:28:44: loading time: 119.64798903465271 for : 14(14, 3)
+03/01/2024 10:28:44: converting into table...
+03/01/2024 10:28:44: table size: (10, 9)
+03/01/2024 10:28:44: solving for item parameters...
+03/01/2024 10:28:52: parameter calculation time: 8.11561393737793 seconds.
+03/01/2024 10:28:52: skipping shisoowi either loading or estimating broke.
+03/01/2024 10:28:52: skill #: 57 skill_id: siuvaeri
+03/01/2024 10:28:52: attempting to load skill from local data: siuvaeri
+03/01/2024 10:30:51: loading time: 118.88358736038208 for : 176(176, 3)
+03/01/2024 10:30:51: converting into table...
+03/01/2024 10:30:51: table size: (31, 12)
+03/01/2024 10:30:51: solving for item parameters...
+03/01/2024 10:31:01: parameter calculation time: 10.472790956497192 seconds.
+03/01/2024 10:31:01: skipping siuvaeri either loading or estimating broke.
+03/01/2024 10:31:01: skill #: 58 skill_id: noojooku
+03/01/2024 10:31:01: attempting to load skill from local data: noojooku
+03/01/2024 10:33:01: loading time: 119.15757060050964 for : 516(516, 3)
+03/01/2024 10:33:01: converting into table...
+03/01/2024 10:33:01: table size: (72, 20)
+03/01/2024 10:33:01: solving for item parameters...
+03/01/2024 10:33:14: parameter calculation time: 13.460309505462646 seconds.
+03/01/2024 10:33:14: skipping noojooku either loading or estimating broke.
+03/01/2024 10:33:14: skill #: 59 skill_id: ahsaigha
+03/01/2024 10:33:14: attempting to load skill from local data: ahsaigha
+03/01/2024 10:35:13: loading time: 118.65943098068237 for : 261(261, 3)
+03/01/2024 10:35:13: converting into table...
+03/01/2024 10:35:13: table size: (82, 65)
+03/01/2024 10:35:13: solving for item parameters...
+03/01/2024 10:35:48: parameter calculation time: 35.542545557022095 seconds.
+03/01/2024 10:35:48: skipping ahsaigha either loading or estimating broke.
+03/01/2024 10:35:48: skill #: 60 skill_id: 584d1ed1f674444094abd9f4718a9634
+03/01/2024 10:35:48: attempting to load skill from local data: 584d1ed1f674444094abd9f4718a9634
+03/01/2024 10:37:49: loading time: 120.2486822605133 for : 796610(796610, 3)
+03/01/2024 10:37:49: converting into table...
+03/01/2024 10:37:49: table size: (163811, 42)
+03/01/2024 10:37:49: solving for item parameters...
+03/01/2024 10:41:29: parameter calculation time: 219.76735281944275 seconds.
+03/01/2024 10:41:29: skipping 584d1ed1f674444094abd9f4718a9634 either loading or estimating broke.
+03/01/2024 10:41:29: skill #: 61 skill_id: 60a5bfaa479de311b77c005056801da1
+03/01/2024 10:41:29: attempting to load skill from local data: 60a5bfaa479de311b77c005056801da1
+03/01/2024 10:43:29: loading time: 119.9502305984497 for : 156275(156275, 3)
+03/01/2024 10:43:29: converting into table...
+03/01/2024 10:43:29: table size: (23400, 36)
+03/01/2024 10:43:29: solving for item parameters...
+03/01/2024 10:44:48: parameter calculation time: 79.09611010551453 seconds.
+03/01/2024 10:44:48: skipping 60a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 10:44:48: skill #: 62 skill_id: a8bbc51aa39fe3119503005056801da1
+03/01/2024 10:44:48: attempting to load skill from local data: a8bbc51aa39fe3119503005056801da1
+03/01/2024 10:46:49: loading time: 120.38184714317322 for : 727136(727136, 3)
+03/01/2024 10:46:49: converting into table...
+03/01/2024 10:46:49: table size: (251907, 54)
+03/01/2024 10:46:49: solving for item parameters...
+03/01/2024 10:53:23: parameter calculation time: 393.3112063407898 seconds.
+03/01/2024 10:53:23: skipping a8bbc51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 10:53:23: skill #: 63 skill_id: veicaewo
+03/01/2024 10:53:23: attempting to load skill from local data: veicaewo
+03/01/2024 10:55:22: loading time: 119.81097054481506 for : 90367(90367, 3)
+03/01/2024 10:55:22: converting into table...
+03/01/2024 10:55:23: table size: (37861, 38)
+03/01/2024 10:55:23: solving for item parameters...
+03/01/2024 10:57:12: parameter calculation time: 109.67886590957642 seconds.
+03/01/2024 10:57:12: skipping veicaewo either loading or estimating broke.
+03/01/2024 10:57:12: skill #: 64 skill_id: ohseiroo
+03/01/2024 10:57:12: attempting to load skill from local data: ohseiroo
+03/01/2024 10:59:12: loading time: 119.85548877716064 for : 40973(40973, 3)
+03/01/2024 10:59:12: converting into table...
+03/01/2024 10:59:12: table size: (16922, 39)
+03/01/2024 10:59:12: solving for item parameters...
+03/01/2024 11:00:21: parameter calculation time: 68.98664546012878 seconds.
+03/01/2024 11:00:21: skipping ohseiroo either loading or estimating broke.
+03/01/2024 11:00:21: skill #: 65 skill_id: 3ba3bfaa479de311b77c005056801da1
+03/01/2024 11:00:21: attempting to load skill from local data: 3ba3bfaa479de311b77c005056801da1
+03/01/2024 11:02:23: loading time: 121.81801557540894 for : 948197(948197, 3)
+03/01/2024 11:02:23: converting into table...
+03/01/2024 11:02:24: table size: (184769, 51)
+03/01/2024 11:02:24: solving for item parameters...
+03/01/2024 11:07:22: parameter calculation time: 298.44697427749634 seconds.
+03/01/2024 11:07:22: skipping 3ba3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 11:07:22: skill #: 66 skill_id: 4da5bfaa479de311b77c005056801da1
+03/01/2024 11:07:22: attempting to load skill from local data: 4da5bfaa479de311b77c005056801da1
+03/01/2024 11:09:22: loading time: 119.90794777870178 for : 150655(150655, 3)
+03/01/2024 11:09:22: converting into table...
+03/01/2024 11:09:22: table size: (18475, 75)
+03/01/2024 11:09:22: solving for item parameters...
+03/01/2024 11:11:18: parameter calculation time: 115.29072308540344 seconds.
+03/01/2024 11:11:18: skipping 4da5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 11:11:18: skill #: 67 skill_id: 59a4bfaa479de311b77c005056801da1
+03/01/2024 11:11:18: attempting to load skill from local data: 59a4bfaa479de311b77c005056801da1
+03/01/2024 11:13:22: loading time: 124.74215698242188 for : 2477174(2477174, 3)
+03/01/2024 11:13:22: converting into table...
+03/01/2024 11:13:24: table size: (327646, 30)
+03/01/2024 11:13:24: solving for item parameters...
+03/01/2024 11:20:19: parameter calculation time: 414.9071650505066 seconds.
+03/01/2024 11:20:19: skipping 59a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 11:20:19: skill #: 68 skill_id: 13a4bfaa479de311b77c005056801da1
+03/01/2024 11:20:19: attempting to load skill from local data: 13a4bfaa479de311b77c005056801da1
+03/01/2024 11:22:21: loading time: 122.02465438842773 for : 1280755(1280755, 3)
+03/01/2024 11:22:21: converting into table...
+03/01/2024 11:22:22: table size: (154907, 36)
+03/01/2024 11:22:22: solving for item parameters...
+03/01/2024 11:25:23: parameter calculation time: 181.08239364624023 seconds.
+03/01/2024 11:25:23: skipping 13a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 11:25:23: skill #: 69 skill_id: fiegeipe
+03/01/2024 11:25:23: attempting to load skill from local data: fiegeipe
+03/01/2024 11:26:52: loading time: 89.34286952018738 for : 443234(443234, 3)
+03/01/2024 11:26:52: converting into table...
+03/01/2024 11:26:53: table size: (86452, 44)
+03/01/2024 11:26:53: solving for item parameters...
+03/01/2024 11:28:59: parameter calculation time: 126.07358646392822 seconds.
+03/01/2024 11:28:59: skipping fiegeipe either loading or estimating broke.
+03/01/2024 11:28:59: skill #: 70 skill_id: 8e178d664b7f41b8bfe030faeb97a514
+03/01/2024 11:28:59: attempting to load skill from local data: 8e178d664b7f41b8bfe030faeb97a514
+03/01/2024 11:30:30: loading time: 91.00888133049011 for : 1931710(1931710, 3)
+03/01/2024 11:30:30: converting into table...
+03/01/2024 11:30:30: table size: (217069, 24)
+03/01/2024 11:30:30: solving for item parameters...
+03/01/2024 11:33:47: parameter calculation time: 196.11427187919617 seconds.
+03/01/2024 11:33:47: skipping 8e178d664b7f41b8bfe030faeb97a514 either loading or estimating broke.
+03/01/2024 11:33:47: skill #: 71 skill_id: 30a4bfaa479de311b77c005056801da1
+03/01/2024 11:33:47: attempting to load skill from local data: 30a4bfaa479de311b77c005056801da1
+03/01/2024 11:35:16: loading time: 89.79199576377869 for : 318201(318201, 3)
+03/01/2024 11:35:16: converting into table...
+03/01/2024 11:35:17: table size: (53147, 54)
+03/01/2024 11:35:17: solving for item parameters...
+03/01/2024 11:37:02: parameter calculation time: 105.6432535648346 seconds.
+03/01/2024 11:37:02: skipping 30a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 11:37:02: skill #: 72 skill_id: 10bdc51aa39fe3119503005056801da1
+03/01/2024 11:37:02: attempting to load skill from local data: 10bdc51aa39fe3119503005056801da1
+03/01/2024 11:38:32: loading time: 89.43008327484131 for : 127875(127875, 3)
+03/01/2024 11:38:32: converting into table...
+03/01/2024 11:38:32: table size: (28195, 31)
+03/01/2024 11:38:32: solving for item parameters...
+03/01/2024 11:39:28: parameter calculation time: 56.27996611595154 seconds.
+03/01/2024 11:39:28: skipping 10bdc51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 11:39:28: skill #: 73 skill_id: 8ea3bfaa479de311b77c005056801da1
+03/01/2024 11:39:28: attempting to load skill from local data: 8ea3bfaa479de311b77c005056801da1
+03/01/2024 11:41:00: loading time: 91.85462403297424 for : 2242509(2242509, 3)
+03/01/2024 11:41:00: converting into table...
+03/01/2024 11:41:01: table size: (314282, 58)
+03/01/2024 11:41:01: solving for item parameters...
+03/01/2024 11:48:05: parameter calculation time: 423.4890100955963 seconds.
+03/01/2024 11:48:05: skipping 8ea3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 11:48:05: skill #: 74 skill_id: phaofees
+03/01/2024 11:48:05: attempting to load skill from local data: phaofees
+03/01/2024 11:49:35: loading time: 90.07868218421936 for : 525528(525528, 3)
+03/01/2024 11:49:35: converting into table...
+03/01/2024 11:49:35: table size: (94778, 39)
+03/01/2024 11:49:35: solving for item parameters...
+03/01/2024 11:51:40: parameter calculation time: 125.3561487197876 seconds.
+03/01/2024 11:51:40: skipping phaofees either loading or estimating broke.
+03/01/2024 11:51:40: skill #: 75 skill_id: eefuxoob
+03/01/2024 11:51:40: attempting to load skill from local data: eefuxoob
+03/01/2024 11:53:10: loading time: 89.85089230537415 for : 436010(436010, 3)
+03/01/2024 11:53:10: converting into table...
+03/01/2024 11:53:11: table size: (99900, 38)
+03/01/2024 11:53:11: solving for item parameters...
+03/01/2024 11:55:22: parameter calculation time: 131.49320697784424 seconds.
+03/01/2024 11:55:22: skipping eefuxoob either loading or estimating broke.
+03/01/2024 11:55:22: skill #: 76 skill_id: 96a3bfaa479de311b77c005056801da1
+03/01/2024 11:55:22: attempting to load skill from local data: 96a3bfaa479de311b77c005056801da1
+03/01/2024 11:56:53: loading time: 91.30493307113647 for : 2061672(2061672, 3)
+03/01/2024 11:56:53: converting into table...
+03/01/2024 11:56:55: table size: (251616, 53)
+03/01/2024 11:56:55: solving for item parameters...
+03/01/2024 12:02:24: parameter calculation time: 329.29082465171814 seconds.
+03/01/2024 12:02:24: skipping 96a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 12:02:24: skill #: 77 skill_id: 97a3bfaa479de311b77c005056801da1
+03/01/2024 12:02:24: attempting to load skill from local data: 97a3bfaa479de311b77c005056801da1
+03/01/2024 12:03:55: loading time: 91.47998476028442 for : 1647491(1647491, 3)
+03/01/2024 12:03:55: converting into table...
+03/01/2024 12:03:56: table size: (232251, 42)
+03/01/2024 12:03:56: solving for item parameters...
+03/01/2024 12:08:18: parameter calculation time: 261.5664105415344 seconds.
+03/01/2024 12:08:18: skipping 97a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 12:08:18: skill #: 78 skill_id: iobieyah
+03/01/2024 12:08:18: attempting to load skill from local data: iobieyah
+03/01/2024 12:09:49: loading time: 91.54964900016785 for : 2195107(2195107, 3)
+03/01/2024 12:09:49: converting into table...
+03/01/2024 12:09:51: table size: (347968, 50)
+03/01/2024 12:09:51: solving for item parameters...
+03/01/2024 12:16:43: parameter calculation time: 412.14072728157043 seconds.
+03/01/2024 12:16:43: skipping iobieyah either loading or estimating broke.
+03/01/2024 12:16:43: skill #: 79 skill_id: a7a3bfaa479de311b77c005056801da1
+03/01/2024 12:16:43: attempting to load skill from local data: a7a3bfaa479de311b77c005056801da1
+03/01/2024 12:18:15: loading time: 91.91456985473633 for : 2420845(2420845, 3)
+03/01/2024 12:18:15: converting into table...
+03/01/2024 12:18:16: table size: (356650, 33)
+03/01/2024 12:18:16: solving for item parameters...
+03/01/2024 12:23:51: parameter calculation time: 334.85144877433777 seconds.
+03/01/2024 12:23:51: skipping a7a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 12:23:51: skill #: 80 skill_id: afa3bfaa479de311b77c005056801da1
+03/01/2024 12:23:51: attempting to load skill from local data: afa3bfaa479de311b77c005056801da1
+03/01/2024 12:25:22: loading time: 91.31660652160645 for : 1592766(1592766, 3)
+03/01/2024 12:25:22: converting into table...
+03/01/2024 12:25:23: table size: (210431, 47)
+03/01/2024 12:25:23: solving for item parameters...
+03/01/2024 12:29:57: parameter calculation time: 273.58660793304443 seconds.
+03/01/2024 12:29:57: skipping afa3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 12:29:57: skill #: 81 skill_id: b0a3bfaa479de311b77c005056801da1
+03/01/2024 12:29:57: attempting to load skill from local data: b0a3bfaa479de311b77c005056801da1
+03/01/2024 12:31:30: loading time: 93.03801369667053 for : 3158258(3158258, 3)
+03/01/2024 12:31:30: converting into table...
+03/01/2024 12:31:32: table size: (330459, 40)
+03/01/2024 12:31:32: solving for item parameters...
+03/01/2024 12:38:00: parameter calculation time: 388.56127429008484 seconds.
+03/01/2024 12:38:00: skipping b0a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 12:38:00: skill #: 82 skill_id: b2a3bfaa479de311b77c005056801da1
+03/01/2024 12:38:00: attempting to load skill from local data: b2a3bfaa479de311b77c005056801da1
+03/01/2024 12:39:31: loading time: 90.8016710281372 for : 1264650(1264650, 3)
+03/01/2024 12:39:31: converting into table...
+03/01/2024 12:39:32: table size: (189664, 40)
+03/01/2024 12:39:32: solving for item parameters...
+03/01/2024 12:42:54: parameter calculation time: 202.6148281097412 seconds.
+03/01/2024 12:42:54: skipping b2a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 12:42:54: skill #: 83 skill_id: cca3bfaa479de311b77c005056801da1
+03/01/2024 12:42:54: attempting to load skill from local data: cca3bfaa479de311b77c005056801da1
+03/01/2024 12:44:25: loading time: 90.56074261665344 for : 887379(887379, 3)
+03/01/2024 12:44:25: converting into table...
+03/01/2024 12:44:25: table size: (129867, 54)
+03/01/2024 12:44:25: solving for item parameters...
+03/01/2024 12:47:47: parameter calculation time: 201.41290092468262 seconds.
+03/01/2024 12:47:47: skipping cca3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 12:47:47: skill #: 84 skill_id: 9fa4bfaa479de311b77c005056801da1
+03/01/2024 12:47:47: attempting to load skill from local data: 9fa4bfaa479de311b77c005056801da1
+03/01/2024 12:49:18: loading time: 90.73765182495117 for : 1741591(1741591, 3)
+03/01/2024 12:49:18: converting into table...
+03/01/2024 12:49:18: table size: (176965, 55)
+03/01/2024 12:49:18: solving for item parameters...
+03/01/2024 12:53:43: parameter calculation time: 264.09667706489563 seconds.
+03/01/2024 12:53:43: skipping 9fa4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 12:53:43: skill #: 85 skill_id: a0a4bfaa479de311b77c005056801da1
+03/01/2024 12:53:43: attempting to load skill from local data: a0a4bfaa479de311b77c005056801da1
+03/01/2024 12:55:14: loading time: 91.00984215736389 for : 1734964(1734964, 3)
+03/01/2024 12:55:14: converting into table...
+03/01/2024 12:55:14: table size: (206295, 38)
+03/01/2024 12:55:14: solving for item parameters...
+03/01/2024 12:58:50: parameter calculation time: 215.15374207496643 seconds.
+03/01/2024 12:58:50: skipping a0a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 12:58:50: skill #: 86 skill_id: a9a4bfaa479de311b77c005056801da1
+03/01/2024 12:58:50: attempting to load skill from local data: a9a4bfaa479de311b77c005056801da1
+03/01/2024 13:00:20: loading time: 90.55083680152893 for : 1327654(1327654, 3)
+03/01/2024 13:00:20: converting into table...
+03/01/2024 13:00:21: table size: (168792, 46)
+03/01/2024 13:00:21: solving for item parameters...
+03/01/2024 13:04:06: parameter calculation time: 225.56287336349487 seconds.
+03/01/2024 13:04:06: skipping a9a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 13:04:06: skill #: 87 skill_id: 5dbbc51aa39fe3119503005056801da1
+03/01/2024 13:04:06: attempting to load skill from local data: 5dbbc51aa39fe3119503005056801da1
+03/01/2024 13:05:38: loading time: 91.42583584785461 for : 2127493(2127493, 3)
+03/01/2024 13:05:38: converting into table...
+03/01/2024 13:05:39: table size: (164904, 60)
+03/01/2024 13:05:39: solving for item parameters...
+03/01/2024 13:10:14: parameter calculation time: 274.7447507381439 seconds.
+03/01/2024 13:10:14: skipping 5dbbc51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 13:10:14: skill #: 88 skill_id: c0a4bfaa479de311b77c005056801da1
+03/01/2024 13:10:14: attempting to load skill from local data: c0a4bfaa479de311b77c005056801da1
+03/01/2024 13:11:44: loading time: 90.78594017028809 for : 1567773(1567773, 3)
+03/01/2024 13:11:44: converting into table...
+03/01/2024 13:11:45: table size: (129671, 67)
+03/01/2024 13:11:45: solving for item parameters...
+03/01/2024 13:16:14: parameter calculation time: 269.2135796546936 seconds.
+03/01/2024 13:16:14: skipping c0a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 13:16:14: skill #: 89 skill_id: cca4bfaa479de311b77c005056801da1
+03/01/2024 13:16:14: attempting to load skill from local data: cca4bfaa479de311b77c005056801da1
+03/01/2024 13:17:43: loading time: 88.68438935279846 for : 391556(391556, 3)
+03/01/2024 13:17:43: converting into table...
+03/01/2024 13:17:43: table size: (35527, 48)
+03/01/2024 13:17:43: solving for item parameters...
+03/01/2024 13:18:59: parameter calculation time: 76.20726037025452 seconds.
+03/01/2024 13:18:59: skipping cca4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 13:18:59: skill #: 90 skill_id: 941adf63de02414cb8e7bdf1c110f04f
+03/01/2024 13:18:59: attempting to load skill from local data: 941adf63de02414cb8e7bdf1c110f04f
+03/01/2024 13:20:29: loading time: 89.3772222995758 for : 612135(612135, 3)
+03/01/2024 13:20:29: converting into table...
+03/01/2024 13:20:29: table size: (102952, 32)
+03/01/2024 13:20:29: solving for item parameters...
+03/01/2024 13:22:29: parameter calculation time: 119.60331177711487 seconds.
+03/01/2024 13:22:29: skipping 941adf63de02414cb8e7bdf1c110f04f either loading or estimating broke.
+03/01/2024 13:22:29: skill #: 91 skill_id: f1a4bfaa479de311b77c005056801da1
+03/01/2024 13:22:29: attempting to load skill from local data: f1a4bfaa479de311b77c005056801da1
+03/01/2024 13:23:58: loading time: 89.21416592597961 for : 781967(781967, 3)
+03/01/2024 13:23:58: converting into table...
+03/01/2024 13:23:58: table size: (92397, 83)
+03/01/2024 13:23:58: solving for item parameters...
+03/01/2024 13:27:55: parameter calculation time: 236.22649955749512 seconds.
+03/01/2024 13:27:55: skipping f1a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 13:27:55: skill #: 92 skill_id: f4a4bfaa479de311b77c005056801da1
+03/01/2024 13:27:55: attempting to load skill from local data: f4a4bfaa479de311b77c005056801da1
+03/01/2024 13:29:24: loading time: 89.3100175857544 for : 279691(279691, 3)
+03/01/2024 13:29:24: converting into table...
+03/01/2024 13:29:24: table size: (44187, 38)
+03/01/2024 13:29:24: solving for item parameters...
+03/01/2024 13:30:41: parameter calculation time: 76.90381050109863 seconds.
+03/01/2024 13:30:41: skipping f4a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 13:30:41: skill #: 93 skill_id: 0ea5bfaa479de311b77c005056801da1
+03/01/2024 13:30:41: attempting to load skill from local data: 0ea5bfaa479de311b77c005056801da1
+03/01/2024 13:32:10: loading time: 89.35294461250305 for : 305000(305000, 3)
+03/01/2024 13:32:10: converting into table...
+03/01/2024 13:32:10: table size: (41629, 50)
+03/01/2024 13:32:10: solving for item parameters...
+03/01/2024 13:33:37: parameter calculation time: 86.7733383178711 seconds.
+03/01/2024 13:33:37: skipping 0ea5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 13:33:37: skill #: 94 skill_id: 15a5bfaa479de311b77c005056801da1
+03/01/2024 13:33:37: attempting to load skill from local data: 15a5bfaa479de311b77c005056801da1
+03/01/2024 13:35:06: loading time: 89.13817954063416 for : 385778(385778, 3)
+03/01/2024 13:35:06: converting into table...
+03/01/2024 13:35:07: table size: (51935, 60)
+03/01/2024 13:35:07: solving for item parameters...
+03/01/2024 13:36:57: parameter calculation time: 110.13614082336426 seconds.
+03/01/2024 13:36:57: skipping 15a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 13:36:57: skill #: 95 skill_id: ahjeimab
+03/01/2024 13:36:57: attempting to load skill from local data: ahjeimab
+03/01/2024 13:38:25: loading time: 88.80175304412842 for : 241957(241957, 3)
+03/01/2024 13:38:25: converting into table...
+03/01/2024 13:38:26: table size: (73563, 57)
+03/01/2024 13:38:26: solving for item parameters...
+03/01/2024 13:40:31: parameter calculation time: 124.93062567710876 seconds.
+03/01/2024 13:40:31: skipping ahjeimab either loading or estimating broke.
+03/01/2024 13:40:31: skill #: 96 skill_id: eithaipo
+03/01/2024 13:40:31: attempting to load skill from local data: eithaipo
+03/01/2024 13:41:59: loading time: 88.52110028266907 for : 445402(445402, 3)
+03/01/2024 13:41:59: converting into table...
+03/01/2024 13:41:59: table size: (99435, 56)
+03/01/2024 13:41:59: solving for item parameters...
+03/01/2024 13:44:50: parameter calculation time: 170.68489742279053 seconds.
+03/01/2024 13:44:50: skipping eithaipo either loading or estimating broke.
+03/01/2024 13:44:50: skill #: 97 skill_id: aea3bfaa479de311b77c005056801da1
+03/01/2024 13:44:50: attempting to load skill from local data: aea3bfaa479de311b77c005056801da1
+03/01/2024 13:46:21: loading time: 90.52319931983948 for : 2099960(2099960, 3)
+03/01/2024 13:46:21: converting into table...
+03/01/2024 13:46:22: table size: (283724, 44)
+03/01/2024 13:46:22: solving for item parameters...
+03/01/2024 13:51:58: parameter calculation time: 336.2623882293701 seconds.
+03/01/2024 13:51:58: skipping aea3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 13:51:58: skill #: 98 skill_id: 3abbc51aa39fe3119503005056801da1
+03/01/2024 13:51:58: attempting to load skill from local data: 3abbc51aa39fe3119503005056801da1
+03/01/2024 13:53:28: loading time: 90.22617530822754 for : 1650495(1650495, 3)
+03/01/2024 13:53:28: converting into table...
+03/01/2024 13:53:29: table size: (154025, 41)
+03/01/2024 13:53:29: solving for item parameters...
+03/01/2024 13:56:43: parameter calculation time: 193.79497694969177 seconds.
+03/01/2024 13:56:43: skipping 3abbc51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 13:56:43: skill #: 99 skill_id: 99a4bfaa479de311b77c005056801da1
+03/01/2024 13:56:43: attempting to load skill from local data: 99a4bfaa479de311b77c005056801da1
+03/01/2024 13:58:17: loading time: 93.8997790813446 for : 5089642(5089642, 3)
+03/01/2024 13:58:17: converting into table...
+03/01/2024 13:58:20: table size: (470952, 42)
+03/01/2024 13:58:20: solving for item parameters...
+03/01/2024 14:08:09: parameter calculation time: 589.6805186271667 seconds.
+03/01/2024 14:08:09: skipping 99a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 14:08:09: skill #: 100 skill_id: 8ee6beadffbe4070bc30271eeba72519
+03/01/2024 14:08:09: attempting to load skill from local data: 8ee6beadffbe4070bc30271eeba72519
+03/01/2024 14:09:39: loading time: 89.91916823387146 for : 1036726(1036726, 3)
+03/01/2024 14:09:39: converting into table...
+03/01/2024 14:09:40: table size: (156441, 51)
+03/01/2024 14:09:40: solving for item parameters...
+03/01/2024 14:13:06: parameter calculation time: 205.89059686660767 seconds.
+03/01/2024 14:13:06: skipping 8ee6beadffbe4070bc30271eeba72519 either loading or estimating broke.
+03/01/2024 14:13:06: skill #: 101 skill_id: c4a4bfaa479de311b77c005056801da1
+03/01/2024 14:13:06: attempting to load skill from local data: c4a4bfaa479de311b77c005056801da1
+03/01/2024 14:14:34: loading time: 88.33864235877991 for : 349537(349537, 3)
+03/01/2024 14:14:34: converting into table...
+03/01/2024 14:14:34: table size: (54834, 39)
+03/01/2024 14:14:34: solving for item parameters...
+03/01/2024 14:16:04: parameter calculation time: 89.45332622528076 seconds.
+03/01/2024 14:16:04: skipping c4a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 14:16:04: skill #: 102 skill_id: b975030e84c74d96a51d4df1fad93ff5
+03/01/2024 14:16:04: attempting to load skill from local data: b975030e84c74d96a51d4df1fad93ff5
+03/01/2024 14:17:32: loading time: 88.43233966827393 for : 357656(357656, 3)
+03/01/2024 14:17:32: converting into table...
+03/01/2024 14:17:32: table size: (76638, 89)
+03/01/2024 14:17:32: solving for item parameters...
+03/01/2024 14:20:56: parameter calculation time: 203.37374591827393 seconds.
+03/01/2024 14:20:56: skipping b975030e84c74d96a51d4df1fad93ff5 either loading or estimating broke.
+03/01/2024 14:20:56: skill #: 103 skill_id: e2a4bfaa479de311b77c005056801da1
+03/01/2024 14:20:56: attempting to load skill from local data: e2a4bfaa479de311b77c005056801da1
+03/01/2024 14:22:25: loading time: 88.7166600227356 for : 432185(432185, 3)
+03/01/2024 14:22:25: converting into table...
+03/01/2024 14:22:25: table size: (83745, 48)
+03/01/2024 14:22:25: solving for item parameters...
+03/01/2024 14:24:31: parameter calculation time: 126.54941987991333 seconds.
+03/01/2024 14:24:31: skipping e2a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 14:24:31: skill #: 104 skill_id: 68a5bfaa479de311b77c005056801da1
+03/01/2024 14:24:31: attempting to load skill from local data: 68a5bfaa479de311b77c005056801da1
+03/01/2024 14:26:00: loading time: 88.1629991531372 for : 316798(316798, 3)
+03/01/2024 14:26:00: converting into table...
+03/01/2024 14:26:00: table size: (31246, 34)
+03/01/2024 14:26:00: solving for item parameters...
+03/01/2024 14:27:02: parameter calculation time: 62.27079701423645 seconds.
+03/01/2024 14:27:02: skipping 68a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 14:27:02: skill #: 105 skill_id: 70a5bfaa479de311b77c005056801da1
+03/01/2024 14:27:02: attempting to load skill from local data: 70a5bfaa479de311b77c005056801da1
+03/01/2024 14:28:30: loading time: 88.15947723388672 for : 85322(85322, 3)
+03/01/2024 14:28:30: converting into table...
+03/01/2024 14:28:30: table size: (16302, 47)
+03/01/2024 14:28:30: solving for item parameters...
+03/01/2024 14:29:30: parameter calculation time: 60.24657678604126 seconds.
+03/01/2024 14:29:30: skipping 70a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 14:29:30: skill #: 106 skill_id: 71a5bfaa479de311b77c005056801da1
+03/01/2024 14:29:30: attempting to load skill from local data: 71a5bfaa479de311b77c005056801da1
+03/01/2024 14:30:59: loading time: 88.25313758850098 for : 172300(172300, 3)
+03/01/2024 14:30:59: converting into table...
+03/01/2024 14:30:59: table size: (51420, 27)
+03/01/2024 14:30:59: solving for item parameters...
+03/01/2024 14:32:06: parameter calculation time: 66.93248128890991 seconds.
+03/01/2024 14:32:06: skipping 71a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 14:32:06: skill #: 107 skill_id: 7aa5bfaa479de311b77c005056801da1
+03/01/2024 14:32:06: attempting to load skill from local data: 7aa5bfaa479de311b77c005056801da1
+03/01/2024 14:33:34: loading time: 87.86494874954224 for : 152252(152252, 3)
+03/01/2024 14:33:34: converting into table...
+03/01/2024 14:33:34: table size: (20496, 57)
+03/01/2024 14:33:34: solving for item parameters...
+03/01/2024 14:34:43: parameter calculation time: 69.80957388877869 seconds.
+03/01/2024 14:34:43: skipping 7aa5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 14:34:43: skill #: 108 skill_id: faigeiph
+03/01/2024 14:34:43: attempting to load skill from local data: faigeiph
+03/01/2024 14:36:11: loading time: 87.65442681312561 for : 4057(4057, 3)
+03/01/2024 14:36:11: converting into table...
+03/01/2024 14:36:11: table size: (365, 22)
+03/01/2024 14:36:11: solving for item parameters...
+03/01/2024 14:36:30: parameter calculation time: 18.545079946517944 seconds.
+03/01/2024 14:36:30: skipping faigeiph either loading or estimating broke.
+03/01/2024 14:36:30: skill #: 109 skill_id: daengohh
+03/01/2024 14:36:30: attempting to load skill from local data: daengohh
+03/01/2024 14:37:58: loading time: 88.09336137771606 for : 26(26, 3)
+03/01/2024 14:37:58: converting into table...
+03/01/2024 14:37:58: table size: (13, 11)
+03/01/2024 14:37:58: solving for item parameters...
+03/01/2024 14:38:04: parameter calculation time: 6.662095785140991 seconds.
+03/01/2024 14:38:04: skipping daengohh either loading or estimating broke.
+03/01/2024 14:38:04: skill #: 110 skill_id: mebaehoh
+03/01/2024 14:38:04: attempting to load skill from local data: mebaehoh
+03/01/2024 14:39:32: loading time: 87.58899283409119 for : 20(20, 3)
+03/01/2024 14:39:32: converting into table...
+03/01/2024 14:39:32: table size: (12, 12)
+03/01/2024 14:39:32: solving for item parameters...
+03/01/2024 14:39:39: parameter calculation time: 6.769733667373657 seconds.
+03/01/2024 14:39:39: skipping mebaehoh either loading or estimating broke.
+03/01/2024 14:39:39: skill #: 111 skill_id: aerephux
+03/01/2024 14:39:39: attempting to load skill from local data: aerephux
+03/01/2024 14:41:07: loading time: 87.84611511230469 for : 172(172, 3)
+03/01/2024 14:41:07: converting into table...
+03/01/2024 14:41:07: table size: (36, 12)
+03/01/2024 14:41:07: solving for item parameters...
+03/01/2024 14:41:13: parameter calculation time: 6.786749839782715 seconds.
+03/01/2024 14:41:13: skipping aerephux either loading or estimating broke.
+03/01/2024 14:41:13: skill #: 112 skill_id: oicaexee
+03/01/2024 14:41:13: attempting to load skill from local data: oicaexee
+03/01/2024 14:42:41: loading time: 87.70577263832092 for : 211(211, 3)
+03/01/2024 14:42:41: converting into table...
+03/01/2024 14:42:41: table size: (48, 11)
+03/01/2024 14:42:41: solving for item parameters...
+03/01/2024 14:42:48: parameter calculation time: 6.82346248626709 seconds.
+03/01/2024 14:42:48: skipping oicaexee either loading or estimating broke.
+03/01/2024 14:42:48: skill #: 113 skill_id: eefuyaej
+03/01/2024 14:42:48: attempting to load skill from local data: eefuyaej
+03/01/2024 14:44:16: loading time: 87.96696448326111 for : 1(1, 3)
+03/01/2024 14:44:16: converting into table...
+03/01/2024 14:44:16: table size: (1, 1)
+03/01/2024 14:44:16: solving for item parameters...
+03/01/2024 14:44:20: parameter calculation time: 3.7688262462615967 seconds.
+03/01/2024 14:44:20: skipping eefuyaej either loading or estimating broke.
+03/01/2024 14:44:20: skill #: 114 skill_id: aexipiem
+03/01/2024 14:44:20: attempting to load skill from local data: aexipiem
+03/01/2024 14:45:47: loading time: 87.37479138374329 for : 559(559, 3)
+03/01/2024 14:45:47: converting into table...
+03/01/2024 14:45:47: table size: (74, 16)
+03/01/2024 14:45:47: solving for item parameters...
+03/01/2024 14:45:56: parameter calculation time: 9.032901287078857 seconds.
+03/01/2024 14:45:56: skipping aexipiem either loading or estimating broke.
+03/01/2024 14:45:56: skill #: 115 skill_id: wahneegh
+03/01/2024 14:45:56: attempting to load skill from local data: wahneegh
+03/01/2024 14:47:24: loading time: 87.93731760978699 for : 505(505, 3)
+03/01/2024 14:47:24: converting into table...
+03/01/2024 14:47:24: table size: (67, 16)
+03/01/2024 14:47:24: solving for item parameters...
+03/01/2024 14:47:31: parameter calculation time: 7.409326791763306 seconds.
+03/01/2024 14:47:31: skipping wahneegh either loading or estimating broke.
+03/01/2024 14:47:31: skill #: 116 skill_id: vaungooz
+03/01/2024 14:47:31: attempting to load skill from local data: vaungooz
+03/01/2024 14:48:59: loading time: 87.79587030410767 for : 6(6, 3)
+03/01/2024 14:48:59: converting into table...
+03/01/2024 14:48:59: table size: (1, 6)
+03/01/2024 14:48:59: solving for item parameters...
+03/01/2024 14:49:03: parameter calculation time: 3.9605562686920166 seconds.
+03/01/2024 14:49:03: skipping vaungooz either loading or estimating broke.
+03/01/2024 14:49:03: skill #: 117 skill_id: aejohchi
+03/01/2024 14:49:03: attempting to load skill from local data: aejohchi
+03/01/2024 14:50:31: loading time: 87.87894988059998 for : 7(7, 3)
+03/01/2024 14:50:31: converting into table...
+03/01/2024 14:50:31: table size: (5, 5)
+03/01/2024 14:50:31: solving for item parameters...
+03/01/2024 14:50:35: parameter calculation time: 3.9235105514526367 seconds.
+03/01/2024 14:50:35: skipping aejohchi either loading or estimating broke.
+03/01/2024 14:50:35: skill #: 118 skill_id: tunaexee
+03/01/2024 14:50:35: attempting to load skill from local data: tunaexee
+03/01/2024 14:52:03: loading time: 88.08391857147217 for : 6082(6082, 3)
+03/01/2024 14:52:03: converting into table...
+03/01/2024 14:52:03: table size: (975, 41)
+03/01/2024 14:52:03: solving for item parameters...
+03/01/2024 14:52:31: parameter calculation time: 27.82560920715332 seconds.
+03/01/2024 14:52:31: skipping tunaexee either loading or estimating broke.
+03/01/2024 14:52:31: skill #: 119 skill_id: ebithiex
+03/01/2024 14:52:31: attempting to load skill from local data: ebithiex
+03/01/2024 14:53:59: loading time: 88.2321264743805 for : 146(146, 3)
+03/01/2024 14:53:59: converting into table...
+03/01/2024 14:53:59: table size: (30, 16)
+03/01/2024 14:53:59: solving for item parameters...
+03/01/2024 14:54:06: parameter calculation time: 7.108036279678345 seconds.
+03/01/2024 14:54:06: skipping ebithiex either loading or estimating broke.
+03/01/2024 14:54:06: skill #: 120 skill_id: yaejeevi
+03/01/2024 14:54:06: attempting to load skill from local data: yaejeevi
+03/01/2024 14:55:34: loading time: 88.13664770126343 for : 81(81, 3)
+03/01/2024 14:55:34: converting into table...
+03/01/2024 14:55:34: table size: (40, 21)
+03/01/2024 14:55:34: solving for item parameters...
+03/01/2024 14:55:43: parameter calculation time: 8.16887378692627 seconds.
+03/01/2024 14:55:43: skipping yaejeevi either loading or estimating broke.
+03/01/2024 14:55:43: skill #: 121 skill_id: oopheeto
+03/01/2024 14:55:43: attempting to load skill from local data: oopheeto
+03/01/2024 14:57:10: loading time: 87.73802518844604 for : 14(14, 3)
+03/01/2024 14:57:10: converting into table...
+03/01/2024 14:57:10: table size: (13, 11)
+03/01/2024 14:57:10: solving for item parameters...
+03/01/2024 14:57:17: parameter calculation time: 6.72017765045166 seconds.
+03/01/2024 14:57:17: skipping oopheeto either loading or estimating broke.
+03/01/2024 14:57:17: skill #: 122 skill_id: cfe39a065f524b109a54f3f5a3bdc6c1
+03/01/2024 14:57:17: attempting to load skill from local data: cfe39a065f524b109a54f3f5a3bdc6c1
+03/01/2024 14:58:46: loading time: 89.04392099380493 for : 729876(729876, 3)
+03/01/2024 14:58:46: converting into table...
+03/01/2024 14:58:46: table size: (110972, 40)
+03/01/2024 14:58:46: solving for item parameters...
+03/01/2024 15:01:19: parameter calculation time: 153.0245316028595 seconds.
+03/01/2024 15:01:19: skipping cfe39a065f524b109a54f3f5a3bdc6c1 either loading or estimating broke.
+03/01/2024 15:01:19: skill #: 123 skill_id: 90e94931b98b47799950dd93c9a8dc28
+03/01/2024 15:01:19: attempting to load skill from local data: 90e94931b98b47799950dd93c9a8dc28
+03/01/2024 15:02:49: loading time: 89.15752744674683 for : 793438(793438, 3)
+03/01/2024 15:02:49: converting into table...
+03/01/2024 15:02:49: table size: (139891, 33)
+03/01/2024 15:02:49: solving for item parameters...
+03/01/2024 15:05:17: parameter calculation time: 148.26654839515686 seconds.
+03/01/2024 15:05:17: skipping 90e94931b98b47799950dd93c9a8dc28 either loading or estimating broke.
+03/01/2024 15:05:17: skill #: 124 skill_id: f1a887712dca48339f687af959e9b16b
+03/01/2024 15:05:17: attempting to load skill from local data: f1a887712dca48339f687af959e9b16b
+03/01/2024 15:06:46: loading time: 89.08340001106262 for : 494588(494588, 3)
+03/01/2024 15:06:46: converting into table...
+03/01/2024 15:06:47: table size: (82806, 40)
+03/01/2024 15:06:47: solving for item parameters...
+03/01/2024 15:08:44: parameter calculation time: 117.08063077926636 seconds.
+03/01/2024 15:08:44: skipping f1a887712dca48339f687af959e9b16b either loading or estimating broke.
+03/01/2024 15:08:44: skill #: 125 skill_id: 91a3bfaa479de311b77c005056801da1
+03/01/2024 15:08:44: attempting to load skill from local data: 91a3bfaa479de311b77c005056801da1
+03/01/2024 15:10:14: loading time: 90.07998180389404 for : 2126926(2126926, 3)
+03/01/2024 15:10:14: converting into table...
+03/01/2024 15:10:15: table size: (226215, 44)
+03/01/2024 15:10:15: solving for item parameters...
+03/01/2024 15:15:03: parameter calculation time: 287.6567997932434 seconds.
+03/01/2024 15:15:03: skipping 91a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 15:15:03: skill #: 126 skill_id: 71acbbfabd284348b0ac319aff6e0578
+03/01/2024 15:15:03: attempting to load skill from local data: 71acbbfabd284348b0ac319aff6e0578
+03/01/2024 15:16:33: loading time: 90.06599974632263 for : 1229139(1229139, 3)
+03/01/2024 15:16:33: converting into table...
+03/01/2024 15:16:33: table size: (164805, 40)
+03/01/2024 15:16:33: solving for item parameters...
+03/01/2024 15:19:44: parameter calculation time: 190.34884548187256 seconds.
+03/01/2024 15:19:44: skipping 71acbbfabd284348b0ac319aff6e0578 either loading or estimating broke.
+03/01/2024 15:19:44: skill #: 127 skill_id: 8ca3bfaa479de311b77c005056801da1
+03/01/2024 15:19:44: attempting to load skill from local data: 8ca3bfaa479de311b77c005056801da1
+03/01/2024 15:21:14: loading time: 90.60003066062927 for : 2182744(2182744, 3)
+03/01/2024 15:21:14: converting into table...
+03/01/2024 15:21:15: table size: (279045, 41)
+03/01/2024 15:21:15: solving for item parameters...
+03/01/2024 15:26:26: parameter calculation time: 310.55643939971924 seconds.
+03/01/2024 15:26:26: skipping 8ca3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 15:26:26: skill #: 128 skill_id: 8da3bfaa479de311b77c005056801da1
+03/01/2024 15:26:26: attempting to load skill from local data: 8da3bfaa479de311b77c005056801da1
+03/01/2024 15:27:56: loading time: 89.59109354019165 for : 1220963(1220963, 3)
+03/01/2024 15:27:56: converting into table...
+03/01/2024 15:27:56: table size: (199303, 30)
+03/01/2024 15:27:56: solving for item parameters...
+03/01/2024 15:31:12: parameter calculation time: 195.9157977104187 seconds.
+03/01/2024 15:31:12: skipping 8da3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 15:31:12: skill #: 129 skill_id: f7a3bfaa479de311b77c005056801da1
+03/01/2024 15:31:12: attempting to load skill from local data: f7a3bfaa479de311b77c005056801da1
+03/01/2024 15:32:42: loading time: 89.56238412857056 for : 1228504(1228504, 3)
+03/01/2024 15:32:42: converting into table...
+03/01/2024 15:32:42: table size: (139424, 58)
+03/01/2024 15:32:42: solving for item parameters...
+03/01/2024 15:36:07: parameter calculation time: 205.01799392700195 seconds.
+03/01/2024 15:36:07: skipping f7a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 15:36:07: skill #: 130 skill_id: 3da3bfaa479de311b77c005056801da1
+03/01/2024 15:36:07: attempting to load skill from local data: 3da3bfaa479de311b77c005056801da1
+03/01/2024 15:37:38: loading time: 90.38966464996338 for : 1894733(1894733, 3)
+03/01/2024 15:37:38: converting into table...
+03/01/2024 15:37:38: table size: (202477, 37)
+03/01/2024 15:37:38: solving for item parameters...
+03/01/2024 15:41:44: parameter calculation time: 245.71919918060303 seconds.
+03/01/2024 15:41:44: skipping 3da3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 15:41:44: skill #: 131 skill_id: 86a5bfaa479de311b77c005056801da1
+03/01/2024 15:41:44: attempting to load skill from local data: 86a5bfaa479de311b77c005056801da1
+03/01/2024 15:43:13: loading time: 88.74003958702087 for : 53670(53670, 3)
+03/01/2024 15:43:13: converting into table...
+03/01/2024 15:43:13: table size: (10977, 34)
+03/01/2024 15:43:13: solving for item parameters...
+03/01/2024 15:44:02: parameter calculation time: 49.363378286361694 seconds.
+03/01/2024 15:44:02: skipping 86a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 15:44:02: skill #: 132 skill_id: 544cfbd80c6943438a540506341865e8
+03/01/2024 15:44:02: attempting to load skill from local data: 544cfbd80c6943438a540506341865e8
+03/01/2024 15:45:30: loading time: 87.84498262405396 for : 3249(3249, 3)
+03/01/2024 15:45:30: converting into table...
+03/01/2024 15:45:30: table size: (556, 18)
+03/01/2024 15:45:30: solving for item parameters...
+03/01/2024 15:45:45: parameter calculation time: 14.49273681640625 seconds.
+03/01/2024 15:45:45: skipping 544cfbd80c6943438a540506341865e8 either loading or estimating broke.
+03/01/2024 15:45:45: skill #: 133 skill_id: cf68522616a0423dbf4720cc3fa0871d
+03/01/2024 15:45:45: attempting to load skill from local data: cf68522616a0423dbf4720cc3fa0871d
+03/01/2024 15:47:13: loading time: 88.2046468257904 for : 172617(172617, 3)
+03/01/2024 15:47:13: converting into table...
+03/01/2024 15:47:13: table size: (24810, 18)
+03/01/2024 15:47:13: solving for item parameters...
+03/01/2024 15:47:59: parameter calculation time: 46.36884641647339 seconds.
+03/01/2024 15:47:59: skipping cf68522616a0423dbf4720cc3fa0871d either loading or estimating broke.
+03/01/2024 15:47:59: skill #: 134 skill_id: 2fa4bfaa479de311b77c005056801da1
+03/01/2024 15:47:59: attempting to load skill from local data: 2fa4bfaa479de311b77c005056801da1
+03/01/2024 15:49:28: loading time: 88.46047759056091 for : 314758(314758, 3)
+03/01/2024 15:49:28: converting into table...
+03/01/2024 15:49:28: table size: (52651, 45)
+03/01/2024 15:49:28: solving for item parameters...
+03/01/2024 15:51:00: parameter calculation time: 91.6168839931488 seconds.
+03/01/2024 15:51:00: skipping 2fa4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 15:51:00: skill #: 135 skill_id: 47a4bfaa479de311b77c005056801da1
+03/01/2024 15:51:00: attempting to load skill from local data: 47a4bfaa479de311b77c005056801da1
+03/01/2024 15:52:28: loading time: 88.52230215072632 for : 127002(127002, 3)
+03/01/2024 15:52:28: converting into table...
+03/01/2024 15:52:28: table size: (22746, 26)
+03/01/2024 15:52:28: solving for item parameters...
+03/01/2024 15:53:20: parameter calculation time: 51.87967276573181 seconds.
+03/01/2024 15:53:20: skipping 47a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 15:53:20: skill #: 136 skill_id: eemiesae
+03/01/2024 15:53:20: attempting to load skill from local data: eemiesae
+03/01/2024 15:54:48: loading time: 87.91487455368042 for : 203(203, 3)
+03/01/2024 15:54:48: converting into table...
+03/01/2024 15:54:48: table size: (41, 15)
+03/01/2024 15:54:48: solving for item parameters...
+03/01/2024 15:54:55: parameter calculation time: 6.963308334350586 seconds.
+03/01/2024 15:54:55: skipping eemiesae either loading or estimating broke.
+03/01/2024 15:54:55: skill #: 137 skill_id: equaushe
+03/01/2024 15:54:55: attempting to load skill from local data: equaushe
+03/01/2024 15:56:23: loading time: 87.94032573699951 for : 1187(1187, 3)
+03/01/2024 15:56:23: converting into table...
+03/01/2024 15:56:23: table size: (272, 24)
+03/01/2024 15:56:23: solving for item parameters...
+03/01/2024 15:56:49: parameter calculation time: 26.207831621170044 seconds.
+03/01/2024 15:56:49: skipping equaushe either loading or estimating broke.
+03/01/2024 15:56:49: skill #: 138 skill_id: 84bec51aa39fe3119503005056801da1
+03/01/2024 15:56:49: attempting to load skill from local data: 84bec51aa39fe3119503005056801da1
+03/01/2024 15:58:17: loading time: 88.12258267402649 for : 7116(7116, 3)
+03/01/2024 15:58:17: converting into table...
+03/01/2024 15:58:17: table size: (1365, 18)
+03/01/2024 15:58:17: solving for item parameters...
+03/01/2024 15:58:31: parameter calculation time: 13.607863903045654 seconds.
+03/01/2024 15:58:31: skipping 84bec51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 15:58:31: skill #: 139 skill_id: 97bcc51aa39fe3119503005056801da1
+03/01/2024 15:58:31: attempting to load skill from local data: 97bcc51aa39fe3119503005056801da1
+03/01/2024 15:59:59: loading time: 88.15771746635437 for : 170787(170787, 3)
+03/01/2024 15:59:59: converting into table...
+03/01/2024 15:59:59: table size: (17954, 18)
+03/01/2024 15:59:59: solving for item parameters...
+03/01/2024 16:00:35: parameter calculation time: 35.9491765499115 seconds.
+03/01/2024 16:00:35: skipping 97bcc51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 16:00:35: skill #: 140 skill_id: fcbdc51aa39fe3119503005056801da1
+03/01/2024 16:00:35: attempting to load skill from local data: fcbdc51aa39fe3119503005056801da1
+03/01/2024 16:02:04: loading time: 88.9514696598053 for : 277602(277602, 3)
+03/01/2024 16:02:04: converting into table...
+03/01/2024 16:02:04: table size: (33563, 18)
+03/01/2024 16:02:04: solving for item parameters...
+03/01/2024 16:02:58: parameter calculation time: 54.34622812271118 seconds.
+03/01/2024 16:02:58: skipping fcbdc51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 16:02:58: skill #: 141 skill_id: 74bac51aa39fe3119503005056801da1
+03/01/2024 16:02:58: attempting to load skill from local data: 74bac51aa39fe3119503005056801da1
+03/01/2024 16:04:27: loading time: 88.63360929489136 for : 193128(193128, 3)
+03/01/2024 16:04:27: converting into table...
+03/01/2024 16:04:27: table size: (37216, 21)
+03/01/2024 16:04:27: solving for item parameters...
+03/01/2024 16:05:25: parameter calculation time: 57.8820013999939 seconds.
+03/01/2024 16:05:25: skipping 74bac51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 16:05:25: skill #: 142 skill_id: 1a7f63d82400e4119e54005056801da1
+03/01/2024 16:05:25: attempting to load skill from local data: 1a7f63d82400e4119e54005056801da1
+03/01/2024 16:06:53: loading time: 88.31774520874023 for : 57371(57371, 3)
+03/01/2024 16:06:53: converting into table...
+03/01/2024 16:06:53: table size: (7706, 25)
+03/01/2024 16:06:53: solving for item parameters...
+03/01/2024 16:07:36: parameter calculation time: 43.14870882034302 seconds.
+03/01/2024 16:07:36: skipping 1a7f63d82400e4119e54005056801da1 either loading or estimating broke.
+03/01/2024 16:07:36: skill #: 143 skill_id: 2f911ddcbda14930a6281f240e7023e4
+03/01/2024 16:07:36: attempting to load skill from local data: 2f911ddcbda14930a6281f240e7023e4
+03/01/2024 16:09:05: loading time: 88.22079277038574 for : 73720(73720, 3)
+03/01/2024 16:09:05: converting into table...
+03/01/2024 16:09:05: table size: (11815, 49)
+03/01/2024 16:09:05: solving for item parameters...
+03/01/2024 16:10:02: parameter calculation time: 57.63919496536255 seconds.
+03/01/2024 16:10:02: skipping 2f911ddcbda14930a6281f240e7023e4 either loading or estimating broke.
+03/01/2024 16:10:02: skill #: 144 skill_id: 791a1746cb5248ed9e0dccc680d48f89
+03/01/2024 16:10:02: attempting to load skill from local data: 791a1746cb5248ed9e0dccc680d48f89
+03/01/2024 16:11:31: loading time: 88.67186546325684 for : 275544(275544, 3)
+03/01/2024 16:11:31: converting into table...
+03/01/2024 16:11:31: table size: (50211, 18)
+03/01/2024 16:11:31: solving for item parameters...
+03/01/2024 16:12:30: parameter calculation time: 58.61213159561157 seconds.
+03/01/2024 16:12:30: skipping 791a1746cb5248ed9e0dccc680d48f89 either loading or estimating broke.
+03/01/2024 16:12:30: skill #: 145 skill_id: 39bdc51aa39fe3119503005056801da1
+03/01/2024 16:12:30: attempting to load skill from local data: 39bdc51aa39fe3119503005056801da1
+03/01/2024 16:13:58: loading time: 88.41869616508484 for : 151002(151002, 3)
+03/01/2024 16:13:58: converting into table...
+03/01/2024 16:13:58: table size: (3374, 18)
+03/01/2024 16:13:58: solving for item parameters...
+03/01/2024 16:14:15: parameter calculation time: 16.357693195343018 seconds.
+03/01/2024 16:14:15: skipping 39bdc51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 16:14:15: skill #: 146 skill_id: 4eec1dee7723460da5e529766a7fceff
+03/01/2024 16:14:15: attempting to load skill from local data: 4eec1dee7723460da5e529766a7fceff
+03/01/2024 16:15:43: loading time: 88.42914533615112 for : 57068(57068, 3)
+03/01/2024 16:15:43: converting into table...
+03/01/2024 16:15:43: table size: (12197, 18)
+03/01/2024 16:15:43: solving for item parameters...
+03/01/2024 16:16:24: parameter calculation time: 41.464070558547974 seconds.
+03/01/2024 16:16:24: skipping 4eec1dee7723460da5e529766a7fceff either loading or estimating broke.
+03/01/2024 16:16:24: skill #: 147 skill_id: 324bbd6260604107bab6c99a184577fb
+03/01/2024 16:16:24: attempting to load skill from local data: 324bbd6260604107bab6c99a184577fb
+03/01/2024 16:17:53: loading time: 88.13845205307007 for : 20785(20785, 3)
+03/01/2024 16:17:53: converting into table...
+03/01/2024 16:17:53: table size: (5199, 17)
+03/01/2024 16:17:53: solving for item parameters...
+03/01/2024 16:18:10: parameter calculation time: 17.907248973846436 seconds.
+03/01/2024 16:18:10: skipping 324bbd6260604107bab6c99a184577fb either loading or estimating broke.
+03/01/2024 16:18:10: skill #: 148 skill_id: aocheoxa
+03/01/2024 16:18:10: attempting to load skill from local data: aocheoxa
+03/01/2024 16:19:39: loading time: 88.81235265731812 for : 581184(581184, 3)
+03/01/2024 16:19:39: converting into table...
+03/01/2024 16:19:40: table size: (64492, 43)
+03/01/2024 16:19:40: solving for item parameters...
+03/01/2024 16:21:24: parameter calculation time: 103.95918607711792 seconds.
+03/01/2024 16:21:24: skipping aocheoxa either loading or estimating broke.
+03/01/2024 16:21:24: skill #: 149 skill_id: aoyiejoo
+03/01/2024 16:21:24: attempting to load skill from local data: aoyiejoo
+03/01/2024 16:22:53: loading time: 89.08169531822205 for : 972580(972580, 3)
+03/01/2024 16:22:53: converting into table...
+03/01/2024 16:22:53: table size: (130429, 50)
+03/01/2024 16:22:53: solving for item parameters...
+03/01/2024 16:26:15: parameter calculation time: 201.64006519317627 seconds.
+03/01/2024 16:26:15: skipping aoyiejoo either loading or estimating broke.
+03/01/2024 16:26:15: skill #: 150 skill_id: f4a2bfaa479de311b77c005056801da1
+03/01/2024 16:26:15: attempting to load skill from local data: f4a2bfaa479de311b77c005056801da1
+03/01/2024 16:27:45: loading time: 90.21694898605347 for : 2040938(2040938, 3)
+03/01/2024 16:27:45: converting into table...
+03/01/2024 16:27:46: table size: (276494, 38)
+03/01/2024 16:27:46: solving for item parameters...
+03/01/2024 16:32:50: parameter calculation time: 304.38297486305237 seconds.
+03/01/2024 16:32:50: skipping f4a2bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 16:32:50: skill #: 151 skill_id: thohxith
+03/01/2024 16:32:50: attempting to load skill from local data: thohxith
+03/01/2024 16:34:20: loading time: 89.80098414421082 for : 1086099(1086099, 3)
+03/01/2024 16:34:20: converting into table...
+03/01/2024 16:34:21: table size: (173786, 67)
+03/01/2024 16:34:21: solving for item parameters...
+03/01/2024 16:38:44: parameter calculation time: 263.19350242614746 seconds.
+03/01/2024 16:38:44: skipping thohxith either loading or estimating broke.
+03/01/2024 16:38:44: skill #: 152 skill_id: rohvaich
+03/01/2024 16:38:44: attempting to load skill from local data: rohvaich
+03/01/2024 16:40:13: loading time: 89.24298810958862 for : 1097101(1097101, 3)
+03/01/2024 16:40:13: converting into table...
+03/01/2024 16:40:14: table size: (348106, 22)
+03/01/2024 16:40:14: solving for item parameters...
+03/01/2024 16:43:03: parameter calculation time: 169.20080590248108 seconds.
+03/01/2024 16:43:03: skipping rohvaich either loading or estimating broke.
+03/01/2024 16:43:03: skill #: 153 skill_id: woohieho
+03/01/2024 16:43:03: attempting to load skill from local data: woohieho
+03/01/2024 16:44:32: loading time: 88.85578751564026 for : 110895(110895, 3)
+03/01/2024 16:44:32: converting into table...
+03/01/2024 16:44:32: table size: (43177, 38)
+03/01/2024 16:44:32: solving for item parameters...
+03/01/2024 16:45:49: parameter calculation time: 76.79774045944214 seconds.
+03/01/2024 16:45:49: skipping woohieho either loading or estimating broke.
+03/01/2024 16:45:49: skill #: 154 skill_id: 02a3bfaa479de311b77c005056801da1
+03/01/2024 16:45:49: attempting to load skill from local data: 02a3bfaa479de311b77c005056801da1
+03/01/2024 16:47:54: loading time: 124.78134989738464 for : 32163616(32163616, 3)
+03/01/2024 16:47:54: converting into table...
+03/01/2024 16:48:06: table size: (491463, 42)
+03/01/2024 16:48:06: solving for item parameters...
+03/01/2024 17:14:11: parameter calculation time: 1565.0318224430084 seconds.
+03/01/2024 17:14:11: skipping 02a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 17:14:11: skill #: 155 skill_id: wkwhwhhl
+03/01/2024 17:14:11: attempting to load skill from local data: wkwhwhhl
+03/01/2024 17:15:38: loading time: 87.3479552268982 for : 327343(327343, 3)
+03/01/2024 17:15:38: converting into table...
+03/01/2024 17:15:38: table size: (66133, 6)
+03/01/2024 17:15:38: solving for item parameters...
+03/01/2024 17:16:18: parameter calculation time: 40.08102035522461 seconds.
+03/01/2024 17:16:18: skipping wkwhwhhl either loading or estimating broke.
+03/01/2024 17:16:18: skill #: 156 skill_id: dpsjhwlk
+03/01/2024 17:16:18: attempting to load skill from local data: dpsjhwlk
+03/01/2024 17:17:46: loading time: 87.32852959632874 for : 244907(244907, 3)
+03/01/2024 17:17:46: converting into table...
+03/01/2024 17:17:46: table size: (62955, 6)
+03/01/2024 17:17:46: solving for item parameters...
+03/01/2024 17:18:18: parameter calculation time: 32.25300931930542 seconds.
+03/01/2024 17:18:18: skipping dpsjhwlk either loading or estimating broke.
+03/01/2024 17:18:18: skill #: 157 skill_id: sjiupqwg
+03/01/2024 17:18:18: attempting to load skill from local data: sjiupqwg
+03/01/2024 17:19:46: loading time: 87.91224575042725 for : 133296(133296, 3)
+03/01/2024 17:19:46: converting into table...
+03/01/2024 17:19:46: table size: (34533, 6)
+03/01/2024 17:19:46: solving for item parameters...
+03/01/2024 17:20:20: parameter calculation time: 34.49467658996582 seconds.
+03/01/2024 17:20:20: skipping sjiupqwg either loading or estimating broke.
+03/01/2024 17:20:20: skill #: 158 skill_id: jjrkgcfq
+03/01/2024 17:20:20: attempting to load skill from local data: jjrkgcfq
+03/01/2024 17:21:48: loading time: 87.46792697906494 for : 80922(80922, 3)
+03/01/2024 17:21:48: converting into table...
+03/01/2024 17:21:48: table size: (27967, 6)
+03/01/2024 17:21:48: solving for item parameters...
+03/01/2024 17:22:15: parameter calculation time: 27.45450496673584 seconds.
+03/01/2024 17:22:15: skipping jjrkgcfq either loading or estimating broke.
+03/01/2024 17:22:15: skill #: 159 skill_id: iuwoecuo
+03/01/2024 17:22:15: attempting to load skill from local data: iuwoecuo
+03/01/2024 17:23:43: loading time: 87.6974310874939 for : 319337(319337, 3)
+03/01/2024 17:23:43: converting into table...
+03/01/2024 17:23:43: table size: (67685, 17)
+03/01/2024 17:23:43: solving for item parameters...
+03/01/2024 17:24:56: parameter calculation time: 72.88078832626343 seconds.
+03/01/2024 17:24:56: skipping iuwoecuo either loading or estimating broke.
+03/01/2024 17:24:56: skill #: 160 skill_id: 39a4bfaa479de311b77c005056801da1
+03/01/2024 17:24:56: attempting to load skill from local data: 39a4bfaa479de311b77c005056801da1
+03/01/2024 17:26:25: loading time: 89.17210006713867 for : 1524550(1524550, 3)
+03/01/2024 17:26:25: converting into table...
+03/01/2024 17:26:26: table size: (182166, 37)
+03/01/2024 17:26:26: solving for item parameters...
+03/01/2024 17:29:58: parameter calculation time: 212.18229722976685 seconds.
+03/01/2024 17:29:58: skipping 39a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 17:29:58: skill #: 161 skill_id: b98063d82400e4119e54005056801da1
+03/01/2024 17:29:58: attempting to load skill from local data: b98063d82400e4119e54005056801da1
+03/01/2024 17:31:30: loading time: 91.48417520523071 for : 3293331(3293331, 3)
+03/01/2024 17:31:30: converting into table...
+03/01/2024 17:31:32: table size: (464470, 40)
+03/01/2024 17:31:32: solving for item parameters...
+03/01/2024 17:39:55: parameter calculation time: 503.58601903915405 seconds.
+03/01/2024 17:39:55: skipping b98063d82400e4119e54005056801da1 either loading or estimating broke.
+03/01/2024 17:39:55: skill #: 162 skill_id: oamoexai
+03/01/2024 17:39:55: attempting to load skill from local data: oamoexai
+03/01/2024 17:41:23: loading time: 88.2268762588501 for : 56371(56371, 3)
+03/01/2024 17:41:23: converting into table...
+03/01/2024 17:41:23: table size: (17813, 16)
+03/01/2024 17:41:23: solving for item parameters...
+03/01/2024 17:42:04: parameter calculation time: 40.43510341644287 seconds.
+03/01/2024 17:42:04: skipping oamoexai either loading or estimating broke.
+03/01/2024 17:42:04: skill #: 163 skill_id: 40a4bfaa479de311b77c005056801da1
+03/01/2024 17:42:04: attempting to load skill from local data: 40a4bfaa479de311b77c005056801da1
+03/01/2024 17:43:34: loading time: 90.13327693939209 for : 2168797(2168797, 3)
+03/01/2024 17:43:34: converting into table...
+03/01/2024 17:43:35: table size: (245455, 26)
+03/01/2024 17:43:35: solving for item parameters...
+03/01/2024 17:47:42: parameter calculation time: 247.22127842903137 seconds.
+03/01/2024 17:47:42: skipping 40a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 17:47:42: skill #: 164 skill_id: viijieha
+03/01/2024 17:47:42: attempting to load skill from local data: viijieha
+03/01/2024 17:49:11: loading time: 89.20623588562012 for : 725412(725412, 3)
+03/01/2024 17:49:11: converting into table...
+03/01/2024 17:49:12: table size: (112726, 33)
+03/01/2024 17:49:12: solving for item parameters...
+03/01/2024 17:51:25: parameter calculation time: 133.5528428554535 seconds.
+03/01/2024 17:51:25: skipping viijieha either loading or estimating broke.
+03/01/2024 17:51:25: skill #: 165 skill_id: eeshahwe
+03/01/2024 17:51:25: attempting to load skill from local data: eeshahwe
+03/01/2024 17:52:55: loading time: 89.38163661956787 for : 1576821(1576821, 3)
+03/01/2024 17:52:55: converting into table...
+03/01/2024 17:52:55: table size: (212012, 30)
+03/01/2024 17:52:55: solving for item parameters...
+03/01/2024 17:56:14: parameter calculation time: 198.339506149292 seconds.
+03/01/2024 17:56:14: skipping eeshahwe either loading or estimating broke.
+03/01/2024 17:56:14: skill #: 166 skill_id: xomaichi
+03/01/2024 17:56:14: attempting to load skill from local data: xomaichi
+03/01/2024 17:57:42: loading time: 88.31427788734436 for : 87708(87708, 3)
+03/01/2024 17:57:42: converting into table...
+03/01/2024 17:57:42: table size: (37164, 14)
+03/01/2024 17:57:42: solving for item parameters...
+03/01/2024 17:58:28: parameter calculation time: 45.83492588996887 seconds.
+03/01/2024 17:58:28: skipping xomaichi either loading or estimating broke.
+03/01/2024 17:58:28: skill #: 167 skill_id: simhvsmm
+03/01/2024 17:58:28: attempting to load skill from local data: simhvsmm
+03/01/2024 17:59:56: loading time: 87.88685989379883 for : 19822(19822, 3)
+03/01/2024 17:59:56: converting into table...
+03/01/2024 17:59:56: table size: (4172, 30)
+03/01/2024 17:59:56: solving for item parameters...
+03/01/2024 18:00:24: parameter calculation time: 28.294708251953125 seconds.
+03/01/2024 18:00:24: skipping simhvsmm either loading or estimating broke.
+03/01/2024 18:00:24: skill #: 168 skill_id: ooyeephe
+03/01/2024 18:00:24: attempting to load skill from local data: ooyeephe
+03/01/2024 18:01:53: loading time: 89.35411715507507 for : 1410677(1410677, 3)
+03/01/2024 18:01:53: converting into table...
+03/01/2024 18:01:54: table size: (170360, 12)
+03/01/2024 18:01:54: solving for item parameters...
+03/01/2024 18:03:25: parameter calculation time: 91.22289204597473 seconds.
+03/01/2024 18:03:25: skipping ooyeephe either loading or estimating broke.
+03/01/2024 18:03:25: skill #: 169 skill_id: hqycbgcx
+03/01/2024 18:03:25: attempting to load skill from local data: hqycbgcx
+03/01/2024 18:04:53: loading time: 88.09471130371094 for : 329(329, 3)
+03/01/2024 18:04:53: converting into table...
+03/01/2024 18:04:53: table size: (79, 37)
+03/01/2024 18:04:53: solving for item parameters...
+03/01/2024 18:05:06: parameter calculation time: 12.932860851287842 seconds.
+03/01/2024 18:05:06: skipping hqycbgcx either loading or estimating broke.
+03/01/2024 18:05:06: skill #: 170 skill_id: 82a5bfaa479de311b77c005056801da1
+03/01/2024 18:05:06: attempting to load skill from local data: 82a5bfaa479de311b77c005056801da1
+03/01/2024 18:06:34: loading time: 88.13941049575806 for : 3236(3236, 3)
+03/01/2024 18:06:34: converting into table...
+03/01/2024 18:06:34: table size: (846, 20)
+03/01/2024 18:06:34: solving for item parameters...
+03/01/2024 18:06:49: parameter calculation time: 14.96808934211731 seconds.
+03/01/2024 18:06:49: skipping 82a5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 18:06:49: skill #: 171 skill_id: d6de76db57c74c4db9285aa6d9e2a9db
+03/01/2024 18:06:49: attempting to load skill from local data: d6de76db57c74c4db9285aa6d9e2a9db
+03/01/2024 18:08:19: loading time: 89.40212178230286 for : 1087195(1087195, 3)
+03/01/2024 18:08:19: converting into table...
+03/01/2024 18:08:19: table size: (154586, 40)
+03/01/2024 18:08:19: solving for item parameters...
+03/01/2024 18:11:19: parameter calculation time: 180.2064049243927 seconds.
+03/01/2024 18:11:19: skipping d6de76db57c74c4db9285aa6d9e2a9db either loading or estimating broke.
+03/01/2024 18:11:19: skill #: 172 skill_id: zpzidalx
+03/01/2024 18:11:19: attempting to load skill from local data: zpzidalx
+03/01/2024 18:12:47: loading time: 87.9147584438324 for : 162308(162308, 3)
+03/01/2024 18:12:47: converting into table...
+03/01/2024 18:12:47: table size: (47212, 6)
+03/01/2024 18:12:47: solving for item parameters...
+03/01/2024 18:13:12: parameter calculation time: 24.31385827064514 seconds.
+03/01/2024 18:13:12: skipping zpzidalx either loading or estimating broke.
+03/01/2024 18:13:12: skill #: 173 skill_id: 43a4bfaa479de311b77c005056801da1
+03/01/2024 18:13:12: attempting to load skill from local data: 43a4bfaa479de311b77c005056801da1
+03/01/2024 18:14:41: loading time: 89.62626361846924 for : 1491953(1491953, 3)
+03/01/2024 18:14:41: converting into table...
+03/01/2024 18:14:42: table size: (239324, 36)
+03/01/2024 18:14:42: solving for item parameters...
+03/01/2024 18:18:58: parameter calculation time: 255.37980675697327 seconds.
+03/01/2024 18:18:58: skipping 43a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 18:18:58: skill #: 174 skill_id: ievoveer
+03/01/2024 18:18:58: attempting to load skill from local data: ievoveer
+03/01/2024 18:20:26: loading time: 88.72564148902893 for : 371035(371035, 3)
+03/01/2024 18:20:26: converting into table...
+03/01/2024 18:20:26: table size: (96115, 19)
+03/01/2024 18:20:26: solving for item parameters...
+03/01/2024 18:21:55: parameter calculation time: 88.80795335769653 seconds.
+03/01/2024 18:21:55: skipping ievoveer either loading or estimating broke.
+03/01/2024 18:21:55: skill #: 175 skill_id: 46a4bfaa479de311b77c005056801da1
+03/01/2024 18:21:55: attempting to load skill from local data: 46a4bfaa479de311b77c005056801da1
+03/01/2024 18:23:25: loading time: 89.52809143066406 for : 1062399(1062399, 3)
+03/01/2024 18:23:25: converting into table...
+03/01/2024 18:23:25: table size: (183777, 22)
+03/01/2024 18:23:25: solving for item parameters...
+03/01/2024 18:25:43: parameter calculation time: 137.58455562591553 seconds.
+03/01/2024 18:25:43: skipping 46a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 18:25:43: skill #: 176 skill_id: xeifaera
+03/01/2024 18:25:43: attempting to load skill from local data: xeifaera
+03/01/2024 18:27:12: loading time: 88.65780758857727 for : 624293(624293, 3)
+03/01/2024 18:27:12: converting into table...
+03/01/2024 18:27:12: table size: (177490, 13)
+03/01/2024 18:27:12: solving for item parameters...
+03/01/2024 18:28:40: parameter calculation time: 88.10027289390564 seconds.
+03/01/2024 18:28:40: skipping xeifaera either loading or estimating broke.
+03/01/2024 18:28:40: skill #: 177 skill_id: ijoophee
+03/01/2024 18:28:40: attempting to load skill from local data: ijoophee
+03/01/2024 18:30:09: loading time: 89.5311484336853 for : 1209205(1209205, 3)
+03/01/2024 18:30:09: converting into table...
+03/01/2024 18:30:10: table size: (236094, 20)
+03/01/2024 18:30:10: solving for item parameters...
+03/01/2024 18:32:46: parameter calculation time: 156.33746910095215 seconds.
+03/01/2024 18:32:46: skipping ijoophee either loading or estimating broke.
+03/01/2024 18:32:46: skill #: 178 skill_id: e2a3bfaa479de311b77c005056801da1
+03/01/2024 18:32:46: attempting to load skill from local data: e2a3bfaa479de311b77c005056801da1
+03/01/2024 18:34:16: loading time: 89.71592450141907 for : 1239999(1239999, 3)
+03/01/2024 18:34:16: converting into table...
+03/01/2024 18:34:17: table size: (206274, 21)
+03/01/2024 18:34:17: solving for item parameters...
+03/01/2024 18:36:07: parameter calculation time: 110.58787059783936 seconds.
+03/01/2024 18:36:07: skipping e2a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 18:36:07: skill #: 179 skill_id: ojahyahz
+03/01/2024 18:36:07: attempting to load skill from local data: ojahyahz
+03/01/2024 18:37:36: loading time: 88.49069237709045 for : 73726(73726, 3)
+03/01/2024 18:37:36: converting into table...
+03/01/2024 18:37:36: table size: (37224, 12)
+03/01/2024 18:37:36: solving for item parameters...
+03/01/2024 18:38:17: parameter calculation time: 40.83858585357666 seconds.
+03/01/2024 18:38:17: skipping ojahyahz either loading or estimating broke.
+03/01/2024 18:38:17: skill #: 180 skill_id: ohghiubu
+03/01/2024 18:38:17: attempting to load skill from local data: ohghiubu
+03/01/2024 18:39:45: loading time: 88.12967133522034 for : 57149(57149, 3)
+03/01/2024 18:39:45: converting into table...
+03/01/2024 18:39:45: table size: (25796, 14)
+03/01/2024 18:39:45: solving for item parameters...
+03/01/2024 18:40:19: parameter calculation time: 34.54324960708618 seconds.
+03/01/2024 18:40:19: skipping ohghiubu either loading or estimating broke.
+03/01/2024 18:40:19: skill #: 181 skill_id: 75a3bfaa479de311b77c005056801da1
+03/01/2024 18:40:19: attempting to load skill from local data: 75a3bfaa479de311b77c005056801da1
+03/01/2024 18:41:50: loading time: 90.49275970458984 for : 1890813(1890813, 3)
+03/01/2024 18:41:50: converting into table...
+03/01/2024 18:41:51: table size: (228013, 33)
+03/01/2024 18:41:51: solving for item parameters...
+03/01/2024 18:46:05: parameter calculation time: 253.84950828552246 seconds.
+03/01/2024 18:46:05: skipping 75a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 18:46:05: skill #: 182 skill_id: rohpahju
+03/01/2024 18:46:05: attempting to load skill from local data: rohpahju
+03/01/2024 18:47:35: loading time: 90.04328775405884 for : 1456081(1456081, 3)
+03/01/2024 18:47:35: converting into table...
+03/01/2024 18:47:35: table size: (241105, 33)
+03/01/2024 18:47:35: solving for item parameters...
+03/01/2024 18:51:10: parameter calculation time: 215.11184740066528 seconds.
+03/01/2024 18:51:10: skipping rohpahju either loading or estimating broke.
+03/01/2024 18:51:10: skill #: 183 skill_id: b7e3216a1040491ebbb37d0aa36407a0
+03/01/2024 18:51:10: attempting to load skill from local data: b7e3216a1040491ebbb37d0aa36407a0
+03/01/2024 18:52:41: loading time: 90.52288913726807 for : 1800973(1800973, 3)
+03/01/2024 18:52:41: converting into table...
+03/01/2024 18:52:42: table size: (232898, 50)
+03/01/2024 18:52:42: solving for item parameters...
+03/01/2024 18:57:37: parameter calculation time: 295.0892632007599 seconds.
+03/01/2024 18:57:37: skipping b7e3216a1040491ebbb37d0aa36407a0 either loading or estimating broke.
+03/01/2024 18:57:37: skill #: 184 skill_id: xqxqxlle
+03/01/2024 18:57:37: attempting to load skill from local data: xqxqxlle
+03/01/2024 18:59:06: loading time: 88.57659721374512 for : 133649(133649, 3)
+03/01/2024 18:59:06: converting into table...
+03/01/2024 18:59:06: table size: (41459, 6)
+03/01/2024 18:59:06: solving for item parameters...
+03/01/2024 18:59:35: parameter calculation time: 29.81351089477539 seconds.
+03/01/2024 18:59:35: skipping xqxqxlle either loading or estimating broke.
+03/01/2024 18:59:35: skill #: 185 skill_id: 70a6bfaa479de311b77c005056801da1
+03/01/2024 18:59:35: attempting to load skill from local data: 70a6bfaa479de311b77c005056801da1
+03/01/2024 19:01:04: loading time: 88.50344443321228 for : 11251(11251, 3)
+03/01/2024 19:01:04: converting into table...
+03/01/2024 19:01:04: table size: (1250, 18)
+03/01/2024 19:01:04: solving for item parameters...
+03/01/2024 19:01:19: parameter calculation time: 15.260151624679565 seconds.
+03/01/2024 19:01:19: skipping 70a6bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:01:19: skill #: 186 skill_id: 54a4bfaa479de311b77c005056801da1
+03/01/2024 19:01:19: attempting to load skill from local data: 54a4bfaa479de311b77c005056801da1
+03/01/2024 19:02:49: loading time: 89.97410345077515 for : 1778824(1778824, 3)
+03/01/2024 19:02:49: converting into table...
+03/01/2024 19:02:50: table size: (210379, 17)
+03/01/2024 19:02:50: solving for item parameters...
+03/01/2024 19:05:57: parameter calculation time: 187.4286208152771 seconds.
+03/01/2024 19:05:57: skipping 54a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:05:57: skill #: 187 skill_id: faa3bfaa479de311b77c005056801da1
+03/01/2024 19:05:57: attempting to load skill from local data: faa3bfaa479de311b77c005056801da1
+03/01/2024 19:07:27: loading time: 90.1262047290802 for : 1055696(1055696, 3)
+03/01/2024 19:07:27: converting into table...
+03/01/2024 19:07:28: table size: (154644, 35)
+03/01/2024 19:07:28: solving for item parameters...
+03/01/2024 19:10:19: parameter calculation time: 170.92649865150452 seconds.
+03/01/2024 19:10:19: skipping faa3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:10:19: skill #: 188 skill_id: efa3bfaa479de311b77c005056801da1
+03/01/2024 19:10:19: attempting to load skill from local data: efa3bfaa479de311b77c005056801da1
+03/01/2024 19:11:48: loading time: 89.47800898551941 for : 956962(956962, 3)
+03/01/2024 19:11:48: converting into table...
+03/01/2024 19:11:49: table size: (141755, 32)
+03/01/2024 19:11:49: solving for item parameters...
+03/01/2024 19:14:06: parameter calculation time: 137.31722688674927 seconds.
+03/01/2024 19:14:06: skipping efa3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:14:06: skill #: 189 skill_id: veitohph
+03/01/2024 19:14:06: attempting to load skill from local data: veitohph
+03/01/2024 19:15:35: loading time: 89.10325288772583 for : 605710(605710, 3)
+03/01/2024 19:15:35: converting into table...
+03/01/2024 19:15:36: table size: (128469, 39)
+03/01/2024 19:15:36: solving for item parameters...
+03/01/2024 19:18:24: parameter calculation time: 168.77109265327454 seconds.
+03/01/2024 19:18:24: skipping veitohph either loading or estimating broke.
+03/01/2024 19:18:24: skill #: 190 skill_id: 469bfff2397f484792c7fb7b57b8ce5c
+03/01/2024 19:18:24: attempting to load skill from local data: 469bfff2397f484792c7fb7b57b8ce5c
+03/01/2024 19:19:53: loading time: 88.42880010604858 for : 2084(2084, 3)
+03/01/2024 19:19:53: converting into table...
+03/01/2024 19:19:53: table size: (160, 18)
+03/01/2024 19:19:53: solving for item parameters...
+03/01/2024 19:20:07: parameter calculation time: 14.403147220611572 seconds.
+03/01/2024 19:20:07: skipping 469bfff2397f484792c7fb7b57b8ce5c either loading or estimating broke.
+03/01/2024 19:20:07: skill #: 191 skill_id: 01a4bfaa479de311b77c005056801da1
+03/01/2024 19:20:07: attempting to load skill from local data: 01a4bfaa479de311b77c005056801da1
+03/01/2024 19:21:36: loading time: 88.73393297195435 for : 387739(387739, 3)
+03/01/2024 19:21:36: converting into table...
+03/01/2024 19:21:36: table size: (72344, 21)
+03/01/2024 19:21:36: solving for item parameters...
+03/01/2024 19:22:54: parameter calculation time: 77.75356578826904 seconds.
+03/01/2024 19:22:54: skipping 01a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:22:54: skill #: 192 skill_id: eeziekao
+03/01/2024 19:22:54: attempting to load skill from local data: eeziekao
+03/01/2024 19:24:22: loading time: 87.87507176399231 for : 56(56, 3)
+03/01/2024 19:24:22: converting into table...
+03/01/2024 19:24:22: table size: (28, 35)
+03/01/2024 19:24:22: solving for item parameters...
+03/01/2024 19:24:35: parameter calculation time: 13.066360712051392 seconds.
+03/01/2024 19:24:35: skipping eeziekao either loading or estimating broke.
+03/01/2024 19:24:35: skill #: 193 skill_id: 95a3bfaa479de311b77c005056801da1
+03/01/2024 19:24:35: attempting to load skill from local data: 95a3bfaa479de311b77c005056801da1
+03/01/2024 19:26:06: loading time: 91.16582107543945 for : 2688122(2688122, 3)
+03/01/2024 19:26:06: converting into table...
+03/01/2024 19:26:08: table size: (302957, 57)
+03/01/2024 19:26:08: solving for item parameters...
+03/01/2024 19:33:25: parameter calculation time: 437.0531361103058 seconds.
+03/01/2024 19:33:25: skipping 95a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:33:25: skill #: 194 skill_id: c3a3bfaa479de311b77c005056801da1
+03/01/2024 19:33:25: attempting to load skill from local data: c3a3bfaa479de311b77c005056801da1
+03/01/2024 19:34:55: loading time: 90.34205675125122 for : 1561743(1561743, 3)
+03/01/2024 19:34:55: converting into table...
+03/01/2024 19:34:56: table size: (163306, 32)
+03/01/2024 19:34:56: solving for item parameters...
+03/01/2024 19:38:07: parameter calculation time: 191.3465187549591 seconds.
+03/01/2024 19:38:07: skipping c3a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:38:07: skill #: 195 skill_id: bba4bfaa479de311b77c005056801da1
+03/01/2024 19:38:07: attempting to load skill from local data: bba4bfaa479de311b77c005056801da1
+03/01/2024 19:39:36: loading time: 89.27174115180969 for : 712087(712087, 3)
+03/01/2024 19:39:36: converting into table...
+03/01/2024 19:39:37: table size: (88335, 47)
+03/01/2024 19:39:37: solving for item parameters...
+03/01/2024 19:41:58: parameter calculation time: 141.70811009407043 seconds.
+03/01/2024 19:41:58: skipping bba4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:41:58: skill #: 196 skill_id: f2a4bfaa479de311b77c005056801da1
+03/01/2024 19:41:58: attempting to load skill from local data: f2a4bfaa479de311b77c005056801da1
+03/01/2024 19:43:27: loading time: 88.54878830909729 for : 287929(287929, 3)
+03/01/2024 19:43:27: converting into table...
+03/01/2024 19:43:27: table size: (51187, 49)
+03/01/2024 19:43:27: solving for item parameters...
+03/01/2024 19:45:01: parameter calculation time: 93.9817476272583 seconds.
+03/01/2024 19:45:01: skipping f2a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:45:01: skill #: 197 skill_id: d7a4bfaa479de311b77c005056801da1
+03/01/2024 19:45:01: attempting to load skill from local data: d7a4bfaa479de311b77c005056801da1
+03/01/2024 19:46:30: loading time: 88.88335061073303 for : 288052(288052, 3)
+03/01/2024 19:46:30: converting into table...
+03/01/2024 19:46:30: table size: (46179, 24)
+03/01/2024 19:46:30: solving for item parameters...
+03/01/2024 19:47:36: parameter calculation time: 66.33310151100159 seconds.
+03/01/2024 19:47:36: skipping d7a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:47:36: skill #: 198 skill_id: dfa4bfaa479de311b77c005056801da1
+03/01/2024 19:47:36: attempting to load skill from local data: dfa4bfaa479de311b77c005056801da1
+03/01/2024 19:49:05: loading time: 88.65102243423462 for : 431558(431558, 3)
+03/01/2024 19:49:05: converting into table...
+03/01/2024 19:49:05: table size: (65384, 24)
+03/01/2024 19:49:05: solving for item parameters...
+03/01/2024 19:50:25: parameter calculation time: 80.2605357170105 seconds.
+03/01/2024 19:50:25: skipping dfa4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:50:25: skill #: 199 skill_id: e3a4bfaa479de311b77c005056801da1
+03/01/2024 19:50:25: attempting to load skill from local data: e3a4bfaa479de311b77c005056801da1
+03/01/2024 19:51:54: loading time: 88.87056732177734 for : 477060(477060, 3)
+03/01/2024 19:51:54: converting into table...
+03/01/2024 19:51:54: table size: (49462, 39)
+03/01/2024 19:51:54: solving for item parameters...
+03/01/2024 19:53:19: parameter calculation time: 84.26001000404358 seconds.
+03/01/2024 19:53:19: skipping e3a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:53:19: skill #: 200 skill_id: 6ca5bfaa479de311b77c005056801da1
+03/01/2024 19:53:19: attempting to load skill from local data: 6ca5bfaa479de311b77c005056801da1
+03/01/2024 19:54:47: loading time: 88.3753309249878 for : 150090(150090, 3)
+03/01/2024 19:54:47: converting into table...
+03/01/2024 19:54:47: table size: (37438, 32)
+03/01/2024 19:54:47: solving for item parameters...
+03/01/2024 19:55:52: parameter calculation time: 65.30665254592896 seconds.
+03/01/2024 19:55:52: skipping 6ca5bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 19:55:52: skill #: 201 skill_id: eiphieyu
+03/01/2024 19:55:52: attempting to load skill from local data: eiphieyu
+03/01/2024 19:57:21: loading time: 88.17966413497925 for : 14(14, 3)
+03/01/2024 19:57:21: converting into table...
+03/01/2024 19:57:21: table size: (9, 7)
+03/01/2024 19:57:21: solving for item parameters...
+03/01/2024 19:57:25: parameter calculation time: 4.247804641723633 seconds.
+03/01/2024 19:57:25: skipping eiphieyu either loading or estimating broke.
+03/01/2024 19:57:25: skill #: 202 skill_id: aegubuux
+03/01/2024 19:57:25: attempting to load skill from local data: aegubuux
+03/01/2024 19:58:53: loading time: 87.90032482147217 for : 1754(1754, 3)
+03/01/2024 19:58:53: converting into table...
+03/01/2024 19:58:53: table size: (214, 12)
+03/01/2024 19:58:53: solving for item parameters...
+03/01/2024 19:59:05: parameter calculation time: 12.434066534042358 seconds.
+03/01/2024 19:59:05: skipping aegubuux either loading or estimating broke.
+03/01/2024 19:59:05: skill #: 203 skill_id: uupheehu
+03/01/2024 19:59:05: attempting to load skill from local data: uupheehu
+03/01/2024 20:00:33: loading time: 88.02747845649719 for : 6(6, 3)
+03/01/2024 20:00:33: converting into table...
+03/01/2024 20:00:33: table size: (4, 6)
+03/01/2024 20:00:33: solving for item parameters...
+03/01/2024 20:00:37: parameter calculation time: 4.102173089981079 seconds.
+03/01/2024 20:00:37: skipping uupheehu either loading or estimating broke.
+03/01/2024 20:00:37: skill #: 204 skill_id: kievikei
+03/01/2024 20:00:37: attempting to load skill from local data: kievikei
+03/01/2024 20:02:06: loading time: 88.2372350692749 for : 1(1, 3)
+03/01/2024 20:02:06: converting into table...
+03/01/2024 20:02:06: table size: (1, 1)
+03/01/2024 20:02:06: solving for item parameters...
+03/01/2024 20:02:10: parameter calculation time: 4.273709058761597 seconds.
+03/01/2024 20:02:10: skipping kievikei either loading or estimating broke.
+03/01/2024 20:02:10: skill #: 205 skill_id: aecaekai
+03/01/2024 20:02:10: attempting to load skill from local data: aecaekai
+03/01/2024 20:03:38: loading time: 88.06050825119019 for : 498(498, 3)
+03/01/2024 20:03:38: converting into table...
+03/01/2024 20:03:38: table size: (66, 15)
+03/01/2024 20:03:38: solving for item parameters...
+03/01/2024 20:03:53: parameter calculation time: 15.30204176902771 seconds.
+03/01/2024 20:03:53: skipping aecaekai either loading or estimating broke.
+03/01/2024 20:03:53: skill #: 206 skill_id: thaaghah
+03/01/2024 20:03:53: attempting to load skill from local data: thaaghah
+03/01/2024 20:05:22: loading time: 88.24999070167542 for : 15086(15086, 3)
+03/01/2024 20:05:22: converting into table...
+03/01/2024 20:05:22: table size: (1882, 25)
+03/01/2024 20:05:22: solving for item parameters...
+03/01/2024 20:05:41: parameter calculation time: 19.001929759979248 seconds.
+03/01/2024 20:05:41: skipping thaaghah either loading or estimating broke.
+03/01/2024 20:05:41: skill #: 207 skill_id: ahquagie
+03/01/2024 20:05:41: attempting to load skill from local data: ahquagie
+03/01/2024 20:07:09: loading time: 88.03534078598022 for : 14(14, 3)
+03/01/2024 20:07:09: converting into table...
+03/01/2024 20:07:09: table size: (6, 7)
+03/01/2024 20:07:09: solving for item parameters...
+03/01/2024 20:07:13: parameter calculation time: 4.07379674911499 seconds.
+03/01/2024 20:07:13: skipping ahquagie either loading or estimating broke.
+03/01/2024 20:07:13: skill #: 208 skill_id: aizeingi
+03/01/2024 20:07:13: attempting to load skill from local data: aizeingi
+03/01/2024 20:08:41: loading time: 88.22800278663635 for : 5768(5768, 3)
+03/01/2024 20:08:41: converting into table...
+03/01/2024 20:08:41: table size: (1698, 11)
+03/01/2024 20:08:41: solving for item parameters...
+03/01/2024 20:08:53: parameter calculation time: 11.945849895477295 seconds.
+03/01/2024 20:08:53: skipping aizeingi either loading or estimating broke.
+03/01/2024 20:08:53: skill #: 209 skill_id: eiphaehe
+03/01/2024 20:08:53: attempting to load skill from local data: eiphaehe
+03/01/2024 20:10:21: loading time: 88.39605283737183 for : 191(191, 3)
+03/01/2024 20:10:21: converting into table...
+03/01/2024 20:10:21: table size: (41, 15)
+03/01/2024 20:10:21: solving for item parameters...
+03/01/2024 20:10:29: parameter calculation time: 7.323140859603882 seconds.
+03/01/2024 20:10:29: skipping eiphaehe either loading or estimating broke.
+03/01/2024 20:10:29: skill #: 210 skill_id: eifoehai
+03/01/2024 20:10:29: attempting to load skill from local data: eifoehai
+03/01/2024 20:11:56: loading time: 87.60573720932007 for : 169(169, 3)
+03/01/2024 20:11:56: converting into table...
+03/01/2024 20:11:56: table size: (26, 16)
+03/01/2024 20:11:56: solving for item parameters...
+03/01/2024 20:12:03: parameter calculation time: 7.310739040374756 seconds.
+03/01/2024 20:12:03: skipping eifoehai either loading or estimating broke.
+03/01/2024 20:12:03: skill #: 211 skill_id: beb5b7d5981c4856adb123f79b2fc1ec
+03/01/2024 20:12:03: attempting to load skill from local data: beb5b7d5981c4856adb123f79b2fc1ec
+03/01/2024 20:13:33: loading time: 89.47828888893127 for : 1161104(1161104, 3)
+03/01/2024 20:13:33: converting into table...
+03/01/2024 20:13:34: table size: (179744, 40)
+03/01/2024 20:13:34: solving for item parameters...
+03/01/2024 20:16:51: parameter calculation time: 197.13724088668823 seconds.
+03/01/2024 20:16:51: skipping beb5b7d5981c4856adb123f79b2fc1ec either loading or estimating broke.
+03/01/2024 20:16:51: skill #: 212 skill_id: 5ca84d654a86401784376f57f5c72661
+03/01/2024 20:16:51: attempting to load skill from local data: 5ca84d654a86401784376f57f5c72661
+03/01/2024 20:18:20: loading time: 89.19328927993774 for : 686935(686935, 3)
+03/01/2024 20:18:20: converting into table...
+03/01/2024 20:18:20: table size: (149579, 34)
+03/01/2024 20:18:20: solving for item parameters...
+03/01/2024 20:21:00: parameter calculation time: 159.40296459197998 seconds.
+03/01/2024 20:21:00: skipping 5ca84d654a86401784376f57f5c72661 either loading or estimating broke.
+03/01/2024 20:21:00: skill #: 213 skill_id: 69f6dd86522a4cd1beea3da02fcbf45e
+03/01/2024 20:21:00: attempting to load skill from local data: 69f6dd86522a4cd1beea3da02fcbf45e
+03/01/2024 20:22:29: loading time: 89.06880617141724 for : 786498(786498, 3)
+03/01/2024 20:22:29: converting into table...
+03/01/2024 20:22:29: table size: (135221, 40)
+03/01/2024 20:22:29: solving for item parameters...
+03/01/2024 20:25:09: parameter calculation time: 160.01951217651367 seconds.
+03/01/2024 20:25:09: skipping 69f6dd86522a4cd1beea3da02fcbf45e either loading or estimating broke.
+03/01/2024 20:25:09: skill #: 214 skill_id: ed401d56785d4b84927d20dd52a3f48e
+03/01/2024 20:25:09: attempting to load skill from local data: ed401d56785d4b84927d20dd52a3f48e
+03/01/2024 20:26:38: loading time: 88.476717710495 for : 634364(634364, 3)
+03/01/2024 20:26:38: converting into table...
+03/01/2024 20:26:38: table size: (122967, 40)
+03/01/2024 20:26:38: solving for item parameters...
+03/01/2024 20:29:25: parameter calculation time: 167.2585744857788 seconds.
+03/01/2024 20:29:25: skipping ed401d56785d4b84927d20dd52a3f48e either loading or estimating broke.
+03/01/2024 20:29:25: skill #: 215 skill_id: 58b9fa1be137403497867d990702dcce
+03/01/2024 20:29:25: attempting to load skill from local data: 58b9fa1be137403497867d990702dcce
+03/01/2024 20:30:54: loading time: 88.3952169418335 for : 522812(522812, 3)
+03/01/2024 20:30:54: converting into table...
+03/01/2024 20:30:54: table size: (142001, 40)
+03/01/2024 20:30:54: solving for item parameters...
+03/01/2024 20:33:28: parameter calculation time: 153.74155354499817 seconds.
+03/01/2024 20:33:28: skipping 58b9fa1be137403497867d990702dcce either loading or estimating broke.
+03/01/2024 20:33:28: skill #: 216 skill_id: 4da4bfaa479de311b77c005056801da1
+03/01/2024 20:33:28: attempting to load skill from local data: 4da4bfaa479de311b77c005056801da1
+03/01/2024 20:34:59: loading time: 91.62775683403015 for : 3518681(3518681, 3)
+03/01/2024 20:34:59: converting into table...
+03/01/2024 20:35:01: table size: (353850, 50)
+03/01/2024 20:35:01: solving for item parameters...
+03/01/2024 20:43:28: parameter calculation time: 506.3461000919342 seconds.
+03/01/2024 20:43:28: skipping 4da4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 20:43:28: skill #: 217 skill_id: 53a4bfaa479de311b77c005056801da1
+03/01/2024 20:43:28: attempting to load skill from local data: 53a4bfaa479de311b77c005056801da1
+03/01/2024 20:44:58: loading time: 90.09361147880554 for : 1624993(1624993, 3)
+03/01/2024 20:44:58: converting into table...
+03/01/2024 20:44:59: table size: (288304, 36)
+03/01/2024 20:44:59: solving for item parameters...
+03/01/2024 20:49:39: parameter calculation time: 280.37221026420593 seconds.
+03/01/2024 20:49:39: skipping 53a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 20:49:39: skill #: 218 skill_id: e9a3bfaa479de311b77c005056801da1
+03/01/2024 20:49:39: attempting to load skill from local data: e9a3bfaa479de311b77c005056801da1
+03/01/2024 20:51:08: loading time: 88.97256803512573 for : 891813(891813, 3)
+03/01/2024 20:51:08: converting into table...
+03/01/2024 20:51:08: table size: (107735, 42)
+03/01/2024 20:51:08: solving for item parameters...
+03/01/2024 20:54:10: parameter calculation time: 181.60804772377014 seconds.
+03/01/2024 20:54:10: skipping e9a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 20:54:10: skill #: 219 skill_id: 604ca9d8298b4fa68d5e3c8e68af7cc2
+03/01/2024 20:54:10: attempting to load skill from local data: 604ca9d8298b4fa68d5e3c8e68af7cc2
+03/01/2024 20:55:39: loading time: 88.77695560455322 for : 800040(800040, 3)
+03/01/2024 20:55:39: converting into table...
+03/01/2024 20:55:39: table size: (116045, 54)
+03/01/2024 20:55:39: solving for item parameters...
+03/01/2024 20:58:59: parameter calculation time: 199.61135458946228 seconds.
+03/01/2024 20:58:59: skipping 604ca9d8298b4fa68d5e3c8e68af7cc2 either loading or estimating broke.
+03/01/2024 20:58:59: skill #: 220 skill_id: a0a3bfaa479de311b77c005056801da1
+03/01/2024 20:58:59: attempting to load skill from local data: a0a3bfaa479de311b77c005056801da1
+03/01/2024 21:00:28: loading time: 89.21060228347778 for : 1170765(1170765, 3)
+03/01/2024 21:00:28: converting into table...
+03/01/2024 21:00:29: table size: (238430, 62)
+03/01/2024 21:00:29: solving for item parameters...
+03/01/2024 21:05:54: parameter calculation time: 325.3263084888458 seconds.
+03/01/2024 21:05:54: skipping a0a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 21:05:54: skill #: 221 skill_id: 9fa3bfaa479de311b77c005056801da1
+03/01/2024 21:05:54: attempting to load skill from local data: 9fa3bfaa479de311b77c005056801da1
+03/01/2024 21:07:24: loading time: 89.39225149154663 for : 1185837(1185837, 3)
+03/01/2024 21:07:24: converting into table...
+03/01/2024 21:07:24: table size: (247798, 58)
+03/01/2024 21:07:24: solving for item parameters...
+03/01/2024 21:12:47: parameter calculation time: 322.21558928489685 seconds.
+03/01/2024 21:12:47: skipping 9fa3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 21:12:47: skill #: 222 skill_id: a6a3bfaa479de311b77c005056801da1
+03/01/2024 21:12:47: attempting to load skill from local data: a6a3bfaa479de311b77c005056801da1
+03/01/2024 21:14:17: loading time: 90.245769739151 for : 1960436(1960436, 3)
+03/01/2024 21:14:17: converting into table...
+03/01/2024 21:14:18: table size: (231558, 44)
+03/01/2024 21:14:18: solving for item parameters...
+03/01/2024 21:19:00: parameter calculation time: 282.61744236946106 seconds.
+03/01/2024 21:19:00: skipping a6a3bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 21:19:00: skill #: 223 skill_id: 149db89d7eab451b8c83828e028625a4
+03/01/2024 21:19:00: attempting to load skill from local data: 149db89d7eab451b8c83828e028625a4
+03/01/2024 21:20:29: loading time: 88.91063475608826 for : 238833(238833, 3)
+03/01/2024 21:20:29: converting into table...
+03/01/2024 21:20:29: table size: (40779, 29)
+03/01/2024 21:20:29: solving for item parameters...
+03/01/2024 21:21:33: parameter calculation time: 63.16119718551636 seconds.
+03/01/2024 21:21:33: skipping 149db89d7eab451b8c83828e028625a4 either loading or estimating broke.
+03/01/2024 21:21:33: skill #: 224 skill_id: 90bcc51aa39fe3119503005056801da1
+03/01/2024 21:21:33: attempting to load skill from local data: 90bcc51aa39fe3119503005056801da1
+03/01/2024 21:23:01: loading time: 88.14002752304077 for : 33790(33790, 3)
+03/01/2024 21:23:01: converting into table...
+03/01/2024 21:23:01: table size: (4971, 18)
+03/01/2024 21:23:01: solving for item parameters...
+03/01/2024 21:23:20: parameter calculation time: 19.68584132194519 seconds.
+03/01/2024 21:23:20: skipping 90bcc51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 21:23:20: skill #: 225 skill_id: 467b39996b624d4ab8bb4387f3cc24bb
+03/01/2024 21:23:20: attempting to load skill from local data: 467b39996b624d4ab8bb4387f3cc24bb
+03/01/2024 21:24:48: loading time: 87.96061635017395 for : 102480(102480, 3)
+03/01/2024 21:24:48: converting into table...
+03/01/2024 21:24:48: table size: (13978, 18)
+03/01/2024 21:24:48: solving for item parameters...
+03/01/2024 21:25:34: parameter calculation time: 45.796858072280884 seconds.
+03/01/2024 21:25:34: skipping 467b39996b624d4ab8bb4387f3cc24bb either loading or estimating broke.
+03/01/2024 21:25:34: skill #: 226 skill_id: 36f1a4022f01419abb5592ebb427d237
+03/01/2024 21:25:34: attempting to load skill from local data: 36f1a4022f01419abb5592ebb427d237
+03/01/2024 21:27:02: loading time: 88.0322470664978 for : 86522(86522, 3)
+03/01/2024 21:27:02: converting into table...
+03/01/2024 21:27:02: table size: (11164, 22)
+03/01/2024 21:27:02: solving for item parameters...
+03/01/2024 21:27:48: parameter calculation time: 45.48622369766235 seconds.
+03/01/2024 21:27:48: skipping 36f1a4022f01419abb5592ebb427d237 either loading or estimating broke.
+03/01/2024 21:27:48: skill #: 227 skill_id: b904282407f14cf085723e3f48c8fe1f
+03/01/2024 21:27:48: attempting to load skill from local data: b904282407f14cf085723e3f48c8fe1f
+03/01/2024 21:29:16: loading time: 88.31332612037659 for : 333371(333371, 3)
+03/01/2024 21:29:16: converting into table...
+03/01/2024 21:29:16: table size: (46954, 18)
+03/01/2024 21:29:16: solving for item parameters...
+03/01/2024 21:30:14: parameter calculation time: 57.69339680671692 seconds.
+03/01/2024 21:30:14: skipping b904282407f14cf085723e3f48c8fe1f either loading or estimating broke.
+03/01/2024 21:30:14: skill #: 228 skill_id: 6fbac51aa39fe3119503005056801da1
+03/01/2024 21:30:14: attempting to load skill from local data: 6fbac51aa39fe3119503005056801da1
+03/01/2024 21:31:42: loading time: 88.45834445953369 for : 252853(252853, 3)
+03/01/2024 21:31:42: converting into table...
+03/01/2024 21:31:43: table size: (47270, 20)
+03/01/2024 21:31:43: solving for item parameters...
+03/01/2024 21:32:46: parameter calculation time: 63.552340269088745 seconds.
+03/01/2024 21:32:46: skipping 6fbac51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 21:32:46: skill #: 229 skill_id: 7a095e2a874643cdb74953e92bb71276
+03/01/2024 21:32:46: attempting to load skill from local data: 7a095e2a874643cdb74953e92bb71276
+03/01/2024 21:34:14: loading time: 88.28676342964172 for : 343263(343263, 3)
+03/01/2024 21:34:14: converting into table...
+03/01/2024 21:34:15: table size: (58023, 28)
+03/01/2024 21:34:15: solving for item parameters...
+03/01/2024 21:35:37: parameter calculation time: 82.85106015205383 seconds.
+03/01/2024 21:35:37: skipping 7a095e2a874643cdb74953e92bb71276 either loading or estimating broke.
+03/01/2024 21:35:37: skill #: 230 skill_id: 94ded287ff864b918c70ce3b383339e5
+03/01/2024 21:35:37: attempting to load skill from local data: 94ded287ff864b918c70ce3b383339e5
+03/01/2024 21:37:06: loading time: 88.19323110580444 for : 19802(19802, 3)
+03/01/2024 21:37:06: converting into table...
+03/01/2024 21:37:06: table size: (1543, 17)
+03/01/2024 21:37:06: solving for item parameters...
+03/01/2024 21:37:21: parameter calculation time: 15.406084060668945 seconds.
+03/01/2024 21:37:21: skipping 94ded287ff864b918c70ce3b383339e5 either loading or estimating broke.
+03/01/2024 21:37:21: skill #: 231 skill_id: 77bcc51aa39fe3119503005056801da1
+03/01/2024 21:37:21: attempting to load skill from local data: 77bcc51aa39fe3119503005056801da1
+03/01/2024 21:38:49: loading time: 88.03492546081543 for : 424786(424786, 3)
+03/01/2024 21:38:49: converting into table...
+03/01/2024 21:38:49: table size: (64139, 18)
+03/01/2024 21:38:49: solving for item parameters...
+03/01/2024 21:39:51: parameter calculation time: 61.80619549751282 seconds.
+03/01/2024 21:39:51: skipping 77bcc51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 21:39:51: skill #: 232 skill_id: 3a8a25cfa85e4a208cf1812422916a4e
+03/01/2024 21:39:51: attempting to load skill from local data: 3a8a25cfa85e4a208cf1812422916a4e
+03/01/2024 21:41:19: loading time: 88.38934969902039 for : 84879(84879, 3)
+03/01/2024 21:41:19: converting into table...
+03/01/2024 21:41:19: table size: (10691, 24)
+03/01/2024 21:41:19: solving for item parameters...
+03/01/2024 21:42:08: parameter calculation time: 48.28378367424011 seconds.
+03/01/2024 21:42:08: skipping 3a8a25cfa85e4a208cf1812422916a4e either loading or estimating broke.
+03/01/2024 21:42:08: skill #: 233 skill_id: 6dbcc51aa39fe3119503005056801da1
+03/01/2024 21:42:08: attempting to load skill from local data: 6dbcc51aa39fe3119503005056801da1
+03/01/2024 21:43:36: loading time: 88.34816670417786 for : 67491(67491, 3)
+03/01/2024 21:43:36: converting into table...
+03/01/2024 21:43:36: table size: (11307, 18)
+03/01/2024 21:43:36: solving for item parameters...
+03/01/2024 21:44:18: parameter calculation time: 41.908435106277466 seconds.
+03/01/2024 21:44:18: skipping 6dbcc51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 21:44:18: skill #: 234 skill_id: 07d00b5577d7424babc16829030b44b9
+03/01/2024 21:44:18: attempting to load skill from local data: 07d00b5577d7424babc16829030b44b9
+03/01/2024 21:45:46: loading time: 88.24808120727539 for : 5217(5217, 3)
+03/01/2024 21:45:46: converting into table...
+03/01/2024 21:45:46: table size: (1216, 18)
+03/01/2024 21:45:46: solving for item parameters...
+03/01/2024 21:46:02: parameter calculation time: 16.196930170059204 seconds.
+03/01/2024 21:46:02: skipping 07d00b5577d7424babc16829030b44b9 either loading or estimating broke.
+03/01/2024 21:46:02: skill #: 235 skill_id: e98063d82400e4119e54005056801da1
+03/01/2024 21:46:02: attempting to load skill from local data: e98063d82400e4119e54005056801da1
+03/01/2024 21:47:30: loading time: 88.00252485275269 for : 27011(27011, 3)
+03/01/2024 21:47:30: converting into table...
+03/01/2024 21:47:30: table size: (5426, 18)
+03/01/2024 21:47:30: solving for item parameters...
+03/01/2024 21:47:50: parameter calculation time: 19.82408332824707 seconds.
+03/01/2024 21:47:50: skipping e98063d82400e4119e54005056801da1 either loading or estimating broke.
+03/01/2024 21:47:50: skill #: 236 skill_id: 35b53c1729304566bb164c336c268f16
+03/01/2024 21:47:50: attempting to load skill from local data: 35b53c1729304566bb164c336c268f16
+03/01/2024 21:49:18: loading time: 88.11757946014404 for : 7692(7692, 3)
+03/01/2024 21:49:18: converting into table...
+03/01/2024 21:49:18: table size: (887, 18)
+03/01/2024 21:49:18: solving for item parameters...
+03/01/2024 21:49:32: parameter calculation time: 13.603989124298096 seconds.
+03/01/2024 21:49:32: skipping 35b53c1729304566bb164c336c268f16 either loading or estimating broke.
+03/01/2024 21:49:32: skill #: 237 skill_id: 7995c6c23c5647a098144965a8a89054
+03/01/2024 21:49:32: attempting to load skill from local data: 7995c6c23c5647a098144965a8a89054
+03/01/2024 21:51:00: loading time: 88.01893043518066 for : 12883(12883, 3)
+03/01/2024 21:51:00: converting into table...
+03/01/2024 21:51:00: table size: (2273, 22)
+03/01/2024 21:51:00: solving for item parameters...
+03/01/2024 21:51:18: parameter calculation time: 17.95765781402588 seconds.
+03/01/2024 21:51:18: skipping 7995c6c23c5647a098144965a8a89054 either loading or estimating broke.
+03/01/2024 21:51:18: skill #: 238 skill_id: a324c4332f6e4a81bf8934d03be63c03
+03/01/2024 21:51:18: attempting to load skill from local data: a324c4332f6e4a81bf8934d03be63c03
+03/01/2024 21:52:46: loading time: 88.14815664291382 for : 13052(13052, 3)
+03/01/2024 21:52:46: converting into table...
+03/01/2024 21:52:46: table size: (1063, 22)
+03/01/2024 21:52:46: solving for item parameters...
+03/01/2024 21:53:03: parameter calculation time: 17.222917556762695 seconds.
+03/01/2024 21:53:03: skipping a324c4332f6e4a81bf8934d03be63c03 either loading or estimating broke.
+03/01/2024 21:53:03: skill #: 239 skill_id: f3a2bfaa479de311b77c005056801da1
+03/01/2024 21:53:03: attempting to load skill from local data: f3a2bfaa479de311b77c005056801da1
+03/01/2024 21:54:35: loading time: 91.79883861541748 for : 3863939(3863939, 3)
+03/01/2024 21:54:35: converting into table...
+03/01/2024 21:54:38: table size: (475903, 50)
+03/01/2024 21:54:38: solving for item parameters...
+03/01/2024 22:04:48: parameter calculation time: 610.8677461147308 seconds.
+03/01/2024 22:04:48: skipping f3a2bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 22:04:48: skill #: 240 skill_id: vifaenoo
+03/01/2024 22:04:48: attempting to load skill from local data: vifaenoo
+03/01/2024 22:06:19: loading time: 90.4297604560852 for : 2094147(2094147, 3)
+03/01/2024 22:06:19: converting into table...
+03/01/2024 22:06:20: table size: (177769, 51)
+03/01/2024 22:06:20: solving for item parameters...
+03/01/2024 22:10:39: parameter calculation time: 259.7652177810669 seconds.
+03/01/2024 22:10:39: skipping vifaenoo either loading or estimating broke.
+03/01/2024 22:10:39: skill #: 241 skill_id: riefaira
+03/01/2024 22:10:39: attempting to load skill from local data: riefaira
+03/01/2024 22:12:08: loading time: 88.03239965438843 for : 197896(197896, 3)
+03/01/2024 22:12:08: converting into table...
+03/01/2024 22:12:08: table size: (50564, 57)
+03/01/2024 22:12:08: solving for item parameters...
+03/01/2024 22:13:50: parameter calculation time: 102.10104298591614 seconds.
+03/01/2024 22:13:50: skipping riefaira either loading or estimating broke.
+03/01/2024 22:13:50: skill #: 242 skill_id: aithaing
+03/01/2024 22:13:50: attempting to load skill from local data: aithaing
+03/01/2024 22:15:18: loading time: 88.0454671382904 for : 219894(219894, 3)
+03/01/2024 22:15:18: converting into table...
+03/01/2024 22:15:18: table size: (60281, 39)
+03/01/2024 22:15:18: solving for item parameters...
+03/01/2024 22:16:59: parameter calculation time: 101.54066514968872 seconds.
+03/01/2024 22:16:59: skipping aithaing either loading or estimating broke.
+03/01/2024 22:16:59: skill #: 243 skill_id: vachaesh
+03/01/2024 22:16:59: attempting to load skill from local data: vachaesh
+03/01/2024 22:18:27: loading time: 88.01831650733948 for : 116604(116604, 3)
+03/01/2024 22:18:28: converting into table...
+03/01/2024 22:18:28: table size: (38589, 8)
+03/01/2024 22:18:28: solving for item parameters...
+03/01/2024 22:19:11: parameter calculation time: 43.17727732658386 seconds.
+03/01/2024 22:19:11: skipping vachaesh either loading or estimating broke.
+03/01/2024 22:19:11: skill #: 244 skill_id: f5a2bfaa479de311b77c005056801da1
+03/01/2024 22:19:11: attempting to load skill from local data: f5a2bfaa479de311b77c005056801da1
+03/01/2024 22:20:41: loading time: 90.15647721290588 for : 1845417(1845417, 3)
+03/01/2024 22:20:41: converting into table...
+03/01/2024 22:20:42: table size: (204700, 61)
+03/01/2024 22:20:42: solving for item parameters...
+03/01/2024 22:25:48: parameter calculation time: 306.3165888786316 seconds.
+03/01/2024 22:25:48: skipping f5a2bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 22:25:48: skill #: 245 skill_id: 30c25e6a7c874faea2bbc193320fe60c
+03/01/2024 22:25:48: attempting to load skill from local data: 30c25e6a7c874faea2bbc193320fe60c
+03/01/2024 22:27:18: loading time: 89.75497841835022 for : 1315471(1315471, 3)
+03/01/2024 22:27:18: converting into table...
+03/01/2024 22:27:19: table size: (148293, 44)
+03/01/2024 22:27:19: solving for item parameters...
+03/01/2024 22:30:29: parameter calculation time: 190.03485941886902 seconds.
+03/01/2024 22:30:29: skipping 30c25e6a7c874faea2bbc193320fe60c either loading or estimating broke.
+03/01/2024 22:30:29: skill #: 246 skill_id: pothahye
+03/01/2024 22:30:29: attempting to load skill from local data: pothahye
+03/01/2024 22:31:57: loading time: 88.69352746009827 for : 463051(463051, 3)
+03/01/2024 22:31:57: converting into table...
+03/01/2024 22:31:57: table size: (57194, 29)
+03/01/2024 22:31:57: solving for item parameters...
+03/01/2024 22:33:16: parameter calculation time: 78.72745013237 seconds.
+03/01/2024 22:33:16: skipping pothahye either loading or estimating broke.
+03/01/2024 22:33:16: skill #: 247 skill_id: fda2bfaa479de311b77c005056801da1
+03/01/2024 22:33:16: attempting to load skill from local data: fda2bfaa479de311b77c005056801da1
+03/01/2024 22:34:47: loading time: 90.38269996643066 for : 1927248(1927248, 3)
+03/01/2024 22:34:47: converting into table...
+03/01/2024 22:34:48: table size: (290533, 53)
+03/01/2024 22:34:48: solving for item parameters...
+03/01/2024 22:40:58: parameter calculation time: 370.2330117225647 seconds.
+03/01/2024 22:40:58: skipping fda2bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 22:40:58: skill #: 248 skill_id: edozeith
+03/01/2024 22:40:58: attempting to load skill from local data: edozeith
+03/01/2024 22:42:29: loading time: 90.82934927940369 for : 2475602(2475602, 3)
+03/01/2024 22:42:29: converting into table...
+03/01/2024 22:42:30: table size: (413563, 36)
+03/01/2024 22:42:30: solving for item parameters...
+03/01/2024 22:47:43: parameter calculation time: 312.8323464393616 seconds.
+03/01/2024 22:47:43: skipping edozeith either loading or estimating broke.
+03/01/2024 22:47:43: skill #: 249 skill_id: aizuhaiw
+03/01/2024 22:47:43: attempting to load skill from local data: aizuhaiw
+03/01/2024 22:49:12: loading time: 89.14228630065918 for : 496405(496405, 3)
+03/01/2024 22:49:12: converting into table...
+03/01/2024 22:49:12: table size: (67274, 30)
+03/01/2024 22:49:12: solving for item parameters...
+03/01/2024 22:50:43: parameter calculation time: 90.2356345653534 seconds.
+03/01/2024 22:50:43: skipping aizuhaiw either loading or estimating broke.
+03/01/2024 22:50:43: skill #: 250 skill_id: ffa2bfaa479de311b77c005056801da1
+03/01/2024 22:50:43: attempting to load skill from local data: ffa2bfaa479de311b77c005056801da1
+03/01/2024 22:52:13: loading time: 90.48768830299377 for : 2130048(2130048, 3)
+03/01/2024 22:52:13: converting into table...
+03/01/2024 22:52:14: table size: (405817, 39)
+03/01/2024 22:52:14: solving for item parameters...
+03/01/2024 22:59:12: parameter calculation time: 417.96111392974854 seconds.
+03/01/2024 22:59:12: skipping ffa2bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 22:59:12: skill #: 251 skill_id: fba2bfaa479de311b77c005056801da1
+03/01/2024 22:59:12: attempting to load skill from local data: fba2bfaa479de311b77c005056801da1
+03/01/2024 23:00:45: loading time: 92.78246474266052 for : 4022973(4022973, 3)
+03/01/2024 23:00:45: converting into table...
+03/01/2024 23:00:48: table size: (534635, 57)
+03/01/2024 23:00:48: solving for item parameters...
+03/01/2024 23:12:53: parameter calculation time: 724.5904116630554 seconds.
+03/01/2024 23:12:53: skipping fba2bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 23:12:53: skill #: 252 skill_id: izujupaf
+03/01/2024 23:12:53: attempting to load skill from local data: izujupaf
+03/01/2024 23:14:22: loading time: 89.80639028549194 for : 144700(144700, 3)
+03/01/2024 23:14:22: converting into table...
+03/01/2024 23:14:22: table size: (53671, 60)
+03/01/2024 23:14:22: solving for item parameters...
+03/01/2024 23:16:11: parameter calculation time: 108.32561826705933 seconds.
+03/01/2024 23:16:11: skipping izujupaf either loading or estimating broke.
+03/01/2024 23:16:11: skill #: 253 skill_id: eacieveg
+03/01/2024 23:16:11: attempting to load skill from local data: eacieveg
+03/01/2024 23:17:40: loading time: 88.86541104316711 for : 104(104, 3)
+03/01/2024 23:17:40: converting into table...
+03/01/2024 23:17:40: table size: (50, 25)
+03/01/2024 23:17:40: solving for item parameters...
+03/01/2024 23:17:50: parameter calculation time: 10.664123773574829 seconds.
+03/01/2024 23:17:50: skipping eacieveg either loading or estimating broke.
+03/01/2024 23:17:50: skill #: 254 skill_id: xpekuldo
+03/01/2024 23:17:50: attempting to load skill from local data: xpekuldo
+03/01/2024 23:19:21: loading time: 91.15058922767639 for : 2349012(2349012, 3)
+03/01/2024 23:19:22: converting into table...
+03/01/2024 23:19:22: table size: (215585, 12)
+03/01/2024 23:19:22: solving for item parameters...
+03/01/2024 23:20:41: parameter calculation time: 78.47120571136475 seconds.
+03/01/2024 23:20:41: skipping xpekuldo either loading or estimating broke.
+03/01/2024 23:20:41: skill #: 255 skill_id: 1f8d6e84131f4cd8a12b957248941418
+03/01/2024 23:20:41: attempting to load skill from local data: 1f8d6e84131f4cd8a12b957248941418
+03/01/2024 23:22:11: loading time: 90.70998477935791 for : 1135883(1135883, 3)
+03/01/2024 23:22:11: converting into table...
+03/01/2024 23:22:12: table size: (179754, 22)
+03/01/2024 23:22:12: solving for item parameters...
+03/01/2024 23:24:23: parameter calculation time: 131.62450242042542 seconds.
+03/01/2024 23:24:23: skipping 1f8d6e84131f4cd8a12b957248941418 either loading or estimating broke.
+03/01/2024 23:24:23: skill #: 256 skill_id: duiycpdn
+03/01/2024 23:24:23: attempting to load skill from local data: duiycpdn
+03/01/2024 23:25:53: loading time: 89.27103638648987 for : 195311(195311, 3)
+03/01/2024 23:25:53: converting into table...
+03/01/2024 23:25:53: table size: (45576, 6)
+03/01/2024 23:25:53: solving for item parameters...
+03/01/2024 23:26:34: parameter calculation time: 40.831547498703 seconds.
+03/01/2024 23:26:34: skipping duiycpdn either loading or estimating broke.
+03/01/2024 23:26:34: skill #: 257 skill_id: fa5dec1b37e9451595f98af8a7175095
+03/01/2024 23:26:34: attempting to load skill from local data: fa5dec1b37e9451595f98af8a7175095
+03/01/2024 23:28:04: loading time: 89.99366593360901 for : 883931(883931, 3)
+03/01/2024 23:28:04: converting into table...
+03/01/2024 23:28:04: table size: (148427, 18)
+03/01/2024 23:28:04: solving for item parameters...
+03/01/2024 23:29:55: parameter calculation time: 110.90217447280884 seconds.
+03/01/2024 23:29:55: skipping fa5dec1b37e9451595f98af8a7175095 either loading or estimating broke.
+03/01/2024 23:29:55: skill #: 258 skill_id: bofprnxa
+03/01/2024 23:29:55: attempting to load skill from local data: bofprnxa
+03/01/2024 23:31:24: loading time: 89.3116819858551 for : 112978(112978, 3)
+03/01/2024 23:31:24: converting into table...
+03/01/2024 23:31:24: table size: (29076, 6)
+03/01/2024 23:31:24: solving for item parameters...
+03/01/2024 23:31:43: parameter calculation time: 18.81996774673462 seconds.
+03/01/2024 23:31:43: skipping bofprnxa either loading or estimating broke.
+03/01/2024 23:31:43: skill #: 259 skill_id: uvomvoab
+03/01/2024 23:31:43: attempting to load skill from local data: uvomvoab
+03/01/2024 23:33:12: loading time: 88.7963695526123 for : 70374(70374, 3)
+03/01/2024 23:33:12: converting into table...
+03/01/2024 23:33:12: table size: (19003, 6)
+03/01/2024 23:33:12: solving for item parameters...
+03/01/2024 23:33:26: parameter calculation time: 14.322804927825928 seconds.
+03/01/2024 23:33:26: skipping uvomvoab either loading or estimating broke.
+03/01/2024 23:33:26: skill #: 260 skill_id: llcrjbyn
+03/01/2024 23:33:26: attempting to load skill from local data: llcrjbyn
+03/01/2024 23:34:57: loading time: 90.50613927841187 for : 1052398(1052398, 3)
+03/01/2024 23:34:57: converting into table...
+03/01/2024 23:34:57: table size: (153846, 19)
+03/01/2024 23:34:57: solving for item parameters...
+03/01/2024 23:36:22: parameter calculation time: 84.82038378715515 seconds.
+03/01/2024 23:36:22: skipping llcrjbyn either loading or estimating broke.
+03/01/2024 23:36:22: skill #: 261 skill_id: tfupkvdd
+03/01/2024 23:36:22: attempting to load skill from local data: tfupkvdd
+03/01/2024 23:37:51: loading time: 89.22176098823547 for : 77010(77010, 3)
+03/01/2024 23:37:51: converting into table...
+03/01/2024 23:37:51: table size: (27723, 6)
+03/01/2024 23:37:51: solving for item parameters...
+03/01/2024 23:38:11: parameter calculation time: 20.17629075050354 seconds.
+03/01/2024 23:38:11: skipping tfupkvdd either loading or estimating broke.
+03/01/2024 23:38:11: skill #: 262 skill_id: 35a4bfaa479de311b77c005056801da1
+03/01/2024 23:38:11: attempting to load skill from local data: 35a4bfaa479de311b77c005056801da1
+03/01/2024 23:39:43: loading time: 91.63073444366455 for : 2321285(2321285, 3)
+03/01/2024 23:39:43: converting into table...
+03/01/2024 23:39:44: table size: (301053, 40)
+03/01/2024 23:39:44: solving for item parameters...
+03/01/2024 23:45:19: parameter calculation time: 334.8045287132263 seconds.
+03/01/2024 23:45:19: skipping 35a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 23:45:19: skill #: 263 skill_id: meibiech
+03/01/2024 23:45:19: attempting to load skill from local data: meibiech
+03/01/2024 23:46:49: loading time: 89.56481099128723 for : 570945(570945, 3)
+03/01/2024 23:46:49: converting into table...
+03/01/2024 23:46:49: table size: (80285, 12)
+03/01/2024 23:46:49: solving for item parameters...
+03/01/2024 23:48:20: parameter calculation time: 91.0221745967865 seconds.
+03/01/2024 23:48:20: skipping meibiech either loading or estimating broke.
+03/01/2024 23:48:20: skill #: 264 skill_id: 79bcc51aa39fe3119503005056801da1
+03/01/2024 23:48:20: attempting to load skill from local data: 79bcc51aa39fe3119503005056801da1
+03/01/2024 23:49:51: loading time: 91.27609992027283 for : 1616730(1616730, 3)
+03/01/2024 23:49:51: converting into table...
+03/01/2024 23:49:52: table size: (176863, 65)
+03/01/2024 23:49:52: solving for item parameters...
+03/01/2024 23:54:32: parameter calculation time: 279.78043580055237 seconds.
+03/01/2024 23:54:32: skipping 79bcc51aa39fe3119503005056801da1 either loading or estimating broke.
+03/01/2024 23:54:32: skill #: 265 skill_id: 37a4bfaa479de311b77c005056801da1
+03/01/2024 23:54:32: attempting to load skill from local data: 37a4bfaa479de311b77c005056801da1
+03/01/2024 23:56:03: loading time: 91.1432135105133 for : 1703244(1703244, 3)
+03/01/2024 23:56:03: converting into table...
+03/01/2024 23:56:04: table size: (201575, 31)
+03/01/2024 23:56:04: solving for item parameters...
+03/01/2024 23:59:41: parameter calculation time: 216.7946138381958 seconds.
+03/01/2024 23:59:41: skipping 37a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+03/01/2024 23:59:41: skill #: 266 skill_id: 38a4bfaa479de311b77c005056801da1
+03/01/2024 23:59:41: attempting to load skill from local data: 38a4bfaa479de311b77c005056801da1
+04/01/2024 00:01:12: loading time: 91.61114645004272 for : 2326104(2326104, 3)
+04/01/2024 00:01:12: converting into table...
+04/01/2024 00:01:13: table size: (170550, 28)
+04/01/2024 00:01:13: solving for item parameters...
+04/01/2024 00:04:02: parameter calculation time: 168.68707060813904 seconds.
+04/01/2024 00:04:02: skipping 38a4bfaa479de311b77c005056801da1 either loading or estimating broke.
+04/01/2024 00:04:02: skill #: 267 skill_id: 377f63d82400e4119e54005056801da1
+04/01/2024 00:04:02: attempting to load skill from local data: 377f63d82400e4119e54005056801da1
+04/01/2024 00:05:31: loading time: 89.4604103565216 for : 135128(135128, 3)
+04/01/2024 00:05:31: converting into table...
+04/01/2024 00:05:31: table size: (16355, 18)
+04/01/2024 00:05:31: solving for item parameters...
+04/01/2024 00:06:22: parameter calculation time: 50.63931083679199 seconds.
+04/01/2024 00:06:22: skipping 377f63d82400e4119e54005056801da1 either loading or estimating broke.
+04/01/2024 00:06:22: skill #: 268 skill_id: xeejohke
+04/01/2024 00:06:22: attempting to load skill from local data: xeejohke
+04/01/2024 00:07:51: loading time: 89.2197630405426 for : 113828(113828, 3)
+04/01/2024 00:07:51: converting into table...
+04/01/2024 00:07:51: table size: (26214, 59)
+04/01/2024 00:07:51: solving for item parameters...
+04/01/2024 00:09:09: parameter calculation time: 78.15873861312866 seconds.
+04/01/2024 00:09:09: skipping xeejohke either loading or estimating broke.
+04/01/2024 00:09:09: skill #: 269 skill_id: inlpvyrd
+04/01/2024 00:09:09: attempting to load skill from local data: inlpvyrd
+04/01/2024 00:10:39: loading time: 89.71112728118896 for : 675583(675583, 3)
+04/01/2024 00:10:39: converting into table...
+04/01/2024 00:10:39: table size: (75620, 6)
+04/01/2024 00:10:39: solving for item parameters...
+04/01/2024 00:11:11: parameter calculation time: 31.427900791168213 seconds.
+04/01/2024 00:11:11: skipping inlpvyrd either loading or estimating broke.
+04/01/2024 00:11:11: skill #: 270 skill_id: feeyoubo
+04/01/2024 00:11:11: attempting to load skill from local data: feeyoubo
+04/01/2024 00:12:40: loading time: 89.27810740470886 for : 137938(137938, 3)
+04/01/2024 00:12:40: converting into table...
+04/01/2024 00:12:40: table size: (31214, 12)
+04/01/2024 00:12:40: solving for item parameters...
+04/01/2024 00:13:12: parameter calculation time: 31.765357494354248 seconds.
+04/01/2024 00:13:12: skipping feeyoubo either loading or estimating broke.
+04/01/2024 00:13:12: skill #: 271 skill_id: eepaifae
+04/01/2024 00:13:12: attempting to load skill from local data: eepaifae
+04/01/2024 00:14:41: loading time: 89.52845335006714 for : 561632(561632, 3)
+04/01/2024 00:14:41: converting into table...
+04/01/2024 00:14:41: table size: (45113, 12)
+04/01/2024 00:14:41: solving for item parameters...
+04/01/2024 00:15:35: parameter calculation time: 54.07131600379944 seconds.
+04/01/2024 00:15:35: skipping eepaifae either loading or estimating broke.
+04/01/2024 00:15:35: skill #: 272 skill_id: 04e104ad2d074ab9a7e66888823f9567
+04/01/2024 00:15:35: attempting to load skill from local data: 04e104ad2d074ab9a7e66888823f9567
+04/01/2024 00:17:06: loading time: 90.10111498832703 for : 636598(636598, 3)
+04/01/2024 00:17:06: converting into table...
+04/01/2024 00:17:06: table size: (118586, 27)
+04/01/2024 00:17:06: solving for item parameters...
+04/01/2024 00:19:06: parameter calculation time: 120.03487825393677 seconds.
+04/01/2024 00:19:06: skipping 04e104ad2d074ab9a7e66888823f9567 either loading or estimating broke.
+04/01/2024 00:19:06: skill #: 273 skill_id: xeiniuci
+04/01/2024 00:19:06: attempting to load skill from local data: xeiniuci
+04/01/2024 00:20:35: loading time: 89.53569984436035 for : 94293(94293, 3)
+04/01/2024 00:20:35: converting into table...
+04/01/2024 00:20:35: table size: (29347, 14)
+04/01/2024 00:20:35: solving for item parameters...
+04/01/2024 00:21:18: parameter calculation time: 42.731609582901 seconds.
+04/01/2024 00:21:18: skipping xeiniuci either loading or estimating broke.
+04/01/2024 00:21:18: skill #: 274 skill_id: 3ca4bfaa479de311b77c005056801da1
+04/01/2024 00:21:18: attempting to load skill from local data: 3ca4bfaa479de311b77c005056801da1
+04/01/2024 00:22:48: loading time: 89.65988826751709 for : 441129(441129, 3)
+04/01/2024 00:22:48: converting into table...
+04/01/2024 00:22:48: table size: (98529, 27)
+04/01/2024 00:22:48: solving for item parameters...
+04/01/2024 00:24:49: parameter calculation time: 120.71248126029968 seconds.
+04/01/2024 00:24:49: skipping 3ca4bfaa479de311b77c005056801da1 either loading or estimating broke.
+04/01/2024 00:24:49: skill #: 275 skill_id: nuiwaeju
+04/01/2024 00:24:49: attempting to load skill from local data: nuiwaeju
+04/01/2024 00:26:19: loading time: 89.808846950531 for : 478436(478436, 3)
+04/01/2024 00:26:19: converting into table...
+04/01/2024 00:26:19: table size: (86941, 15)
+04/01/2024 00:26:19: solving for item parameters...
+04/01/2024 00:27:52: parameter calculation time: 93.38305640220642 seconds.
+04/01/2024 00:27:52: skipping nuiwaeju either loading or estimating broke.
+04/01/2024 00:27:52: skill #: 276 skill_id: 3ea4bfaa479de311b77c005056801da1
+04/01/2024 00:27:52: attempting to load skill from local data: 3ea4bfaa479de311b77c005056801da1
+04/01/2024 00:29:23: loading time: 90.66026973724365 for : 992662(992662, 3)
+04/01/2024 00:29:23: converting into table...
+04/01/2024 00:29:23: table size: (153628, 30)
+04/01/2024 00:29:23: solving for item parameters...
+04/01/2024 00:32:04: parameter calculation time: 160.97248029708862 seconds.
+04/01/2024 00:32:04: skipping 3ea4bfaa479de311b77c005056801da1 either loading or estimating broke.
+04/01/2024 00:32:04: skill #: 277 skill_id: cc1a05ff87ee4873af070db3a8b06281
+04/01/2024 00:32:04: attempting to load skill from local data: cc1a05ff87ee4873af070db3a8b06281
+04/01/2024 00:33:35: loading time: 90.20567584037781 for : 929437(929437, 3)
+04/01/2024 00:33:35: converting into table...
+04/01/2024 00:33:35: table size: (200453, 33)
+04/01/2024 00:33:35: solving for item parameters...
+04/01/2024 00:36:33: parameter calculation time: 177.70823693275452 seconds.
+04/01/2024 00:36:33: skipping cc1a05ff87ee4873af070db3a8b06281 either loading or estimating broke.
+04/01/2024 00:36:33: skill #: 278 skill_id: jiquaife
+04/01/2024 00:36:33: attempting to load skill from local data: jiquaife
+04/01/2024 00:38:03: loading time: 90.70862412452698 for : 1592625(1592625, 3)
+04/01/2024 00:38:04: converting into table...
+04/01/2024 00:38:04: table size: (192910, 14)
+04/01/2024 00:38:04: solving for item parameters...
+04/01/2024 00:39:38: parameter calculation time: 94.14274263381958 seconds.
+04/01/2024 00:39:38: skipping jiquaife either loading or estimating broke.
+04/01/2024 00:39:38: skill #: 279 skill_id: eikahree
+04/01/2024 00:39:38: attempting to load skill from local data: eikahree
+04/01/2024 00:41:08: loading time: 90.19440245628357 for : 415174(415174, 3)
+04/01/2024 00:41:08: converting into table...
+04/01/2024 00:41:09: table size: (64330, 20)
+04/01/2024 00:41:09: solving for item parameters...
+04/01/2024 00:42:17: parameter calculation time: 68.24300694465637 seconds.
+04/01/2024 00:42:17: skipping eikahree either loading or estimating broke.
+04/01/2024 00:42:17: skill #: 280 skill_id: phaechei
+04/01/2024 00:42:17: attempting to load skill from local data: phaechei
+04/01/2024 00:43:46: loading time: 89.63163352012634 for : 329129(329129, 3)
+04/01/2024 00:43:46: converting into table...
+04/01/2024 00:43:47: table size: (61459, 12)
+04/01/2024 00:43:47: solving for item parameters...
+04/01/2024 00:44:58: parameter calculation time: 71.37317490577698 seconds.
+04/01/2024 00:44:58: skipping phaechei either loading or estimating broke.
+04/01/2024 00:44:58: skill #: 281 skill_id: phaingak
+04/01/2024 00:44:58: attempting to load skill from local data: phaingak
+04/01/2024 00:46:28: loading time: 90.08278799057007 for : 313933(313933, 3)
+04/01/2024 00:46:28: converting into table...
+04/01/2024 00:46:28: table size: (110915, 34)
+04/01/2024 00:46:28: solving for item parameters...
+04/01/2024 00:48:34: parameter calculation time: 125.79626798629761 seconds.
+04/01/2024 00:48:34: skipping phaingak either loading or estimating broke.
+04/01/2024 00:48:34: skill #: 282 skill_id: ciurohqu
+04/01/2024 00:48:34: attempting to load skill from local data: ciurohqu
+04/01/2024 00:50:04: loading time: 89.5692183971405 for : 530661(530661, 3)
+04/01/2024 00:50:04: converting into table...
+04/01/2024 00:50:04: table size: (76197, 13)
+04/01/2024 00:50:04: solving for item parameters...
+04/01/2024 00:51:32: parameter calculation time: 87.86450839042664 seconds.
+04/01/2024 00:51:32: skipping ciurohqu either loading or estimating broke.
+04/01/2024 00:51:32: skill #: 283 skill_id: daa3bfaa479de311b77c005056801da1
+04/01/2024 00:51:32: attempting to load skill from local data: daa3bfaa479de311b77c005056801da1
+04/01/2024 00:53:02: loading time: 90.88346099853516 for : 1552574(1552574, 3)
+04/01/2024 00:53:03: converting into table...
+04/01/2024 00:53:03: table size: (180645, 21)
+04/01/2024 00:53:03: solving for item parameters...
+04/01/2024 00:54:59: parameter calculation time: 116.3082799911499 seconds.
+04/01/2024 00:54:59: skipping daa3bfaa479de311b77c005056801da1 either loading or estimating broke.
+04/01/2024 00:54:59: skill #: 284 skill_id: dda3bfaa479de311b77c005056801da1
+04/01/2024 00:54:59: attempting to load skill from local data: dda3bfaa479de311b77c005056801da1
+04/01/2024 00:56:31: loading time: 91.59695887565613 for : 1578810(1578810, 3)
+04/01/2024 00:56:31: converting into table...
+04/01/2024 00:56:32: table size: (219544, 19)
+04/01/2024 00:56:32: solving for item parameters...
+04/01/2024 00:59:32: parameter calculation time: 179.9739809036255 seconds.
+04/01/2024 00:59:32: skipping dda3bfaa479de311b77c005056801da1 either loading or estimating broke.
+04/01/2024 00:59:32: skill #: 285 skill_id: 6657cdf0c98648a5bfce7b7f6c678eb0
+04/01/2024 00:59:32: attempting to load skill from local data: 6657cdf0c98648a5bfce7b7f6c678eb0
+04/01/2024 01:01:02: loading time: 90.72766971588135 for : 1346938(1346938, 3)
+04/01/2024 01:01:02: converting into table...
+04/01/2024 01:01:03: table size: (141554, 18)
+04/01/2024 01:01:03: solving for item parameters...
+04/01/2024 01:02:40: parameter calculation time: 97.44898271560669 seconds.
+04/01/2024 01:02:40: skipping 6657cdf0c98648a5bfce7b7f6c678eb0 either loading or estimating broke.
+04/01/2024 01:02:40: skill #: 286 skill_id: jaetheex
+04/01/2024 01:02:40: attempting to load skill from local data: jaetheex
+04/01/2024 01:04:11: loading time: 90.60401701927185 for : 1273816(1273816, 3)
+04/01/2024 01:04:11: converting into table...
+04/01/2024 01:04:11: table size: (196403, 13)
+04/01/2024 01:04:11: solving for item parameters...
+04/01/2024 01:06:37: parameter calculation time: 145.3980531692505 seconds.
+04/01/2024 01:06:37: skipping jaetheex either loading or estimating broke.
+04/01/2024 01:06:37: skill #: 287 skill_id: dea3bfaa479de311b77c005056801da1
+04/01/2024 01:06:37: attempting to load skill from local data: dea3bfaa479de311b77c005056801da1
+04/01/2024 01:08:08: loading time: 91.20511865615845 for : 1672432(1672432, 3)
+04/01/2024 01:08:08: converting into table...
+04/01/2024 01:08:09: table size: (189888, 26)
+04/01/2024 01:08:09: solving for item parameters...
+04/01/2024 01:11:22: parameter calculation time: 193.52773594856262 seconds.
+04/01/2024 01:11:22: skipping dea3bfaa479de311b77c005056801da1 either loading or estimating broke.
+04/01/2024 01:11:22: skill #: 288 skill_id: yiefaequ
+04/01/2024 01:11:22: attempting to load skill from local data: yiefaequ
+04/01/2024 01:12:52: loading time: 89.32486271858215 for : 256550(256550, 3)
+04/01/2024 01:12:52: converting into table...
+04/01/2024 01:12:52: table size: (51928, 29)
+04/01/2024 01:12:52: solving for item parameters...
+04/01/2024 01:14:19: parameter calculation time: 86.85058259963989 seconds.
+04/01/2024 01:14:19: skipping yiefaequ either loading or estimating broke.
+04/01/2024 01:14:19: skill #: 289 skill_id: oozieque
+04/01/2024 01:14:19: attempting to load skill from local data: oozieque
+04/01/2024 01:15:48: loading time: 89.05930519104004 for : 180881(180881, 3)
+04/01/2024 01:15:48: converting into table...
+04/01/2024 01:15:48: table size: (45287, 8)
+04/01/2024 01:15:48: solving for item parameters...
+04/01/2024 01:16:43: parameter calculation time: 55.21100354194641 seconds.
+04/01/2024 01:16:43: skipping oozieque either loading or estimating broke.
+04/01/2024 01:16:43: skill #: 290 skill_id: miegheex
+04/01/2024 01:16:43: attempting to load skill from local data: miegheex
+04/01/2024 01:18:13: loading time: 90.13622689247131 for : 1244308(1244308, 3)
+04/01/2024 01:18:13: converting into table...
+04/01/2024 01:18:14: table size: (243077, 40)
+04/01/2024 01:18:14: solving for item parameters...
+04/01/2024 01:20:16: skipping miegheex either loading or estimating broke.
+04/01/2024 01:20:16: skill #: 291 skill_id: ohkeirei
+04/01/2024 01:20:16: attempting to load skill from local data: ohkeirei
+04/01/2024 01:20:19: skipping ohkeirei either loading or estimating broke.
+04/01/2024 01:20:19: skill #: 292 skill_id: 8135969ea1ece311b64a005056801da1
+04/01/2024 01:20:19: attempting to load skill from local data: 8135969ea1ece311b64a005056801da1
+04/01/2024 01:20:19: skipping 8135969ea1ece311b64a005056801da1 either loading or estimating broke.
+04/01/2024 01:20:19: skill #: 293 skill_id: aeyefaip
+04/01/2024 01:20:19: attempting to load skill from local data: aeyefaip
+04/01/2024 01:20:20: skipping aeyefaip either loading or estimating broke.
+04/01/2024 01:20:20: skill #: 294 skill_id: ietheeti
+04/01/2024 01:20:20: attempting to load skill from local data: ietheeti

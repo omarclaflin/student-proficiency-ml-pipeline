@@ -1,0 +1,6 @@
+
+    SELECT *
+    FROM PROGRESS.ELA_PROFICIENCY_EVENTS 
+    WHERE VERSION = '3.9c14c'  -- Update with your model version
+    ORDER BY OCCURREDAT DESC
+    
